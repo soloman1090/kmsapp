@@ -1,0 +1,76 @@
+<form class="form-horizontal auth-form" action="{{ route('register') }}"
+                                            method="POST">
+                                            @csrf
+                                            <div class="form-group mb-2">
+                                                <label class="form-label" for="username">Username</label>
+                                                <div class="input-group">
+
+                                                    <input type="text"
+                                                        class="form-control @error('name') is-invalid @enderror" id="name"
+                                                        name="name" aria-describedby="emailHelp"
+                                                        value="{{ old('name') }}" placeholder="Enter your name">
+                                                    @error('name')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            {{ $message }}
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <!--end form-group-->
+
+                                            <div class="form-group mb-2">
+                                                <label class="form-label" for="useremail">Email</label>
+                                                <div class="input-group">
+                                                    <input type="email"
+                                                        class="form-control @error('email') is-invalid @enderror" id="email"
+                                                        name="email" aria-describedby="emailHelp"
+                                                        value="{{ old('email') }}"  placeholder="Enter your email address">
+                                                    @error('email')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            {{ $message }}
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <!--end form-group-->
+
+                                            <div class="form-group mb-2">
+                                                <label class="form-label" for="userpassword">Password</label>
+                                                <div class="input-group">
+                                                    <input type="password"
+                                                        class="form-control @error('password') is-invalid @enderror"
+                                                        id="password" name="password" value="{{ old('password') }}"  placeholder="Enter password">
+                                                    @error('password')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            {{ $message }}
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <!--end form-group-->
+
+                                            <div class="form-group mb-2">
+                                                <label class="form-label" for="conf_password">Confirm Password</label>
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" id="password_confirmation"
+                                                        name="password_confirmation"  placeholder="Confirm your password">
+                                                </div>
+                                            </div>
+                                            <!--end form-group-->
+
+                                            <div class="form-group mb-0 row">
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary w-100 waves-effect waves-light"
+                                                        type="submit">Register <i
+                                                            class="fas fa-sign-in-alt ms-1"></i></button>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end form-group-->
+                                        </form>
+ <!--end form-->
+                                        <p class="my-3 text-muted">Already have an account ?
+                                            @if (Route::has('login'))
+                                                <a href="{{ route('login') }}" class="text-primary ms-2 ">Login</a>
+                                            @endif
+                                        </p>

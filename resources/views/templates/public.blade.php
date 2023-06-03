@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dell Group">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Dell Group</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="assets/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300,400,700" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- LayerSlider stylesheet -->
+    <link href="assets/layerslider/css/layerslider.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header-wp">
+                    <div class="navbar-header">
+                        <a class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);" data-toggle="collapse" data-target="#navbar"><span>Menu mobile</span></a>
+                        <div id="logo_home">
+                            <h1><a href="/" title="Prometeo">Prometeo - Business, Financial and Consulting Site Template</a></h1>
+                        </div>
+                        <div id="top_nav">
+                            <ul>
+                                <li><a href="#0" class="aside-panel-bt"><i class="icon_lock_alt"></i></a></li>
+                              </ul>
+                        </div>
+                        <!--/top_nav-->
+                    </div>
+                    <!--/navbar-header-->
+                </div>
+                <!--/navbar-header-wp-->
+                <div class="collapse navbar-collapse navbar-right" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Our Firm</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about"> About Us</a></li>
+                                <li><a href="leadership">Leadership</a></li>
+                                <li><a href="unique-process">Unique process</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Our Firm</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="real-estate"> Real Estate</a></li>
+                                <li><a href="infrastructure">Infrastructure</a></li>
+                                <li><a href="insurance-solutions">Insurance Solutions</a></li>
+                                <li><a href="credit">Credit</a></li>
+                                <li><a href="multi-asset-solution">Multi Asset Solution</a></li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#0" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Our Impact</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="esg">ESG</a></li>
+                                <li><a href="responsible-investing">Responsible Investing </a></li>
+                                <li><a href="diversity-and-inclusion">Diversity and Inclusion  </a></li>
+                            </ul>
+                        </li>
+                     
+                        
+                        <li><a href="blog">News</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="login">Client Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /Nav -->
+    </header><!-- /Header -->
+
+
+        <main>
+            @yield('content')
+        </main>
+    <!--/main-->
+
+    <div id="newsletter_container">
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3>Subscribe to our Newsletter for latest news.</h3>
+                    <div id="message-newsletter_2"></div>
+                    <form method="post" action="assets/newsletter.php" name="newsletter_2" id="newsletter_2" class="form-inline">
+                        <input name="email_newsletter_2" id="email_newsletter_2" type="email" value="" placeholder="Your Email" class="form-control">
+                        <button id="submit-newsletter_2" class="button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- End newsletter_container -->
+
+    <footer>
+        <div class="container margin_60_35">
+            <div class="row ">
+                <div class="col-md-4 col-sm-6">
+                    <img src="assets/img/logo-footer.png" width="190" height="48" alt="Prometeo" data-retina="true" id="logo_footer">
+                    <p>Id pri consul aeterno petentium. Vivendo abhorreant et vim, et quot persecuti mel. Libris hendrerit ex sea. Duo legere evertitur an, pri hinc doctus definitiones an, vix id dicam putent. Ius ornatus instructior in.</p>
+                </div>
+                <div class="col-md-3 col-md-offset-1 col-sm-3">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Quotation</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Terms and condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-3" id="contact_bg">
+                    <h3>Contacts</h3>
+                    <ul id="contact_details_footer">
+                        <li id="address_footer">4 West 31st Street New York, New York - 10001<br>United States</li>
+                        <li id="phone_footer"><a href="tel://004542344599">+45 423 445 99</a> / <a href="tel://004542344599">+45 423 445 99</a></li>
+                        <li id="email_footer"><a href="#">info@domain.com</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div id="social_footer">
+                <ul>
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-google"></i></a></li>
+                    <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                </ul>
+            </div>
+        </div><!-- End container -->
+        <div id="copy">
+            <div class="container">
+                © Prometeo 2017 - All rights reserved.
+            </div>
+        </div><!-- End copy -->
+    </footer><!-- End footer -->
+
+    <aside id="aside_panel">
+        <a class="aside-panel-bt" href="#0"><i class="icon_close"></i></a>
+        <p class="text-center"><img src="assets/img/aside_logo.png" width="190" height="48" alt="" data-retina="true"></p>
+        <div class="panel panel-login">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="#" class="active" id="login-form-link">Login</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="#" id="register-form-link">Register</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="login-form">
+                            <div class="access_social">
+                                <a href="#0" class="social_bt facebook">Login with Facebook</a>
+                                <a href="#0" class="social_bt google">Login with Google</a>
+                                <a href="#0" class="social_bt linkedin">Login with Linkedin</a>
+                            </div>
+                            <div class="divider"><span>Or</span></div>
+                            <div class="form-group">
+                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn_1" value="Log In">
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="#0" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                </div>
+                            </div>
+                        </form>
+                        <form id="register-form">
+                            <div class="form-group">
+                                <input type="text" name="username_2" id="username_2" tabindex="1" class="form-control" placeholder="Username" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email_2" id="email_2" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password_2" id="password1" tabindex="2" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="confirm-password_2" id="password2" tabindex="2" class="form-control" placeholder="Confirm Password">
+                            </div>
+                            <div id="pass-info" class="clearfix"></div>
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn_1" value="Register Now">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside><!-- End aside panel -->
+
+    <!-- Search Menu -->
+    <div class="search-overlay-menu">
+        <span class="search-overlay-close"><i class="icon_close"></i></span>
+        <form role="search" id="searchform" method="get">
+            <input value="" name="q" type="search" placeholder="Search..." />
+            <button type="submit"><i class="icon_search"></i>
+            </button>
+        </form>
+    </div><!-- End Search Menu -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/common_scripts.js"></script>
+    <script src="assets/validate.js"></script>
+    <script src="js/header_sticky_1.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- LayerSlider script files -->
+    <script src="assets/layerslider/js/greensock.js"></script>
+    <script src="assets/layerslider/js/layerslider.transitions.js"></script>
+    <script src="assets/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+    <script src="js/slider_func.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
