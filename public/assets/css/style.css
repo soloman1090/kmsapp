@@ -66,6 +66,8 @@ h6 {
 	-webkit-font-smoothing: antialiased;
 	color: #222;
 	font-weight: 500;
+	
+	font-family: 'Times New Roman', Times, serif !important;
 }
 
 .bg_white h1,
