@@ -18,6 +18,7 @@
 
     <!-- GOOGLE WEB FONT-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- BASE CSS -->
     <link href="assets/css/animate.min.css" rel="stylesheet">
@@ -64,7 +65,7 @@
                             <ul class="dropdown-menu">
                                 <li class="container">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="about">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -73,7 +74,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="leadership">
                                                 <figure>
                                                     <img src="assets/img/menu_img_2.jpg" alt="" class="img-responsive">
@@ -82,7 +83,7 @@
                                                 <p>Mei duis eruditi deserunt te, nec an graeco offendit. Dicit elaboraret temporibus cum ei, nihil possim id vel, at doctus iudicabit.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="unique-process">
                                                 <figure>
                                                     <img src="assets/img/menu_img_3.jpg" alt="" class="img-responsive">
@@ -101,7 +102,8 @@
                             <ul class="dropdown-menu">
                                 <li class="container">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2">
                                             <a href="real-estate">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -110,7 +112,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <a href="infrastructure">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -119,7 +121,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <a href="insurance-solutions">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -128,7 +130,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <a href="credit">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -137,7 +139,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <a href="multi-asset-solution">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -157,7 +159,7 @@
                             <ul class="dropdown-menu">
                                 <li class="container">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="esg">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -166,7 +168,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="responsible-investing">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
@@ -175,7 +177,7 @@
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <a href="diversity-and-inclusion">
                                                 <figure>
                                                     <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
