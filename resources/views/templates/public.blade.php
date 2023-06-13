@@ -65,25 +65,31 @@
                                 <li class="container">
                                     <div class="row">
                                         <div class="col-md-3">
-                                            <figure>
-                                                <a href="service-single.html"><img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive"></a>
-                                            </figure>
-                                            <h5>About Us</h5>
-                                            <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
+                                            <a href="about">
+                                                <figure>
+                                                    <img src="assets/img/menu_img_1.jpg" alt="" class="img-responsive">
+                                                </figure>
+                                                <h5>About Us</h5>
+                                                <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
+                                            </a>
                                         </div>
                                         <div class="col-md-3">
-                                            <figure>
-                                                <a href="service-single.html"><img src="assets/img/menu_img_2.jpg" alt="" class="img-responsive"></a>
-                                            </figure>
-                                            <h5>Leadership</h5>
-                                            <p>Mei duis eruditi deserunt te, nec an graeco offendit. Dicit elaboraret temporibus cum ei, nihil possim id vel, at doctus iudicabit.</p>
+                                            <a href="leadership">
+                                                <figure>
+                                                    <img src="assets/img/menu_img_2.jpg" alt="" class="img-responsive">
+                                                </figure>
+                                                <h5>Leadership</h5>
+                                                <p>Mei duis eruditi deserunt te, nec an graeco offendit. Dicit elaboraret temporibus cum ei, nihil possim id vel, at doctus iudicabit.</p>
+                                            </a>
                                         </div>
                                         <div class="col-md-3">
-                                            <figure>
-                                                <a href="service-single.html"><img src="assets/img/menu_img_3.jpg" alt="" class="img-responsive"></a>
-                                            </figure>
-                                            <h5>Unique Process</h5>
-                                            <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
+                                            <a href="unique-process">
+                                                <figure>
+                                                    <img src="assets/img/menu_img_3.jpg" alt="" class="img-responsive">
+                                                </figure>
+                                                <h5>Unique Process</h5>
+                                                <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
+                                            </a>
                                         </div>
 
                                     </div>
@@ -177,11 +183,11 @@
                                                 <h5>Diversity and Inclusion</h5>
                                                 <p>Lorem ipsum dolor sit amet, usu cu enim ceteros, vidit civibus imperdiet eu eos. Novum nihil soluta no mel, dicant.</p>
                                             </a>
-                                        </div> 
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
-                        </li> 
+                        </li>
 
                         <li><a href="blog">News</a></li>
                         <li><a href="contact">Contact</a></li>
