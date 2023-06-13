@@ -330,17 +330,17 @@
     </div><!-- End Search Menu -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/common_scripts.js"></script>
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/common_scripts.js"></script>
     <script src="assets/validate.js"></script>
-    <script src="js/header_sticky_1.js"></script>
-    <script src="js/functions.js"></script>
+    <script src="assets/js/header_sticky_1.js"></script>
+    <script src="assets/js/functions.js"></script>
 
     <!-- LayerSlider script files -->
     <script src="assets/layerslider/js/greensock.js"></script>
     <script src="assets/layerslider/js/layerslider.transitions.js"></script>
     <script src="assets/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
-    <script src="js/slider_func.js"></script>
+    <script src="assets/js/slider_func.js"></script>
 
 </body>
 </html>

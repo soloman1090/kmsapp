@@ -1,3 +1,608 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
+
+/* About Starts Here*/
+
+
+.backgroung_img{
+    background-image: url(../img/unique-process/DSC05479_edit-3.webp);
+    background-color: black;
+    height: 100vh;
+}
+
+.about_header{
+    text-align: center;
+    padding-top: 100px;
+    font-family: Sanomat Web,serif;
+    font-size: 49px;
+    font-weight: 550;
+    line-height: 1.25;
+    color: white;
+}
+.about_paragraph{
+    text-align: center;
+    font-family: Sanomat Web,serif;
+    font-size: 23px;
+    font-weight: 550;
+    padding-top: 50px;
+    color: white;
+}
+.vl{
+    border-left: 2px solid white;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+}
+.vertical_line{
+    padding-top: 50px;
+}
+.learn_more_about a{
+    text-decoration: none;
+    padding-top: 155px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.section_two_about{
+    height: auto;
+    z-index: 99;
+}
+.section_two_paragraph{
+    padding-top: 90px;
+    font-size: 20px;
+    font-family: Sanomat Web,serif;
+}
+.section_two_head{
+    max-width: 80%;
+    font-size: 40px;
+    font-weight: 750;
+    font-family: Sanomat Web,serif;
+}
+.d-flex{
+    display: flex;
+}
+.section_two_about_text_section{
+    width: 50%;
+}
+.section_two_about_divs{
+    display: flex;
+    padding-top: 30px;
+}
+.section_two_about_img{
+    width: 100%;
+    padding-left: 20px;
+    height: 700px;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+.section_two_txt{
+    font-size: 20px;
+    font-weight: 550;
+}
+.txt_two{
+    padding-top: 30px;
+}
+.txt_three{
+    padding-top: 30px;
+}
+.img_section{
+    width: 60%;
+}
+.hr_spacing{
+    padding-top: 18px;
+}
+
+
+
+.section_three{
+    text-align: center;
+}
+
+.section_four img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    padding: 20px 20px 0px 20px;
+}
+.Ares_section{
+    background-color: white;
+    margin-top: -70px;
+    position: relative;
+    z-index: 99;
+}
+.Ares_header{
+    padding-top: 80px;
+    font-size: 40px;
+    font-weight: 600;
+    color: blue;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.Ares_medium_text{
+    padding-left: 180px;
+    padding-right: 180px;
+    font-size: 30px;
+}
+.Ares_small_text{
+    padding: 70px;
+}
+
+/* About Ends Here*/
+
+
+
+/* leadership starts here  */
+.section_one_leadership{
+    display: flex;
+    padding-top: 120px;
+}
+.leadership_welcome_text{
+    padding-top: 150px;
+}
+.leadership_welcome_head{
+    font-size: 75px;
+    padding-right: 15px;
+}
+.leadership_welcome_paragraph{
+    font-size: 20px;
+    padding-top: 30px;
+    padding-right: 15px;
+}
+.our_team_btn{
+    padding-right: 20px;
+    padding-top: 15px;
+}
+.see_team{
+    padding-top: 20px;
+}
+.btn{
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.who-we-are_members-section{
+    background-color: #fcf9f0;
+    height: 1100px;
+    margin-top: 90px;
+}
+.main_content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+.who-we-are_members-section_intro{
+    width: 40%;
+    top: 4rem;
+    position: sticky;
+}
+.who-we-are_members-section_intro h1{
+    font-family: Signifier,sans-serif;
+    font-size: 8rem;
+    font-weight: 200;
+    line-height: 8rem;
+    margin-top: -40px;
+    padding: 35px 35px 20px 35px;
+}
+.who-we-are_members-section_intro h6{
+    font-size: 2.13rem;
+    line-height: 3rem;
+    padding: 0px 65px 0px 38px;
+}
+.who-we-are_members-section_images{
+    width: 60%;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.who-we-are_members-section_images h4{
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.who-we-are_members-section_images img{
+    height: 330px;
+}
+.who-we-are-single-members-one{
+    transition: transform .5s;
+}
+.who-we-are-single-members-one:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.who-we-are-single-members-two{
+    transition: transform .5s;
+}
+.who-we-are-single-members-two:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.who-we-are-single-members-three{
+    transition: transform .5s;
+}
+.who-we-are-single-members-three:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.content_space{
+    padding-bottom: 70px;
+}
+.talented-folks_title{
+    max-width: 50rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    padding-top: 100px;
+}
+.h0{
+    margin-top: 0;
+    font-family: Signifier,sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 5.25rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 4px;
+    padding: 3px;
+  }
+  
+  .grid-container > div {
+    background-image: url(../img/leadership/ceo_one.webp);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding: 90px 0;
+  }
+  
+  .item1 {
+    grid-row: 1 / 3;
+  }
+
+  .item1 img{
+    object-fit: cover;
+    height: 200px;
+  }
+  .pill-text_wrap{
+    min-height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+  }
+.pill-text{
+    padding-left: 10px;
+}
+.btn_direction{
+    padding-bottom: 20px;
+}
+.pill_grid{
+    background-color: #fcf9f0;
+    min-height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+}
+.pill_grid h4{
+    font-size: 8rem;
+    font-weight: 5500;
+    line-height: 5.25rem;
+}
+.grid-container_pill_grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #fcf9f0;
+    padding: 10px;
+  }
+  .grid-item_pill_grid {
+    background-color: #fcf9f0;
+    border: 6px solid white;
+    padding: 75px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .span_pill_grid{
+    font-size: 20px;
+    margin-bottom: -40px;
+  }
+/* leadership ends here  */
+
+/* real estate starts here  */
+.sec1{
+    height: 1000px;
+    width:100%;
+    margin: auto;
+    background-image: url(./img/Banner\ 1.webp);
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sec1--{
+    height: 400px;
+    width: 70%;   
+    margin: auto;
+    position: relative;
+
+}
+
+.sec1- h1{
+    width: 60%;
+    height: 150px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.sec1-detail{
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    line-height: 30px;
+}
+
+.sec1-detail- {
+    height: 400px;
+    width: 50%;
+    /* display: flex;
+    align-items:baseline;
+    justify-content: center; */
+}
+
+/* section 1 end */
+
+
+/* section 2 start */
+.sec2{
+    height: 700px;
+    width: 100%;
+    margin: auto;
+    color: white;
+}
+.sec2-{
+    height: 700px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.sec2--{
+    height: 700px;
+    width: 80%;
+    /* margin: auto; */
+    background-color: #012a41;
+    position: relative;
+}
+
+.sec2-details{
+    height: 00px;
+    width: 50%;
+    margin: auto;
+    /* margin: auto; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.sec2-- h1{
+    margin-left: 10%;
+}
+
+.sec2-right{
+    width: 30%;
+    position: absolute;
+    left: 60%;
+}
+
+/* section 2 end */
+
+
+/* section 3 start */
+.sec3{
+    width: 100%;
+    height: 1300px;
+    color: #5f7987 ;
+}
+
+.sec3-{
+    width: 55%;
+    height: 1000px;
+    margin: auto;
+}
+
+
+.sec3-  h2{
+
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sec3--{
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 20px;
+}
+
+.sec3-- p{
+   width: 50%;
+}
+
+.sec3-rows{
+    width: 100%;
+    height: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.rows{
+    width: 100%;
+}
+
+.rows img{
+    width: 100%;
+}
+
+/* section 3 end*/
+
+/* section 4 start */
+.sec4{
+    height: 900px;
+    width: 100%;
+    background-color: #f2f5f8;
+}
+
+.sec4-{
+      height: 900px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+}
+
+.sec4--{
+    /* width: 20%; */
+    color: white;
+     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+}
+.sec4- h1{
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.sec4svg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* justify-content: center; */
+}
+
+.sec4svg svg{
+   font-size: 50px;
+   color: white;
+}
+
+
+.sec4-box{
+   
+    background-color: #0f3557;
+    padding: 30px;
+
+}
+
+.sec4-box svg{
+    color: white;
+}
+
+.arrorSvg{
+    float:right;
+}
+/* section 4 ends */
+
+
+/* section 5 start */
+.sec5{
+    width: 100%;
+    height: 700px;
+    /* color: white; */
+}
+
+.sec5-{
+    height: 700px;
+    width: 80%;
+    margin: auto;
+}
+
+.sec5- h1{
+    font-weight: 500;
+}
+
+.sec5--{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sec5-box{
+    height: 300px;
+    width: 25%;
+    background-color: #0f3557;
+
+}
+/* body{
+    margin: 80%;
+    margin: auto;
+} */
+/* real estate ends here  */
+
+/* unique section starts here */
+.bxg{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+.bxg img{
+    width: 100%;
+}
+.bxg h2{
+    color: white;
+    font-size: 45px;
+    font-size: 500;
+    text-align: center;
+    padding-top: 30px;
+}
+.bxg p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.bxg ul{
+    list-style: none;
+}
+.bxg img{
+    align-content: center;
+    height: 200px;
+    object-fit: cover;
+    padding-top: 140px;
+}
+.unique_section {
+    max-width: 80%;
+    height: 300px;
+    padding-top: 50px;
+    text-align: center;
+}
+.unique_section h1{
+    font-size: 45px;
+    font-weight: 500;
+}
+.unique_section h4{
+    padding-top: 30px;
+}
+.mySlides {
+    display:none;
+}
+/* unique section ends here */
