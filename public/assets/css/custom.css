@@ -601,8 +601,30 @@
 }
 .unique_section h4{
     padding-top: 30px;
+    font-size: 20px;
 }
-.mySlides {
-    display:none;
+.Sustainability_section h1{
+    color: #012a41;
+}
+.Sustainability_section p{
+    max-width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.Sustainability{
+    background-image: url(../img/unique-process/windmill.webp);
+    height: 500px;
+}
+.content_center_Sustainability h3{
+   
+    padding: 30px !important;
+    font-size: 30px;
+    color: #ffff;
+    font-weight: 500;
+}
+.content_center_Sustainability p{
+    display: flex;
+    justify-content: flex-start;
 }
 /* unique section ends here */
