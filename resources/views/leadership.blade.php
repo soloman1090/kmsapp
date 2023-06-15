@@ -11,7 +11,7 @@
         <p class="leadership_welcome_paragraph">Moonfare's strength lies in the diversity and depth of expertise found across all aspects of the business.</p>
         <div class="d-flex see_team">
         <p class="our_team_btn">See our team </p>
-        <button class="btn"> <span class=""> > </span> </button>
+        <i class="bi bi-arrow-right-circle-fill btn btn-primary"></i>
         </div>
         </div>
         <div>
@@ -122,7 +122,7 @@
     <h4>Looking for your Investment Solutions Manager?</h4>
     </div>
     <div class="pill-text">
-    <button class="btn"> <span class="btn_direction"> > </span> </button>
+        <i class="bi bi-arrow-right-circle-fill btn btn-primary"></i>
     </div>
 </div>
 
@@ -152,10 +152,11 @@
     <div class="section_one_leadership">
         <div class="leadership_welcome_text col-md-12 col-sm-12">
         <h1 class="leadership_welcome_head">Join the team</h1>
-        <h1 class="leadership_welcome_head">Invest in yourself</h1>
+        <h1 class="leadership_welcome_head"><i>Invest in yourself</i></h1>
         <div class="d-flex see_team">
         <p class="our_team_btn">See careers </p>
-        <button class="btn"> <span class=""> > </span> </button>
+        
+        <i class="bi bi-arrow-right-circle-fill btn btn-primary"></i>
         </div>
         </div>
         <div>
