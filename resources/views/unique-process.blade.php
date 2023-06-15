@@ -236,7 +236,7 @@
 
             <div>
             <div class="box_service">
-                    <figure><img src="assets/img/unique-process/greenenegry.webp" alt=""> </figure>
+                    <figure><img src="assets/img/unique-process/recent_news.jpg" alt=""> </figure>
                     <p><b class="text-primary">Private Equity</b></p>
                     <h1>Recycling Food Waste Sustainably</h1>
                     <p>Greenergy has implemented an innovative sustainability project at its two biodiesel manufacturing facilities on the east coast of England.</p>
@@ -268,26 +268,36 @@
     </div>
     </div>
 
-    <div id="newsletter_container">
-		<div class="container margin_60">
-			<div class="row">
-                <div class="col-6">
-                    <img src="assets/img/unique-process/greenenegry.webp" alt="">
-                    <p>WHITE PAPER</p>
-                    <p>Q&A: Why Brookfield Private Equity</p>
+    <div class="recent_news_bg">
+    <div class="container">
+    <div class="row">
+        <h2 class="recent_news_intro_text">RECENT NEWS & INSIGHTS</h2>
+        	<div class="col-sm-6 recent_news">
+                <div class="recent_news_img">
+                    <img src="assets/img/unique-process/solar.webp" alt="">
                 </div>
-                <div class="col-3">
-                <img src="assets/img/unique-process/greenenegry.webp" alt="">
-                    <p>WHITE PAPER</p>
-                    <p>Q&A: Why Brookfield Private Equity</p>
+                <div class="recent_news_text">
+                    <h3>WHITE PAPER</h3>
+                    <h2>Q&A: Why Brookfield Private Equity</h2>
                 </div>
-                <div class="col-3">
-                <img src="assets/img/unique-process/greenenegry.webp" alt="">
+            </div>
+            <div class="col-sm-3">
+            	<div class="news_img_col">
+                    <img src="assets/img/unique-process/solar.webp" alt="">
                     <p>WHITE PAPER</p>
-                    <p>Q&A: Why Brookfield Private Equity</p>
+                    <h2>Building a Global Financial System for Net Zero</h2>
                 </div>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="col-sm-3">
+            <div class="news_img_col">
+                    <img src="assets/img/unique-process/solar.webp" alt="">
+                    <p>ARTICLE</p>
+                    <h2>Private Equity Investing: Assessing Business Quality</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
 
     @endsection
