@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.margin60 {
+  margin: 60px 0;
+}
+
+.margin70 {
+  margin: 70px 0;
+}
+
+.margin30 {
+  margin: 30px 0;
+}
+
+.margin20 {
+  margin: 20px 0;
+}
+
+.line {
+  border-top: 1px solid #ff6200;
+  width: 103px;
+}
+
+.dash {
+  border-bottom: 1px solid rgb(219, 216, 216);
+}
+
+.ESG .Banner1 {
+  background-position: center;
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
+}
+.ESG .Banner1 .text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+.ESG .Banner1 .text h5, .ESG .Banner1 .text h1 {
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+  color: white;
+}
+.ESG .Banner1 .text h5 {
+  font-size: 20px;
+}
+.ESG .Banner1 .text h1 {
+  font-size: 50px;
+}
+.ESG .section2 {
+  height: 50vh;
+  text-align: center;
+  margin: 60px 0;
+}
+.ESG .section2 .video1 {
+  padding: 70px;
+}
+.ESG .section2 .video1 video {
+  margin-left: 250px;
+}
+.ESG .section3 {
+  background-color: #fbfcfe;
+  padding: 50px 0;
+}
+.ESG .section3 h3 {
+  line-height: 1.13;
+  font-size: 27px;
+  letter-spacing: 0.3px;
+  color: #123a5f !important;
+}
+.ESG .section3 .img {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../assets/img/tri.png);
+}
+.ESG .section5 .top {
+  font-size: 20px;
+}
+.ESG .section5 .top p {
+  margin-bottom: 10px !important;
+}
+.ESG .section5 .top h3 {
+  font-size: 30px;
+  color: #123a5f;
+  margin-top: 10px !important;
+}
+.ESG .section5 .down {
+  margin-top: 100px;
+}
+.ESG .section5 .down .header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.ESG .section5 .down .header h3 {
+  color: #123a5f;
+}
+.ESG .section5 .down .header .number {
+  color: #5c9b96;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .Banner1 .text h5 {
+    font-size: 15px !important;
+  }
+  .Banner1 .text h1 {
+    font-size: 30px !important;
+  }
+  .section2 {
+    height: 30vh !important;
+    margin: 20px 0 !important;
+  }
+  .section2 video {
+    margin: 0 !important;
+  }
+}/*# sourceMappingURL=emma.css.map */

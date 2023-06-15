@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 60 50">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#5386a5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}.cls-3{fill:#6b9995}
+        </style>
+    </defs>
+    <g id="assess_icon" data-name="assess icon" transform="translate(-166.811 -3420)">
+        <path id="Rectangle_884" d="M0 0h60v50H0z" class="cls-1" data-name="Rectangle 884" transform="translate(166.811 3420)"/>
+        <path id="Line_119" d="M0 0h24.21" class="cls-2" data-name="Line 119" transform="translate(190.151 3433.99)"/>
+        <path id="Path_2943" d="M8.59 17.12a.86.86 0 0 1-.68-.34l-1.77-2.37a.86.86 0 0 1 1.38-1l1 1.33 3-5.21a.85.85 0 0 1 1.17-.31.86.86 0 0 1 .31 1.14l-3.66 6.33a.89.89 0 0 1-.7.43z" class="cls-3" data-name="Path 2943" transform="translate(171.811 3420)"/>
+        <path id="Line_120" d="M0 0h24.21" class="cls-2" data-name="Line 120" transform="translate(190.151 3445.6)"/>
+        <path id="Path_2944" d="M8.59 29.09a.83.83 0 0 1-.68-.34l-1.77-2.37a.86.86 0 0 1 1.38-1l1 1.33 3-5.21a.86.86 0 0 1 1.17-.32.88.88 0 0 1 .31 1.15l-3.66 6.33a.89.89 0 0 1-.7.43z" class="cls-3" data-name="Path 2944" transform="translate(171.811 3420)"/>
+        <path id="Line_121" d="M0 0h24.21" class="cls-2" data-name="Line 121" transform="translate(190.151 3457.2)"/>
+        <path id="Path_2945" d="M8.59 41.06a.83.83 0 0 1-.68-.34l-1.77-2.37a.86.86 0 1 1 1.38-1l1 1.32 3-5.21a.85.85 0 0 1 1.17-.31.86.86 0 0 1 .31 1.15l-3.66 6.33a.89.89 0 0 1-.7.43z" class="cls-3" data-name="Path 2945" transform="translate(171.811 3420)"/>
+    </g>
+</svg>
