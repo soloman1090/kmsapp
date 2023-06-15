@@ -4,34 +4,25 @@
 @section('content')
 
  <div class="container margin_60_35">
- <div class="sec1">
-      <div class="sec1-">
-        <div class="sec1--">
-          <h1>
-            Experienced Leadership. Investment Discipline. Dependable Partner.
-          </h1>
-          <div class="sec1-detail">
-            <div class="sec1-detail-">
-              <p>
-                Real Estate manages comprehensive public and private, equity and
-                debt strategies, with approximately $49.2 billion of assets
-                under management as of March 31, 2023. Backed by a vertically
-                integrated platform, demonstrated track record, tenured team,
-                thematic investment approach, access to proprietary deal flow,
-                and synergies with the broader Ares platform, we are able to
-                identify and execute on attractive opportunities with compelling
-                risk-reward profiles.
-              </p>
-            </div>
-            <div class="sec1-detail-">
-              We maintain a time-tested and consistent approach across our
-              equity and debt strategies focusing on major property types and
-              adjacent sectors that have value creation opportunities, located
-              in liquid markets with diversified economies.
-            </div>
-          </div>
+    <div class="real_estate_section_one">
+      <div class="real_estate_section_banner">
+        <img src="assets/img/real_estate/banner.webp" alt="">
+      </div>
+        <div class="real_estate_bg">
+        <div class="container real_estate_section_one_header">
+          <h1>Experienced Leadership. Investment Discipline. Dependable Partner.</h1>
+    </div>
+      <div class="container real_estate_section_one_text">
+        <div class="real_estate_section_one_text_one">
+            <p>Real Estate manages comprehensive public and private, equity and debt strategies, with approximately $49.2 billion of assets under management as of March 31, 2023. Backed by a vertically integrated platform, demonstrated track record, tenured team, thematic investment approach, access to proprietary deal flow, and synergies with the broader Ares platform, we are able to identify and execute on attractive opportunities with compelling risk-reward profiles.</p>
+        </div>
+        <div class="real_estate_section_one_text_two">
+            <p>We maintain a time-tested and consistent approach across our equity and debt strategies focusing on major property types and adjacent sectors that have value creation opportunities, located in liquid markets with diversified economies.
+            </p>
         </div>
       </div>
+        </div>
+    </div>
     </div>
 
     <div class="sec2">
@@ -76,6 +67,11 @@
               </p>
             </div>
           </div>
+          <h5 class="real_estate_note">
+        (1) None of our fund strategies involve the active trading of securities
+        instruments; however, securities instruments may be acquired/disposed in
+        accordance with the general strategy of the fund.
+      </h5>
         </div>
         <div class="sec2-right">
           <video width="620" height="340" controls>
@@ -85,27 +81,27 @@
           </video>
         </div>
       </div>
-
-      <h5>
-        (1) None of our fund strategies involve the active trading of securities
-        instruments; however, securities instruments may be acquired/disposed in
-        accordance with the general strategy of the fund.
-      </h5>
     </div>
 
-    <div class="sec3">
-      <div class="sec3-"> 
-          <!-- <div> -->
-           
-             <h2>We believe our cycle-tested team, access to real-time property market and corporate trends and disciplined approach to value creation and risk mitigation differentiate us from other investors.</h2> -->
-           </div> 
-           <div class="sec3--">
+    <div class="experience">
+        <div class="experience_header">
+        <h2>We believe our cycle-tested team, access to real-time property market and corporate trends and disciplined approach to value creation and risk mitigation differentiate us from other investors.</h2>
+        </div>
+        <div class="experience_text">
+          <div class="experience_text_one">
             <p>Ares Real Estate provides investors access to its capabilities through several vehicles including private commingled funds in the U.S. and Europe investing in equity and debt strategies, as well as Non-traded Real Estate Investment Trusts (REITS) and Ares Commercial Real Estate Corporation (NYSE: ACRE), a publicly traded commercial mortgage real estate investment trust.</p>
+          </div>
+          <div class="experience_text_two">
             <p>Ares Real Estate activities are managed by dedicated equity and debt teams in the U.S. and Europe, which leverage the following core capabilities across our platform:</p>
           </div>
-          <div class="sec3-rows">
+        </div>      
+    </div>
+
+    <div class="sec3-rows">
             <div>
-                <div class="rows"><img src="./img/pic 1.webp" alt=""></div>
+                <div class="rows">
+                  <img src="assets/img/real_estate/leadership.webp" alt="">
+                </div>
                 <div>
                     <h3>Experienced Leadership </h3>
                     <p>Stable and deep team that has been market cycle-tested and is established in many local markets across the world</p>
@@ -113,7 +109,9 @@
             </div>
 
             <div>
-                <div class="rows"><img src="./img//pic 2.webp" alt=""></div>
+                <div class="rows">
+                  <img src="assets/img/real_estate/global_market.webp" alt="">
+                </div>
                 <div>
                     <h3>Global Market Perspective</h3>
                     <p>Integrating a global market view with local market knowledge and fundamental asset analysis</p>
@@ -121,7 +119,9 @@
             </div>
 
             <div>
-                <div class="rows"><img src="./img/pic 3.webp" alt=""></div>
+                <div class="rows">
+                  <img src="assets/img/real_estate/multi_channel.webp" alt="">
+                </div>
                 <div>
                     <h3>Multi-Channel Sourcing </h3>
                     <p>Deep connectivity into local property networks, leading to proprietary investment opportunities sourced with an Ares Advantage</p>
@@ -129,7 +129,9 @@
             </div>
 
             <div>
-                <div class="rows"><img src="./img/pic 4.webp" alt=""></div>
+                <div class="rows">
+                  <img src="assets/img/real_estate/in_house.webp" alt="">
+                </div>
                 <div>
                     <h3>In-House Research</h3>
                     <p>Comprehensive macroeconomic, market, sub-market property and industry research providing real-time information to capitalize on real estate market trends and support rigorous underwriting of investment opportunities.</p>
@@ -137,13 +139,12 @@
             </div>
           </div>
       </div>
-    </div>
+    
 
-    <div class="sec4">
+    <div class="container sec4">
         <div class="sec4-">
             <h1>Business Sectors</h1>
             <div class="sec4--">
-               <!-- <div> -->
                 <<div class="sec4-box">
                    <div class="sec4svg">
                     <svg width="40" height="46" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,21 +279,10 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6631 13.1007L20.6631 20.5081C20.6631 20.9627 20.2946 21.3312 19.84 21.3312H12.4326C11.978 21.3312 11.6095 20.9627 11.6095 20.5081C11.6095 20.0536 11.978 19.6851 12.4326 19.6851H17.853L8.91169 10.7438C8.59027 10.4224 8.59027 9.90123 8.91169 9.57981C9.23311 9.25839 9.75423 9.25839 10.0757 9.57981L19.017 18.5211L19.017 13.1007C19.017 12.6462 19.3855 12.2777 19.84 12.2777C20.2946 12.2777 20.6631 12.6462 20.6631 13.1007Z" fill="#949494"></path>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.76471 15C1.76471 22.3097 7.69035 28.2353 15 28.2353C22.3097 28.2353 28.2353 22.3097 28.2353 15C28.2353 7.69035 22.3097 1.76471 15 1.76471C7.69035 1.76471 1.76471 7.69035 1.76471 15ZM0 15C-3.62117e-07 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 3.62117e-07 15 0C6.71573 -3.62117e-07 3.62117e-07 6.71573 0 15Z" fill="#949494"></path>
                   </svg></div>
-            </div>
-            
+            </div>    
         </div>
     </div>
 
-    <div class="sec5">
-        <div class="sec5-">
-           <h1> Recent News</h1>
-           <div class="sec5--">
-            <div class="sec5-box"></div>
-            <div class="sec5-box"></div>
-            <div class="sec5-box"></div>
-           </div>
-        </div>
-    </div>
     </div> 
 
  
