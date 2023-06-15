@@ -215,51 +215,56 @@
         <div class="owl-carousel owl-theme case_studies add_bottom_30">
 
             <div class="renewable_carosel ">
-                <div class="box_service">
+                <div class="box_service caro_service">
                     <figure><img src="assets/img/unique-process/windwhril.webp" alt=""> </figure>
                     <p><b class="text-primary">Renewable Power</b></p>
                     <h1>An Onshore Wind Portfolio in One of Europe’s Strongest Wind Resource Locations</h1>
                     <p>Ireland is a prime location for this wind portfolio, and a place where wind is a competitive source of electricity in a natural gas fired market.</p>
+                    
                     <a href=""> Read More</a>
                 </div>
             </div>
 
             <div>
-            <div class="box_service">
+            <div class="box_service caro_service">
                     <figure><img src="assets/img/unique-process/solar.webp" alt=""> </figure>
                     <p><b class="text-primary">Impact Investing</b></p>
                     <h1>Powering the Transition to Net Zero</h1>
                     <p>Net zero is not only a global imperative—it’s an attractive opportunity.</p>
+                    <br> <br><br><br>
                     <a href=""> Read More</a>
                 </div>
             </div>
 
             <div>
-            <div class="box_service">
+            <div class="box_service caro_service">
                     <figure><img src="assets/img/unique-process/recent_news.jpg" alt=""> </figure>
                     <p><b class="text-primary">Private Equity</b></p>
                     <h1>Recycling Food Waste Sustainably</h1>
                     <p>Greenergy has implemented an innovative sustainability project at its two biodiesel manufacturing facilities on the east coast of England.</p>
+                    <br> <br><br>
                     <a href=""> Read More</a>
                 </div>
             </div>
 
             <div>
-            <div class="box_service">
+            <div class="box_service caro_service">
                     <figure><img src="assets/img/unique-process/greenenegry.webp" alt=""> </figure>
                     <p><b class="text-primary">Infrastructure</b></p>
                     <h1>Keeping Plastics out of Rivers and Seas</h1>
                     <p>PD Ports is the first U.K. port to sign up to Operation Clean Sweep.</p>
+                    <br> <br><br><br>
                     <a href=""> Read More</a>
                 </div>
             </div>
 
             <div>
-            <div class="box_service">
+            <div class="box_service caro_service">
                     <figure><img src="assets/img/unique-process/solar.webp" alt=""> </figure>
                     <p><b class="text-primary">Real Estate</b></p>
                     <h1>A First-of-its-kind Community Solar Initiative</h1>
                     <p>Three rooftops have become the first downtown commercial locations to produce solar power for this purpose.</p>
+                    <br><br>
                     <a href=""> Read More</a>
                 </div>
             </div>
