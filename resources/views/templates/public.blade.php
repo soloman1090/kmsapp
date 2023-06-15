@@ -28,6 +28,7 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/emma.css" rel="stylesheet">
 
     <!-- LayerSlider stylesheet -->
     <link href="assets/layerslider/css/layerslider.css" rel="stylesheet">
