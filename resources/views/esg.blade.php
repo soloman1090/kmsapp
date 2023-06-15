@@ -5,8 +5,12 @@
 
 
 <div class="container margin_60_35">
-    <h1>ESG PAGE</h1>
+    <div class="Banner1">
+        <div class="text">
+            
+        </div>
     </div>
+</div>
 
  
 @endsection

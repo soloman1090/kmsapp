@@ -584,8 +584,7 @@
 /* unique section starts here */
 .bxg{
     background-color: black;
-    width: 100%;
-    height: 100vh;
+    width: 100%; 
 }
 .bxg img{
     width: 100%;
@@ -606,9 +605,8 @@
 }
 .bxg img{
     align-content: center;
-    height: 200px;
-    object-fit: cover;
-    padding-top: 140px;
+    height: 600px;
+    object-fit: contain;
 }
 .unique_section {
     max-width: 80%;
@@ -701,4 +699,5 @@
     padding: 20px;
     font-size: 23px;
 }
+ 
 /* unique section ends here */
