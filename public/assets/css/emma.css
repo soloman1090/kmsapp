@@ -400,6 +400,57 @@
   width: 70% !important;
 }
 
+.leftwhite {
+  border-left: 1px solid white;
+}
+
+.rightwhite {
+  border-right: 1px solid white;
+}
+
+.Responsible .banner1 {
+  background-position: bottom center;
+  height: 80vh;
+  background-size: cover;
+  background-color: #000;
+  background-blend-mode: normal;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.4156862745)), url(https://www.gcmgrosvenor.com/wp-content/uploads/SEDM-headver-v1-web.jpg);
+}
+.Responsible .banner1 .text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+.Responsible .banner1 .text h1 {
+  font-size: 60px;
+  color: white;
+}
+.Responsible .banner1 .text p {
+  font-size: 20px;
+}
+.Responsible .banner1 .down {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: -50px;
+  left: 10%;
+  text-align: center;
+}
+.Responsible .banner1 .down div {
+  width: 500px;
+  background-color: #083151;
+  color: white;
+}
+.Responsible .banner1 .down div h2 {
+  color: white;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
 @media only screen and (max-width: 500px) {
   .ml100 {
     margin-left: 0px !important;

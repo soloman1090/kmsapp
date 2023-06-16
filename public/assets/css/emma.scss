@@ -4,21 +4,61 @@
     box-sizing: border-box;
 }
 
-.ml100 {margin-left: 100px !important;}
-.ml20 {margin-left: 20px !important;}
-.margin60 {margin: 60px 0;}
-.margin50 {margin: 50px 0;}
-.margin70 {margin: 70px 0;}
-.margin40 {margin: 40px 0;}
-.margin30 {margin: 30px 0;}
-.margin20 {margin: 20px 0;}
+.ml100 {
+    margin-left: 100px !important;
+}
 
-.padding60 {padding: 60px;}
-.padding50 {padding: 50px;}
-.padding70 {padding: 70px;}
-.padding40 {padding: 40px;}
-.padding30 {padding: 30px;}
-.padding20 {padding: 20px;}
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.margin60 {
+    margin: 60px 0;
+}
+
+.margin50 {
+    margin: 50px 0;
+}
+
+.margin70 {
+    margin: 70px 0;
+}
+
+.margin40 {
+    margin: 40px 0;
+}
+
+.margin30 {
+    margin: 30px 0;
+}
+
+.margin20 {
+    margin: 20px 0;
+}
+
+.padding60 {
+    padding: 60px;
+}
+
+.padding50 {
+    padding: 50px;
+}
+
+.padding70 {
+    padding: 70px;
+}
+
+.padding40 {
+    padding: 40px;
+}
+
+.padding30 {
+    padding: 30px;
+}
+
+.padding20 {
+    padding: 20px;
+}
 
 .line {
     border-top: 1px solid #ff6200;
@@ -29,17 +69,19 @@
     border-bottom: 1px solid rgb(219, 216, 216);
 }
 
-.borderleft{
+.borderleft {
     border-left: 3px solid #F06C00;
 }
-.bordertop{
+
+.bordertop {
     border-top: 3px solid #F06C00;
 }
-.borderbottom{
+
+.borderbottom {
     border-bottom: 3px solid #F06C00;
 }
 
-.borderright{
+.borderright {
     border-right: 3px solid #F06C00;
 }
 
@@ -328,7 +370,7 @@
     }
 }
 
-.Diversity{
+.Diversity {
     .banner1 {
         background-position: center;
         height: 70vh;
@@ -353,68 +395,149 @@
                 text-shadow: 2px 2px 5px black;
             }
 
-            p{
+            p {
                 font-size: 20px;
             }
 
-            h3{
+            h3 {
                 font-size: 40px;
             }
         }
     }
-    .section1{
-        h3{color: #F06C00;font-size: 30px; margin-bottom: 20px !important;margin-top: 0 !important;}
-        .bord{
+
+    .section1 {
+        h3 {
+            color: #F06C00;
+            font-size: 30px;
+            margin-bottom: 20px !important;
+            margin-top: 0 !important;
+        }
+
+        .bord {
             padding: 30px 40px;
         }
     }
-    .section2{
-        p{
+
+    .section2 {
+        p {
             margin-bottom: 10px;
-            b{
-                margin-bottom: 10px !important;margin-top: 0 !important;
+
+            b {
+                margin-bottom: 10px !important;
+                margin-top: 0 !important;
                 color: #123a5f;
             }
         }
-        .up{
+
+        .up {
             margin-top: 30px;
         }
     }
-    .section3{
+
+    .section3 {
         padding: 50px 0;
         background-image: linear-gradient(to bottom, #EDF2F5, #f8fafb 15%, #ffffff);
-        p{
+
+        p {
             margin-bottom: 10px;
-            b{
-                margin-bottom: 10px !important;margin-top: 0 !important;
+
+            b {
+                margin-bottom: 10px !important;
+                margin-top: 0 !important;
                 color: #123a5f;
             }
         }
-        .up{
+
+        .up {
             margin-top: 30px;
         }
     }
-    .bg-white{background-color: rgb(255,255,255) !important;}
-    .section4{
-        img{width: 100%;}
-        p{
+
+    .bg-white {
+        background-color: rgb(255, 255, 255) !important;
+    }
+
+    .section4 {
+        img {
+            width: 100%;
+        }
+
+        p {
             margin-bottom: 10px;
-            b{
+
+            b {
                 color: #123a5f;
                 margin-top: 10px;
                 font-size: 20px;
             }
         }
-        h1{
+
+        h1 {
             font-size: 60px;
             color: #123a5f;
             margin-top: 0px;
             margin-bottom: 40px;
         }
-        .col-md-3{
+
+        .col-md-3 {
             margin: 30px;
-            img{
+
+            img {
                 width: 70% !important;
+            }
+        }
+    }
+}
+
+.leftwhite {
+    border-left: 1px solid white;
+}
+
+.rightwhite {
+    border-right: 1px solid white;
+}
+
+.Responsible {
+    .banner1 {
+        background-position: bottom center;
+        height: 80vh;
+        background-size: cover;
+        background-color: #000;
+        background-blend-mode:normal;
+        position: relative;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to top, #0000006a, #0000006a), url(https://www.gcmgrosvenor.com/wp-content/uploads/SEDM-headver-v1-web.jpg);
+        .text {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            color: white;
+            h1{
+                font-size: 60px;
+                color: white;
+            }
+            p{font-size: 20px;}
+        }
+        .down {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            bottom: -50px;
+            left: 10%;
+            text-align: center;
+
+            div {
+                width: 500px;
+                background-color: #083151;
+
+                h2 {
+                    color: white;
+                    font-size: 40px;
+                    margin: 10px 0;
+                }
+
+                color: white;
             }
         }
     }
@@ -427,7 +550,7 @@
     .ml100 {
         margin-left: 0px !important;
     }
-    
+
 
     .ESG {
 
@@ -510,10 +633,11 @@
             }
         }
     }
-    .Diversity{
+
+    .Diversity {
         .banner1 {
             .text {
-                p{
+                p {
                     font-size: 15px !important;
                 }
 
@@ -522,11 +646,15 @@
                 }
             }
         }
-        .section2{
-            img{width: 100% !important;}
+
+        .section2 {
+            img {
+                width: 100% !important;
+            }
         }
-        .section4{
-            h1{
+
+        .section4 {
+            h1 {
                 font-size: 40px !important;
             }
         }
