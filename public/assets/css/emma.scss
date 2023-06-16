@@ -4,37 +4,21 @@
     box-sizing: border-box;
 }
 
-.ml100 {
-    margin-left: 100px !important;
-}
+.ml100 {margin-left: 100px !important;}
+.ml20 {margin-left: 20px !important;}
+.margin60 {margin: 60px 0;}
+.margin50 {margin: 50px 0;}
+.margin70 {margin: 70px 0;}
+.margin40 {margin: 40px 0;}
+.margin30 {margin: 30px 0;}
+.margin20 {margin: 20px 0;}
 
-.ml20 {
-    margin-left: 20px !important;
-}
-
-.margin60 {
-    margin: 60px 0;
-}
-
-.margin50 {
-    margin: 50px 0;
-}
-
-.margin70 {
-    margin: 70px 0;
-}
-
-.margin40 {
-    margin: 40px 0;
-}
-
-.margin30 {
-    margin: 30px 0;
-}
-
-.margin20 {
-    margin: 20px 0;
-}
+.padding60 {padding: 60px;}
+.padding50 {padding: 50px;}
+.padding70 {padding: 70px;}
+.padding40 {padding: 40px;}
+.padding30 {padding: 30px;}
+.padding20 {padding: 20px;}
 
 .line {
     border-top: 1px solid #ff6200;
@@ -43,6 +27,20 @@
 
 .dash {
     border-bottom: 1px solid rgb(219, 216, 216);
+}
+
+.borderleft{
+    border-left: 3px solid #F06C00;
+}
+.bordertop{
+    border-top: 3px solid #F06C00;
+}
+.borderbottom{
+    border-bottom: 3px solid #F06C00;
+}
+
+.borderright{
+    border-right: 3px solid #F06C00;
 }
 
 .ESG {
@@ -331,16 +329,107 @@
 }
 
 .Diversity{
-    
+    .banner1 {
+        background-position: center;
+        height: 70vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://www.nb.com/-/media/NB/Firm-Pages/EID/EID_Hero_1600x500_r2.ashx);
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // margin: -25px 0 0 -25px;
+            text-align: center;
+            color: white;
+            transform: translate(-50%, -50%);
+
+            h3,
+            p {
+                margin: 0 !important;
+                margin-bottom: 5px !important;
+                color: white;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            h3{
+                font-size: 40px;
+            }
+        }
+    }
+    .section1{
+        h3{color: #F06C00;font-size: 30px; margin-bottom: 20px !important;margin-top: 0 !important;}
+        .bord{
+            padding: 30px 40px;
+        }
+    }
+    .section2{
+        p{
+            margin-bottom: 10px;
+            b{
+                margin-bottom: 10px !important;margin-top: 0 !important;
+                color: #123a5f;
+            }
+        }
+        .up{
+            margin-top: 30px;
+        }
+    }
+    .section3{
+        padding: 50px 0;
+        background-image: linear-gradient(to bottom, #EDF2F5, #f8fafb 15%, #ffffff);
+        p{
+            margin-bottom: 10px;
+            b{
+                margin-bottom: 10px !important;margin-top: 0 !important;
+                color: #123a5f;
+            }
+        }
+        .up{
+            margin-top: 30px;
+        }
+    }
+    .bg-white{background-color: rgb(255,255,255) !important;}
+    .section4{
+        img{width: 100%;}
+        p{
+            margin-bottom: 10px;
+            b{
+                color: #123a5f;
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        }
+        h1{
+            font-size: 60px;
+            color: #123a5f;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+        .col-md-3{
+            margin: 30px;
+            img{
+                width: 70% !important;
+            }
+        }
+    }
 }
 
 
+
+
 @media only screen and (max-width: 500px) {
+    .ml100 {
+        margin-left: 0px !important;
+    }
+    
 
     .ESG {
-        .ml100 {
-            margin-left: 0px !important;
-        }
 
         .Banner1 {
             .text {
@@ -418,6 +507,27 @@
                     margin: 5px !important;
                     text-align: left;
                 }
+            }
+        }
+    }
+    .Diversity{
+        .banner1 {
+            .text {
+                p{
+                    font-size: 15px !important;
+                }
+
+                h3 {
+                    font-size: 30px !important;
+                }
+            }
+        }
+        .section2{
+            img{width: 100% !important;}
+        }
+        .section4{
+            h1{
+                font-size: 40px !important;
             }
         }
     }
