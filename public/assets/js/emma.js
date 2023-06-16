@@ -12,3 +12,14 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+window.onload = function () {
+    let button = document.getElementById("btnn");
+    let item = document.getElementById("myCont");
+
+    button.onclick = function () {
+    if (item.style.display === "block") {
+        item.style.display = "none";
+    }
+}
+}

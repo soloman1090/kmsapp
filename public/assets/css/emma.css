@@ -24,6 +24,10 @@
   margin: 70px 0;
 }
 
+.margin100 {
+  margin: 100px 0;
+}
+
 .margin40 {
   margin: 40px 0;
 }
@@ -46,6 +50,10 @@
 
 .padding70 {
   padding: 70px;
+}
+
+.padding100 {
+  padding: 100px 0;
 }
 
 .padding40 {
@@ -82,6 +90,14 @@
 }
 
 .borderright {
+  border-right: 3px solid #F06C00;
+}
+
+.borderlefts {
+  border-right: 3px solid #012A41;
+}
+
+.borderrights {
   border-right: 3px solid #F06C00;
 }
 
@@ -450,6 +466,126 @@
   font-size: 40px;
   margin: 10px 0;
 }
+.Responsible .section1 {
+  background-color: #F2F2F3;
+}
+.Responsible .section1 h2 {
+  color: #083151;
+  font-size: 40px;
+}
+.Responsible .section2 h2 {
+  color: #083151;
+  font-size: 50px;
+  text-align: right;
+  margin: 0;
+  line-height: 50px;
+}
+.Responsible .section2 img {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.Responsible .section2 span {
+  font-size: 13px;
+}
+.Responsible .section3 h2 {
+  color: #012a41;
+  font-size: 50px;
+}
+.Responsible .section3 .accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-top: 2px solid #012a41;
+  font-size: 15px;
+  background-color: #f8f8f8;
+  transition: 0.4s;
+}
+.Responsible .section3 .accordion h3 {
+  color: #012a41;
+  font-size: 20px;
+}
+.Responsible .section3 .accordion svg {
+  color: #9C6E02;
+}
+.Responsible .section3 .panel {
+  padding: 20px;
+  display: none;
+  overflow: hidden;
+  background-color: #F2F2F3;
+}
+.Responsible .section3 .panel h5 {
+  color: #012a41;
+  font-size: 20px;
+}
+.Responsible .section4 {
+  padding: 50px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9137254902), rgba(255, 255, 255, 0.9137254902)), url(https://www.commonfund.org/hubfs/CF%20Website%20Assets%20-%202020/Global/group-collaborating-computers.jpg);
+}
+.Responsible .section4 h2 {
+  color: #083151;
+  font-size: 50px;
+  text-align: left;
+  margin: 0;
+  line-height: 60px;
+}
+.Responsible .section5 {
+  padding: 50px 0;
+  background-color: #F2F2F3;
+}
+.Responsible .section5 h2 {
+  color: #083151;
+  font-size: 40px;
+}
+.Responsible .section6 .dark {
+  border-left: 3px solid #9C6E02;
+  padding-left: 20px;
+}
+.Responsible .section6 h2 {
+  font-size: 40px;
+}
+.Responsible .section6 .accordion {
+  color: #012a41;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.Responsible .section6 .accordion h3 {
+  color: #012a41;
+  font-size: 20px;
+}
+.Responsible .section6 .accordion svg {
+  color: #9C6E02;
+}
+.Responsible .section6 .panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+}
+.Responsible .section6 .panel h5 {
+  color: #012a41;
+  font-size: 20px;
+}
+.Responsible .section6 .panel p {
+  margin-bottom: 10px !important;
+  color: #012A41;
+}
 
 @media only screen and (max-width: 500px) {
   .ml100 {
@@ -523,5 +659,43 @@
   }
   .Diversity .section4 h1 {
     font-size: 40px !important;
+  }
+  .Responsible img {
+    width: 100% !important;
+  }
+  .Responsible .banner1 .text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+  }
+  .Responsible .banner1 .text h1 {
+    font-size: 30px;
+    color: white;
+  }
+  .Responsible .banner1 .text p {
+    font-size: 15px;
+  }
+  .Responsible .banner1 .down {
+    left: 10% !important;
+    text-align: center;
+  }
+  .Responsible .banner1 .down .rightwhite {
+    border-bottom: 1px solid white !important;
+    border-right: none !important;
+  }
+  .Responsible .banner1 .down .leftwhite {
+    border-top: 1px solid white !important;
+    border-left: none !important;
+  }
+  .Responsible .banner1 .down div {
+    width: 300px !important;
+    background-color: #083151;
+    color: white;
+  }
+  .Responsible .banner1 .down div h2 {
+    color: white;
+    font-size: 30px;
+    margin: 10px 0;
   }
 }/*# sourceMappingURL=emma.css.map */

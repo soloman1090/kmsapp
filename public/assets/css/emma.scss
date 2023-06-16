@@ -24,6 +24,10 @@
     margin: 70px 0;
 }
 
+.margin100 {
+    margin: 100px 0;
+}
+
 .margin40 {
     margin: 40px 0;
 }
@@ -46,6 +50,10 @@
 
 .padding70 {
     padding: 70px;
+}
+
+.padding100 {
+    padding: 100px 0;
 }
 
 .padding40 {
@@ -82,6 +90,14 @@
 }
 
 .borderright {
+    border-right: 3px solid #F06C00;
+}
+
+.borderlefts {
+    border-right: 3px solid #012A41;
+}
+
+.borderrights {
     border-right: 3px solid #F06C00;
 }
 
@@ -503,21 +519,27 @@
         height: 80vh;
         background-size: cover;
         background-color: #000;
-        background-blend-mode:normal;
+        background-blend-mode: normal;
         position: relative;
         background-repeat: no-repeat;
         background-image: linear-gradient(to top, #0000006a, #0000006a), url(https://www.gcmgrosvenor.com/wp-content/uploads/SEDM-headver-v1-web.jpg);
+
         .text {
             position: absolute;
             top: 40%;
             left: 10%;
             color: white;
-            h1{
+
+            h1 {
                 font-size: 60px;
                 color: white;
             }
-            p{font-size: 20px;}
+
+            p {
+                font-size: 20px;
+            }
         }
+
         .down {
             position: absolute;
             display: flex;
@@ -538,6 +560,162 @@
                 }
 
                 color: white;
+            }
+        }
+    }
+
+    .section1 {
+        background-color: #F2F2F3;
+
+        h2 {
+            color: #083151;
+            font-size: 40px;
+        }
+    }
+
+    .section2 {
+        h2 {
+            color: #083151;
+            font-size: 50px;
+            text-align: right;
+            margin: 0;
+            line-height: 50px;
+        }
+
+        img {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: 13px;
+        }
+    }
+
+    .section3 {
+
+        h2 {
+            color: #012a41;
+            font-size: 50px;
+        }
+
+        // accordion
+        .accordion {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            border-top: 2px solid #012a41;
+            font-size: 15px;
+            background-color: #f8f8f8;
+            transition: 0.4s;
+
+            h3 {
+                color: #012a41;
+                font-size: 20px;
+            }
+
+            svg {
+                color: #9C6E02;
+            }
+        }
+
+        .panel {
+            padding: 20px;
+            display: none;
+            overflow: hidden;
+            background-color: #F2F2F3;
+
+            h5 {
+                color: #012a41;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .section4 {
+        h2 {
+            color: #083151;
+            font-size: 50px;
+            text-align: left;
+            margin: 0;
+            line-height: 60px;
+        }
+
+        padding: 50px;
+        background-image: linear-gradient(to top, #ffffffe9, #ffffffe9),
+        url(https://www.commonfund.org/hubfs/CF%20Website%20Assets%20-%202020/Global/group-collaborating-computers.jpg);
+    }
+
+    .section5 {
+        padding: 50px 0;
+        background-color: #F2F2F3;
+
+        h2 {
+            color: #083151;
+            font-size: 40px;
+        }
+    }
+
+    .section6 {
+
+        .dark{
+            border-left: 3px solid #9C6E02;
+            padding-left: 20px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        // accordion
+        .accordion {
+            color: #012a41;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+
+            h3 {
+                color: #012a41;
+                font-size: 20px;
+            }
+
+            svg {
+                color: #9C6E02;
+            }
+        }
+
+        //   .active, .accordion:hover {
+        //     background-color: #ccc; 
+        //   }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: transparent;
+            border: none;
+
+            h5 {
+                color: #012a41;
+                font-size: 20px;
+            }
+
+            p {
+                margin-bottom: 10px !important;
+                color: #012A41;
             }
         }
     }
@@ -656,6 +834,47 @@
         .section4 {
             h1 {
                 font-size: 40px !important;
+            }
+        }
+    }
+
+    .Responsible{
+        img{width: 100% !important;}
+        .banner1{
+            .text {
+                position: absolute;
+                top: 20%;
+                left: 10%;
+                color: white;
+    
+                h1 {
+                    font-size: 30px;
+                    color: white;
+                }
+    
+                p {
+                    font-size: 15px;
+                }
+            }
+    
+            .down {
+                .rightwhite{border-bottom: 1px solid white !important;border-right: none !important;}
+                .leftwhite{border-top: 1px solid white !important;border-left: none !important;}
+                left: 10% !important;
+                text-align: center;
+    
+                div {
+                    width: 300px !important;
+                    background-color: #083151;
+    
+                    h2 {
+                        color: white;
+                        font-size: 30px;
+                        margin: 10px 0;
+                    }
+    
+                    color: white;
+                }
             }
         }
     }
