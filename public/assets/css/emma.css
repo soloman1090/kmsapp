@@ -8,6 +8,14 @@
   margin-left: 100px !important;
 }
 
+.ml50 {
+  margin-left: 50px !important;
+}
+
+.mr50 {
+  margin-right: 50px !important;
+}
+
 .ml20 {
   margin-left: 20px !important;
 }
@@ -66,6 +74,10 @@
 
 .padding20 {
   padding: 20px;
+}
+
+.padding10 {
+  padding: 10px;
 }
 
 .line {
@@ -587,8 +599,306 @@
   color: #012A41;
 }
 
+.Home .Banner1 {
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+  background-color: #000;
+  background-blend-mode: normal;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.4156862745)), url(../../assets/img/pexels-pixabay-414837.jpg);
+}
+.Home .Banner1 .text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+.Home .Banner1 .text h1 {
+  margin: 0;
+  font-size: 60px;
+  color: white;
+}
+.Home .Banner1 .text p {
+  margin: 0;
+  font-size: 20px;
+}
+.Home .Banner1 .text p b {
+  font-size: 15px;
+}
+.Home .Banner1 .text a {
+  text-decoration: none;
+  color: white;
+}
+.Home .Banner1 .text a button {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 8px 23px;
+}
+.Home .Banner1 .text a button p {
+  font-size: 14px;
+}
+.Home .Banner1 .text a button svg {
+  margin-left: 20px;
+}
+.Home .Banner1 .text a button:hover {
+  background-color: rgba(255, 255, 255, 0.434);
+  transition: all 0.5s ease-out;
+}
+.Home .section1 .big {
+  font-size: 25px;
+  margin-top: 50px;
+}
+.Home .section1 h2, .Home .section1 p {
+  margin: 0;
+}
+.Home .section1 .rightline {
+  border-right: 1px solid #083151;
+}
+.Home .section2 {
+  height: 87vh;
+}
+.Home .section3 .pl10 {
+  padding-left: 10px !important;
+}
+.Home .section3 .pr10 {
+  padding-right: 10px !important;
+}
+.Home .section3 .col-md-6 {
+  padding: 0 !important;
+}
+.Home .section3 .line1 {
+  border-top: 10px solid #2973b9;
+  border-bottom: 10px solid #2973b9;
+}
+.Home .section3 .line2 {
+  border-bottom: 10px solid #e68f1a;
+  border-top: 10px solid #e68f1a;
+}
+.Home .section3 .bal {
+  margin-bottom: 61.5px;
+}
+.Home .section3 .line1, .Home .section3 .line2 {
+  padding-bottom: 40px;
+}
+.Home .section3 .line1 h2, .Home .section3 .line2 h2 {
+  color: #083151;
+  font-size: 40px;
+}
+.Home .section3 .line1 p, .Home .section3 .line2 p {
+  padding: 0 5px;
+}
+.Home .section4 .all1, .Home .section4 .all2, .Home .section4 .all3, .Home .section4 .all4, .Home .section4 .all5, .Home .section4 .all6 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/aa.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+}
+.Home .section4 .all1 .text, .Home .section4 .all2 .text, .Home .section4 .all3 .text, .Home .section4 .all4 .text, .Home .section4 .all5 .text, .Home .section4 .all6 .text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+}
+.Home .section4 .all1 h1, .Home .section4 .all2 h1, .Home .section4 .all3 h1, .Home .section4 .all4 h1, .Home .section4 .all5 h1, .Home .section4 .all6 h1 {
+  color: white;
+}
+.Home .section4 .all1 p, .Home .section4 .all2 p, .Home .section4 .all3 p, .Home .section4 .all4 p, .Home .section4 .all5 p, .Home .section4 .all6 p {
+  display: none;
+}
+.Home .section4 .all1 button, .Home .section4 .all2 button, .Home .section4 .all3 button, .Home .section4 .all4 button, .Home .section4 .all5 button, .Home .section4 .all6 button {
+  color: #94cef3;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.Home .section4 .all1 button p, .Home .section4 .all2 button p, .Home .section4 .all3 button p, .Home .section4 .all4 button p, .Home .section4 .all5 button p, .Home .section4 .all6 button p {
+  margin: 0;
+  margin-right: 20px;
+  display: none;
+}
+.Home .section4 .all1:hover, .Home .section4 .all2:hover, .Home .section4 .all3:hover, .Home .section4 .all4:hover, .Home .section4 .all5:hover, .Home .section4 .all6:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.4156862745)), url(../../assets/img/aa.webp);
+  transition: all 0.8s ease-in-out;
+}
+.Home .section4 .all1:hover p, .Home .section4 .all2:hover p, .Home .section4 .all3:hover p, .Home .section4 .all4:hover p, .Home .section4 .all5:hover p, .Home .section4 .all6:hover p {
+  display: block !important;
+}
+.Home .section4 .all1 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/aa.webp);
+}
+.Home .section4 .all2 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/bb.webp);
+}
+.Home .section4 .all13 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/cc.webp);
+}
+.Home .section4 .all4 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/New-City-Rises_Preview_1100x600.webp);
+}
+.Home .section4 .all5 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/oaktree-sm.jpeg);
+}
+.Home .section4 .all6 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0.1647058824)), url(../../assets/img/insurance_solutions_home_page_grid.webp);
+}
+.Home .section5 p b {
+  color: #083151;
+  font-size: 20px;
+}
+.Home .section5 .lline {
+  border-bottom: 1px solid #012a41;
+}
+.Home .section5 button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  color: #083151;
+  font-size: 20px;
+  background-color: transparent;
+  transition: 0.4s;
+}
+.Home .section5 button p {
+  margin: 0;
+}
+.Home .section6 .col-md-6 {
+  padding: 0 !important;
+}
+.Home .section6 .linegreen {
+  width: 100px;
+  border-top: 3px solid green;
+}
+.Home .section6 .carousel {
+  margin: 30px 0;
+}
+.Home .section6 .carousel h1 {
+  font-size: 50px;
+}
+.Home .section6 .carousel .text {
+  padding: 20px;
+}
+.Home .section6 .carousel .text p {
+  font-size: 23px;
+  margin: 0;
+}
+.Home .section6 .carousel .text span {
+  font-size: 13px;
+}
+.Home .section6 .carousel .text button {
+  margin-top: 30px;
+  background-color: #083151;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 12px;
+  display: flex;
+  border: none;
+  outline: none;
+  align-items: center;
+}
+.Home .section6 .carousel .text button p {
+  margin: 0;
+  font-size: 14px;
+}
+.Home .section6 .carousel .text button svg {
+  margin-left: 10px;
+}
+.Home .section6 .line2 {
+  background-image: url(https://www.gcmgrosvenor.com/wp-content/uploads/home-news-web.jpg);
+}
+.Home .section6 .line3 {
+  background-image: url(https://www.gcmgrosvenor.com/wp-content/uploads/home-DEI-4-web.jpg);
+}
+.Home .section6 .line2, .Home .section6 .line3, .Home .section6 .line4 {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+.Home .section6 .line4 {
+  background-image: url(https://www.gcmgrosvenor.com/wp-content/uploads/home-page-our-impact-3-web.jpg);
+}
+.Home .section6 .ttext h1 {
+  font-size: 50px;
+}
+.Home .section6 .ttext p {
+  font-size: 20px;
+}
+.Home .section6 .ttext button {
+  background-color: #083151;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+}
+
+.carousel-cell {
+  width: 100% !important;
+  height: 220px;
+  margin-right: 10px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: #083151 !important;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: #083151;
+}
+
+.flickity-button-icon {
+  color: white !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.flickity-button {
+  background-color: #083151 !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
 @media only screen and (max-width: 500px) {
   .ml100 {
+    margin-left: 0px !important;
+  }
+  .ml50 {
     margin-left: 0px !important;
   }
   .ESG .Banner1 .text h5 {
@@ -697,5 +1007,16 @@
     color: white;
     font-size: 30px;
     margin: 10px 0;
+  }
+  .Home .Banner1 .text {
+    top: 23%;
+    left: 4%;
+  }
+  .Home .section1 .rightline {
+    border-right: none !important;
+    border-bottom: 1px solid #083151 !important;
+  }
+  .Home .section2 {
+    height: 25vh;
   }
 }/*# sourceMappingURL=emma.css.map */

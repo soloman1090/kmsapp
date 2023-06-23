@@ -37,6 +37,7 @@
     <!-- YOUR CUSTOM CSS -->
     <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/emma.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- LayerSlider stylesheet -->
     <link href="assets/layerslider/css/layerslider.css" rel="stylesheet">
@@ -356,7 +357,7 @@
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/emma.js"></script>
 
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <!-- LayerSlider script files -->
     <script src="assets/layerslider/js/greensock.js"></script>
