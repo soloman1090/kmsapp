@@ -64,7 +64,7 @@
             <div class="">
                 <center>
                     <div class="col-md-12">
-                        <video controls  autoplay>
+                        <video   autoplay="true" muted>
                         <source src=”https://www.blackstone.com/wp-content/uploads/sites/2/2023/03/build_with_blackstone_-_ga_-_website_thumbnail_-_21x9_-_v02-1080p.mp4” type=video/ogg>
                         <source src="https://www.blackstone.com/wp-content/uploads/sites/2/2023/03/build_with_blackstone_-_ga_-_website_thumbnail_-_21x9_-_v02-1080p.mp4" type=video/mp4>
                         </video>
