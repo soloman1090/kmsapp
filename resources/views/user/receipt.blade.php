@@ -16,10 +16,10 @@
         <img src="{{ asset('admin-assets/img/logo.png')  }}">
       </div>
       <div id="company">
-        <h2 class="name"><b>Palm Alliance Management</b></h2>
+        <h2 class="name"><b>Dell Group  Management</b></h2>
         <div>1201 N Orange St, Midtown Ste 100, Wilmington, Delaware</div>
         <div>(302) 389-5302</div>
-        <div><a href="mailto:support@palmalliance.com">support@palmalliance.com</a></div>
+        <div><a href="mailto:support@Dell Group.com">support@Dell Group.com</a></div>
       </div>
       </div>
     </header>

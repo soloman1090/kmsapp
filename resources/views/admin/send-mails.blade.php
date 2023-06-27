@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             <label class="control-label">Subject</label>
-                                            <input type="text" placeholder="Enter Subject, e.g Welcome to palmalliance" name="subject"  class="form-control" required>
+                                            <input type="text" placeholder="Enter Subject, e.g Welcome to Dell Group" name="subject"  class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-12">
                                             <label class="control-label">Button Url</label>
-                                            <input type="text" placeholder="Button Url e.g https://palmalliance.com/"  name="action_url"  class="form-control">
+                                            <input type="text" placeholder="Button Url e.g https://Dell Group.com/"  name="action_url"  class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                                         <div class="col-lg-12">
                                             <label class="control-label">Subject</label>
                                             <input type="hidden" name="bulk" id="" value="bulk">
-                                            <input type="text" placeholder="Enter Subject, e.g Welcome to palmalliance" name="subject"  class="form-control" required>
+                                            <input type="text" placeholder="Enter Subject, e.g Welcome to Dell Group" name="subject"  class="form-control" required>
                                         </div>
                                     </div>
                                 </div>

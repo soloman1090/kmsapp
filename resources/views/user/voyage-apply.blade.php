@@ -6,10 +6,10 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>{{ $page_title }} | Palm Member</title>
+    <title>{{ $page_title }} | Dell Group Member</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Palmalliance Members Dashboard" name="description" />
-    <meta content="PalmAlliance" name="Palm" />
+    <meta content="Dell Group Members Dashboard" name="description" />
+    <meta content="Dell Group" name="Dell Group" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('admin-assets/img/fav-icon.png') }}">
@@ -66,7 +66,7 @@
                                             <div class="col-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="formrow-firstname-input"> Email Address</label>
-                                                    <input type="email" name="email"  required class="form-control" placeholder="Enter Palm Registered Email Address" value="{{ $user->email }}">
+                                                    <input type="email" name="email"  required class="form-control" placeholder="Enter Dell Group Registered Email Address" value="{{ $user->email }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -431,7 +431,7 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                            <h4>Palm Account Details </h4>
+                                            <h4>Dell Group Account Details </h4>
                                             <br><br>
                                             <div class="row mb-3">
                                                 <div class="col-6">
@@ -448,7 +448,7 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                            <h4>Information About Palmalliance </h4>
+                                            <h4>Information About Dell Group </h4>
                                             <br><br>
                                             <p>We strive to continuously improve our services and the brand awareness and we would therefore like to know you better as you are going to introduce our company. Please reply to the following questions and please note the answers to these questions are also part of the Voyager Client application and will be reviewed appropriately. </p>
                                             <div class="mb-3">
@@ -461,14 +461,14 @@
                                                 <input type="text" name="target_clients" class="form-control" required placeholder="Target Clients ">
                                             </div>
                                             <div class="mb-3">
-                                                <label class="form-label" for="formrow-firstname-input"><b>How are you going to promote Palmalliance brand to potential clients? Will it be via face to face meetings, Palmalliance website and its marketing material, or through your own website, materials, webinars, etc?
+                                                <label class="form-label" for="formrow-firstname-input"><b>How are you going to promote Dell Group brand to potential clients? Will it be via face to face meetings, Dell Group website and its marketing material, or through your own website, materials, webinars, etc?
                                                     </b>
                                                 </label>
                                                 <input type="text" name="promotion_materials" class="form-control" required placeholder="Promotion Materials ">
                                                 <small>Please note that you may only use your own materials or website after prior approval by our Compliance team.</small>
                                             </div>
                                             <div class="mb-3">
-                                                <label class="form-label" for="formrow-firstname-input"><b>What specific marketing materials for promotion of Palmalliance are you going to use? (any website, own presentation, printed materials, etc)
+                                                <label class="form-label" for="formrow-firstname-input"><b>What specific marketing materials for promotion of Dell Group are you going to use? (any website, own presentation, printed materials, etc)
                                                     </b>
                                                 </label>
                                                 <input type="text" name="marketing_materials" class="form-control" required placeholder="Marketing Materials ">
@@ -494,16 +494,16 @@
                                             <button class="btn btn-primary">Submit Application</button>
                                             <hr>
                                             <br>
-                                            <h3 class="text-center">Questions? <a href="palmalliance.com/contact" target="blank">Contact</a> | <a href="palmalliance.com/faq" target="blank">FAQs</a></h3>
+                                            <h3 class="text-center">Questions? <a href="Dell Group.com/contact" target="blank">Contact</a> | <a href="Dell Group.com/faq" target="blank">FAQs</a></h3>
                                             <hr>
-                                            <small>Your statements, confirmations, and activity history are available securely at <a href="Palmalliance.com">Palmalliance.com</a> . This serves as notice that prospectuses for any securities purchased in these transactions are available inside your account, under the portfolio tab, along with other important disclosures. Expanding a category of your portfolio shows its respective positions, and each links to the most recent prospectus. <br><br>
+                                            <small>Your statements, confirmations, and activity history are available securely at <a href="Dell Group.com">Dell Group.com</a> . This serves as notice that prospectuses for any securities purchased in these transactions are available inside your account, under the portfolio tab, along with other important disclosures. Expanding a category of your portfolio shows its respective positions, and each links to the most recent prospectus. <br><br>
 
                                                 How PAM calculates "better returns". Unless otherwise specified, all return figures shown above are for illustrative purposes only, and are not actual customer or model returns. Actual returns will vary greatly and depend on personal and market conditions. <br><br>
                                                 The information on this site is intended solely for the benefit of firms and companies seeking private equity investment capital by providing general information on our services and philosophy. The material on this site is for informational purposes only and does not constitute an offer or solicitation to purchase any investment solutions or a recommendation to buy or sell a security nor is it to be construed as legal, tax or investment advice.<br><br>
 
                                                 Unless otherwise indicated, any information available through this site is as of the date indicated therein and may not be updated or otherwise revised to reflect information that subsequently becomes available. PAM is under no obligation to update the information contained on this site. Additionally, the material on this site does not constitute a representation that the solutions described therein are suitable or appropriate for any person and PAM does not accept any liability with respect to the information. By using this site you agree to the Terms of Use. <br><br>
 
-                                                This email was sent by: Palm Alliance Management <br>
+                                                This email was sent by: Dell Group  Management <br>
                                                 1201 N Orange St, Midtown Ste 100</small><br>
                                         </div>
 
@@ -571,7 +571,7 @@
         $('#referralLink').on('click', function() {
             refData.style.visibility = "visible";
             $(this).attr('referral_id')
-            let link = `https://palmalliance.com/register/?refer=${$(this).attr('referral_id')}`
+            let link = `https://Dell Group.com/register/?refer=${$(this).attr('referral_id')}`
 
             refData.value = link;
             refData.select();

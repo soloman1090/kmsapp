@@ -148,11 +148,11 @@ class ReinvestmentController extends Controller
             //     'subject' => 'Portfolio Payment',
             //     'title' => "Hi Admin",
             //     'url' => "{$req->getSchemeAndHttpHost()}/admin/users-investments",
-            //     'descp' => "A user just successfully reinvested in $packagename on Palmalliance.
+            //     'descp' => "A user just successfully reinvested in $packagename on Dell Group.
             //              These are the user details.... NAME: $user->name $user->last_name, EMAIL: $user->email, PHONE: $user->phone, AMOUNT: $$singleReinvest->topup_amount .....
             //              Please Login to view investments",
             //     'action-text' => 'Vew Investments',
-            //     'img' => 'assets/images/emails/Palm-Alliance-Management-Building.jpg',
+            //     'img' => 'assets/images/emails/Dell Group--Management-Building.jpg',
             // ]));
         } catch (\Exception$e) {
 
@@ -203,7 +203,7 @@ class ReinvestmentController extends Controller
                         'subject' => 'Members Benefit Commissions',
                         'title' => "Hi $referredUser->name $referredUser->last_name ",
                         'url' => "{$req->getSchemeAndHttpHost()}/user/referred-users",
-                        'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@palmalliance.com",
+                        'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@Dell Group.com",
                         'action-text' => 'Client Access',
                         'img' => 'assets/images/emails/first-referal-banner.jpg',
                     ]));
@@ -254,7 +254,7 @@ class ReinvestmentController extends Controller
                             //     'subject' => 'Members Benefit Commissions',
                             //     'title' => "Hi $referredUser_stage2->name $referredUser_stage2->last_name ",
                             //     'url' => "{$req->getSchemeAndHttpHost()}/user/referred-users",
-                            //     'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@palmalliance.com",
+                            //     'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@Dell Group.com",
                             //     'action-text' => 'Client Access',
                             //     'img' => 'assets/images/emails/first-referal-banner.jpg',
                             // ]));
@@ -305,7 +305,7 @@ class ReinvestmentController extends Controller
                                     //     'subject' => 'Members Benefit Commissions',
                                     //     'title' => "Hi $referredUser_stage3->name $referredUser_stage3->last_name ",
                                     //     'url' => "{$req->getSchemeAndHttpHost()}/user/referred-users",
-                                    //     'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@palmalliance.com",
+                                    //     'descp' => "We are delighted to inform you that your partner in your members benefit programme has Purchased a portfolio successfully. Their transaction will be processed and are certainly in order. They will have their account functioning in no time! Thank you for participating in our MEMBER'S BENEFIT Programme and building your team with us!!........For more information, visit our online support page or leave us a message—support@Dell Group.com",
                                     //     'action-text' => 'Client Access',
                                     //     'img' => 'assets/images/emails/first-referal-banner.jpg',
                                     // ]));

@@ -422,7 +422,7 @@ class UserDashboard extends Controller
             "Popup_Datas" => $Popup_Datas,
             "packages" => $packages,
             'hasSurvey' => $hasSurvey,
-            'site_host' => "https://verify.palmalliance.com",//$request->getSchemeAndHttpHost()
+            'site_host' => "https://verify.Dell Group.com",//$request->getSchemeAndHttpHost()
             "accumulatedTransfer" =>  getAmountAttribute($accumulatedTransfer),
             "accumulatedWithdrawals" =>  getAmountAttribute($accumulatedWithdrawals),
             "accumulatedEarnings" =>    getAmountAttribute($accumulatedEarnings),
@@ -465,7 +465,7 @@ class UserDashboard extends Controller
 
         $survey->save();
 
-        $request->session()->flash('success', 'Your feedback has been sent successfully, Please talk to Support if you have any issues with Palmalliance System');
+        $request->session()->flash('success', 'Your feedback has been sent successfully, Please talk to Support if you have any issues with Dell Group System');
         return redirect('user/dashboard');
 
     }

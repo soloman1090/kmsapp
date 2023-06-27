@@ -15,7 +15,7 @@
                         <div class=" p-0 ">
                             <div class="text-left p-3">
                                 <h4 class="mt-3 mb-1 fw-bold  font-30">Welcome Back!</h4>
-                                <p class="font-20  mb-0">Sign in to Palm Account</p>
+                                <p class="font-20  mb-0">Sign in to Dell Group Account</p>
                             </div>
                         </div>
                         <div class=" p-0">
@@ -81,7 +81,7 @@
                                     </div>
                                     <!--end form-->
                                     <div class="m-3 text-center text-muted">
-                                        <p class="mb-0">Create PALM Account ? <a href="{{ route('register') }}" class="text-primary ms-2">Register</a></p>
+                                        <p class="mb-0">Create Dell Group Account ? <a href="{{ route('register') }}" class="text-primary ms-2">Register</a></p>
                                     </div>
 
 
@@ -92,7 +92,7 @@
                         </div>
                         <!--end card-body-->
                         <div class="card-body bg-light-alt text-center">
-                            <span class="text-muted d-none d-sm-inline-block">Palm Alliance © <script>
+                            <span class="text-muted d-none d-sm-inline-block">Dell Group  © <script>
                                     document.write(new Date().getFullYear())
 
                                 </script></span>

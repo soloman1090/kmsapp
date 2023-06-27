@@ -7,7 +7,7 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>{{ $page_title }} | Palm Admin</title>
+    <title>{{ $page_title }} | Dell Group Admin</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -365,7 +365,7 @@
 				<footer class="footer container-fluid pl-30 pr-30">
 					<div class="row">
 						<div class="col-sm-12">
-							<p><b>2022 &copy;</b> <b>PALM ALLIANCE MANAGEMENT SYSTEM</b></p>
+							<p><b>2022 &copy;</b> <b>Dell Group  MANAGEMENT SYSTEM</b></p>
 						</div>
 					</div>
 				</footer>

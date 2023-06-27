@@ -48,10 +48,10 @@ class SendMailController extends Controller
 
                if($req["bulk"]){
                 $mgClient = Mailgun::create(env('REST_EM_KEY'));
-                $domain = "m.palmalliance.com";
+                $domain = "m.Dell Group.com";
                 $params = array(
-                  'from'    => 'Palm Alliance Management <noreplys@m.palmalliance.com>',
-                  'to'      => 'noreply@m.palmalliance.com',
+                  'from'    => 'Dell Group  Management <noreplys@m.Dell Group.com>',
+                  'to'      => 'noreply@m.Dell Group.com',
                   'subject' => "{$req['subject']}",
                   'template'    => "customer",
                   'h:X-Mailgun-Variables'    => '{"test": "test"}'
@@ -71,8 +71,8 @@ class SendMailController extends Controller
             $saveMail->img=$imageName;
             $imgLink=$imageName;
         } else {
-            $saveMail->img="http://palmalliance.com/assets/images/emails/verification-banner.jpg";
-            $imgLink="http://palmalliance.com/assets/images/emails/verification-banner.jpg";
+            $saveMail->img="http://Dell Group.com/assets/images/emails/verification-banner.jpg";
+            $imgLink="http://Dell Group.com/assets/images/emails/verification-banner.jpg";
         }
 
         if ($req->file('img_event')!=null) {

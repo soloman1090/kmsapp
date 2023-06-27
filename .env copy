@@ -1,8 +1,8 @@
-APP_NAME=Palm-Alliance
+APP_NAME=Dell Group-
 APP_ENV=local
 APP_KEY=base64:cJkRSCAYrxOvg0biz0MSjw4PqpaPHyup8gtQg+wQ3yU=
 APP_DEBUG=true
-APP_URL=http://palmalliance.com/
+APP_URL=http://Dell Group.com/
 APP_EMAIL="chizitech@protonmail.com"
 
 LOG_CHANNEL=stack
@@ -44,10 +44,10 @@ REDIS_PORT=6379
 MAIL_MAILER=smtp
 MAIL_HOST=smtppro.zoho.com
 MAIL_PORT=465
-MAIL_USERNAME=info@palmalliance.com
+MAIL_USERNAME=info@Dell Group.com
 MAIL_PASSWORD=@JUBiland1
 MAIL_ENCRYPTION=SSL
-MAIL_FROM_ADDRESS="info@palmalliance.com"
+MAIL_FROM_ADDRESS="info@Dell Group.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
 

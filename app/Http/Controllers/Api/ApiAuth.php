@@ -186,7 +186,7 @@ class ApiAuth extends Controller
                     'title' => "Hi $referredUser->name $referredUser->last_name ",
                     'url' => "{$request->getSchemeAndHttpHost()}/user/referred-users",
                     'descp' => 'We are pleased to inform you that your referral has successfully registered through your members benefit programme. All commissions and referral bonuses will be processed accordingly. Our different levels are as follows; ( 10%- 1ST LEVEL, 5%- 2ND LEVEL, 2.5%- 3RD LEVEL ). All registered partners must have an active investment portfolio before commissions are disbursed to the various referee respectively.
-                    Kindly confirm all wallet address before transactions are being carried out. Thank your for choosing Palm Alliance Management. For more information visit our Customer fulfilment Centre or leave us a message at support@palmalliance.com',
+                    Kindly confirm all wallet address before transactions are being carried out. Thank your for choosing Dell Group  Management. For more information visit our Customer fulfilment Centre or leave us a message at support@Dell Group.com',
                     'action-text'=>'Client Access',
                     'img'=>'assets/images/emails/first-referal-banner.jpg'
                 ]));
@@ -198,9 +198,9 @@ class ApiAuth extends Controller
             //     'subject'=>'New user registration',
             //     'title' => "Hi Admin",
             //     'url' => "{$request->getSchemeAndHttpHost()}/admin/users",
-            //     'descp' => "A new user just registered on Palmalliance. These are the few information about the user.... NAME: {$request->name} {$request->lastName}, EMAIL: {$request->email}, PHONE: {$request->phone}..... Please Login to approve the account",
+            //     'descp' => "A new user just registered on Dell Group. These are the few information about the user.... NAME: {$request->name} {$request->lastName}, EMAIL: {$request->email}, PHONE: {$request->phone}..... Please Login to approve the account",
             //     'action-text'=>'Login Here',
-            //     'img'=>'assets/images/emails/Palm-Alliance-Management-Building.jpg'
+            //     'img'=>'assets/images/emails/Dell Group--Management-Building.jpg'
             // ]));
             
             $registeredUser = User::where('users.id', $user->id)->join('user_infos', 'users.id', "=", 'user_infos.user_id')->first();

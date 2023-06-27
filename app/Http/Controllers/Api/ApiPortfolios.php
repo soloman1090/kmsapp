@@ -163,7 +163,7 @@ class ApiPortfolios extends Controller
                     //     'url' => "{$req->getSchemeAndHttpHost()}/admin/users-investments",
                     //     'descp' => "A user just made an investment of {$investAmount} with {$req['currency']}  Please Login to activate portfolio",
                     //     'action-text' => 'Approve Portfolio',
-                    //     'img' => 'assets/images/emails/Palm-Alliance-Management-Building.jpg',
+                    //     'img' => 'assets/images/emails/Dell Group--Management-Building.jpg',
                     // ]));
                 //     $invoice;
                 //     $currency = $req['currency'];

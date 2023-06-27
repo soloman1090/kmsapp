@@ -38,7 +38,7 @@
 
     </div>
     <div class="container sus-sec3">
-        <p>Many investors are recognizing the value of investing in strategies that seek to improve our collective world. But some fear this approach can compromise investment outcomes. At Palm Alliance Management, we are committed to delivering investment performance and making a difference. We are proud of our history of helping clients achieve financial success while also impacting society in a positive way.
+        <p>Many investors are recognizing the value of investing in strategies that seek to improve our collective world. But some fear this approach can compromise investment outcomes. At Dell Group  Management, we are committed to delivering investment performance and making a difference. We are proud of our history of helping clients achieve financial success while also impacting society in a positive way.
         </p>
     </div>
     <div class="container">

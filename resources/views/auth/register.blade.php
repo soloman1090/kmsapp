@@ -12,8 +12,8 @@
                         <div class=" p-0 ">
                             <div class="row">
                                 <div class=" col text-center p-3">
-                                    <h4 class="mb-1 fw-bold font-20 light">Let's Get Started With Palm
-                                        Alliance</h4>
+                                    <h4 class="mb-1 fw-bold font-20 light">Let's Get Started With Dell Group
+                                        </h4>
                                     <p class="font-18  mb-0">Where do you want to start?</p>
                                 </div>
                                 <div class="col-auto">

@@ -188,7 +188,7 @@ class ViewPortfolios extends Controller
                     Mail::to($user->email)->send(new UserRegisteredMail([
                         'subject' => 'Congratulations on your Portfolio Purchase',
                         'title' => "Congratulations {$user->name} {$user->last_name}",
-                        'url' => "https://palmalliance.com/user/user-investments",
+                        'url' => "https://Dell Group.com/user/user-investments",
                         'descp' => "We are delighted to inform you that your portfolio purchase of {$package->name}
         has been received and activated successfully. ",
                         'action-text' => 'Client Access',

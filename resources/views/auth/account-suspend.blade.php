@@ -14,7 +14,7 @@
                                         <img src="{{ asset('user-assets/images/suspended.png') }}" alt="" style="width: 100%; " >
                                         <br>
                                         <h4 class="mt-3 mb-1 fw-bold  font-30">Account Suspended</h4>
-                                        <p class="font-16  mb-0">Contact Palm Customer care to resolve this issue</p>
+                                        <p class="font-16  mb-0">Contact Dell Group Customer care to resolve this issue</p>
                                         <br>
                                         <div class="form-group mb-0 row">
                                             <div class="col-6">
@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="card-body bg-light-alt text-center">
-                                    <span class="text-muted d-none d-sm-inline-block">Palm Alliance © <script>
+                                    <span class="text-muted d-none d-sm-inline-block">Dell Group  © <script>
                                         document.write(new Date().getFullYear())
                                     </script></span>
                                 </div>

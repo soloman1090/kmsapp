@@ -10,7 +10,7 @@ border-top-right-radius: 10px;" >
     </div>
     <div class="col">
         <div class="text-center m-2">
-            <span class="badge badge-outline-primary"><b>Referal Link: </b> <span class="badge  badge-soft-primary p-3"> https://palmalliance.com/register/?refer={{ $referral_code }} </span></span>
+            <span class="badge badge-outline-primary"><b>Referal Link: </b> <span class="badge  badge-soft-primary p-3"> https://Dell Group.com/register/?refer={{ $referral_code }} </span></span>
             <input id="refereee" class="form-control" placeholder="show here" />
         </div>
     </div>

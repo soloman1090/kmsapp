@@ -96,7 +96,7 @@ return ['error' => true, "msg" => "Error sending OTP", "type" => "INVALID_CREDEN
 
         if ($re_user == null) {
              
-            return ['error' => true, "msg" => "Invalid Email Address,...Sorry this is not a registered account on Palm Alliance", "type" => "INVALID_CREDENTIAL"];
+            return ['error' => true, "msg" => "Invalid Email Address,...Sorry this is not a registered account on Dell Group ", "type" => "INVALID_CREDENTIAL"];
             
         }
 

@@ -71,7 +71,7 @@ class CustomVerifyEmailNotification extends Notification
             ->line(Lang::get('In order to transact on your behalf, we need to verify a way of communicating with you. To verify your email address with us, please click the following secure link:'))
             ->action(Lang::get('Verify Email Address'), $url)
             ->line(Lang::get('If you did not create an account, no further action is required.'))
-            ->line(Lang::get('The Palm Team.'));
+            ->line(Lang::get('The Dell Group Team.'));
     }
 
     /**

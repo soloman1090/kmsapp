@@ -21,7 +21,7 @@
                                         <br>
                                         <div class="form-group mb-0 row text-center">
                                             <div class="col-6">
-                                                <a class="btn btn-primary w-100 waves-effect waves-light" href="/" >Explore Palmalliance</i></a>
+                                                <a class="btn btn-primary w-100 waves-effect waves-light" href="/" >Explore Dell Group</i></a>
                                             </div><!--end col-->
                                             <div class="col-6">
                                                 <a class="btn btn-primary w-100 waves-effect waves-light" href="/user/dashboard" >Check Account</i></a>
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="card-body bg-light-alt text-center">
-                                    <span class="text-muted d-none d-sm-inline-block">Palm Alliance © <script>
+                                    <span class="text-muted d-none d-sm-inline-block">Dell Group  © <script>
                                         document.write(new Date().getFullYear())
                                     </script></span>
                                 </div>

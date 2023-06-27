@@ -129,7 +129,7 @@
                 <div class="row margin60 animate__animated animate__fadeInUp">
                     <div class="col-md-6 ">
                         <div class="ml100">
-                        <p><b>Ares Black Alliance</b></p>
+                        <p><b>Ares Black </b></p>
                         <p >The ABA is a group focused on leadership, development and recruitment of persons of color. ABA values and engages its members, allies and partners through a series events which range from volunteering initiatives to lunch-and-learns with the aim of empowering all Ares' employees and making the firm a more inclusive place to work. This employee-led group is committed to excellence in professional development, giving back to the community, and a fair and equitable employee experience while driving superior business results. The group provides a safe and supportive environment where all member voices count. ABA's strategy is based on four pillars: Attract, Change, Advance & Engage.</p>
                         </div>
                     </div>

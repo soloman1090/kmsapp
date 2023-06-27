@@ -248,9 +248,9 @@
         <div class="col-md-6">
             <br>
             <br>
-            <h1>Invest with Palm Alliance Management</h1>
+            <h1>Invest with Dell Group  Management</h1>
 
-            <p>Our pure-play global renewables portfolio is available to investors through our publicly listed vehicle, Palm Alliance Management Renewable Partners. Investors can also participate in the growth of our assets through our private funds.</p>
+            <p>Our pure-play global renewables portfolio is available to investors through our publicly listed vehicle, Dell Group  Management Renewable Partners. Investors can also participate in the growth of our assets through our private funds.</p>
         </div>
     </div>
 </div>

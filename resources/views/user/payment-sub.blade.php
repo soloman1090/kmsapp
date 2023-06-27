@@ -2915,7 +2915,7 @@
         <div data-v-5e0cd238="" class="invoice">
             <div class="invoice__header header">
                 <div class="header__top row_between">
-                    <h5 style="color: white;">Palmalliance Management</h5>
+                    <h5 style="color: white;">Dell Group Management</h5>
                 </div>
                 <div data-v-e2dae8b0="" id="timer_invoice" class="header__progress progress">
                     <div data-v-e2dae8b0="" class="progress__line" style="width: 2%;"></div>
@@ -3065,7 +3065,7 @@
                     <aside data-v-e6bd7c5e="" class="invoice__help help">
                         <a data-v-e6bd7c5e="" href="#" title="How do I pay for this?" target="_blank" rel="noopener"
                             class="help__link _que"> 
-                            <b>Powered by Palmalliance</b>
+                            <b>Powered by Dell Group</b>
                         </a>
 
                     </aside>

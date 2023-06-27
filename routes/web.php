@@ -89,7 +89,7 @@ Route::get('/email', function () {
     return new UserRegisteredMail([
         'title' => 'Please Verify your email address',
         'url' => 'https://www.itsolutionstuff.com',
-        'subject'=>'Welcome to Palm Alliance Management!',
+        'subject'=>'Welcome to Dell Group  Management!',
         'descp' => 'In order to transact on your behalf, we need to verify a way of communicating with you. To verify your email address with us, please click the following secure link:',
         'action-text'=>'Verify Now',
         'img'=>'assets/images/emails/verification-banner.jpg'
@@ -99,7 +99,7 @@ Route::get('/email', function () {
 Route::get('/email-chritmas', function () {
     return new CustomMail([
         'title' => 'Dear partners,',
-        'url' => 'https://palmalliance.com/',
+        'url' => 'https://Dell Group.com/',
         'subject'=>'Merry Christmas',
         'user'=>'James Kala',
         'descp' => "As we reflect on another blissful year of business, we would like to thank you for being a part of our vision. We truly appreciate you, your trust, and your committment to helping us build a sustainable economy together! ",

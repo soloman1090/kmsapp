@@ -11,7 +11,7 @@
                             <div class="card-body p-0 ">
                                 <div class="text-center p-3">
                                     <h4 class="mt-3 mb-1 fw-bold  font-30">Confirm Password</h4>
-                                    <p class="font-20  mb-0">Provide password to authenticate your Palm Account</p>
+                                    <p class="font-20  mb-0">Provide password to authenticate your Dell Group Account</p>
                                 </div>
                             </div>
                             <div class="card-body p-0">
@@ -65,7 +65,7 @@
                                 </div>
                             </div><!--end card-body-->
                             <div class="card-body bg-light-alt text-center">
-                                <span class="text-muted d-none d-sm-inline-block">Palm Alliance © <script>
+                                <span class="text-muted d-none d-sm-inline-block">Dell Group  © <script>
                                     document.write(new Date().getFullYear())
                                 </script></span>
                             </div>

@@ -45,7 +45,7 @@
                         <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; (302) 389-5302</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp; support@palmalliance.com</p>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp; support@Dell Group.com</p>
                     </li>
                     <li>
                         <p><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp; Mon-Fri 09:00 - 17:00</p>

@@ -14,7 +14,7 @@
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>{{ $page_title }} | Palm User</title>
+    <title>{{ $page_title }} | Dell Group User</title>
     <link rel="shortcut icon" href="{{ asset('admin-assets/img/fav-icon.png') }}">
 	<link rel="icon" href="{{ asset('admin-assets/img/fav-icon.png') }}" type="image/x-icon">
 
@@ -282,7 +282,7 @@
          $('#referralLink').on('click', function () {
             refData .style.visibility = "visible";
              $(this).attr('referral_id')
-             let link= `https://palmalliance.com/register/?refer=${$(this).attr('referral_id')}`
+             let link= `https://Dell Group.com/register/?refer=${$(this).attr('referral_id')}`
 
              refData.value=link;
              refData.select();

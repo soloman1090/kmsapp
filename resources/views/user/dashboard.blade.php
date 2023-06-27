@@ -746,7 +746,7 @@
                             <div class="carousel-item {{ $key==0? "active" :"" }}">
                                 <div class="text-center p-4">                                     
                                     
-                                    <h2 class="mt-3 lh-base fw-normal text-white"><b>Palm</b> Message</h2>
+                                    <h2 class="mt-3 lh-base fw-normal text-white"><b>Dell Group</b> Message</h2>
                                     <br>
                                     <p class="text-white font-size-20">{{ $mess->descp}}</p>
                                     <br><br>

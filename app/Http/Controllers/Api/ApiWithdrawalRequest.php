@@ -198,10 +198,10 @@ class ApiWithdrawalRequest extends Controller
                             'subject' => 'Withdrawal Request',
                             'title' => "Hi Admin",
                             'url' => "{$req->getSchemeAndHttpHost()}/admin/withdrawal-request",
-                            'descp' => "A user just requested for withdrawal on Palm-Alliance. These are the user details.... NAME: {$user->name} {$user->last_name}, APPROVAL-KEY:{$approval_key}
+                            'descp' => "A user just requested for withdrawal on Dell Group-. These are the user details.... NAME: {$user->name} {$user->last_name}, APPROVAL-KEY:{$approval_key}
                      EMAIL: {$user->email}, PHONE: {$user->phone}, AMOUNT: $$credited,  WALLET-ADDRESS:...... {$req['wallet_address']} .......{$req['wallet_type']}...... Please Login to approve the transaction",
                             'action-text' => 'Approve Withdrawal',
-                            'img' => 'assets/images/emails/Palm-Alliance-Management-Building.jpg',
+                            'img' => 'assets/images/emails/Dell Group--Management-Building.jpg',
                         ]));
                     }
                 }

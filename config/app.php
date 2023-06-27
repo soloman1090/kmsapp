@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'PALMALLIANCE'),
+    'name' => env('APP_NAME', 'Dell Group'),
 
     /*
     |--------------------------------------------------------------------------

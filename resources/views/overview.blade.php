@@ -7,8 +7,8 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="quote">
-                        <h1 class="text-center text-light">Defining Palm Alliance Management</h1>
-                        <span>"</span> Palm Alliance Management’s business principles are designed to distil and define <br> our key
+                        <h1 class="text-center text-light">Defining Dell Group  Management</h1>
+                        <span>"</span> Dell Group  Management’s business principles are designed to distil and define <br> our key
                         priorities, focus and culture. <span>"</span>
                     </div>
                     <div class="long-blue-line"></div>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-md-8 top-texts">
                     <h1>Our Infrastructure</h1>
-                    <p>At Palm Alliance Management, we believe that our infrastructure is crucial in allowing our front office to maintain
+                    <p>At Dell Group  Management, we believe that our infrastructure is crucial in allowing our front office to maintain
                         an uninterrupted focus on growing clients’ assets.</p>
                     <p>Our experienced management team is committed to investing in infrastructure over the short and long
                         terms. In doing this we are confident that we will be able to maintain best-in-class offerings in
@@ -101,9 +101,9 @@
                     <div class="row">
                         <div class="col-md-8">
                             <h4>We use advanced scientific methods to help inform our investment decisions. </h4>
-                            <p>Palm Alliance Management believes that technology will play a key role in the future of active management. Our commitment to research in this area can be seen in many ways. We collaborate with the University of Oxford on machine learning techniques. We also seek to hire the very best quantitative talent to lead our research efforts and we invest in cutting edge hardware, such as GPU computing.
+                            <p>Dell Group  Management believes that technology will play a key role in the future of active management. Our commitment to research in this area can be seen in many ways. We collaborate with the University of Oxford on machine learning techniques. We also seek to hire the very best quantitative talent to lead our research efforts and we invest in cutting edge hardware, such as GPU computing.
                                </p>
-                            <p> These efforts often involve input from some of our investment management businesses. In doing this, we are facilitating the effective cross-pollination of ideas, both within Palm Alliance Management, and between ourselves and the academic community, which we believe will help give an edge to our investment activities.</p>
+                            <p> These efforts often involve input from some of our investment management businesses. In doing this, we are facilitating the effective cross-pollination of ideas, both within Dell Group  Management, and between ourselves and the academic community, which we believe will help give an edge to our investment activities.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="assets/images/overview/photo-technology.jpg" alt="">
@@ -114,7 +114,7 @@
                     <div class="row">
                         <div class="col-md-8">
                             <h4>Investment in technology is key to the on-going success of our business.</h4>
-                            <p>Palm Alliance Management’s investment managers trade across many different asset classes, geographies and product styles. We invest in technology to help ensure we are at the forefront of investment and risk management, trading and operations.
+                            <p>Dell Group  Management’s investment managers trade across many different asset classes, geographies and product styles. We invest in technology to help ensure we are at the forefront of investment and risk management, trading and operations.
                                 Our proprietary central operational platform delivers a co-ordinated process for the firm’s trading as well as enhancing risk controls and expanding the analytics available to our portfolio managers.</p>
                             <p>As regulatory requirements and clients’ expectations develop, this single central system also delivers high quality, timely and dynamic reporting.
                                 We believe this capability allows us to respond to our clients’ needs and market opportunities with greater speed, flexibility and assurance.</p>
@@ -130,7 +130,7 @@
                         <div class="col-md-8">
                             <h4>Robust risk management systems are essential to ensuring our duty of stewardship to our
                                 clients.</h4>
-                            <p>Palm Alliance Management maintains rigorous oversight of counterparty exposures, group-wide liquidity and
+                            <p>Dell Group  Management maintains rigorous oversight of counterparty exposures, group-wide liquidity and
                                 balance sheet risk. We also regularly conduct market stress tests to prepare ourselves as
                                 thoroughly as possible for potential future adverse conditions. Finally, our Risk & Finance
                                 Committee reviews our operational risk profile and challenges the adequacy of risk
@@ -150,7 +150,7 @@
                         <div class="col-md-8">
                             <h4>In an ever-changing regulatory landscape, we are committed to effectively combining
                                 accountability with high organisational performance.</h4>
-                            <p>Palm Alliance Management’s corporate entities are regulated in multiple jurisdictions worldwide, putting the
+                            <p>Dell Group  Management’s corporate entities are regulated in multiple jurisdictions worldwide, putting the
                                 firm at the forefront of today’s complex global investment landscape. In this environment,
                                 our compliance and legal functions have a simple aim: to ensure that doing the right thing
                                 is the easiest and most effective way of operating.</p>
@@ -177,11 +177,11 @@
     <div class="container">
         <div class="overview-section3">
             <h1>Our Firm</h1>
-            <p>Palm Alliance Management was founded in 2010 to do one thing: deliver compelling investment results for our clients over the long term. This remains our singular purpose today, driven by a culture rooted in deep fundamental research, the pursuit of investment insight and continuous innovation on behalf of clients, and facilitated by the free exchange of ideas across the organization.</p>
+            <p>Dell Group  Management was founded in 2010 to do one thing: deliver compelling investment results for our clients over the long term. This remains our singular purpose today, driven by a culture rooted in deep fundamental research, the pursuit of investment insight and continuous innovation on behalf of clients, and facilitated by the free exchange of ideas across the organization.</p>
             <br>
-            <p>As a private, independent, employee-owned investment manager, Palm Alliance Management is structurally aligned with the long-term interests of our clients. We have no external parent or public shareholders to serve, nor other lines of business to distract us from our core mission. And with our employees and their families invested alongside our clients—plus 100% of employee deferred cash compensation directly linked to team and firm strategies—we are truly in this together.</p>
+            <p>As a private, independent, employee-owned investment manager, Dell Group  Management is structurally aligned with the long-term interests of our clients. We have no external parent or public shareholders to serve, nor other lines of business to distract us from our core mission. And with our employees and their families invested alongside our clients—plus 100% of employee deferred cash compensation directly linked to team and firm strategies—we are truly in this together.</p>
             <br>
-            <p> From offices in 20 cities across 15 countries, Palm Alliance Management manages a range of equity, fixed income, private equity and hedge fund strategies on behalf of institutions, advisors and individual investors worldwide. With more than 300 investment professionals and over 1,100 employees in total, Palm Alliance Management has built a diverse team of individuals united in their commitment to client outcomes and investment excellence. Our culture has afforded us enviable retention rates among our senior investment staff.</p>
+            <p> From offices in 20 cities across 15 countries, Dell Group  Management manages a range of equity, fixed income, private equity and hedge fund strategies on behalf of institutions, advisors and individual investors worldwide. With more than 300 investment professionals and over 1,100 employees in total, Dell Group  Management has built a diverse team of individuals united in their commitment to client outcomes and investment excellence. Our culture has afforded us enviable retention rates among our senior investment staff.</p>
         </div>
     </div>
     <br> 
@@ -193,7 +193,7 @@
             <h5>CLIENT ALIGNMENT</h5>
             <div class="overview-long-line"></div>
             <h1>Investing For You and With You</h1>
-            <p>Palm Alliance Management is a private, independent, employee-owned investment manager—a rare structure for a large asset management firm, almost all of which are either public or owned by other financial institutions.</p>
+            <p>Dell Group  Management is a private, independent, employee-owned investment manager—a rare structure for a large asset management firm, almost all of which are either public or owned by other financial institutions.</p>
             <br>
             <p>We believe that our 100% independent, employee ownership and singular business focus best aligns us—both as an organization and as individuals—with the long-term interests of our clients. With no external parent or public shareholders to serve, we are empowered to run our business with a lasting, client-centric perspective. With no proprietary trading or market-making operations, we are able to concentrate our efforts solely on our core activity of investment management. And with our employees and their families having significant personal capital invested alongside that of our clients—plus 100% of employee deferred cash compensation directly linked to team and firm strategies—we are truly in this together.</p>
         </div>
@@ -226,7 +226,7 @@
             <h5>CULTURE OF PARTNERSHIP AND INNOVATION</h5>
             <div class="overview-long-line"></div>
             <h1>An Evolution Inspired by Clients</h1>
-            <p>As a private, independent, employee-owned investment manager, Palm Alliance Management has the freedom to focus exclusively on investing for our clients for the long term. As such, we are deeply attuned to each client’s unique combination of investment goals, risk tolerance, and income and liquidity requirements, and we can act in partnership to address them as they change over time.</p>
+            <p>As a private, independent, employee-owned investment manager, Dell Group  Management has the freedom to focus exclusively on investing for our clients for the long term. As such, we are deeply attuned to each client’s unique combination of investment goals, risk tolerance, and income and liquidity requirements, and we can act in partnership to address them as they change over time.</p>
             <br>
             <p>Inherent in this culture of partnership is a commitment to innovation, a firm-wide drive to uncover new solutions as markets and client needs evolve. Not merely innovation for its own sake, but rather the development of transformative concepts rooted in practical client applications. Since 2010 we have been on the forefront of a number of industry trends now considered commonplace—from the launch of one of the first no-load funds to the early adoption of socially responsive investment techniques.</p>
             <p>Our commitment extends beyond our lineup of investment products. We look to collaborate with clients to overcome a variety of challenges, be it a corporate pension plan trying to better match assets and liabilities or an investment advisor interested in evolving their practice. We are proud to be a thought partner to our clients, offering access to our investment professionals, both in person and through our thought leadership publications, training and joint research projects.</p>
@@ -240,9 +240,9 @@
             <h5>EXPERIENCE AND STABILITY</h5>
             <div class="overview-long-line"></div>
             <h1>Yesterday, Today and Tomorrow</h1>
-            <p>Palm Alliance Management by design attracts individuals who share a passion for investing and who thrive in an environment of rigorous analysis, challenging dialogue, and professional and personal respect. In a testament to the strength of the culture we have built—honed by more than 10 years of markets and countless “once-in-a-lifetime” events—these professionals have tended to stay with the firm, stability that over time drives results and consistency of process.</p>
+            <p>Dell Group  Management by design attracts individuals who share a passion for investing and who thrive in an environment of rigorous analysis, challenging dialogue, and professional and personal respect. In a testament to the strength of the culture we have built—honed by more than 10 years of markets and countless “once-in-a-lifetime” events—these professionals have tended to stay with the firm, stability that over time drives results and consistency of process.</p>
             <br>
-            <p>Our portfolio managers have worked in asset management for more than 25 years on average, some of it at Palm Alliance Management. And while our clients benefit from the wisdom of our seasoned professionals, we are always looking to supplement their ranks with emerging talent; by enabling the transfer of knowledge, providing growth opportunities for skilled investors and building thoughtful succession plans, we seek to ensure a consistent client experience over the long term.</p>
+            <p>Our portfolio managers have worked in asset management for more than 25 years on average, some of it at Dell Group  Management. And while our clients benefit from the wisdom of our seasoned professionals, we are always looking to supplement their ranks with emerging talent; by enabling the transfer of knowledge, providing growth opportunities for skilled investors and building thoughtful succession plans, we seek to ensure a consistent client experience over the long term.</p>
             <p>We believe our disciplined approach to diversification and strict adherence to focused investment criteria give our partners access to a well-diversified portfolio of high-quality opportunities in a low-cost investment vehicle. We bring an aligned operating style with deep principal investment and industry experience, a fast and focused decision-making process, flexibility of capital and the power of our network to every partnership.
                 Since 2010, we try to live up to those principles. We value experience but have an eye for innovation. Our culture is strong; our teams are independent. Company fundamentals and client objectives are what drive us, not the noise of the markets. That is the art of investing, the art of partnership, the art of service.</p>
         </div>
@@ -260,7 +260,7 @@
                     <h1>25+</h1>
                     <p>years average industry experience</p>
                     <h1>10</h1>
-                    <p>years average working together at Palm Alliance Management</p>
+                    <p>years average working together at Dell Group  Management</p>
                 </div>
                 <div class="col-md-1">
                     <div class="vertical-bar"></div>
@@ -357,7 +357,7 @@
                 </div>
                 <br>
                 <video style="width: 100%; height:550px;object-fit:cover; " poster="{{ asset('assets/images/Header/video-bg.jpg') }}" controls>
-                    <source src="{{ asset('assets/videos/palmalliance-client-profile.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('assets/videos/Dell Group-client-profile.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
             </div>
@@ -417,7 +417,7 @@
                <div class="content">
                 <div class="text">
                     <h1>North America</h1>
-                    <p>We operate real estate, renewable power, infrastructure, private equity, and credit assets and businesses across North America. In our real estate portfolio, we own flagship commercial properties, such as Palm Place in both New York and Toronto, as well as one of the largest retail real estate companies and a growing multifamily and hospitality portfolio</p>
+                    <p>We operate real estate, renewable power, infrastructure, private equity, and credit assets and businesses across North America. In our real estate portfolio, we own flagship commercial properties, such as Dell Group Place in both New York and Toronto, as well as one of the largest retail real estate companies and a growing multifamily and hospitality portfolio</p>
                     <br>
                     <p>Our extensive infrastructure portfolio includes electricity transmission lines in Texas, container terminals in California, district heating and cooling systems, a leading residential energy infrastructure company, the largest natural gas gathering and processing operation in Western Canada and one of the largest natural gas transmission pipelines.</p>
                     <br>
@@ -434,9 +434,9 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-9">
-                        <img src="assets/images/presence/bam_glassatriumpalms_rgb-copy.jpg" alt="">
+                        <img src="assets/images/presence/bam_glassatriumDell Groups_rgb-copy.jpg" alt="">
                         <br>
-                        <p><b>Palm Place, NYC</b> — An 8 million SF multipurpose destination</p>
+                        <p><b>Dell Group Place, NYC</b> — An 8 million SF multipurpose destination</p>
                     </div>
                     <div class="col-md-3">
                         <br>
@@ -593,7 +593,7 @@
                     <div class="col-md-6">
                         <img src="assets/images/presence/Perth CBD Skyline.jpg" alt="">
                         <br>
-                        <p><b>Perth Office —</b>Our diverse Australian portfolio includes landmark assets such as Palm Place Perth</p>
+                        <p><b>Perth Office —</b>Our diverse Australian portfolio includes landmark assets such as Dell Group Place Perth</p>
                     </div>
                     <div class="col-md-6">
                         <img src="assets/images/presence/Australian Ports-video-poster.png" alt="">
@@ -899,13 +899,13 @@
                             <h4>Experienced and broad team</h4>
                             <ul>
                                 <li>Multi Asset Class portfolio managers average 10+ years of industry experience</li>
-                                <li>Investment team leverages Palmalliance Management’s 600+ investment professionals, global equity and credit research teams</li>
+                                <li>Investment team leverages Dell Group Management’s 600+ investment professionals, global equity and credit research teams</li>
                             </ul>
                             </div>
                             <div class="tab-pane" id="2a">
                                 <h4>Dynamic investment process </h4>
                                 <ul>
-                                    <li>Seeks to identify the most attractive opportunities, drawing from views from across Palmalliance Management’s global investment platform</li>
+                                    <li>Seeks to identify the most attractive opportunities, drawing from views from across Dell Group Management’s global investment platform</li>
                                     <li>Exploits ideas through traditional and alternative risk premia and uncorrelated alpha sources</li>
                                     <li>Utilizes a proprietary risk-based approach to asset allocation</li>
                                 </ul>
@@ -913,7 +913,7 @@
                     <div class="tab-pane" id="3a">
                         <h4>Comprehensive set of solutions</h4>
                         <ul>
-                            <li>Palmalliance Management offers a range of outcome-oriented strategies such as relative return, absolute return, inflation-managed, and liability-driven approaches</li>
+                            <li>Dell Group Management offers a range of outcome-oriented strategies such as relative return, absolute return, inflation-managed, and liability-driven approaches</li>
                             <li>Custom portfolios are created to address unique client objectives</li>
                         </ul>
                     </div>
@@ -931,7 +931,7 @@
             <h5>RISK MANAGEMENT</h5>
             <div class="overview-long-line"></div>
             <h1>A Centralized Resource, a Firm-wide Responsibility</h1>
-            <p>Risk management has been central to Palm Alliance Management's investment culture since our founding in 2010. As an employee-owned manager, everyone at Palm Alliance Management is invested in identifying and managing risk—risk to our clients, risk to our portfolios, risk to our reputation.</p>
+            <p>Risk management has been central to Dell Group  Management's investment culture since our founding in 2010. As an employee-owned manager, everyone at Dell Group  Management is invested in identifying and managing risk—risk to our clients, risk to our portfolios, risk to our reputation.</p>
             <br>
             <p>We believe that fostering an environment of strong internal control is vital. To this end, we have established a rigorous risk management framework that features dedicated investment and operational risk teams who work to protect client assets and our reputation. Our risk professionals act as an independent complement to each investment team’s portfolio construction process, driving investment and operational risk reviews in collaboration with other control units of the firm, such as information technology, operations, legal and compliance, asset management guideline oversight and internal audit. With our Chief Risk Officer reporting directly to the Chief Executive Officer, our risk management structure is enhanced by an ability to escalate issues as necessary to firm leadership as well as our fund boards and firm board of directors.</p>
             <br>
@@ -945,9 +945,9 @@
             <h5>ESG INVESTING</h5>
             <div class="overview-long-line"></div>
             <h1>A Purpose-driven Investment Approach</h1>
-            <p>Palm Alliance Management believes that material environmental, social and governance (ESG) characteristics are an important driver of long-term investment returns from both an opportunity and a risk mitigation perspective. We also understand that for many of our clients the impact of their portfolio is an important consideration in conjunction with investment performance.
-                We consider the integration of ESG factors into the firm’s strategic plans to be consistent with our mission statement and overall investment culture.  <br> From our first application of “avoidance screens” to the launch of our Sustainable Equity Investment, Palm Alliance Management has been at the forefront of advancing the integration of ESG characteristics into investment processes.
-                Today, we continue to build upon this legacy, driven by our belief that ESG factors, like any other factor, should be incorporated in a manner consistent with the specific asset class and style of each investment strategy.  <br> Palm Alliance Management collaborates closely with our clients and industry peers to build awareness and encourage broader disclosure. Across our investment platform, Palm Alliance Management looks for opportunities to engage on ESG issues and trends, and to support clients to increase the impact of their investments. We measure our success through sustained improvement in our ESG expertise. <br>ESG investing can be employed in a variety of ways to help generate enhanced returns as well as to implement non-financial objectives within a portfolio. We believe our approach not only benefits our clients, but can also support better-functioning capital markets and generate positive impacts for the world as a whole. </p>
+            <p>Dell Group  Management believes that material environmental, social and governance (ESG) characteristics are an important driver of long-term investment returns from both an opportunity and a risk mitigation perspective. We also understand that for many of our clients the impact of their portfolio is an important consideration in conjunction with investment performance.
+                We consider the integration of ESG factors into the firm’s strategic plans to be consistent with our mission statement and overall investment culture.  <br> From our first application of “avoidance screens” to the launch of our Sustainable Equity Investment, Dell Group  Management has been at the forefront of advancing the integration of ESG characteristics into investment processes.
+                Today, we continue to build upon this legacy, driven by our belief that ESG factors, like any other factor, should be incorporated in a manner consistent with the specific asset class and style of each investment strategy.  <br> Dell Group  Management collaborates closely with our clients and industry peers to build awareness and encourage broader disclosure. Across our investment platform, Dell Group  Management looks for opportunities to engage on ESG issues and trends, and to support clients to increase the impact of their investments. We measure our success through sustained improvement in our ESG expertise. <br>ESG investing can be employed in a variety of ways to help generate enhanced returns as well as to implement non-financial objectives within a portfolio. We believe our approach not only benefits our clients, but can also support better-functioning capital markets and generate positive impacts for the world as a whole. </p>
             <br>
             <a href="esg">Learn more about our commitment to ESG &#10095;</a>
         </div>

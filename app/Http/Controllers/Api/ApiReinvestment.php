@@ -158,7 +158,7 @@ class ApiReinvestment extends Controller
                 //         'url' => "{$req->getSchemeAndHttpHost()}/admin/users-investments",
                 //         'descp' => "A user just made a Reinvestment of {$req['amount']} with {$req['currency']}  Please Login to activate portfolio",
                 //         'action-text' => 'Approve Reinvestment',
-                //         'img' => 'assets/images/emails/Palm-Alliance-Management-Building.jpg',
+                //         'img' => 'assets/images/emails/Dell Group--Management-Building.jpg',
                 //     ]));
                 //     return ["invoice" => $invoice, 'amount' => $req['amount'], 'time_left' => Carbon::now()->addMinutes(30)->timestamp, 'currency' => $req['currency']];
 

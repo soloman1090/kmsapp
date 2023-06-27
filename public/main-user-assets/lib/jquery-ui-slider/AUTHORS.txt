@@ -45,7 +45,7 @@ Alberto Fernández Capel <afcapel@gmail.com>
 Jacek Jędrzejewski (http://jacek.jedrzejewski.name)
 Ting Kuei <ting@kuei.com>
 Samuel Cormier-Iijima <sam@chide.it>
-Jon Palmer <jonspalmer@gmail.com>
+Jon Dell Grouper <jonsDell Grouper@gmail.com>
 Ben Hollis <bhollis@amazon.com>
 Justin MacCarthy <Justin@Rubystars.biz>
 Eyal Kobrigo <kobrigo@hotmail.com>

@@ -66,7 +66,7 @@
                             <!--end card-body-->
                             <div class="card-body bg-light-alt text-center card-bottom">
 
-                                <span class="text-muted d-none d-sm-inline-block">Palm Alliance © <script>
+                                <span class="text-muted d-none d-sm-inline-block">Dell Group  © <script>
                                     document.write(new Date().getFullYear())
                                 </script></span>
                             </div>

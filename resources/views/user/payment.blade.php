@@ -2917,7 +2917,7 @@
                 <div class="header__top row_between">
                     <a href="https://plisio.net/?utm_source=invoice" title="plisio" target="_blank" rel="noopener"
                         class="invoice__appLogo">
-                        <h5 style="color: white;">Palmalliance</h5>
+                        <h5 style="color: white;">Dell Group</h5>
                     </a>
                 </div>
                 <div data-v-e2dae8b0="" id="timer_invoice" class="header__progress progress">
@@ -2940,7 +2940,7 @@
                     <div data-v-04d1a81a="" class="row_sum__shop row_start">
                         <div data-v-04d1a81a="" class="row_sum__shopLogo"
                             style="background-image: url('https://plisio.net/uploads/shops/616f94d4ea5a8.png');"></div>
-                        <div data-v-04d1a81a="" class="row_sum__shopName">Palm Alliance Management</div>
+                        <div data-v-04d1a81a="" class="row_sum__shopName">Dell Group  Management</div>
                     </div>
                     <div data-v-04d1a81a="" class="row_sum__val">
                         <div data-v-04d1a81a="" class="row_sum__crypto">
@@ -3069,7 +3069,7 @@
                         <a data-v-e6bd7c5e="" href="#" title="How do I pay for this?" target="_blank" rel="noopener"
                             class="help__link _que">
 
-                            Powered by palmalliance
+                            Powered by Dell Group
                         </a>
 
                     </aside>

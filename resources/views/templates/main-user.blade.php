@@ -6,10 +6,10 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>{{ $page_title }} | Palm Member</title>
+    <title>{{ $page_title }} | Dell Group Member</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Palmalliance Members Dashboard" name="description" />
-    <meta content="PalmAlliance" name="Palm" />
+    <meta content="Dell Group Members Dashboard" name="description" />
+    <meta content="Dell Group" name="Dell Group" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('admin-assets/img/fav-icon.png') }}">
@@ -236,7 +236,7 @@
                         <div class="col-sm-12">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Palmalliance.
+                            </script> © Dell Group.
                         </div>
 
                     </div>
@@ -288,7 +288,7 @@ window.intercomSettings = {
         $('#referralLink').on('click', function() {
             refData.style.visibility = "visible";
             $(this).attr('referral_id')
-            let link = `https://palmalliance.com/register/?refer=${$(this).attr('referral_id')}`
+            let link = `https://Dell Group.com/register/?refer=${$(this).attr('referral_id')}`
 
             refData.value = link;
             refData.select();

@@ -61,7 +61,7 @@
                             </div>
                             <!--end card-body-->
                             <div class="card-body bg-light-alt text-center">
-                                Palm Alliance ©   <script>
+                                Dell Group  ©   <script>
                                     document.write(new Date().getFullYear())
                                 </script></span>
                             </div>

@@ -257,7 +257,7 @@ class Affiliate extends Controller
         <b>NAME:</b> $req->account_name <br/>
         <b>REFERRAL-CODE :</b> $req->referral_code <br/>
         <hr/>
-        <h4>PALM INFO:</h4>
+        <h4>Dell Group INFO:</h4>
         <hr/>
         <b>COMMUNICATION:</b> $req->communication <br/>
         <b>TARGET CLIENTS:</b> $req->target_clients <br/>

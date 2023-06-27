@@ -99,7 +99,7 @@ class Transfer extends Controller
         ->get()->first();
 
         if($re_user==null){
-            $req->session()->flash('error','Invalid Email Address,...Sorry this is not a registered account on Palm Alliance.');
+            $req->session()->flash('error','Invalid Email Address,...Sorry this is not a registered account on Dell Group .');
             return  redirect('user/transfer');
         }
         

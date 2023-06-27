@@ -63,7 +63,7 @@
         <br>
         <div class="row text-center">
             <div class="col-md-5">
-                <h4 class="bold">PALM'S UNIQUE, VERTICALLY INTEGRATED MODEL</h4>
+                <h4 class="bold">Dell Group'S UNIQUE, VERTICALLY INTEGRATED MODEL</h4>
                 <br>
                 <img class="img1" src="{{ asset('user-assets/images/portfolios/port-img-1.png') }}" alt="">
             </div>

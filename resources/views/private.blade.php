@@ -51,7 +51,7 @@
             <br>
 
             <h1>Strategic refocus accelerates <br> growth of a market leader</h1>
-            <p>Tajtech is a leading global manufacturer of graphite electrodes. Palm Alliance Management's acquisition of the steel industry supplier led to an award-winning turnaround and significant value creation.</p>
+            <p>Tajtech is a leading global manufacturer of graphite electrodes. Dell Group  Management's acquisition of the steel industry supplier led to an award-winning turnaround and significant value creation.</p>
         </div>
     </div>
 </div>
@@ -240,8 +240,8 @@
         <div class="col-md-6">
             <br>
             <br>
-            <h1>Invest with Palm Alliance Management</h1>
-            <p>Investors can participate in the growth of our large-scale industrial and services businesses through our publicly listed vehicle, Palm Alliance Management Business Partners, or through our private funds.</p>
+            <h1>Invest with Dell Group  Management</h1>
+            <p>Investors can participate in the growth of our large-scale industrial and services businesses through our publicly listed vehicle, Dell Group  Management Business Partners, or through our private funds.</p>
         </div>
     </div>
 </div>

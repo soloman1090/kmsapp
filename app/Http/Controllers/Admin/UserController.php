@@ -420,7 +420,7 @@ class UserController extends Controller
             $userInfo->update();
             try {
                 Mail::to($user->email)->send(new UserRegisteredMail([
-                    'subject' => 'Welcome to Palm Alliance Management!',
+                    'subject' => 'Welcome to Dell Group  Management!',
                     'title' => "Welcome {$user->name}",
                     'url' => "{{ $request->getSchemeAndHttpHost() }}/user/dashboard",
                     'descp' => 'We pride ourselves on serving our clients to the best of our potential and hope that this newfound relationship with you grows by the day.
