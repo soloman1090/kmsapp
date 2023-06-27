@@ -33,11 +33,12 @@
                                         <div class="row ">
                                             <div class="col-md-1"></div>
                                             <div class="col-md-10">
-                                                <h4 class="mt-3 mb-1 fw-bold  font-30">Nice. Now, What's your name?</h4>
-                                                <p class="font-20  mb-0">We're required to get your full legal first and last name. If the name you go by is different, please enter both below</p>
+                                               
                                                 <br>
                                                 <form class="form-parsley" action="user-phone" onsubmit="saveData()">
                                                     <div class="form-group">
+                                                    <h4 class="mt-3 mb-1 fw-bold  font-30">Nice. Now, What's your name?</h4>
+                                                <p class="font-20  mb-0">We're required to get your full legal first and last name. If the name you go by is different, please enter both below</p>
                                                         <label class="form-label text-dark">Legal First Name</label>
                                                         <div>
                                                             <input type="text" class="form-control" required

@@ -15,7 +15,7 @@
                             <div class="p-0">
                                 <div class="row">
                                     <div class="col-md-2 text-center">
-                                        <a href="business-password" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
+                                        <a href="business-email" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="text-center p-2">
