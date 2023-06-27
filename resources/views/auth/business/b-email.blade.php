@@ -17,7 +17,7 @@
                             <div class=" p-0">
                                 <div class="row">
                                     <div class="col-md-2 text-center">
-                                        <a href="business-location" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
+                                        <a href="business-name" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="text-center p-2">
@@ -45,7 +45,7 @@
                                                         <p class="font-20  mb-3">Please provide your business email address</p>
                                                             <label class="form-label text-dark">Business Email Address</label>
                                                             <div>
-                                                                <input type="email" id="bssEmailTxt" class="form-control  pt-2 pb-2"
+                                                                <input type="email" id="bssEmailTxt" class="form-control  pt-3 pb-3"
                                                                     required parsley-type="email"
                                                                     placeholder="Enter your business email address " />
                                                             </div>
@@ -55,7 +55,7 @@
                                                         <p class="font-20  mb-3">Please provide your business contact details</p>
                                                             <label class="form-label text-dark">Phone Number</label>
                                                             <div>
-                                                                <input type="number" id="bssPhoneTxt" class="form-control  pt-2 pb-2"
+                                                                <input type="number" id="bssPhoneTxt" class="form-control  pt-3 pb-3"
                                                                     required parsley-type="name"
                                                                     placeholder="Enter your business phone number" />
                                                             </div>
