@@ -14,7 +14,7 @@
                     <div class="">
                         <div class=" p-0 ">
                             <div class="text-left p-3">
-                                <h4 class="mt-3 mb-1 fw-bold  font-30">Welcome Back!</h4>
+                                <h1 class="mt-3 mb-1 fw-bold  font-30">Hello there !</h1>
                                 <p class="font-20  mb-0">Sign in to Dell Group Account</p>
                             </div>
                         </div>
@@ -68,18 +68,13 @@
 
                                         <div class="form-group mb-0 row">
                                             <div class="col-12">
-                                                <button class="btn btn-brand-02 w-100" type="submit">Log In <i class="fas fa-sign-in-alt ms-1"></i></button>
+                                                <button class="btn btn-brand-02 w-100" type="submit">Sign In To Account </button>
                                             </div>
                                             <!--end col-->
                                         </div>
                                         <!--end form-group-->
                                     </form>
-                                    <div class="divider-text">or</div>
-                                    <div class="d-grid gap-2">
-                                        <button class="btn btn-outline-facebook btn-block">Sign In With Facebook</button>
-                                        <button class="btn btn-outline-twitter btn-block">Sign In With Twitter</button>
-                                    </div>
-                                    <!--end form-->
+                                   
                                     <div class="m-3 text-center text-muted">
                                         <p class="mb-0">Create Dell Group Account ? <a href="{{ route('register') }}" class="text-primary ms-2">Register</a></p>
                                     </div>
