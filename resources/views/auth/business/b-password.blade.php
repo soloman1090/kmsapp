@@ -33,11 +33,12 @@
                                         <div class="row ">
                                             <div class="col-md-1"></div>
                                             <div class="col-md-10">
-                                                <h4 class="mt-3 mb-1 fw-bold  font-30">Next create a strong password</h4>
-                                                <p class="font-20  mb-0">To make this unique and secure, please use symbols, uncommon words, and at least 8 characters.</p>
+                                            
                                                 <br>
                                                 <form class="form-parsley" action="business-upload" onsubmit="saveData()">
                                                     <div class="form-group">
+                                                    <h4 class="mt-3 mb-1 fw-bold  font-30">Next create a strong password</h4>
+                                                    <p class="font-20  mb-0">To make this unique and secure, please use symbols, uncommon words, and at least 8 characters.</p>
                                                         <label class="form-label text-dark">Password</label>
                                                         <div>
                                                             <input type="password" id="passTxt" class="form-control" required

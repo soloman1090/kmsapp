@@ -36,12 +36,13 @@
                                         <div class="row ">
                                             <div class="col-md-1"></div>
                                             <div class="col-md-10">
-                                                <h4 class="mb-2 fw-bold  font-30">What phone number can we reach you at?</h4>
-                                                <p class="font-20  mb-0">Please provide your business contact details</p>
+                                                
                                                 <br>
                                                 <form class="form-parsley" id="form" onsubmit="saveData()"
                                                     action="business-password">
                                                     <div class="form-group">
+                                                    <h4 class="mb-2 fw-bold  font-30">What phone number can we reach you at?</h4>
+                                                    <p class="font-20  mb-3">Please provide your business contact details</p>
                                                         <label class="form-label text-dark">Phone Number</label>
                                                         <div>
                                                             <input type="number" id="bssPhoneTxt" class="form-control"

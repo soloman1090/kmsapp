@@ -3,19 +3,22 @@
 @section('content')
 
 <!-- Log In page -->
-<div class="container">
-    <div class="row vh-100 d-flex justify-content-center">
-        <div class="col-12 align-self-center">
+<div class="Login">
+    <div class=" vh-100 >
+        <div class="col-md-12 ">
             <div class="row">
-                <div class="col-lg-4 mx-auto">
-                    <div class="card">
-                        <div class="card-body p-0 ">
-                            <div class="text-center p-3">
+                <div class="col-md-7">
+                    <div class="bg2"></div>
+                </div>
+                <div class="col-md-5 p-5">
+                    <div class="">
+                        <div class=" p-0 ">
+                            <div class="text-left p-3">
                                 <h4 class="mt-3 mb-1 fw-bold  font-30">Welcome Back!</h4>
                                 <p class="font-20  mb-0">Sign in to Palm Account</p>
                             </div>
                         </div>
-                        <div class="card-body p-0">
+                        <div class=" p-0">
                             <!-- Tab panes -->
                             <div class="tab-content">
 
@@ -65,12 +68,17 @@
 
                                         <div class="form-group mb-0 row">
                                             <div class="col-12">
-                                                <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Log In <i class="fas fa-sign-in-alt ms-1"></i></button>
+                                                <button class="btn btn-brand-02 w-100" type="submit">Log In <i class="fas fa-sign-in-alt ms-1"></i></button>
                                             </div>
                                             <!--end col-->
                                         </div>
                                         <!--end form-group-->
                                     </form>
+                                    <div class="divider-text">or</div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-outline-facebook btn-block">Sign In With Facebook</button>
+                                        <button class="btn btn-outline-twitter btn-block">Sign In With Twitter</button>
+                                    </div>
                                     <!--end form-->
                                     <div class="m-3 text-center text-muted">
                                         <p class="mb-0">Create PALM Account ? <a href="{{ route('register') }}" class="text-primary ms-2">Register</a></p>

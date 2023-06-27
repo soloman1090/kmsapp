@@ -6,20 +6,20 @@
 </style>
 <link href="{{ asset('user-assets/plugins/dropify/css/dropify.min.css') }}" rel="stylesheet">
     <!-- Log In page -->
-    <div class="container">
-        <div class="row  d-flex justify-content-center vh-100" >
-            <div class="col-12 align-self-center">
+    <div class="File">
+        <div class="vh-100" >
+            <div class="">
                 <div class="row">
-                    <div class="col-lg-6 mx-auto">
-                        <div class="card card-top">
-                            <div class="card-body p-0">
+                    <div class="col-md-6 ">
+                        <div class="">
+                            <div class="p-0">
                                 <div class="row">
                                     <div class="col-md-2 text-center">
                                         <a href="business-password" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="text-center p-2">
-                                            <h4 class="mt-3 mb-1 fw-semibold  font-17">7/7</h4>
+                                            <h4 class="mt-3 mb-1 fw-semibold  font-17">3/3</h4>
                                         </div>
                                     </div>
                                     <div class="col-md-2 text-center">
@@ -71,13 +71,19 @@
                                                             <input type="hidden" id="lastNameTxt" name="lastName">
                                                             <input type="hidden" id="passwordConfirmTxt" name="password_confirmation">
                                                             <input type="hidden" id="referral_id" name="referral_id">
-                                                              <input type="file" id="input-file-now" name="image" class="dropify" data-height="100" />
+                                                            <div class="mb-3">
+                                                                <label for="formFile" class="form-label">Default file input example</label>
+                                                                <input type="file" id="input-file-now formFile" name="image" class="dropify form-control " data-height="100" />
+                                                            </div>
+                                                             
                                                               <br>
-                                                               <input type="checkbox" class="custom-control-input" id="customCheck1" data-parsley-multiple="groups"
+                                                              <div class="d-flex">
+                                                              <input type="checkbox" class="custom-control-input me-3" id="customCheck1" data-parsley-multiple="groups"
                                                                     data-parsley-mincheck="1">
                                                             <label class="custom-control-label" for="customCheck1">By checking this box, you agree to our Limited Scope Advisory Agreement,
                                                                 consent to eletronic delivery of communications and our Privacy Policy, and acknowledge that
                                                             </label>
+                                                              </div>
 
 
                                                         </div>
@@ -100,6 +106,9 @@
                             </div>
                         </div>
                         <!--end card-->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg2"></div>
                     </div>
                     <!--end col-->
                 </div>

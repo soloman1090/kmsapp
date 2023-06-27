@@ -7,21 +7,21 @@
         }
     </style>
     <!-- Log In page -->
-    <div class="container">
-        <div class="row  d-flex justify-content-center vh-100" >
-            <div class="col-12 align-self-center">
+    <div class="Email">
+        <div class="vh-100" >
+            <div class="">
                 <div class="row">
-                    <div class="col-lg-6 mx-auto">
-                        <div class="card card-top">
+                    <div class="col-md-6 ">
+                        <div class="">
 
-                            <div class="card-body p-0">
+                            <div class=" p-0">
                                 <div class="row">
                                     <div class="col-md-2 text-center">
                                         <a href="business-location" class=""><i class=" fas fa-arrow-left  pt-4"></i></a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="text-center p-2">
-                                            <h4 class="mt-3 mb-1 fw-semibold  font-17">3/7</h4>
+                                            <h4 class="mt-3 mb-1 fw-semibold  font-17">2/3</h4>
                                         </div>
                                     </div>
                                     <div class="col-md-2 text-center">
@@ -31,27 +31,56 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active " id="Register_Tab" role="tabpanel">
-                                        <br>
-                                        <h3 class="text-center"></h3>
+                                       
                                         <div class="row ">
                                             <div class="col-md-1"></div>
                                             <div class="col-md-10">
-                                                <h4 class="mb-2 fw-bold  font-30">What Email address can we reach you at?</h4>
-                                                <p class="font-20  mb-0">Please provide your business email address</p>
-                                                <br>
-                                                <form class="form-parsley" id="form" onsubmit="saveData()"
-                                                    action="business-reg-no">
-                                                    <div class="form-group">
-                                                        <label class="form-label text-dark">Business Email Address</label>
-                                                        <div>
-                                                            <input type="email" id="bssEmailTxt" class="form-control"
-                                                                required parsley-type="email"
-                                                                placeholder="Enter your business email address " />
+                                                <div class="mb-3">
+                                                   
+                                                    <br>
+                                                    <form class="form-parsley" id="form" onsubmit="saveData()"
+                                                        action="business-upload">
+                                                        <div class="form-group">
+                                                        <h5 class="fw-bold  font-30">What Email address can we reach you at?</h5>
+                                                        <p class="font-20  mb-3">Please provide your business email address</p>
+                                                            <label class="form-label text-dark">Business Email Address</label>
+                                                            <div>
+                                                                <input type="email" id="bssEmailTxt" class="form-control  pt-2 pb-2"
+                                                                    required parsley-type="email"
+                                                                    placeholder="Enter your business email address " />
+                                                            </div>
                                                         </div>
+                                                        <div class="form-group">
+                                                        <h5 class=" fw-bold  font-30">What phone number can we reach you at?</h5>
+                                                        <p class="font-20  mb-3">Please provide your business contact details</p>
+                                                            <label class="form-label text-dark">Phone Number</label>
+                                                            <div>
+                                                                <input type="number" id="bssPhoneTxt" class="form-control  pt-2 pb-2"
+                                                                    required parsley-type="name"
+                                                                    placeholder="Enter your business phone number" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                    <h5 class="mt-3 fw-bold  font-30">Next create a strong password</h5>
+                                                    <p class="font-20  mb-3">To make this unique and secure, please use symbols, uncommon words, and at least 8 characters.</p>
+                                                        <label class="form-label text-dark">Password</label>
+                                                        <div>
+                                                            <input type="password" id="passTxt" class="form-control  pt-2 pb-2" required
+                                                              placeholder="Enter password"/>
+                                                             <div class="mt-2">
+                                                        <input type="password" class="form-control  pt-2 pb-2" required
+                                                                data-parsley-equalto="#passTxt" id="confirmTxt"
+                                                                placeholder="Confirm Password"/>
                                                     </div>
-                                                    <!--end form-group-->
-                                                    <button type="submit" id="btnNext" class="btn btn-primary btn-lg"> Continue </button>
-                                                </form>
+                                                        </div>
+                                                    </div><!--end form-group-->
+                                                        <!--end form-group-->
+                                                        <button type="submit" id="btnNext" class="btn btn-brand-02"> Continue </button>
+                                                    </form>
+                                                </div>
+                                                <div class="mb-3">
+
+                                                </div>
                                             </div>
                                             <div class="col-md-1"></div>
                                         </div>
@@ -69,6 +98,9 @@
                             </div>
                         </div>
                         <!--end card-->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg1"></div>
                     </div>
                     <!--end col-->
                 </div>
@@ -102,4 +134,43 @@
             localStorage.setItem("reg_data", JSON.stringify(lData))
         }
     </script>
+        <script>
+        let bssPhoneTxt = document.getElementById('bssPhoneTxt');
+
+        let lData = {};
+        if (localStorage.getItem("reg_data") != null) {
+            lData = JSON.parse(localStorage.getItem("reg_data"))
+            if (lData.businessPhone != null) {
+                bssPhoneTxt.value = lData.businessPhone;
+            }
+        }
+
+        console.log(lData)
+
+        function saveData() {
+            lData.businessPhone = bssPhoneTxt.value
+            console.log(lData);
+            localStorage.setItem("reg_data", JSON.stringify(lData))
+        }
+    </script>
+        <script>
+        let passTxt=document.getElementById('passTxt');
+
+        let lData={};
+        if(localStorage.getItem("reg_data")!=null){
+            lData =JSON.parse(localStorage.getItem("reg_data"))
+            if(lData.businessPassword!=null){
+                passTxt.value=lData.businessPassword;
+                confirmTxt.value=lData.businessPassword;
+            }
+        }
+        console.log(lData)
+
+       function saveData(){
+        lData.businessPassword=passTxt.value
+        console.log(lData);
+        localStorage.setItem("reg_data",JSON.stringify(lData))
+        // ={"firstName":"", "lastName":"", "phone":"", "password":""}
+       }
+        </script>
 @endsection
