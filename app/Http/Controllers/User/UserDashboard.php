@@ -67,10 +67,10 @@ class UserDashboard extends Controller
             ->where('users.id', $id)
             ->get()->first();
 
-        if($user->verified==null){
-            $request->session()->flash('success', 'For security reasons. Please reset your password');
-            return redirect('user/change-password');
-        }
+        // if($user->verified==null){
+        //     $request->session()->flash('success', 'For security reasons. Please reset your password');
+        //     return redirect('user/change-password');
+        // }
 
         try {
             if ($request->has('auth')) {
