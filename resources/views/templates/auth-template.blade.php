@@ -77,7 +77,7 @@
     <script src="../../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script src="../../assets/js/dashforge.js"></script>
-    <script src="assets/js/emma.js"></script>
+    <!-- <script src="assets/js/emma.js"></script> -->
 
     <!-- append theme customizer -->
     <script src="../../lib/js-cookie/js.cookie.js"></script>
