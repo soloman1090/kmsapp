@@ -1,1113 +1,979 @@
 @extends('templates.main-user')
 
 @section('content')
-<link href="{{ asset('user-assets/css/skippr.css') }}" rel="stylesheet" type="text/css" />
-<style>
-    #containerSlider {
-        width: 100%;
-        height: 300px;
-    }
-
-    .newsHeading,
-    .newsSummary {
-        display: block;
-        /* Fallback for non-webkit */
-        display: -webkit-box;
-        height: 4.8em;
-        /* Fallback for non-webkit, line-height * 2 */
-        line-height: 1.5em;
-        -webkit-line-clamp: 4;
-        /* if you change this, make sure to change the fallback line-height and height */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-</style>
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="row justify-content-center">
-            <div class="col-xl-3 col-md-6">
-                <!-- card -->
-                <div class="card card-h-100">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <span class="  mb-3 lh-1 d-block text-truncate "><b>Accumulated Dividends</b></span>
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <h4 class="m-0 amount1" amount="{{ $accumulatedDevidends }}">${{ $accumulatedDevidends }}</h4>
-                            </div>
-                            <div class="col-4">
-                                <div id="mini-chart1" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                            </div>
-                            <div class="text-nowrap">
-                                <span class="badge bg-soft-success text-success">+$20.9k</span>
-                                <span class="ms-1 text-muted font-size-13">Since last week</span>
-                            </div>
-                        </div>
-                    </div><!-- end card body -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-
-            <div class="col-xl-3 col-md-6">
-                <!-- card -->
-                <div class="card card-h-100">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <span class="  mb-3 lh-1 d-block text-truncate"><b>Active Portfolios</b></span>
-                        <div class="row align-items-center">
-                            <div class="col-8">
-
-                                <h4 class="m-0">{{ $investment_count?? 0 }}</h4>
-                            </div>
-                            <div class="col-4">
-                                <div id="mini-chart3" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                            </div>
-                            <div class="text-nowrap">
-                                <span class="badge bg-soft-success text-success">+ 29</span>
-                                <span class="ms-1 text-muted font-size-13">Since last week</span>
-                            </div>
-                        </div>
-                    </div><!-- end card body -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-
-             
-
-            <div class="col-xl-3 col-md-6">
-                <!-- card -->
-                <div class="card card-h-100">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <span class="  mb-3 lh-1 d-block text-truncate"><b>Members Benefit Commission</b></span>
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <h4 class="m-0 amount2" amount="{{ $accumulatedBonus??0 }}">${{ $accumulatedBonus??0 }}</h4>
-                            </div>
-                            <div class="col-4">
-                                <div id="mini-chart5" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                            </div>
-                            <div class="text-nowrap">
-                                <span class="badge bg-soft-warning text-danger">-29 Trades</span>
-                                <span class="ms-1 text-muted font-size-13">Since last week</span>
-                            </div>
-                        </div>
-                    </div><!-- end card body -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-
-            <div class="col-xl-3 col-md-6">
-                <!-- card -->
-                <div class="card card-h-100">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <span class="  mb-3 lh-1 d-block text-truncate"><b>Compounding Dividends</b></span>
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <h4 class="m-0">${{ $compound_wallet ?? 0 }}</h4>
-                            </div>
-                            <div class="col-4">
-                                <div id="mini-chart4" data-colors='["#1A7BB7"]' class="apex-charts mb-2"></div>
-                            </div>
-                            <div class="text-nowrap">
-                                <span class="badge bg-soft-success text-success">+2.95%</span>
-                                <span class="ms-1 text-muted font-size-13">Since last week</span>
-                            </div>
-                        </div>
-                    </div><!-- end card body -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-
-
-
-
+<div class="content content-fixed">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cryptocurrency</li>
+              </ol>
+            </nav>
+            <h4 class="mg-b-0 tx-spacing--1">Welcome to Dashboard</h4>
+          </div>
+          <div class="d-none d-md-flex">
+            <button class="btn btn-sm btn-primary btn-uppercase pd-x-20">BTC</button>
+            <button class="btn btn-sm btn-white btn-uppercase pd-x-20 mg-l-5">ETH</button>
+            <button class="btn btn-sm btn-white btn-uppercase pd-x-20 mg-l-5">LTC</button>
+            <button class="btn btn-sm btn-white btn-uppercase pd-x-20 mg-l-5">BTG</button>
+            <button class="btn btn-sm btn-icon btn-white btn-uppercase mg-l-5"><i data-feather="more-vertical"></i></button>
+          </div>
         </div>
-        <!--end row--> 
-         
-    </div>
-    <!--end col-->
 
-    
-    <!--end col-->
-</div>
-<!--end row-->
-<div class="row">
-    <div class="col-md-12 col-lg-5">
-        <!-- card -->
-        <div class="card card-h-100">
-            <!-- card body -->
-            <div class="card-body">
-                <div class="d-flex flex-wrap align-items-center mb-4">
-                    <h5 class="card-title me-2">Wallet Overview</h5>
-                    <div class="ms-auto">
-                         
+        <div class="row row-xs">
+          <div class="col-12">
+            <div class="card card-body">
+              <div class="d-md-flex align-items-center justify-content-between">
+                <div class="media align-sm-items-center">
+                  <div class="tx-40 tx-lg-60 lh-0 tx-orange"><i class="fab fa-bitcoin"></i></div>
+                  <div class="media-body mg-l-15">
+                    <h6 class="tx-12 tx-lg-14 tx-semibold tx-uppercase tx-spacing-1 mg-b-5">Bitcoin Price <span class="tx-normal tx-color-03">(BTC)</span></h6>
+                    <div class="d-flex align-items-baseline">
+                      <h2 class="tx-20 tx-lg-28 tx-normal tx-rubik tx-spacing--2 lh-2 mg-b-0">$3,972.87</h2>
+                      <h6 class="tx-11 tx-lg-16 tx-normal tx-rubik tx-danger mg-l-5 lh-2 mg-b-0">-$7.98(0.2006%)</h6>
                     </div>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+                <div class="d-flex flex-column flex-sm-row mg-t-20 mg-md-t-0">
+                  <button class="btn btn-sm btn-white btn-uppercase pd-x-15"><i data-feather="download" class="mg-r-5"></i> Export CSV</button>
+                  <button class="btn btn-sm btn-white btn-uppercase pd-x-15 mg-t-5 mg-sm-t-0 mg-sm-l-5"><i data-feather="share-2" class="mg-r-5"></i> Share</button>
+                  <button class="btn btn-sm btn-white btn-uppercase pd-x-15 mg-t-5 mg-sm-t-0  mg-sm-l-5"><i data-feather="eye" class="mg-r-5"></i> Watch</button>
                 </div>
-
-                <div class="row align-items-center">
-                    <div class="col-sm">
-                        <div id="wallet-balance" data-colors='["#2AB57D", "#1A7BB7", "#084567"]' data-labels='[ "Portfolio Dividend", "Referral Bonus","Transfers"]'  
-                        data-values='["40", "45", "15"]' class="apex-charts"></div>
-                    </div>
-                    <div class="col-sm align-self-center">
-                        <div class="mt-4 mt-sm-0">
-                            <div>
-                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-success"></i> Portfolio Dividend</p>
-                                <h6 class="m-0 amount3" amount="{{ $accumulatedEarnings }}">${{ $accumulatedEarnings }}</h6>
-                            </div>
-
-                            <div class="mt-4 pt-2">
-                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-primary"></i> Referral Bonus</p>
-                                <h6 class="m-0 amount4" amount="{{ $accumulatedBonus??0 }}">${{ $accumulatedBonus??0 }}</h6>
-                            </div>
-
-                            <div class="mt-4 pt-2">
-                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-info"></i> Transfers</p>
-                                <h6>$ {{ $accumulatedTransfer }}</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-        <!-- end card -->
-    </div>
-    <!-- end col -->
-    <div class="col-md-12 col-lg-4">
-        <div class="row">
-            <div class="col-xl-12">
-                <!-- card -->
-                <div class="card card-h-100">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap align-items-center  ">
-                            <h5 class="card-title me-2">Investment Overview</h5>
-                            
-                        </div>
-                        
-                        <div class="row align-items-center text-center mt-3">
-                            
-                             
-                                <div class=" mt-sm-0"> 
-                                    <div class="row  ">
-                                        <div class="col-4">
-                                            <p class=" "><b>Invested </b></p>
-                                            <h4 class="text-primary">${{ $invested_capital??0 }}</h4> 
-                                        </div>
-                                        <div class="col-4">
-                                            <div>
-                                                <p class=" text-uppercase font-size-11"> <b>Earnings</b></p>
-                                                
-                                                <h5 class="m-0 amount3 fw-medium text-success" amount="{{ $accumulatedEarnings }}">${{ $accumulatedEarnings }}</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div>
-                                                <p class="   text-uppercase font-size-11"><b>Withdrawals</b></p>
-                                                <h5 class="fw-medium text-danger">-${{ $accumulatedWithdrawals }}</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                
-                            </div>
-                        </div>
-                        <div class=" text-center mt-1 mb-3">
-                            <p class="text-muted mb-2"> + 0.0012.23 ( 0.2 % ) <i class="mdi mdi-arrow-up ms-1 text-success"></i></p>
-                            <a href="user-investments mt-2" class="btn btn-primary btn-sm">View more <i class="mdi mdi-arrow-right ms-1"></i></a>
-                        </div>
-                        <div class="ms-auto">
-                            {{-- <div id="invested-overview" data-colors='["#1A7BB7", "#34c38f"]' class="apex-charts"></div> --}}
-
-                            <a href="voyager-program" >
-                                <div class="card @if ($voyager!=null) bg-primary  @else bg-danger @endif p-3 text-white text-center">
-                                    <h3 class="text-white">Voyager Wallet </h3>
-                                   @if ( $voyager!=null)
-                                   <h3><i class="mdi mdi-wallet text-white"></i><span class="text-white"> ${{ $voyager->total_amount??"0.00" }}<span style="font-size: 13px">Earned</span></span></h3>
-                                   <hr>
-                                   <span style="font-size: 13px" class="text-white">${{ $voyager->daily_return??"0.00" }}Daily ROI</span>
-                                   @else
-                                   <h4><i class="mdi mdi-reload text-white"></i><span class="text-white">Inactive</b></h4>
-                                   @endif
-                                </div>
-                            </a>
-                        </div>
-
-                       
-                    </div>
+          </div><!-- col -->
+          <div class="col-lg-9 mg-t-10">
+            <div class="card card-crypto">
+              <div class="card-header pd-y-8 d-sm-flex align-items-center justify-content-between">
+                <nav class="nav nav-line">
+                  <a href="" class="nav-link">Hour</a>
+                  <a href="" class="nav-link active">Day</a>
+                  <a href="" class="nav-link">Week</a>
+                  <a href="" class="nav-link">Month</a>
+                  <a href="" class="nav-link">Year</a>
+                  <a href="" class="nav-link">All</a>
+                </nav>
+                <div class="tx-12 tx-color-03 align-items-center d-none d-sm-flex">
+                  <a href="" class="link-01 tx-spacing-1 tx-rubik d-flex align-items-center">03/01/2023 <ion-icon name="chevron-down-outline"></ion-icon></a>
+                  <span class="mg-x-10">to</span>
+                  <a href="" class="link-01 tx-spacing-1 tx-rubik d-flex align-items-center">03/02/2023 <ion-icon name="chevron-down-outline"></ion-icon></a>
                 </div>
-            </div>
-            <!-- end col -->
+              </div><!-- card-header -->
+              <div class="card-body pd-10 pd-sm-20">
+                <div class="chart-eleven">
+                  <div id="flotChart1" class="flot-chart"></div>
+                </div><!-- chart-eleven -->
+              </div><!-- card-body -->
+              <div class="card-footer pd-20">
+                <div class="row row-sm">
+                  <div class="col-6 col-sm-4 col-md">
+                    <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 mg-b-10">Market Cap</h6>
+                    <h5 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">$14.5B</h5>
+                  </div><!-- col -->
+                  <div class="col-6 col-sm-4 col-md">
+                    <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 mg-b-10">Volume (24h)</h6>
+                    <h5 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">$4.6B</h5>
+                  </div><!-- col -->
+                  <div class="col-6 col-sm-4 col-md mg-t-20 mg-sm-t-0">
+                    <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 mg-b-10">Change</h6>
+                    <h5 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1 d-flex align-items-center">-$7.98 <small class="tx-danger position-relative t-1"><ion-icon name="arrow-down-outline"></ion-icon></small></h5>
+                  </div><!-- col -->
+                  <div class="col-6 col-sm-4 col-md-3 col-xl mg-t-20 mg-md-t-0">
+                    <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 mg-b-10"><span class="d-none d-sm-inline">Circulating </span>Supply</h6>
+                    <h5 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">17.59M</h5>
+                  </div><!-- col -->
+                  <div class="col-6 col-sm-4 col-md mg-t-20 mg-md-t-0">
+                    <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 mg-b-10">All Time High</h6>
+                    <h5 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">$18.4K</h5>
+                  </div><!-- col -->
+                </div><!-- row -->
+              </div><!-- card-footer -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-lg-3 mg-t-10">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="mg-b-0">Cryptocurrencies</h6>
+              </div><!-- card-header -->
+              <div class="card-body pd-10">
+                <div class="table-responsive">
+                  <table class="table table-borderless tx-13 mg-b-0">
+                    <thead>
+                      <tr class="tx-uppercase tx-10 tx-spacing-1 tx-semibold tx-color-03">
+                        <th>Asset</th>
+                        <th class="text-end">Last Price</th>
+                        <th class="text-end">% Change</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>BCH</strong></td>
+                        <td class="text-end tx-rubik">$160.43</td>
+                        <td class="text-end tx-rubik"><span class="tx-success d-inline-flex align-items-center">4.34% <ion-icon name="arrow-up-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>ETH</strong></td>
+                        <td class="text-end tx-rubik">$136.99</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">0.77% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>DASH</strong></td>
+                        <td class="text-end tx-rubik">$90.53</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">0.80% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>BSV</strong></td>
+                        <td class="text-end tx-rubik">$66.34</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">1.61% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>LTC</strong></td>
+                        <td class="text-end tx-rubik">$58.91</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">2.17% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>ZEC</strong></td>
+                        <td class="text-end tx-rubik">$53.57</td>
+                        <td class="text-end tx-rubik"><span class="tx-success d-inline-flex align-items-center">0.59% <ion-icon name="arrow-up-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>XMR</strong></td>
+                        <td class="text-end tx-rubik">$52.36</td>
+                        <td class="text-end tx-rubik"><span class="tx-success d-inline-flex align-items-center">0.42% <ion-icon name="arrow-up-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>BTG</strong></td>
+                        <td class="text-end tx-rubik">$13.09</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">0.56% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>NEO</strong></td>
+                        <td class="text-end tx-rubik">$9.06</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">0.83% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>ETC</strong></td>
+                        <td class="text-end tx-rubik">$4.37</td>
+                        <td class="text-end tx-rubik"><span class="tx-danger d-inline-flex align-items-center">0.53% <ion-icon name="arrow-down-outline"></ion-icon></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!-- table-responsive -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-12 mg-t-10">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="mg-b-0">Cryptocurrency Watchlist</h6>
+              </div><!-- card-header -->
+              <div class="card-body pd-0">
+                <div class="row no-gutters">
+                  <div class="col col-sm-6 col-lg">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                        <div class="crypto-icon bg-secondary">
+                          <i class="cf cf-eth"></i>
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Ethereum <span class="tx-color-03 tx-normal">(ETH)</span></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0">$136.99</h5>
+                            <p class="mg-b-0 tx-11 tx-danger mg-l-3 d-flex align-items-center"><ion-icon name="arrow-down-outline"></ion-icon> 0.77%</p>
+                          </div>
+                        </div><!-- media-body -->
+                      </div><!-- media -->
 
-            
-            
-            <!-- end col -->
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end col -->
-    <div class="col-md-12 col-lg-3">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="card-title">Main Wallet Balance</h4>
-                    </div>
-                    <!--end col-->
-                    <div class="col-auto">
-                        <i data-feather="dollar-sign" class="align-self-center icon-xs me-1"></i>
-                    </div>
-                    <!--end col-->
-                </div>
-                <!--end row-->
-            </div>
-            <!--end card-header-->
-            <div class="card-body">
-                <div class="text-center">
-                    <h1 class="amount5" amount="{{ $wallet_balance ?? 0 }}">${{ $wallet_balance ?? 0 }}</h1>
-                    <div id="mini-chart2" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                </div>
-                <div class="text-center m-2">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#drawModalDefault" class="btn btn-outline-primary">Withdraw</a>
-                </div>
-            </div>
-            <!--end card-body-->
-        </div>
-        <!--end card-->
-        <div class="col-md-6 col-lg-12">
-            <div class="card report-card">
-                <div class="card-body">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col">
-                            <p class="text-dark mb-0 fw-semibold font-16">Total Referred Partners </p>
-                            @if ($user_id==75)
-                            <h3 class="m-0">{{count($referrals)+15}}</h3>
-                            @elseif ($user_id==77)
-                            <h3 class="m-0">{{count($referrals)+3}}</h3>
-                            @elseif ($user_id==101)
-                            <h3 class="m-0">{{count($referrals)+67}}</h3>
-                            @elseif ($user_id==214)
-                            <h3 class="m-0">{{count($referrals)+67}}</h3>
-                            @elseif ($user_id==84)
-                            <h3 class="m-0">{{count($referrals)+409}}</h3>
-                            @else
-                            <h3 class="m-0">{{count($referrals)}}</h3>
-                            @endif
-                        </div>
-                        <div class="col-auto align-self-center">
-                            <div class="report-main-icon bg-light-alt">
-                                <i data-feather="users" class="align-self-center text-muted icon-sm"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--end card-body-->
-            </div>
-            <!--end card-->
-        </div>
-        
-    </div>
-</div> <!-- end row-->
-<div class="row">
-    <div class="col-md-12 col-lg-8">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="card-title">Recent News</h4>
-                    </div>
-                    <!--end col-->
+                      <div class="chart-twelve">
+                        <div id="flotChart2" class="flot-chart"></div>
+                      </div><!-- chart-twelve -->
 
-                </div>
-                <!--end row-->
-            </div>
-            <!--end card-header-->
-            <div class="card-body">
-                <div class="">
-                    <div id="containerSlider">
-                        <div id="newsSlider">
-                            @foreach($news as $new)
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img style="width: 100%; height:260px; object-fit:cover;" src="{{ $new->urlToImage }}" alt="">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="p-3">
-                                            <span class="bg-soft-pink p-2 rounded">{{ $new->author }}</span>
-                                            <h3 class="my-2 font-weight-bold newsHeading">{{ $new->title }}</h3>
-                                            <p class="font-14 text-muted newsSummary">{{ $new->description }}
-                                            </p>
-                                            <a href="{{ $new->url }}" target="blank" class="btn btn-outline-primary">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
+                      <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">12</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">81</a> ETH Markets
+                        </label>
+                      </div>
+                    </div><!-- crypto -->
+                  </div>
+                  <div class="col col-sm-6 col-lg bd-t bd-sm-t-0 bd-sm-l">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                        <div class="crypto-bitcoin-cash"><i class="fab fa-bitcoin tx-success tx-42"></i></div>
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Bitcoin Cash <span class="tx-color-03 tx-normal">(BCH)</span></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0">$160.43</h5>
+                            <p class="mg-b-0 tx-11 tx-success mg-l-3 d-flex align-items-center"><ion-icon name="arrow-up-outline"></ion-icon> 4.34%</p>
+                          </div>
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+
+                      <div class="chart-twelve">
+                        <div id="flotChart3" class="flot-chart"></div>
+                      </div><!-- chart-twelve -->
+
+                      <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">11</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">74</a> BCH Markets
+                        </label>
+                      </div>
+                    </div><!-- crypto -->
+                  </div>
+                  <div class="col col-sm-6 col-lg bd-t bd-lg-t-0 bd-lg-l">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                        <div class="crypto-icon bg-litecoin">
+                          <i class="cf cf-ltc"></i>
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Litecoin <span class="tx-color-03 tx-normal">(LTC)</span></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0">$58.91</h5>
+                            <p class="mg-b-0 tx-11 tx-danger mg-l-3 d-flex align-items-center"><ion-icon name="arrow-down-outline"></ion-icon> 2.17%</p>
+                          </div>
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+
+                      <div class="chart-twelve">
+                        <div id="flotChart4" class="flot-chart"></div>
+                      </div><!-- chart-twelve -->
+
+                      <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">6</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">42</a> LTC Markets
+                        </label>
+                      </div>
+                    </div><!-- crypto -->
+                  </div>
+                  <div class="col col-sm-6 col-lg bd-t bd-lg-t-0 bd-sm-l">
+                    <div class="crypto">
+                      <div class="media mg-b-10">
+                        <div class="crypto-icon bg-primary">
+                          <i class="cf cf-dash"></i>
+                        </div><!-- crypto-icon -->
+                        <div class="media-body pd-l-8">
+                          <h6 class="tx-11 tx-spacing-1 tx-uppercase tx-semibold mg-b-5">Dash <span class="tx-color-03 tx-normal">(DASH)</span></h6>
+                          <div class="d-flex align-items-baseline tx-rubik">
+                            <h5 class="tx-20 mg-b-0">$90.53</h5>
+                            <p class="mg-b-0 tx-11 tx-danger mg-l-3 d-flex align-items-center"><ion-icon name="arrow-down-outline"></ion-icon> 0.80%</p>
+                          </div>
+                        </div><!-- media-body -->
+                      </div><!-- media -->
+
+                      <div class="chart-twelve">
+                        <div id="flotChart5" class="flot-chart"></div>
+                      </div><!-- chart-twelve -->
+
+                      <div class="pos-absolute b-5 l-20 tx-medium">
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03">
+                          <a href="" class="link-01 tx-semibold">6</a> USD Markets
+                        </label>
+                        <label class="tx-9 tx-uppercase tx-sans tx-color-03 mg-l-10">
+                          <a href="" class="link-01 tx-semibold">31</a> DASH Markets
+                        </label>
+                      </div>
+                    </div><!-- crypto -->
+                  </div>
+                </div><!-- row -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-4 mg-t-10">
+            <div class="card ht-md-100p">
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">Transactions</h6>
+                <a href="" class="tx-12 link-03">View All Transactions <i data-feather="arrow-right" class="wd-15 ht-15"></i></a>
+              </div><!-- card-header -->
+              <div class="card-body pd-0">
+                <ul class="list-unstyled mg-b-0">
+                  <li class="list-label">Today, Mar 20</li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-info tx-info rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="download" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Received Bitcoin</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">Received via PayPal</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="mg-b-0">+0.0108 BTC</p>
+                      <p class="tx-12 mg-b-0 tx-success">+$25.00 USD</p>
+                    </div><!-- media-body -->
+                  </li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-primary tx-primary rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="upload" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Sent Bitcoin</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">To Bitcoin address</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="tx-normal mg-b-2">-0.0157 BTC</p>
+                      <p class="tx-12 mg-b-0 tx-danger">-$289.00 USD</p>
+                    </div><!-- media-body -->
+                  </li>
+                  <li class="list-label">Yesterday, Mar 19</li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-success tx-success rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="shopping-bag" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Bought Ethereum</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">Using PayPal account</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="mg-b-0">+2.0157 ETH</p>
+                      <p class="tx-12 mg-b-0 tx-success">+$21.50 USD</p>
                     </div>
-                    {{-- <div id="ana_dash_1" class="apex-charts"></div> --}}
-                </div>
-            </div>
-            <!--end card-body-->
-        </div>
-        <!--end card-->
-    </div>
-
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="card-title">Active Investment Sheet</h4>
+                  </li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-success tx-success rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="shopping-bag" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Bought Bitcoin</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">Using visa <span class="d-lg-none d-xl-inline">debit</span> ***1146</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="mg-b-0">+0.004 BTC</p>
+                      <p class="tx-12 mg-b-0 tx-success">+$18.50 USD</p>
                     </div>
-                    <!--end col-->
-
-                    <div class="col-auto">
-                        <a href="user-investments" class="btn btn-outline-primary">
-                            View Active Investments<i class="fi-arrow-right"></i>
-                        </a>
+                  </li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-primary tx-primary rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="upload" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Sent Bitcoin</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">To Bitcoin address</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="mg-b-0">-0.0025 BTC</p>
+                      <p class="tx-12 mg-b-0 tx-danger">-$289.00 USD</p>
                     </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-            </div>
-            <!--end card-header-->
-            <div class="card-body">
-                <ul class="list-group custom-list-group mb-n3">
-                    @foreach($recent_investments as $invest)
-                    <li class="list-group-item align-items-center d-flex justify-content-between pt-0">
-                        <div class="media">
-                            <div class="icon-info-activity">
-                                <i data-feather="trending-up" class="me-3 align-self-center rounded "></i>
-                            </div>
-                            <div class="media-body align-self-center">
-                                <h6 class="m-0">{{ $invest->packagename }} <br> ${{ $invest->amount }}</h6>
-                                <p class="mb-0 text-muted">{{ $invest->date }}</p>
-                            </div>
-                            <!--end media body-->
-                        </div>
-                        <div class="align-self-center">
-                            <a href="#" class="btn btn-sm btn-soft-primary" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $invest->user_investments_id }}" aria-expanded="false" aria-controls="collapseTwo{{ $invest->user_investments_id }}">View Earnings<i data-feather="arrow-right-circle" class="align-self-center rounded font-5"></i></a>
-                        </div>
-                    </li>
-                    @endforeach
-
+                  </li>
+                  <li class="list-item">
+                    <div class="media align-items-center">
+                      <div class="wd-35 ht-35 bd bd-2 bd-primary tx-primary rounded-circle align-items-center justify-content-center op-6 d-none d-sm-flex">
+                        <i data-feather="upload" class="wd-20 ht-20"></i>
+                      </div>
+                      <div class="media-body mg-sm-l-15">
+                        <p class="tx-medium mg-b-0">Sent Bitcoin</p>
+                        <p class="tx-12 mg-b-0 tx-color-03">To Bitcoin address</p>
+                      </div><!-- media-body -->
+                    </div><!-- media -->
+                    <div class="text-end tx-rubik">
+                      <p class="mg-b-0">-0.0025 BTC</p>
+                      <p class="tx-12 mg-b-0 tx-danger">-$289.00 USD</p>
+                    </div>
+                  </li>
                 </ul>
-            </div>
-            <!--end card-body-->
-            <div class="table-responsive browser_users">
-                @foreach($dailyCredited as $key=> $dayC)
-                <div id="collapseTwo{{ $dayC->invest_id }}" class="accordion-collapse collapse @if ( $key==0) show @endif " aria-labelledby="headingTwo" data-bs-parent="#accordionExample-faq">
-
-                    <div class="accordion-body">
-                        <h5 class="text-center">{{ $dayC->invest_name }} </h5>
-                        <table class="table mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th class="border-top-0">Days</th>
-                                    <th class="border-top-0">Amount</th>
-                                    <th class="border-top-0">Status</th>
-                                </tr>
-                                <!--end tr-->
-                            </thead>
-                            <tbody>
-                                @foreach($dayC->dailys as $daily)
-                                @if($daily->status==false)
-                                <tr>
-                                    <td><a href="#" class="text-primary">{{ $daily->day }}</a></td>
-                                    <td>$0.00</td>
-                                    <td> <span class="bg-danger p-1 font-10 text-white">PENDING</span> </td>
-                                </tr>
-                                <!--end tr-->
-                                @else
-                                <tr>
-                                    <td><a href="#" class="text-primary">{{ $daily->day }}</a></td>
-                                    <td>${{ $daily->amount }}</td>
-                                    <td> <span class="bg-success p-1 font-10 text-white">CREDITED</span> </td>
-                                </tr>
-                                <!--end tr-->
-                                @endif
-
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <!--end table-->
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-        <!--end card-->
-    </div>
-
-</div>
-
- 
-    <div class="row"> 
-       
-        <div class="col-lg-4">
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-4 mg-t-10">
             <div class="card">
-                <div class="card-header">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <h4 class="card-title">Quick Portfolio Purchase </h4>
-                        </div>
-                        <div class="col-auto">
-                            <a href="view-investments-portfolio" class="btn btn-outline-primary">
-                                View all Portfolios <i class="fi-arrow-right"></i>
-                            </a>
-                        </div>
-                        <!--end col-->
+              <div class="card-header bd-b-0 d-flex align-items-center justify-content-between">
+                <h6 class="lh-5 mg-b-0">Price Indexes</h6>
+                <a href="" class="link-03 tx-12 d-flex align-items-center">USD <ion-icon name="chevron-down-outline" class="mg-l-2 tx-12"></ion-icon></a>
+              </div><!-- card-header -->
+              <div class="card-body pd-0">
+                <ul class="list-unstyled mg-b-0">
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-orange">
+                        <i class="cf cf-btc"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">Bitcoin</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium">BTC/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$4,000.19</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">0.27%</p>
                     </div>
-                    <!--end row-->
-                </div>
-                <!--end card-header-->
-                <div class="card-body">
-                    <h6>Fill form to purchase investment portfolio</h6>
-
-                    <form action="{{ route('user.get-payment.index') }}" method="get" class="form-parsley">
-                        @csrf
-                        <input type="hidden" name="quick_purchase" value="true">
-                        <div class="row">
-                            <input type="hidden" name="user_id" value="{{ $user_id }}">
-                            <input type="hidden" name="returns" id="returns" value="23.4">
-                            <div class="form-group col-md-12">
-                                <label for="investment_packages_id">Package</label>
-                                <select name="investment_packages_id" class="form-control" id="investment_packages_id" required>
-                                    <option value="">Select Package</option>
-                                    @foreach($packages as $key=> $pack)
-                                    @if ($pack->package_type!="pods")
-                                    <option value="{{ $pack->id}}" min_val="{{  $pack->min_amt }}" max_val="{{ $pack->max_amt }}">{{ $pack->name}}</option>
-                                    @endif
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="purchaseAmount">Amount</label>
-                                <input type="number" class="form-control" name="amount" id="purchaseAmount" placeholder="Enter Amount" required data-parsley-min="0" data-parsley-max="100">
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="inputAmount">Select payment platform</label>
-                                <select name="payment_method" id="port_payment_method" class="form-control" required>
-                                    <option value="">Select Payment Platform</option>
-                                    <option value="direct_deposit">Direct Deposit</option>
-                                    <option value="main_wallet">Main Wallet</option>
-                                    <option value="compound_wallet">Compound Wallet</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12" id="currency">
-                                <label for="currency">Currency</label>
-                                <select name="currency" class="form-control" id="currency_drop" required>
-                                    <option value="">Select Currency</option>
-                                    <option value="BTC">Bitcoin (BTC)</option>
-                                    <option value="ETH">Ethereum (ETH)</option>
-                                    <option value="LTC">Litecoin (LTC)</option>
-                                    <option value="DASH">Dash (DASH)</option>
-                                    <option value="TZEC">Zcash (TZEC)</option>
-                                    <option value="DOGE">Dogecoin (DOGE)</option>
-                                    <option value="BCH">Bitcoin Cash (BCH)</option>
-                                    <option value="XMR">Monero (XMR)</option>
-                                    <option value="TRX">Tron (TRX)</option>
-                                    <option value="USDT">Tether ERC-20( USDT)</option>
-                                    <option value="USDC">USD Coin (USDC)</option>
-                                    <option value="SHIB">Shiba Inu (SHIB)</option>
-                                    <option value="BTT">BitTorrent TRC-20 (BTT)</option>
-                                    <option value="USDT_TRX">Tether TRC-20 (USDT_TRX)</option>
-                                    <option value="BNB">BNB Chain (BNB)</option>
-                                    <option value="BUSD">Binance USD BEP-20 (BUSD)</option>
-                                    <option value="USDT_BSC">Tether BEP-20 (USDT_BSC)</option>
-
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="payout">Payout Dauration</label>
-                                <select name="payout" class="form-control" id="payout" required>
-                                    <option value="">Select Duration</option>
-                                    <option value="daily_payout">Daily Payout</option>
-                                    <option value="monthly_payout">Monthly Payout</option>
-                                    <option value="6_months_compounding">6 Months Compounding</option>
-                                    <option value="7_months_compounding">7 Months Compounding</option>
-                                    <option value="8_months_compounding">8 Months Compounding</option>
-                                    <option value="9_months_compounding">9 Months Compounding</option>
-                                    <option value="10_months_compounding">10 Months Compounding</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-soft-primary ">Purchase portfolio</button>
-                    </form>
-                    <!--end /div-->
-                </div>
-                <!--end card-body-->
-            </div>
-            <!--end card-->
-        </div>
-        <div class="col-lg-4"> 
-            <div class="col-xl-12">
-                <!-- card -->
-                <div class="card bg-primary text-white shadow-primary card-h-100">
-                    <!-- card body -->
-                    <div class="card-body p-0">
-                        <div id="carouselExampleCaptions1" class="carousel slide text-center widget-carousel" data-bs-ride="carousel">                                                   
-                            <div class="carousel-inner">
-                                @foreach ($Popup_Datas as $key=> $data )
-                                    @if($data->status!="main" && $data->status!="deactivated")
-                                    <div class="carousel-item {{ $key==0? "active" :"" }}">
-                                        <img src="{{ $site_host.'/uploads/'.$data->image  }}" alt="" style="width:100%; height:580px; object-fit:cover;" >
-                                    </div>
-                                    @endif
-                                @endforeach 
-                            </div>
-                            <!-- end carousel-inner -->
-                            
-                            {{-- <div class="carousel-indicators carousel-indicators-rounded">
-                                @foreach ($Popup_Datas as $key=> $data )
-                                <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="{{ $key }}" class="{{ $key==0? "active" :"" }}"
-                                    aria-current="{{ $key==0? "true" :"" }}" aria-label="Slide {{ $key }}"></button>
-                                @endforeach 
-                                 
-                            </div> --}}
-                            <!-- end carousel-indicators -->
-                        </div>
-                        <!-- end carousel -->
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-secondary">
+                        <i class="cf cf-eth"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">Ethereum</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">ETH/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$138.90</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">0.35%</p>
                     </div>
-                    <!-- end card body -->
-                </div>
-                <!-- end card -->
-            </div>
-            
-            <!--end col-->
-        </div>
-        <div class="col-lg-4">
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-litecoin">
+                        <i class="cf cf-ltc"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">Litecoin</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">LTC/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$59.95</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">0.05%</p>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-success">
+                        <i class="cf cf-btc"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">Bitcoin Cash</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">BCH/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$160.28</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">-0.19%</p>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-primary">
+                        <i class="cf cf-dash"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">Dash</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">DASH/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$92.19</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">-0.21%</p>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-primary op-7">
+                        <i class="cf cf-bsd"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">BitSend</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">BSD/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$56.53</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">2.86%</p>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="media">
+                      <div class="crypto-icon crypto-icon-sm bg-pink">
+                        <i class="cf cf-bcn"></i>
+                      </div>
+                      <div class="media-body mg-l-15">
+                        <p class="tx-medium mg-b-0">ByteCoin</p>
+                        <p class="mg-b-0 tx-11 tx-color-03 tx-medium tx-spacing-1 tx-sans">BCN/USD</p>
+                      </div>
+                    </div><!-- media -->
+                    <div class="text-end">
+                      <p class="tx-normal tx-rubik mg-b-0">$0.000776</p>
+                      <p class="mg-b-0 tx-12 tx-rubik tx-success">-1.32%</p>
+                    </div>
+                  </li>
+                </ul>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-4 mg-t-10">
             <div class="card">
-                <div class="card-header">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <h4 class="card-title">Quick Re-Investment </h4>
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">BTC Wallet</h6>
+                <a href="" class="tx-11 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a>
+              </div><!-- card-header -->
+              <div class="card-body pd-x-20 pd-b-10">
+                <p class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-b-5">Available Balance</p>
+                <h3 class="tx-26 tx-normal tx-rubik tx-spacing--2 mg-b-5">26.00453100 <small class="text-muted tx-light">BTC</small></h3>
+                <div class="d-flex mg-b-25">
+                  <p class="tx-12 tx-rubik mg-b-0"><span class="tx-medium tx-success mg-r-5">USD</span> $103,342.50</p>
+                  <p class="tx-12 tx-rubik mg-b-0 mg-l-10"><span class="tx-medium tx-primary mg-r-5">EUR</span> $91,105.00</p>
                 </div>
-                <!--end card-header-->
-                <div class="card-body">
-                    <h6>Fill form to purchase investment portfolio</h6>
-
-                    <form action="{{ route('user.reinvest.store') }}" method="post" class="form-parsley">
-                        @csrf
-                        <input type="hidden" name="quick_reinvest" value="true">
-
-                        <div class="row mb-5">
-                            <div class="form-group col-md-12">
-                                <label for="investment_id">Active Investment</label>
-                                <select name="investment_id" class="form-control" id="investment_id" required>
-                                    <option value="">Select Investment</option>
-                                    @foreach($recent_investments as $key=> $pack)
-                                    <option value="{{ $pack->user_investments_id}}" category_name="{{  $pack->category_name }}" packagename="{{ $pack->packagename }}" curr_amount="{{ $pack->amount }}">{{ $pack->packagename}} - (${{ $pack->amount}})</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="form-group col-md-12">
-                                <label for="inputAmount">Add Amount</label>
-                                <input type="decimal" name="amount" id="addAmountInput" placeholder="Add more funds to this portfolio" class="form-control" required data-parsley-min="100">
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="inputAmount">Select payment platform</label>
-                                <select name="payment_method" id="payment_method" class="form-control" required>
-                                    <option value="">Select Payment Platform</option>
-                                    <option value="direct_deposit">Direct Deposit</option>
-                                    <option value="main_wallet">Main Wallet</option>
-                                    <option value="compound_wallet">Compound Wallet</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12" id="reinvest_currency">
-                                <label for="currency">Currency</label>
-                                <select name="currency" class="form-control">
-                                    <option value="">Select Currency</option>
-                                    <option value="BTC">Bitcoin (BTC)</option>
-                                    <option value="ETH">Ethereum (ETH)</option>
-                                    <option value="LTC">Litecoin (LTC)</option>
-                                    <option value="DASH">Dash (DASH)</option>
-                                    <option value="TZEC">Zcash (TZEC)</option>
-                                    <option value="DOGE">Dogecoin (DOGE)</option>
-                                    <option value="BCH">Bitcoin Cash (BCH)</option>
-                                    <option value="XMR">Monero (XMR)</option>
-                                    <option value="TRX">Tron (TRX)</option>
-                                    <option value="USDT">Tether ERC-20( USDT)</option>
-                                    <option value="USDC">USD Coin (USDC)</option>
-                                    <option value="SHIB">Shiba Inu (SHIB)</option>
-                                    <option value="BTT">BitTorrent TRC-20 (BTT)</option>
-                                    <option value="USDT_TRX">Tether TRC-20 (USDT_TRX)</option>
-                                    <option value="BNB">BNB Chain (BNB)</option>
-                                    <option value="BUSD">Binance USD BEP-20 (BUSD)</option>
-                                    <option value="USDT_BSC">Tether BEP-20 (USDT_BSC)</option>
-                                </select>
-                            </div>
-
-
-                        </div>
-                        
-                        <button type="submit" class="btn btn-soft-primary mt-5">Reinvest</button>
-                    </form>
-                    <!--end /div-->
+                <div class="d-flex mg-b-25">
+                  <button class="btn btn-sm btn-uppercase btn-white flex-fill tx-spacing-1">Send</button>
+                  <button class="btn btn-sm btn-uppercase btn-primary flex-fill tx-spacing-1 mg-l-10">Receive</button>
                 </div>
-                <!--end card-body-->
-            </div>
-            <!--end card-->
-        </div> 
-    </div>
-    <!--end row-->
-   {{-- <div class="row">
-    <div class="col-lg-8">
-        <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <h4 class="card-title mb-0 flex-grow-1">Transactions</h4>
-                <a href="activity" class="btn btn-outline-primary">
-                    View Transactions<i class="fi-arrow-right"></i>
-                </a>
-            </div><!-- end card header -->
 
-            <div class="card-body px-0">
-                <div class="table-responsive px-3" data-simplebar style="max-height: 352px;">
-                    <table class="table align-middle table-nowrap table-borderless">
-                        <tbody>
-                            @foreach($activities as $active)
-                            <tr>
-                                <td style="width: 50px;"> 
-                                    @if ($active->category=="earning" || $active->category=="bonus") 
-                                    <div class="font-size-22 text-success">
-                                        <i class="bx bx-down-arrow-circle d-block"></i>
-                                    </div>
-                                    @elseif ($active->category=="withdrawals")
-                                     <div class="font-size-22 text-danger">
-                                        <i class="bx bx-up-arrow-circle d-block"></i>
-                                    </div>
-                                    @elseif ($active->category=="transfer")
-                                    <div class="font-size-22 text-success">
-                                       <i class="bx bx-slider-alt d-block"></i>
-                                   </div>
-                                    @elseif ($active->category=="deposit")
-                                    <div class="font-size-22 text-primary">
-                                        <i class="bx bx-briefcase-alt d-block"></i>
-                                    </div>
-                                    @elseif ($active->category=="expired" || $active->category=="error" || $active->category=="cancelled")
-                                    <div class="font-size-22 text-danger">
-                                        <i class="bx bx-x d-block"></i>
-                                    </div>
-                                    
-                                    @endif
-                                </td>
-
-                                <td>
-                                    <div>
-                                        <h5 class="font-size-14 mb-1">{{ $active->title }}</h5>
-                                        <p class="font-size-14 mb-1" style="width: 20px">{{ $active->descp }}</p>
-                                        <p class="text-muted mb-0 font-size-12">  {{ Carbon\Carbon::parse($active->date)->format('d F Y')  }}</p>
-                                    </div>
-                                </td>
-                                 
-
-                                <td>
-                                    <div class="text-end">
-                                        @if ($active->category=="earning" || $active->category=="bonus"|| $active->category=="transfer") 
-                                        <h5 class="font-size-14 text-success mb-0">${{ $active->amount }}</h5>
-                                        @elseif ($active->category=="deposit")
-                                        <h5 class="font-size-14 text-primary mb-0">${{ $active->amount }}</h5>
-                                        @else
-                                        <h5 class="font-size-14 text-danger mb-0">${{ $active->amount }}</h5>
-                                        @endif
-                                        <p class="text-muted mb-0 font-size-12">Amount</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-
-                        </tbody>
-                    </table>
+                <div class="d-flex align-items-center justify-content-between mg-b-10">
+                  <p class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-b-0">Recent Transactions</p>
+                  <a href="" class="tx-uppercase tx-11 tx-medium mg-b-0">Show All</a>
                 </div>
-            </div>
-            <!-- end card body -->
-        </div>
-        <!-- end card -->
-    </div>
-    <div class="col-lg-4"> 
-        <div class="col-xl-12">
-            <!-- card -->
-            <div class="card bg-primary text-white shadow-primary card-h-100">
-                <!-- card body -->
-                <div class="card-body p-0">
-                    <div id="carouselExampleCaptions" class="carousel slide text-center widget-carousel" data-bs-ride="carousel">                                                   
-                        <div class="carousel-inner">
-                            @foreach ($messages as $key=> $mess )
-                            <div class="carousel-item {{ $key==0? "active" :"" }}">
-                                <div class="text-center p-4">                                     
-                                    
-                                    <h2 class="mt-3 lh-base fw-normal text-white"><b>Dell Group</b> Message</h2>
-                                    <br>
-                                    <p class="text-white font-size-20">{{ $mess->descp}}</p>
-                                    <br><br>
-                                    <a href="messages" class="btn btn-light btn-sm">View More <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                            @endforeach 
-                        </div>
-                        <!-- end carousel-inner -->
-                        
-                        <div class="carousel-indicators carousel-indicators-rounded">
-                            @foreach ($messages as $key=> $mess )
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $key }}" class="{{ $key==0? "active" :"" }}"
-                                aria-current="{{ $key==0? "true" :"" }}" aria-label="Slide {{ $key }}"></button>
-                            @endforeach 
-                             
-                        </div>
-                        <!-- end carousel-indicators -->
+                <ul class="list-group list-group-flush mg-b-0 tx-13">
+                  <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                    <span class="tx-medium">Received Bitcoin</span>
+                    <span class="tx-rubik">+0.00003998 BTC</span>
+                  </li>
+                  <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                    <span class="tx-medium">Sent Bitcoin</span>
+                    <span class="tx-rubik">-0.01570525 BTC</span>
+                  </li>
+                  <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                    <span class="tx-medium">Bought Ethereum</span>
+                    <span class="tx-rubik">+2.0157 ETH</span>
+                  </li>
+                  <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                    <span class="tx-medium">Bought Bitcoin</span>
+                    <span class="tx-rubik">+0.000033420 BTC</span>
+                  </li>
+                  <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                    <span class="tx-medium">Sent Bitcoin</span>
+                    <span class="tx-rubik">-0.01570525 BTC</span>
+                  </li>
+                </ul>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-5 col-xl-3 mg-t-10">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">BTC Volume By Currency</h6>
+                <a href="" class="tx-13 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a>
+              </div><!-- card-header -->
+              <div class="card-body pd-y-25">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="chart-thirteen"><canvas id="chartDonut"></canvas></div>
+                  </div>
+                  <div class="col-12 tx-12 mg-t-40">
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 bg-primary rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">USD</span>
+                      <span class="tx-rubik mg-l-auto">4,024.52</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-success d-flex align-items-center justify-content-end">0.96% <ion-icon name="arrow-up-outline"></ion-icon></span>
                     </div>
-                    <!-- end carousel -->
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-teal rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">EUR</span>
+                      <span class="tx-rubik mg-l-auto">3,539.23</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-success d-flex align-items-center justify-content-end">0.75% <ion-icon name="arrow-up-outline"></ion-icon></span>
+                    </div>
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-warning rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">CNY</span>
+                      <span class="tx-rubik mg-l-auto">27,499.4</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-danger d-flex align-items-center justify-content-end">-0.58% <ion-icon name="arrow-down-outline"></ion-icon></span>
+                    </div>
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-pink rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">GBP</span>
+                      <span class="tx-rubik mg-l-auto">3,022.90</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-danger d-flex align-items-center justify-content-end">-0.69% <ion-icon name="arrow-down-outline"></ion-icon></span>
+                    </div>
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-success rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">JPY</span>
+                      <span class="tx-rubik mg-l-auto">444,814.7</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-success d-flex align-items-center justify-content-end">0.82% <ion-icon name="arrow-up-outline"></ion-icon></span>
+                    </div>
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-lightblue rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">KRW</span>
+                      <span class="tx-rubik mg-l-auto">4,491,099.6</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-danger d-flex align-items-center justify-content-end">-1.11% <ion-icon name="arrow-down-outline"></ion-icon></span>
+                    </div>
+                    <div class="d-flex align-items-center mg-t-10">
+                      <div class="wd-10 ht-10 bg-brand-02 op-2 rounded-circle pos-relative t--1"></div>
+                      <span class="tx-medium mg-l-10">SGD</span>
+                      <span class="tx-rubik mg-l-auto">5,393.0</span>
+                      <span class="wd-60 tx-rubik mg-l-5 tx-success d-flex align-items-center justify-content-end">0.66% <ion-icon name="arrow-up-outline"></ion-icon></span>
+                    </div>
+                  </div>
                 </div>
-                <!-- end card body -->
-            </div>
-            <!-- end card -->
-        </div>
-        
-        <!--end col-->
-    </div>
-   </div> --}}
-
-   <div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="card-title">Account Activities</h4>
-                    </div>
-                    <!--end col-->
-                    <div class="col-auto">
-                        <a href="activity" class="btn btn-outline-primary both">
-                            View all Activities >><i class="fi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <!--end col-->
-
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-7 col-xl mg-t-10 order-md-1 order-lg-0">
+            <div class="card ht-100p">
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">Latest Crypto News</h6>
+                <a href="" class="tx-13 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a>
+              </div><!-- card-header -->
+              <div class="card-body pd-0">
+                <div class="media-list">
+                  <div class="d-sm-flex pd-20">
+                    <a href="" class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60">
+                      <img src="https://placehold.co/640x426" class="img-fit-cover" alt="">
+                    </a>
+                    <div class="media-body mg-t-20 mg-sm-t-0 mg-sm-l-20">
+                      <a href="" class="d-block tx-uppercase tx-11 tx-medium mg-b-5">CryptoNinja</a>
+                      <h6><a href="" class="link-01">Dow Futures, Bitcoin Teeter as Markets Wait for FOMC Bounce</a></h6>
+                      <p class="tx-color-03 tx-13 mg-b-0">As the unwelcome bearish momentum returns to all top cryptocurrency markets, most of this morning’s excitement...</p>
+                    </div><!-- media-body -->
+                  </div>
+                  <hr class="mg-0">
+                  <div class="d-sm-flex pd-20">
+                    <a href="" class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60">
+                      <img src="https://placehold.co/640x427" class="img-fit-cover" alt="">
+                    </a>
+                    <div class="media-body mg-t-20 mg-sm-t-0 mg-sm-l-20">
+                      <a href="" class="d-block tx-uppercase tx-11 tx-medium mg-b-5">CNN</a>
+                      <h6><a href="" class="link-01">XRP Price Remains Bearish as XRP/BTC Drops Below 7,800 Satoshi</a></h6>
+                      <p class="tx-color-03 tx-13 mg-b-0">Liquidity has shifted away from the top gaining crypto assets, with only six of the week’s 30 top performing markets...</p>
+                    </div><!-- media-body -->
+                  </div>
+                  <hr class="mg-0">
+                  <div class="d-sm-flex pd-20">
+                    <a href="" class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60">
+                      <img src="https://placehold.co/640x418" class="img-fit-cover" alt="">
+                    </a>
+                    <div class="media-body mg-t-20 mg-sm-t-0 mg-sm-l-20">
+                      <a href="" class="d-block tx-uppercase tx-11 tx-medium mg-b-5">Bitcoin.com</a>
+                      <h6><a href="" class="link-01">Bitcoin Price to $4500 soon? BTC Price Analysis</a></h6>
+                      <p class="tx-color-03 tx-13 mg-b-0">Published on CoinnounceTechnical Indicators: Support Level: $3900 Resistance Levels: $4100, $4200 Bitcoin Price Analysis...</p>
+                    </div><!-- media-body -->
+                  </div>
                 </div>
-                <!--end row-->
-            </div>
-            <!--end card-header-->
-            <div class="card-body p-0">
-                <div class="table-responsive browser_users ">
-                    <table class="table mb-0 ">
-                        <thead class="table-light ">
-                            <tr class="tops">
-                                <th class="border-top-0 ps-4"><b>Title</b></th>
-                                <th class="border-top-0"><b>Description</b></th>
-                                <th class="border-top-0"><b>Date</b></th>
-                                <th class="border-top-0"><b>Amount</b></th>
-                                <th class="border-top-0"><b>Status</b></th>
-                            </tr>
-                            <!--end tr-->
-                        </thead>
-                        <tbody>
-                            @foreach($activities as $active)
-                            <tr>
-                                <td class="ps-4 pt-3 pb-3"><a href="#" class="text-primary">{{ $active->title }}</a></td>
-                                <td class=" pt-3 pb-3">{{ $active->descp }}</td>
-                                <td class=" pt-3 pb-3">{{ $active->date }}</td>
-                                <td class=" pt-3 pb-3">${{ $active->amount }}</td>
-                                @if ($active->category=="earning" || $active->category=="bonus")
-                                <td class=" pt-3 pb-3"> <span class="bg-success p-1 font-10 text-white">WALLET CREDITED</span></td>
-                                @elseif ($active->category=="compound_earning")
-                                <td class=" pt-3 pb-3"> <span class="bg-danger p-1 font-10 text-white">COMPOUNDING INTEREST</span></td>
-                                @elseif ($active->category=="withdrawals")
-                                <td class=" pt-3 pb-3"> <span class="bg-danger p-1 font-10 text-white">WITHDRAWAL</span></td>
-                                @elseif ($active->category=="deposit")
-                                <td class=" pt-3 pb-3"> <span class="bg-primary p-1 font-10 text-white">DEPOSIT</span></td>
-                                @elseif ($active->category=="expired")
-                                <td class=" pt-3 pb-3"> <span class="bg-danger p-1 font-10 text-white">EXPIRED</span></td>
-                                @elseif ($active->category=="error")
-                                <td class=" pt-3 pb-3"> <span class="bg-danger p-1 font-10 text-white">ERROR</span></td>
-                                @elseif ($active->category=="cancelled")
-                                <td class=" pt-3 pb-3"> <span class="bg-danger p-1 font-10 text-white">CANCELLED</span></td>
-                                @elseif ($active->category=="transfer")
-                                <td> <span class="bg-success p-1 font-10 text-white">TRANSFER</span></td>
-                                @endif
-
-                            </tr>
-                            <!--end tr-->
-                            @endforeach
-
-                        </tbody>
-
-                    </table>
-                    <!--end table-->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          <div class="col-sm-6 col-lg-5 col-xl-4 mg-t-10">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h6 class="lh-5 mg-b-0">Portfolio</h6>
+                <nav class="nav nav-row-xs align-items-center">
+                  <a href="" class="nav-link">1D</a>
+                  <a href="" class="nav-link active">1W</a>
+                  <a href="" class="nav-link">1M</a>
+                  <a href="" class="nav-link">1Y</a>
+                </nav>
+              </div><!-- card-header -->
+              <div class="card-body pd-0 pos-relative">
+                <div class="pos-absolute t-20 l-20">
+                  <p class="tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-b-0">Total Balance</p>
+                  <div class="d-flex align-items-baseline">
+                    <h2 class="tx-normal tx-rubik tx-spacing--2 mg-b-0"><small class="tx-color-03">$</small> 7,429.97</h2>
+                    <span class="tx-rubik tx-success mg-l-5 d-flex align-items-center"><ion-icon name="arrow-up-outline"></ion-icon> 60 (2.45%)</span>
+                  </div>
                 </div>
-                <!--end /div-->
-
-
-            </div>
-            <!--end card-body-->
-        </div>
-        <!--end card-->
-    </div>
-</div>
- 
- <!-- right offcanvas -->
- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header bg-white">
-      <h3 id="offcanvasRightLabel " class="text-dark">Quick Survey</h3>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <hr>
-     <h4>Would you like to see Portfolios with a shorter duration?</h4> 
-       <form action="{{ route('user.dashboard.store') }}" method="POST">
-        @csrf
-        <div class="form-check">
-            <input class="form-radio-input" type="radio" id="formCheck2"  name="choice" value="yes">
-             
-            <label class="form-check-label" for="formCheck2">
-                Yes 
-            </label>
-            <div class="progress m-3 pro">
-                <div class="progress-bar pro or" role="progressbar" aria-label="Example with label" style="width: {{ $surveyInfo->support??"0" }}%;" aria-valuenow="p{{ $surveyInfo->support??"0" }}" aria-valuemin="0" aria-valuemax="100"><b>{{ $surveyInfo->support??"0" }} %</b></div>
-            </div>
-            
-        </div>
-        <hr>
-        <div class="form-check">
-            <input class="form-radio-input" type="radio" id="formCheck2"  name="choice" value="no">
-            <label class="form-check-label" for="formCheck2">
-                No
-            </label>
-            <div class="progress m-3 pro">
-                <div class="progress-bar pro or" role="progressbar" aria-label="Example with label" style="width: {{ $surveyInfo->withdrawals??"0" }}%;" aria-valuenow="p{{ $surveyInfo->withdrawals??"0" }}" aria-valuemin="0" aria-valuemax="100"><b>{{ $surveyInfo->withdrawals??"0" }} %</b></div>
-            </div>
-        </div>
-        <hr>
-         <div class="form-check">
-            <input class="form-radio-input" type="radio" id="formCheck2"  name="choice" value="maybe">
-            <label class="form-check-label" for="formCheck2">
-                Maybe
-            </label>
-            <div class="progress m-3 pro">
-                <div class="progress-bar pro or" role="progressbar" aria-label="Example with label" style="width: {{ $surveyInfo->deposits??"0" }}%;" aria-valuenow="p{{ $surveyInfo->deposits??"0" }}" aria-valuemin="0" aria-valuemax="100"><b>{{ $surveyInfo->deposits??"0" }} %</b></div>
-            </div>
-        </div>
-        <hr>
-       {{-- <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="formCheck2" name="functions" >
-            <label class="form-check-label" for="formCheck2">
-                Better technical functionalities
-            </label>
-        </div>
-        <hr> --}}
-        <label class="form-label" >
-            Brief Comment
-        </label>
-        <textarea   class="form-control" name="comments" id="" cols="10" rows="3"> </textarea>
-        <br>
-        <div class="col-sm-auto">
-            <button type="submit" class="btn btn-primary">Submit Survey</button>
-        </div>
-        
-       </form>
-    </div>
-</div>
-<br>
- 
-
-
-
-<div class="modal fade" id="drawModalDefault" tabindex="-1" role="dialog" aria-labelledby="exampleModalDefaultLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title m-0" id="exampleModalDefaultLabel">Withdrawal request
-                </h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <!--end modal-header-->
-            <div class="modal-body">
-                <form action="{{ route('user.withdrawal-request.store') }}" method="post" class="form-parsley">
-                    @csrf
-                    <input type="hidden" name="user_id" value="{{ $user_id }}">
-
-                    <input type="hidden" name="currency_code" id="currency_code">
-                    <input type="hidden" name="charge" id="charge">
-                    <p>To make withdrawal, you have to generate a 2fa code with will be sent to your email address, paste the code on the 2fa field below to continue</p>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="inputAmount">Enter 2fa Code </label>
-                                <input type="text" class="form-control 2fa" name="2fa" id="2fa" placeholder="Enter 2fa code">
-
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <br>
-                            <a href="dashboard?auth=yes" class="btn btn-info">Generate Code</a>
-                        </div>
+                <div class="chart-fourteen">
+                  <div id="flotChart6" class="flot-chart"></div>
+                </div><!-- chart-fourteen -->
+                <ul class="list-group list-group-flush mg-t-15">
+                  <li class="list-group-item d-flex align-items-center">
+                    <div class="crypto-icon crypto-icon-sm bg-orange">
+                      <i class="cf cf-btc"></i>
                     </div>
-
-                    <div class="amount-group">
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="inputAmount">Choose Withdraw Method</label>
-                                <select name="withdrawal_methods_id" id="withdrawal_methods_id" required class="form-control">
-                                    <option value="">Select Method</option>
-                                    @foreach ($withdrawMethods as $met)
-                                    <option value="{{ $met['id'] }}" currency_code="{{ $met['currency_code'] }}" charge="{{ $met['charges'] }}">{{ $met['name'] }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12">
-                                <label for="inputAmount">Amount</label>
-                                <input type="decimal" class="form-control" name="amount_paid" id="inputAmount" placeholder="Enter Amount" required data-parsley-min="0" data-parsley-max="0">
-                            </div>
-                            <input type="hidden" id="main_wallet_balance" value="{{ $main_wallet}}">
-                            <input type="hidden" id="compound_wallet_balance" value="{{ $compound_wallet}}">
-                            <div class="form-group col-md-12">
-                                <label for="wallet">Wallet</label>
-                                <select name="wallet_type" class="form-control" id="wallet_type" required>
-                                    <option value="">Select Wallet</option>
-                                    <option value="main_wallet">Portfolio Balance</option>
-                                    <option value="compound_wallet">Compounding Dividends</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAmount">Wallet Address</label>
-                            <input type="text" class="form-control" name="wallet_address" id="wallet_address" placeholder="Enter Wallet Address" required>
-                        </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0">Bitcoin</h6>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-medium">btc/usd</span>
                     </div>
+                    <div class="mg-l-auto text-end">
+                      <p class="mg-b-0 tx-rubik">0.7200 BTC</p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik">$2,907.71 USD</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <div class="crypto-icon crypto-icon-sm bg-secondary">
+                      <i class="cf cf-eth"></i>
+                    </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0">Ethereum</h6>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-medium">eth/usd</span>
+                    </div>
+                    <div class="mg-l-auto text-end">
+                      <p class="mg-b-0 tx-rubik">15.0030 ETH</p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik">$2,083.62 USD</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <div class="crypto-icon crypto-icon-sm bg-litecoin">
+                      <i class="cf cf-ltc"></i>
+                    </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0">Litecoin</h6>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-medium">ltc/usd</span>
+                    </div>
+                    <div class="mg-l-auto text-end">
+                      <p class="mg-b-0 tx-rubik">12.5021 LTC</p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik">$748.88 USD</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <div class="crypto-icon crypto-icon-sm bg-success">
+                      <i class="cf cf-btc"></i>
+                    </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0">Bitcoin Cash`</h6>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-medium">bch/usd</span>
+                    </div>
+                    <div class="mg-l-auto text-end">
+                      <p class="mg-b-0 tx-rubik">5.8120 BCH</p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik">$916.67 USD</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <div class="crypto-icon crypto-icon-sm bg-primary">
+                      <i class="cf cf-dash"></i>
+                    </div>
+                    <div class="mg-l-15">
+                      <h6 class="lh-5 mg-b-0">Dash`</h6>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-medium">dash/usd</span>
+                    </div>
+                    <div class="mg-l-auto text-end">
+                      <p class="mg-b-0 tx-rubik">16.5019 DASH</p>
+                      <span class="d-block tx-color-03 tx-uppercase tx-11 tx-rubik">$1,521.97 USD</span>
+                    </div>
+                  </li>
+                </ul>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- content -->
 
-            </div>
+    <script>
+      $(function(){
+        'use strict'
 
-            <!--end modal-body-->
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary withdrawBtn">Withdraw</button>
-                <button type="button" class="btn btn-soft-secondary " data-bs-dismiss="modal">Close</button>
-            </div>
-            <!--end modal-footer-->
-            </form>
-        </div>
-        <!--end modal-content-->
-    </div>
-    <!--end modal-dialog-->
-</div>
-<!--end modal-->
+        var flotChart1 = $.plot('#flotChart1', [{
+            data: df3,
+            color: '#e1e5ed',
+            lines: {
+              lineWidth: 1
+            }
+          },{
+            data: df3,
+            color: '#69b2f8',
+            lines: {
+              lineWidth: 1
+            }
+          },{
+            data: df3,
+            color: '#0168fa'
+          }], {
+    			series: {
+            stack: 0,
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 1.7,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 5,
+            hoverable: true
+          },
+    			yaxis: {
+            show: true,
+            color: 'rgba(72, 94, 144, .1)',
+            min: 0,
+            max: 160,
+            font: {
+              size: 10,
+              color: '#8392a5'
+            }
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(72, 94, 144, .1)',
+            ticks: [[0, '08:00'], [20, '09:00'], [40, '10:00'], [60, '11:00'], [80, '12:00'], [100, '13:00'], [120, '14:00'], [140, '15:00']],
+            font: {
+              size: 10,
+              family: 'Arial, sans-serif',
+              color: '#8392a5'
+            },
+            reserveSpace: false
+          }
+    		});
 
-<div class="modal fade" id="loadPopUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalDefaultLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-            <!--end modal-header-->
-            <div class="modal-body">
-                @if($Popup_Data!=null)
-                <h3>{{ $Popup_Data->title }}</h3>
-                <a href="{{$Popup_Data->link}}">
-                    <img src="{{ $site_host.'/uploads/'.$Popup_Data->image  }}" alt="" style="width: 100%; height:100%;">
-                    <p>{{ $Popup_Data->descp }}</p>
-                </a>
-                @endif
-            </div>
-
-            <!--end modal-body-->
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-soft-primary " data-bs-dismiss="modal">Close</button>
-            </div>
-            <!--end modal-footer-->
-
-        </div>
-        <!--end modal-content-->
-    </div>
-    <!--end modal-dialog-->
-</div>
-<!--end modal-->
-<script src="{{ asset('user-assets/js/jquery.min.js') }}"></script>
-<script>
-    $(window).on('load', function() { 
-
-        @if($hasSurvey==null)
-            //$('#offcanvasRight').offcanvas('show');
-        @endif
-
-        @if($Popup_Data != null && $Popup_Data -> status == "main")
-        $('#loadPopUp').modal('show');
-        @endif
-        
-    });
-    localStorage.removeItem("reg_data")
-
-  
-
-    $("#withdrawal_methods_id").on('change', function() {
-        //alert(`${$('option:selected', this).attr('currency_code')} and ${$('option:selected', this).attr('charge')}`)
-        $("#currency_code").val($('option:selected', this).attr('currency_code'))
-        $("#charge").val($('option:selected', this).attr('charge'))
-    })
-
-    $("#investment_packages_id").on('change', function() {
-        $("#purchaseAmount").attr("data-parsley-min", $('option:selected', this).attr('min_val'))
-        $("#purchaseAmount").attr("data-parsley-max", $('option:selected', this).attr('max_val'))
-    })
-
-
-
-
-
-    $("#wallet_type").on('change', function() {
-        if ($(this).val() == "main_wallet") {
-            $("#inputAmount").attr("data-parsley-max", $("#main_wallet_balance").val())
-        } else if ($(this).val() == "compound_wallet") {
-            $("#inputAmount").attr("data-parsley-max", $("#compound_wallet_balance").val())
+        function flotOption(min, max) {
+          return {
+            series: {
+              stack: 0,
+              shadowSize: 0,
+              lines: {
+                show: true,
+                lineWidth: 1.5,
+                fill: true,
+                fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+              }
+            },
+            grid: { borderWidth: 0 },
+            yaxis: { show: false },
+            xaxis: {
+              show: false,
+              min: min,
+              max: max
+            }
+          }
         }
-    })
+
+        // Ethereum
+        $.plot('#flotChart2', [{
+          data: df3,
+          color: '#c0ccda',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#a0aabc'
+        }], flotOption(0,50));
+
+        // Bitcoin Cash
+        $.plot('#flotChart3', [{
+          data: df3,
+          color: '#b8eace',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#58cd8b'
+        }], flotOption(20,70));
+
+        // Litecoin
+        $.plot('#flotChart4', [{
+          data: df3,
+          color: '#c0ccdf',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#6e8ab6'
+        }], flotOption(90,140));
+
+        // Dash
+        $.plot('#flotChart5', [{
+          data: df3,
+          color: '#b1d0fd',
+          lines: { lineWidth: 1 }
+        },{
+          data: df3,
+          color: '#4c94fb'
+        }], flotOption(80,130));
 
 
-    if ($(".2fa").val() == "") {
-        $(".amount-group").hide()
-        $(".withdrawBtn").hide()
-    }
 
-    $(".2fa").on('keyup change', function() {
+        // Markets
+        $.plot('#flotChart6', [{
+            data: df1,
+            color: '#00cccc',
+            lines: {
+              lineWidth: 1.7,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.4 } ] }
+            }
+          },{
+            data: df2,
+            color: '#e1e5ed',
+            lines: {
+              lineWidth: 1,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 10,
+            aboveData: true
+          },
+    			yaxis: {
+            show: false,
+            max: 150
+          },
+    			xaxis: {
+            show: true,
+            tickColor: 'rgba(72,94,144, 0.07)',
+            ticks: [[25,'mar 10'],[50,'mar 11'],[75,'mar 12'],[100,'mar 13'],[125,'mar 14']],
+            //min: 35,
+            //max: 125
+          }
+    		});
 
-        if ($(this).val().length == 6) {
-            $(".amount-group").show()
-            $(".withdrawBtn").show()
+
+        /** PIE CHART **/
+        var datapie = {
+          labels: ['USD', 'EUR', 'CNY', 'GBP', 'JPY', 'KRW', 'SGD'],
+          datasets: [{
+            data: [25,15,10,12,9,13,16],
+            backgroundColor: ['#66a4fb', '#4cebb5','#fec85e','#ff7c8f','#a4e063','#a5d7fd','#b2bece']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie,
+          options: optionpie
+        });
+
+
+
+        window.darkMode = function(){
+          $('.btn-white').addClass('btn-dark').removeClass('btn-white');
+
+          myDonutChart.options.elements.arc.borderColor = '#141c2b';
+          myDonutChart.update();
+        }
+
+        window.lightMode = function() {
+          $('.btn-dark').addClass('btn-white').removeClass('btn-dark');
+
+          myDonutChart.options.elements.arc.borderColor = '#fff';
+          myDonutChart.update();
+        }
+
+        var hasMode = Cookies.get('df-mode');
+        if(hasMode === 'dark') {
+          darkMode();
         } else {
-            $(".amount-group").hide()
-            $(".withdrawBtn").hide()
+          lightMode();
         }
-    })
 
-</script>
-
-<script>
-    $("#payment_method").on('change', function() {
-        if ($(this).val() == "main_wallet" || $(this).val() == "compound_wallet") {
-            $("#reinvest_currency").hide()
-        } else {
-            $("#reinvest_currency").show()
-        }
-    })
-
-    $("#port_payment_method").on('change', function() {
-        if ($(this).val() == "main_wallet" || $(this).val() == "compound_wallet") {
-            $("#currency").hide()
-            $("#currency_drop").attr("required", false)
-        } else {
-            $("#currency").show()
-            $("#currency_drop").attr("required", true)
-        }
-    })
-
-    
-
-</script>
+      })
+    </script>
 @endsection
  

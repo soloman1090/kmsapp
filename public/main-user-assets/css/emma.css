@@ -5,10 +5,19 @@
   color: var(--color-default);
 }
 
+header .nav {
+  color: var(--color-default);
+  font-weight: 500;
+}
+header .nav:hover {
+  color: var(--color-light-light);
+}
+
 :root {
   --color-default: #001737;
   --color-seconds: #042893;
   --color-light: #063cdd;
+  --color-light-light:#0168fa;
   --color-black: #000;
   --color-body: rgb(241, 245, 249);
   --color-red: rgb(222, 59, 60);
@@ -188,4 +197,16 @@
 
 .UserS h5 {
   margin: 0;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer ul li {
+  list-style: none;
+  margin: 15px 0;
+}
+.footer ul li svg {
+  margin-right: 15px;
 }/*# sourceMappingURL=emma.css.map */
