@@ -45,6 +45,13 @@ use User\InvestCalculator;
 use User\ReinvestContoller;
 use User\ValuePods; 
 use User\ShortTerm;
+use User\Account;
+use User\Contact;
+use User\News;
+use User\Howto;
+use User\Fq;
+use User\Video;
+use User\Pdf;
 use HomeController as Home;
 use CompoundInterest as Compound;
 use CreateActivities as Activities;
@@ -249,7 +256,13 @@ Route::prefix('user')->middleware(['auth', 'verified','approved'])->name('user.'
     Route::resource('/transfer', Transfer::class);
     Route::resource('/value-pods', ValuePods::class);
     Route::resource('/short-term-funds', ShortTerm::class);
-
+    Route::resource('/my-account', Account::class);
+    Route::resource('/contact', Contact::class);
+    Route::resource('/howto', Howto::class);
+    Route::resource('/news', News::class);
+    Route::resource('/pdf', Pdf::class);
+    Route::resource('/video', Video::class);
+    Route::resource('/fq', Fq::class);
 });
 //Admin Routes
 Route::prefix('admin')->middleware(['auth', 'auth.isAdmin'])->name('admin.')->group(function (){

@@ -63,6 +63,9 @@ header{
 .margin70 {
     margin: 70px 0;
 }
+.margin80 {
+    margin: 80px 0;
+}
 
 .margin100 {
     margin: 100px 0;
@@ -217,6 +220,30 @@ header{
 }
 .UserS{
     h5{margin: 0;}
+}
+.headd{ h2{color: var(--color-light) !important;}}
+.cards{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+   
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            padding: 25px;
+            list-style: none;
+            &:hover{
+                background-color: rgba(225, 225, 225, 0.312);
+            }
+            a{
+                text-decoration: none;
+                display: flex ;
+                align-items: center;
+                justify-content: space-between;
+                p{margin: 0;}
+            }
+        }
+    }
 }
 .footer{
     ul{

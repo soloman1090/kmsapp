@@ -61,7 +61,7 @@
         <ul class="nav navbar-menu">
           <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
           <li class="nav-item with-sub active">
-            <a href="" class="nav"> Invest</a>
+            <a href="short-term-funds" class="nav"> Invest</a>
             <!-- <ul class="navbar-menu-sub">
               <li class="nav-sub-item"><a href="dashboard-one.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Sales Monitoring</a></li>
               <li class="nav-sub-item"><a href="dashboard-two.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Website Analytics</a></li>
@@ -70,7 +70,7 @@
             </ul> -->
           </li>
           <li class="nav-item with-sub">
-            <a href="" class="nav"> Portfolio</a>
+            <a href="user-investments" class="nav"> Portfolio</a>
             <!-- <ul class="navbar-menu-sub">
               <li class="nav-sub-item"><a href="app-calendar.html" class="nav-sub-link"><i data-feather="calendar"></i>Calendar</a></li>
               <li class="nav-sub-item"><a href="app-chat.html" class="nav-sub-link"><i data-feather="message-square"></i>Chat</a></li>
@@ -79,8 +79,8 @@
               <li class="nav-sub-item"><a href="app-mail.html" class="nav-sub-link"><i data-feather="mail"></i>Mail</a></li>
             </ul> -->
           </li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav">Secondary Market</a>
+          <!-- <li class="nav-item with-sub">
+            <a href="" class="nav">Secondary Market</a> -->
             <!-- <div class="navbar-menu-sub">
               <div class="d-lg-flex">
                 <ul>
@@ -111,13 +111,23 @@
             </div> -->
           </li>
           <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="package"></i> Secondary Market</a>
+            <ul class="navbar-menu-sub">
+              <li class="nav-sub-item"><a href="referred-users" class="nav-sub-link"><i data-feather="calendar"></i>Referrals</a></li>
+              <li class="nav-sub-item"><a href="referral-bonus" class="nav-sub-link"><i data-feather="message-square"></i>Referrals Commissions</a></li>
+              <li class="nav-sub-item"><a href="transfer" class="nav-sub-link"><i data-feather="users"></i>Inter Account Transfer</a></li>
+              <li class="nav-sub-item"><a href="investment-calculator" class="nav-sub-link"><i data-feather="file-text"></i>Investment Calculator</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="package"></i> Resources</a>
             <ul class="navbar-menu-sub">
-              <li class="nav-sub-item"><a href="app-calendar.html" class="nav-sub-link"><i data-feather="calendar"></i>Calendar</a></li>
-              <li class="nav-sub-item"><a href="app-chat.html" class="nav-sub-link"><i data-feather="message-square"></i>Chat</a></li>
-              <li class="nav-sub-item"><a href="app-contacts.html" class="nav-sub-link"><i data-feather="users"></i>Contacts</a></li>
-              <li class="nav-sub-item"><a href="app-file-manager.html" class="nav-sub-link"><i data-feather="file-text"></i>File Manager</a></li>
-              <li class="nav-sub-item"><a href="app-mail.html" class="nav-sub-link"><i data-feather="mail"></i>Mail</a></li>
+              <li class="nav-sub-item"><a href="pdf" class="nav-sub-link"><i data-feather="calendar"></i>PDF</a></li>
+              <li class="nav-sub-item"><a href="video" class="nav-sub-link"><i data-feather="message-square"></i>Videos</a></li>
+              <li class="nav-sub-item"><a href="fq" class="nav-sub-link"><i data-feather="users"></i>F & Q</a></li>
+              <li class="nav-sub-item"><a href="contact" class="nav-sub-link"><i data-feather="file-text"></i>Contact Us</a></li>
+              <li class="nav-sub-item"><a href="howto" class="nav-sub-link"><i data-feather="mail"></i>How To</a></li>
+              <li class="nav-sub-item"><a href="news" class="nav-sub-link"><i data-feather="mail"></i>News</a></li>
             </ul>
           </li>
         </ul>
