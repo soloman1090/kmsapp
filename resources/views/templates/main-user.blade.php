@@ -61,7 +61,7 @@
         <ul class="nav navbar-menu">
           <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
           <li class="nav-item with-sub active">
-            <a href="short-term-funds" class="nav"> Invest</a>
+            <a href="make-investment" class="nav"> Invest</a>
             <!-- <ul class="navbar-menu-sub">
               <li class="nav-sub-item"><a href="dashboard-one.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Sales Monitoring</a></li>
               <li class="nav-sub-item"><a href="dashboard-two.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Website Analytics</a></li>
@@ -133,7 +133,9 @@
         </ul>
       </div><!-- navbar-menu-wrapper -->
       <div class="navbar-right">
-        <!-- <a id="navbarSearch" href="" class="search-link"><i data-feather="search"></i></a> -->
+          @impersonate()
+         <a class=" btn btn-sm btn-success" href="{{ route('admin.impersonate.destroy') }}" role="button">Back to Admin</a>
+            @endimpersonate
         <!-- <div class="dropdown dropdown-message">
           <a href="" class="dropdown-link new-indicator" data-bs-toggle="dropdown">
             <i data-feather="message-square"></i>
@@ -184,6 +186,7 @@
             <div class="dropdown-footer"><a href="">View all Messages</a></div>
           </div>
         </div> -->
+    
         <!-- <div class="dropdown dropdown-notification">
           <a href="" class="dropdown-link new-indicator" data-bs-toggle="dropdown">
             <i data-feather="bell"></i>
@@ -239,11 +242,11 @@
             <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
             <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
 
-            <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
-            <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+            <a href="profile" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+            <a href="profile" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
             <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
-            <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+            <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+            <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
             <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
           </div><!-- dropdown-menu -->
         </div><!-- dropdown -->
@@ -278,6 +281,8 @@
     </header><!-- navbar -->
     <!-- Main Content -->
 
+    <div class="content content-fixed">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
     <main class=" ">
     <div class=" ">
             @include('partials.alert')
@@ -285,6 +290,8 @@
         @yield('content')
  
     </main>
+  </div>
+</div>
 
 
 
