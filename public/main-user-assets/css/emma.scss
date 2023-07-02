@@ -258,3 +258,148 @@ header{
         }
     }
 }
+
+.Investment{
+    .moon{
+        background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
+        background-position: center;
+        border-radius: 20px;
+        height: 40vh;
+        background-color: black;
+        background-size: cover;
+        background-blend-mode: exclusion;
+        h1{
+            padding: 30px;
+            color: white;
+        }
+    }
+    .set1{
+        h1{
+            font-size: 16px;
+        }
+        p{
+            font-size: 13px;
+            margin: 0;
+            color: var(--color-grey);
+        }
+    }
+    .set2{
+        span{
+            background-color: var(--color-body);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+    }
+    .set3{
+        ul{
+            margin: 0;
+            padding: 0;
+            .grey{color: var(--color-grey);}
+            .blue{color: var(--color-light);}
+            .up{
+                font-size: 13px;
+            }
+            li{
+                .greendot{
+                  border-left: 3px solid green;
+                    height: 1px;
+                }
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .fsize10{
+            font-size: 10 !important;
+        }
+        svg{
+            color: white;
+        }
+        .nobackbtn{
+            background-color: white;
+            border: 1px solid var(--color-light);
+            color: var(--color-light);
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            outline: none;
+            svg{
+                margin-right: 6px;
+                color: var(--color-light) !important;
+            }
+            &:hover{
+                background-color: var(--color-light);
+                color: white;
+                svg{
+                    color: white;
+                }
+            }
+        }
+        .withbackbtn{
+            background-color: var(--color-light);
+            border: 1px solid var(--color-light);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            svg{
+                margin-right: 6px;
+                color: white !important;
+            }
+            &:hover{
+                border: none;
+                background-color: var(--color-light-light);
+                svg{
+                    color: var(--color-light);
+                }
+            }
+        }
+    }
+
+    .set4{
+        .col-md-3{
+            padding: 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            h3{
+                margin-bottom: 20px;
+                color: rgb(55, 93, 247);
+            }
+            background-color: var(--color-light-purple);
+        }
+    }
+    .set5{
+        .opt1{
+            display: flex;
+            .icon{
+                margin-right: 15px;
+                color: var(--color-light);
+                svg{
+                    color: var(--color-light);
+                }
+            }
+        }
+    }
+
+    .set6{
+        .col-md-3{
+            padding: 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 191, 0.408);
+        }
+    }
+    .set7{
+        .col-md-3{
+            p{margin: 0;text-align: center;}
+            padding: 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 191, 0.408);
+        }
+    }
+}
