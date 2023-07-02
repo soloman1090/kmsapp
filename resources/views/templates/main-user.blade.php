@@ -380,6 +380,8 @@
     <script src="{{asset('main-user-assets/lib/chart.js/Chart.bundle.min.js')}}"></script>
 
     <script src="{{asset('main-user-assets/js/dashforge.js')}}"></script>
+    <script src="{{asset('main-user-assets/js/dashboard-one.js')}}"></script>
+    <script src="{{asset('main-user-assets/js/dashboard-two.js')}}"></script>
     <script src="{{asset('main-user-assets/js/dashforge.sampledata.js')}}"></script>
 
     <!-- append theme customizer -->
