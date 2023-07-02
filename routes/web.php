@@ -44,7 +44,7 @@ use User\Affiliate;
 use User\InvestCalculator;
 use User\ReinvestContoller;
 use User\ValuePods; 
-use User\ShortTerm;
+use User\MakeInvestment;
 use User\Account;
 use User\Contact;
 use User\News;
@@ -255,7 +255,7 @@ Route::prefix('user')->middleware(['auth', 'verified','approved'])->name('user.'
     Route::resource('/investment-calculator', InvestCalculator::class);
     Route::resource('/transfer', Transfer::class);
     Route::resource('/value-pods', ValuePods::class);
-    Route::resource('/short-term-funds', ShortTerm::class);
+    Route::resource('/make-investment', MakeInvestment::class);
     Route::resource('/my-account', Account::class);
     Route::resource('/contact', Contact::class);
     Route::resource('/howto', Howto::class);
