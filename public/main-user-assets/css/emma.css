@@ -376,4 +376,20 @@ header .nav:hover {
 .Investment .set7 .col-md-3 p {
   margin: 0;
   text-align: center;
+}
+
+.PDF {
+  height: 100vh;
+  background-color: #f8f9fc;
+}
+.PDF i {
+  color: #dc3545 !important;
+}
+
+.Video {
+  height: 100vh;
+  background-color: #f8f9fc;
+}
+.Video i {
+  color: #f10075 !important;
 }/*# sourceMappingURL=emma.css.map */

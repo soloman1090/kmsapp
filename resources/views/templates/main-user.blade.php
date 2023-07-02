@@ -45,6 +45,7 @@
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/emma.css')}}">
+    <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.filemgr.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.auth.css')}}">
   </head>
   <body>
