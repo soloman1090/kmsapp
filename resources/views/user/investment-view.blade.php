@@ -14,8 +14,7 @@
     </div>
      
 </div>
-<h1>
-    Investment View
-</h1>
+
+
 
 @endsection
