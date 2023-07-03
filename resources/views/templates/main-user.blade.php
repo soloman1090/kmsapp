@@ -41,6 +41,7 @@
     <link href="{{asset('main-user-assets/lib/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
     <link href="{{asset('main-user-assets/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('main-user-assets/lib/remixicon/fonts/remixicon.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.css')}}">
@@ -377,6 +378,7 @@
       </div> -->
     </footer>
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="{{asset('main-user-assets/lib/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/feather-icons/feather.min.js')}}"></script>
