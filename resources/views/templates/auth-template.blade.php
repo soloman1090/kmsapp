@@ -10,29 +10,29 @@
     <meta name="twitter:site" content="@themepixels">
     <meta name="twitter:creator" content="@themepixels">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DashForge">
-    <meta name="twitter:description" content="Responsive Bootstrap 5 Dashboard Template">
-    <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-
+    <meta name="twitter:title" content="Dell Group">
+    <meta name="twitter:description" content="Dell Investment Group">
+ 
     <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/dashforge">
-    <meta property="og:title" content="DashForge">
-    <meta property="og:description" content="Responsive Bootstrap 5 Dashboard Template">
+    <meta property="og:title" content="Dell Group">
+    <meta property="og:description" content="Dell Investment Group">
 
-    <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png">
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+    
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
 
     <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 5 Dashboard Template">
-    <meta name="author" content="ThemePixels">
+    <meta name="description" content="Dell Investment Group">
+    <meta name="author" content="Dell Group">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="main-user-assets/img/favicon.png">
 
-    <title>DashForge Responsive Bootstrap 5 Dashboard Template</title>
+    <title>Auth-Account</title>
 
     <!-- vendor css -->
     <link href="{{asset('main-user-assets/lib/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
