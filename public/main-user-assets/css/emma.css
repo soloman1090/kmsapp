@@ -507,4 +507,17 @@ header .nav:hover {
 }
 .How .blue svg {
   margin-right: 15px;
+}
+
+.FUND .bg1 {
+  background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+.FUND .texts .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }/*# sourceMappingURL=emma.css.map */

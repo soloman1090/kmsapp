@@ -37,8 +37,13 @@
             <div class="col-md-10">
 
                 <div class="accordion-item">
-                    <div class="card-body ">
-                        <div class="text-center">
+                    <div class="card-body FUND">
+                       <div class="row">
+                       <div class="col-md-4">
+                            <div class="bg1"></div>
+                       </div>
+                       <div class="col-md-8">
+                       <div class="texts">
                             <div class="row">
                                 <div class="col">
                                     <h1 class="m-0 fw-semibold text-dark font-24 mt-3">
@@ -65,46 +70,57 @@
                                         </span>{{ $invest->category_name }}
                                     </a>
 
-                                </div>
-                                <div class="col-auto">
+                                    <div class="col-auto">
                                     @if ($invest->status == 'pending' || $invest->status == 'cancelled' || $invest->status == 'expired')
                                     <div></div>
                                     @else
-                                    <div class="c100 p{{ $invest->daysLeft }} small">
-                                        <span class="days">{{ $invest->days }}</span>
+                                    <div class="c100 p{{ $invest->daysLeft }} small mt-2 ">
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                                    </div>
+                                        <div class="left mt-2">
+                                            <span class="days">{{ $invest->days }}</span>
+                                            <h5 class="mb-0 text-muted">Days Left</h5>
+                                        </div>
                                         <div class="slice">
                                             <div class="bar"></div>
                                             <div class="fill"></div>
                                         </div>
+                                        
                                     </div>
-                                    <h5 class="mb-0 text-muted">Days Left</h5>
+                                    
                                     @endif
 
                                 </div>
+                                </div>
+                         
                             </div>
                         </div>
                         <div class="row mt-4 d-flex align-items-center">
                             <div class="col">
-                                <h5 class="font-22 m-0 fw-bold">${{ $invest->amount }}</h5>
-                                <p class="mb-0 text-muted">Amount Invested</p>
+                                {{-- <h5 class="font-22 m-0 fw-bold">${{ $invest->amount }}</h5> --}}
+                                <h5 class="font-14 m-0 fw-bold">23,903</h5>
+                                <p class="mb-0 text-muted">Investment Amount</p>
                             </div>
                             <div class="col">
-                                <h5 class="font-20 m-0 fw-bold">(ROI) ${{ $invest->returns }}</h5>
-                                <p class="mb-0 text-muted">Daily Returns</p>
+                                {{-- <h5 class="font-20 m-0 fw-bold">(ROI) ${{ $invest->returns }}</h5> --}}
+                                <h5 class="font-14 m-0 fw-bold"> 32,432</h5>
+                                <p class="mb-0 text-muted">Total Accumulated</p>
                             </div>
                             <div class="col">
-                                <h5 class="font-20 m-0 fw-bold">{{ $invest->payout }}</h5>
-                                <p class="mb-0 text-muted">Payout</p>
+                                {{-- <h5 class="font-20 m-0 fw-bold">{{ $invest->payout }}</h5> --}}
+                                <h5 class="font-14 m-0 fw-bold">3,223</h5>
+                                <p class="mb-0 text-muted">Portfolio Wallet</p>
                             </div>
                             <div class="col">
-                                <h5 class="font-18 m-0 fw-bold">{{ $invest->duration }} Months</h5>
-                                <p class="mb-0 text-muted">Duration</p>
+                                {{-- <h5 class="font-18 m-0 fw-bold">{{ $invest->duration }} Months</h5> --}}
+                                <h5 class="font-14 m-0 fw-bold">3434</h5>
+                                <p class="mb-0 text-muted">Compound Wallet</p>
                             </div>
-                            <div class="col">
+                            {{-- <div class="col">
                                 <h5 class="font-14 m-0 fw-bold">{{ $invest->date }}</h5>
                                 <p class="mb-0 text-muted">Investment Date</p>
-                            </div>
-
+                            </div> --}}
 
                         </div>
                         <hr class="hr-dashed hr-menu">
@@ -116,19 +132,18 @@
                         </div>
                         @else
                         <div class="row mt-4 d-flex align-items-center">
-                            <div class="col-3">
-                                <a href="#" class="accordion-button collapsed shadow-none  px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $invest->investment_id }}" aria-expanded="false" aria-controls="collapseTwo{{ $invest->investment_id }}">More
-                                    Details</a>
-                            </div>
+                            {{-- <div class="col-3">
+                                <a href="#" class="accordion-button collapsed shadow-none  px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $invest->investment_id }}" aria-expanded="false" aria-controls="collapseTwo{{ $invest->investment_id }}">More Details</a>
+                            </div> --}}
 
                             @if ($invest->status == 'finished')
-                            <div class="col">
+                            {{-- <div class="col">
                                 <a href="#" class="btn btn-sm btn-secondary  px-4">Re-invest</a>
                             </div>
 
                             <div class="col">
                                 <a href="#" class="btn btn-sm btn-secondary  px-4">Make Withdrawal</a>
-                            </div>
+                            </div> --}}
 
                             <div class="col">
                                 {{-- <a href="{{ routes('user.user-investments.edit',$invest->investment_id ) }}" class="btn btn-sm btn-secondary px-4">View More Details</a> --}}
@@ -140,22 +155,24 @@
                                 <a href="{{ route('user.user-investments.show',$invest->investment_id) }}" target="_blank" class="btn btn-sm btn-primary  px-4">Confirm Reinvestment</a>
                             </div>
                             @else
-                            <div class="col">
+                            {{-- <div class="col">
                                 <a href="#" class="btn btn-sm btn-primary  px-4" data-bs-toggle="modal" data-bs-target="#investModalDefault{{ $invest->investment_id }}">Re-invest</a>
-                            </div>
+                            </div> --}}
                             @endif
 
-                            <div class="col">
+                            {{-- <div class="col">
                                 <a href="#" class="btn btn-sm btn-secondary  px-4">Make Withdrawal</a>
-                            </div>
+                            </div> --}}
 
                             <div class="col">
                                 {{-- DONT DELETE --}}
-                                <a href="{{ route('user.user-investments.edit', $invest->investment_id) }}" class="btn btn-sm btn-secondary  px-4">View More Details</a>
+                                <a href="{{ route('user.user-investments.edit', $invest->investment_id) }}" class="btn btn-sm btn-secondary  btn-brand-02 w-100 px-4">View More Details</a>
                             </div>
                             @endif
                         </div>
                         @endif
+                       </div>
+                       </div>
                     </div>
                     <!--end card-body-->
                     <div class="modal fade" id="investModalDefault{{ $invest->investment_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalDefaultLabel" aria-hidden="true">
