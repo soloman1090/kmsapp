@@ -111,7 +111,7 @@
                         @if ($invest->status == 'pending' )
                         <div class="row mt-4 d-flex align-items-center">
                             <div class="col">
-                                <a href="{{ route('user.user-investments.show',$invest->investment_id) }}"  class="btn btn-sm btn-primary  px-4">Click To Confirm Purchase</a>
+                                <a href="{{ route('user.user-investments.show',$invest->investment_id) }}" class="btn btn-sm btn-primary  px-4">Click To Confirm Purchase</a>
                             </div>
                         </div>
                         @else
@@ -131,8 +131,7 @@
                             </div>
 
                             <div class="col">
-                                <a href="#" class="btn btn-sm btn-primary  px-4">Re-initiate
-                                    investment</a>
+                                {{-- <a href="{{ routes('user.user-investments.edit',$invest->investment_id ) }}" class="btn btn-sm btn-secondary px-4">View More Details</a> --}}
                             </div>
                             @else
 
@@ -142,9 +141,7 @@
                             </div>
                             @else
                             <div class="col">
-                                <a href="#" class="btn btn-sm btn-primary  px-4"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#investModalDefault{{ $invest->investment_id }}">Re-invest</a>
+                                <a href="#" class="btn btn-sm btn-primary  px-4" data-bs-toggle="modal" data-bs-target="#investModalDefault{{ $invest->investment_id }}">Re-invest</a>
                             </div>
                             @endif
 
@@ -153,8 +150,8 @@
                             </div>
 
                             <div class="col">
-                                <a href="#" class="btn btn-sm btn-secondary  px-4">Re-initiate
-                                    investment</a>
+                                {{-- DONT DELETE --}}
+                                <a href="{{ route('user.user-investments.edit', $invest->investment_id) }}" class="btn btn-sm btn-secondary  px-4">View More Details</a>
                             </div>
                             @endif
                         </div>

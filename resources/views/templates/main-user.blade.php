@@ -60,7 +60,7 @@
         <ul class="nav navbar-menu">
           <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
           <li class="nav-item with-sub active">
-            <a href="make-investment" class="nav"> Invest</a>
+            <a href="/user/make-investment" class="nav"> Invest</a>
             <!-- <ul class="navbar-menu-sub">
               <li class="nav-sub-item"><a href="dashboard-one.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Sales Monitoring</a></li>
               <li class="nav-sub-item"><a href="dashboard-two.html" class="nav-sub-link"><i data-feather="bar-chart-2"></i>Website Analytics</a></li>
@@ -69,7 +69,7 @@
             </ul> -->
           </li>
           <li class="nav-item with-sub">
-            <a href="user-investments" class="nav"> Portfolio</a>
+            <a href="/user/user-investments" class="nav"> Portfolio</a>
             <!-- <ul class="navbar-menu-sub">
               <li class="nav-sub-item"><a href="app-calendar.html" class="nav-sub-link"><i data-feather="calendar"></i>Calendar</a></li>
               <li class="nav-sub-item"><a href="app-chat.html" class="nav-sub-link"><i data-feather="message-square"></i>Chat</a></li>

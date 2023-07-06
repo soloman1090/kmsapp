@@ -126,4 +126,29 @@ class UsersInvestmentsView extends Controller
             return redirect('user/view-investments-portfolio');
         }
     }
+
+    public function edit($investid, Request $req)
+    {
+        
+        $id = auth()->id();
+
+        $user = DB::table('users')
+            ->join('user_infos', 'users.id', "=", 'user_infos.user_id')
+            ->where('users.id', $id)
+            ->get()->first();
+
+        $activities = DB::table('users')
+            ->join('activities', 'users.id', "=", 'activities.user_id')
+            ->where('activities.user_investments_id', $investid)
+            ->orderBy('activities.id', 'DESC')
+            ->get();
+        
+
+        //dd($activities, $investid);
+        return view('user.user-investment-view', ['user' => $user, 'user_id' => $id, 'username' => $user->name, 'page_title' => "Investment View"] );
+
+        
+    }
+
+
 }

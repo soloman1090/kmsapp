@@ -271,7 +271,7 @@ border-top-right-radius: 10px;">
                             </div>
                         </div>
                         <hr>
-                        <a href="{{ route('user.make-investment.show',$pack['id'] ) }}" class="btn btn-primary w-100  btn-outline-dashed py-2"><span>Get Started With {{ $pack['name'] }}</span></a>
+                        <a href="{{ route('user.make-investment.show',$pack['id'] ) }}" class="btn btn-primary w-100  btn-outline-dashed py-2 text-white"><span>Get Started With {{ $pack['name'] }}</span></a>
 
 
                         {{-- <form action="{{ route('user.get-payment.index') }}" method="get" class="form-parsley">
