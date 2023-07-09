@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\UsersInvestments;
+use App\Models\Investment_Packages;
 use Carbon\Carbon;
 use Coinremitter\Coinremitter;
 use Illuminate\Http\Request;
@@ -63,16 +64,12 @@ class UsersInvestmentsView extends Controller
             ->where('users.id', $id)
             ->orderBy('user_investments.id', 'DESC')
             ->get(['users.name as username', 'users.email', 'investment_packages.name as packagename', 'investment_packages.id as package_id', 'user_investments.date', 'user_investments.id as investment_id', 'user_investments.end_date', 'investment_packages.category_name',
-                'user_investments.amount', 'user_investments.returns', 'investment_packages.duration', 'user_investments.payout', 'user_investments.invoice_url', 'user_investments.active', 'user_investments.status', 'user_investments.txn_id', 'user_investments.wallet_id']);
+                'user_investments.amount', 'user_investments.returns', 'investment_packages.duration', 'user_investments.payout', 'user_investments.invoice_url', 'user_investments.active', 'user_investments.status', 'user_investments.txn_id', 'user_investments.wallet_id', 'investment_packages.image',]);
 
-        $usersInvestments = [];
-
-        for ($i = 0; $i < count($investments); $i++) {
-            if ($investments[$i]['payout'] != "pods") {
-                //$investments[$i]['end_date']
-
-                $d1 = strtotime(Carbon::now()->toDayDateTimeString());
-                $d2 = strtotime($investments[$i]['end_date']);
+        
+        foreach($investments as $key => $invest) {
+            $d1 = strtotime(Carbon::now()->toDayDateTimeString());
+                $d2 = strtotime($invest->end_date);
                 $totalSecondsDiff = abs($d1 - $d2);
                 $totalDaysDiff = intval(round($totalSecondsDiff / 60 / 60 / 24));
                 if ($d1 < $d2 || $d1 > $d2) {
@@ -80,14 +77,13 @@ class UsersInvestmentsView extends Controller
                     if ($totalDaysDiff < 100) {
                         $dayLeft = $totalDaysDiff;
                     }
-                    $data = ['days' => $totalDaysDiff, 'daysLeft' => $dayLeft, 'username' => $investments[$i]['username'], 'email' => $investments[$i]['email'], 'packagename' => $investments[$i]['packagename'], 'category_name' => $investments[$i]['category_name'], 'date' => $investments[$i]['date'], 'amount' => $investments[$i]['amount'], 'returns' => $investments[$i]['returns'], 'duration' => $investments[$i]['duration'],
-                        'payout' => getPayout($investments[$i]['payout']), 'active' => $investments[$i]['active'], 'invoice_url' => $investments[$i]['invoice_url'], 'investment_id' => $investments[$i]['investment_id'], 'package_id' => $investments[$i]['package_id'], 'status' => $investments[$i]['status'], 'txn_id' => $investments[$i]['txn_id'], 'wallet_id' => $investments[$i]['wallet_id']];
-                    array_push($usersInvestments, (object) $data);
+                    $invest->days=$totalDaysDiff;
+                    $invest->daysLeft=$dayLeft;
                 }
-            }
+            
         }
 
-        return view('user.user-investments', ['user' => $user, 'user_id' => $id, 'page_title' => "All Active Investment", 'activities' => $activities, 'investments' => $usersInvestments, 'username' => $user->name]);
+        return view('user.user-investments', ['user' => $user, 'user_id' => $id, 'page_title' => "All Active Investment", 'activities' => $activities, 'investments' => $investments, 'username' => $user->name]);
     }
 
     public function show($id, Request $req)
@@ -129,6 +125,26 @@ class UsersInvestmentsView extends Controller
 
     public function edit($investid, Request $req)
     {
+
+        function getDaysCount($date, $type){
+            $d1 = strtotime(Carbon::now()->toDayDateTimeString());
+                $d2 = strtotime($date);
+                $totalSecondsDiff = abs($d1 - $d2);
+                $totalDaysDiff = intval(round($totalSecondsDiff / 60 / 60 / 24));
+                if ($d1 < $d2 || $d1 > $d2) {
+                    $dayLeft = 100;
+                    if ($totalDaysDiff < 100) {
+                        $dayLeft = $totalDaysDiff;
+                    }
+
+                    if($type=="days"){
+                        return $totalDaysDiff;
+                    }else if($type=="daysLeft"){
+                        return $dayLeft;
+                    }
+                    
+                }
+        }
         
         $id = auth()->id();
 
@@ -142,10 +158,18 @@ class UsersInvestmentsView extends Controller
             ->where('activities.user_investments_id', $investid)
             ->orderBy('activities.id', 'DESC')
             ->get();
+
+        $investment = UsersInvestments::where('id', $investid)->firstOrFail();
+        $investment->days=getDaysCount($investment->end_date, "days");
+        $investment->daysLeft=getDaysCount($investment->end_date, "daysLeft");
+        $investment->package=Investment_Packages::where('id', $investment->investment_packages_id)->firstOrFail();
+        
+
+
         
 
         //dd($activities, $investid);
-        return view('user.user-investment-view', ['user' => $user, 'user_id' => $id, 'username' => $user->name, 'page_title' => "Investment View"] );
+        return view('user.user-investment-view', ['user' => $user, 'user_id' => $id, 'username' => $user->name, 'page_title' => "Investment View", "investment"=>$investment] );
 
         
     }

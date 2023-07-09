@@ -133,7 +133,7 @@
       </div><!-- navbar-menu-wrapper -->
       <div class="navbar-right">
           @impersonate()
-         <a class=" btn btn-sm btn-success" href="{{ route('admin.impersonate.destroy') }}" role="button">Back to Admin</a>
+         <a class=" btn btn-sm btn-success" href="{{ route('admin.impersonate.destroy') }}" role="button">Admin</a>
             @endimpersonate
         <!-- <div class="dropdown dropdown-message">
           <a href="" class="dropdown-link new-indicator" data-bs-toggle="dropdown">

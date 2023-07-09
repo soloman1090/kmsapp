@@ -168,28 +168,28 @@ header .nav:hover {
 }
 
 .bg1 {
-  height: 100vh;
+  height: 280px;
   width: 100%;
+  border-radius: 20;
   background-size: cover;
   background-position: center;
-  background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
-}
+ }
 
 .bg2 {
-  height: 100vh;
+  height: 280px;
   width: 100%;
+  border-radius: 20;
   background-size: cover;
   background-position: center;
-  background-image: url(../../assets/img/pexels-pixabay-414837.jpg);
-}
+ }
 
 .bg3 {
-  height: 100vh;
+  height: 280px;
   width: 100%;
+  border-radius: 20;
   background-size: cover;
   background-position: center;
-  background-image: url(../../assets/img/pexels-pixabay-414122.jpg);
-}
+ }
 
 .Business h5 {
   margin: 0;
@@ -245,7 +245,6 @@ header .nav:hover {
 }
 
 .Investment .moon {
-  background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
   background-position: center;
   border-radius: 20px;
   height: 40vh;
@@ -258,7 +257,7 @@ header .nav:hover {
   color: white;
 }
 .Investment .set1 h1 {
-  font-size: 16px;
+  font-size: 26px;
 }
 .Investment .set1 p {
   font-size: 13px;
@@ -510,11 +509,11 @@ header .nav:hover {
 }
 
 .FUND .bg1 {
-  background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
+  border-radius: 20px;
 }
 .FUND .texts .left {
   display: flex;

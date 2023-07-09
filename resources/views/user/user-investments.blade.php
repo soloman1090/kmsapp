@@ -40,7 +40,7 @@
                     <div class="card-body FUND">
                        <div class="row">
                        <div class="col-md-4">
-                            <div class="bg1"></div>
+                            <div class="bg1" style="background-image: url({{ asset('uploads/'.$invest->image) }});"></div>
                        </div>
                        <div class="col-md-8">
                        <div class="texts">
@@ -75,12 +75,12 @@
                                     <div></div>
                                     @else
                                     <div class="c100 p{{ $invest->daysLeft }} small mt-2 ">
-                                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="{{ $invest->days }}" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: {{ $invest->days }}%"></div>
                                     </div>
                                         <div class="left mt-2">
-                                            <span class="days">{{ $invest->days }}</span>
-                                            <h5 class="mb-0 text-muted">Days Left</h5>
+                                            
+                                            <h6 class="mb-0 text-muted"> {{ $invest->days }} Days Left</h6>
                                         </div>
                                         <div class="slice">
                                             <div class="bar"></div>
@@ -99,22 +99,22 @@
                         <div class="row mt-4 d-flex align-items-center">
                             <div class="col">
                                 {{-- <h5 class="font-22 m-0 fw-bold">${{ $invest->amount }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">23,903</h5>
+                                <h5 class="font-14 m-0 fw-bold">${{ $invest->amount }}</h5>
                                 <p class="mb-0 text-muted">Investment Amount</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">(ROI) ${{ $invest->returns }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold"> 32,432</h5>
+                                <h5 class="font-14 m-0 fw-bold">${{ $invest->returns*$invest->days }}</h5>
                                 <p class="mb-0 text-muted">Total Accumulated</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">{{ $invest->payout }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">3,223</h5>
+                                <h5 class="font-14 m-0 fw-bold">$3,223</h5>
                                 <p class="mb-0 text-muted">Portfolio Wallet</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-18 m-0 fw-bold">{{ $invest->duration }} Months</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">3434</h5>
+                                <h5 class="font-14 m-0 fw-bold">$3434</h5>
                                 <p class="mb-0 text-muted">Compound Wallet</p>
                             </div>
                             {{-- <div class="col">

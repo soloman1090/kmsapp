@@ -13,23 +13,23 @@
     <div class="Investment margin60">
         <div class="row">
             <div class="col-md-5 ">
-                <div class="moon">
-                    <h1>Moonfare</h1>
+                <div class="moon" style="background-image: url({{ asset('uploads/'.$investment->package->image) }})">
+                    <h1>{{ $investment->package->name  }}</h1>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="set1">
                     <div class="card mb-3 p-3">
                         <p>Investment Amount</p>
-                        <h1>23,903</h1>
+                        <h1>${{ $investment->amount }}</h1>
                     </div>
                     <div class="card mb-3 p-3">
                         <p>Total Accumulated </p>
-                        <h1>32,432</h1>
+                        <h1>$32,432</h1>
                     </div>
                     <div class="card mb-3 p-3">
                         <p>Portfolio Wallet </p>
-                        <h1> 3,223</h1>
+                        <h1> $3,223</h1>
                     </div>
                 </div>
             </div>
@@ -37,22 +37,23 @@
                 <div class="set1">
                     <div class="card mb-3 p-3">
                         <p>Compound Wallet </p>
-                        <h1>3434</h1>
+                        <h1>$3,434</h1>
                     </div>
                     <div class="card mb-3 p-3">
                         <p>Total Withdrawn  </p>
-                        <h1>32,432</h1>
+                        <h1>$32,432</h1>
                     </div>
                     <div class=" mb-3 ">
-                        <button class="btn btn-brand-02 w-100  mb-1">
+                        <button class="btn btn-brand-02 w-100 mb-2">
                             Make Withdrawal
+                        </button>
+                        <button class="btn btn-brand-02 w-100 ">
+                            Inter Account Transfer
                         </button>
                         {{-- <div class="col-3">
                                 <a href="#" class="accordion-button collapsed shadow-none  px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $invest->investment_id }}" aria-expanded="false" aria-controls="collapseTwo{{ $invest->investment_id }}">More Details</a>
                             </div> --}}
-                        <button class="btn btn-brand-02 w-100  mb-1">
-                            View more details
-                        </button>
+                        
                     </div>
                 </div>
             </div>
