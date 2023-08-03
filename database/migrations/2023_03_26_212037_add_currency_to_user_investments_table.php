@@ -14,7 +14,7 @@ class AddCurrencyToUserInvestmentsTable extends Migration
     public function up()
     {
         Schema::table('user_investments', function (Blueprint $table) {
-            $table->string('currency')->nullable();
+            //$table->string('currency')->nullable();
         });
     }
 

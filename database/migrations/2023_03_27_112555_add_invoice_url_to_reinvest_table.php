@@ -14,7 +14,7 @@ class AddInvoiceUrlToReinvestTable extends Migration
     public function up()
     {
         Schema::table('reinvest', function (Blueprint $table) {
-            $table->string('invoice_url')->nullable();
+            //$table->string('invoice_url')->nullable();
         });
     }
 

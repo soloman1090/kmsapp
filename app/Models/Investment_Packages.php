@@ -40,6 +40,12 @@ class Investment_Packages extends Model
         "running_days",
         "slots",
         "bonus_percentage",
-        "image"
+        "image",
+        "diverse_taken_percentage",
+        "geography",
+        "strategy",
+        "portfolio_fund_targets",
+        "strategy_focus",
+        "target_size",
     ];
 }

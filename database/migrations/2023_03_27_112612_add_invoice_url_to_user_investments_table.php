@@ -14,7 +14,7 @@ class AddInvoiceUrlToUserInvestmentsTable extends Migration
     public function up()
     {
         Schema::table('user_investments', function (Blueprint $table) {
-            $table->string('invoice_url')->nullable();
+            //$table->string('invoice_url')->nullable();
         });
     }
 
