@@ -25,7 +25,10 @@ class UsersInvestments extends Model
         'txn_id',
         'currency',
         'invoice_url',
-        'active'
+        'active',
+        'available_fund_balance',
+        'active_interest_balance',
+        'by_weekly_next_date'
     ];
 
 
