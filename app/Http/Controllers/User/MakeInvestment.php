@@ -73,7 +73,6 @@ class MakeInvestment extends Controller
         $userActivities=User::join('activities', 'activities.user_id', '=', 'users.id')
         ->join('investment_packages', 'investment_packages.id', '=', 'activities.investment_packages_id')
         ->where('users.id', $id)
-        ->where('investment_packages.package_type', "short")
         ->orderBy('activities.id', 'DESC')
         ->get();
 
@@ -83,7 +82,6 @@ class MakeInvestment extends Controller
         $investments= User::join('user_investments', 'user_investments.user_id', '=', 'users.id')
         ->join('investment_packages', 'investment_packages.id', '=', 'user_investments.investment_packages_id')
         ->where('users.id', $id)
-        ->where('investment_packages.package_type', "short")
         ->orderBy('user_investments.id', 'DESC')
         ->get(['users.name as username','users.email', 'investment_packages.name as packagename',  'investment_packages.id as package_id','user_investments.date','user_investments.id as investment_id','user_investments.end_date','investment_packages.category_name',
         'user_investments.amount','user_investments.returns', 'investment_packages.duration', 'user_investments.payout', 'user_investments.active','user_investments.status','user_investments.txn_id','user_investments.compounding_amount' ]);
@@ -133,7 +131,7 @@ class MakeInvestment extends Controller
     }
 
 
-    public function show($id)
+    public function show($pack_id)
     {
         $id = auth()->id();
 
@@ -141,7 +139,9 @@ class MakeInvestment extends Controller
             ->join('user_infos', 'users.id', "=", 'user_infos.user_id')
             ->where('users.id', $id)
             ->get()->first();
+
+        $package = Investment_Packages::findOrFail($pack_id);
         
-            return view('user.investment-view', ['user' => $user, 'user_id' => $id, 'username' => $user->name, 'page_title' => " "] );
+            return view('user.investment-view', ['user' => $user, 'user_id' => $id, "package"=>$package, 'username' => $user->name, 'page_title' => " "] );
     }
 }

@@ -22,25 +22,29 @@ class InvestPackagesController extends Controller
         }
         $packages = Investment_Packages::all();
 
-        return view('admin.invest.invest-packages',
-            ['packages' => $packages, "priviledge" => $priviledge,
-                'page_title' => "Investment Packages"]);
+        return view(
+            'admin.invest.invest-packages',
+            [
+                'packages' => $packages, "priviledge" => $priviledge,
+                'page_title' => "Investment Packages"
+            ]
+        );
     }
 
     public function store(Request $req)
     {
         //dd($req);
-        $invest =null;
-        if($req['update']=="true"){ 
+        $invest = null;
+        if ($req['update'] == "true") {
             $invest = Investment_Packages::findOrFail($req['package_id']);
-        }else{
-            $invest = new Investment_Packages; 
+        } else {
+            $invest = new Investment_Packages;
         }
-        if( $req->file('image')!=null){
-            $imageName=time().'.'.$req->image->extension();
-            $path= $req->image->move(public_path('uploads'), $imageName);
-            $invest->image=$imageName;
-          }
+        if ($req->file('image') != null) {
+            $imageName = time() . '.' . $req->image->extension();
+            $path = $req->image->move(public_path('uploads'), $imageName);
+            $invest->image = $imageName;
+        }
         $invest->name = $req['name'];
         $invest->min_amt = $req['min_amt'];
         $invest->max_amt = $req['max_amt'];
@@ -70,18 +74,34 @@ class InvestPackagesController extends Controller
         $invest->slots = $req['slots'];
         $invest->bonus_percentage = $req['bonus_percentage'];
         $invest->running_days = $req['running_days'];
-       
-        if($req['update']=="true"){ 
+
+        if ($req['update'] == "true") {
             $invest->update();
             $req->session()->flash('success', 'Package Updated successfully');
-        }else{
+        } else {
             $invest->save();
             $req->session()->flash('success', 'Package added successfully');
         }
         return redirect('admin/investment-packages');
-
     }
-    
+
+    public function edit(Request $request, $id)
+    {
+        $priviledge = "admin";
+        $package = Investment_Packages::findOrFail($id);
+
+        // dd($package);
+
+        return view(
+            'admin.invest.update-package',
+            [
+                'pac' => $package,
+                "priviledge" => $priviledge,
+                'page_title' => "Update Packages"
+            ]
+        );
+    }
+
 
     public function destroy(Request $request, $id)
     {
@@ -89,5 +109,4 @@ class InvestPackagesController extends Controller
         $request->session()->flash('success', 'You have deleted a package');
         return redirect('admin/investment-packages');
     }
-
 }

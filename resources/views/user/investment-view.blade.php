@@ -95,31 +95,13 @@
             </div>
         </div>
         <div class="set4 margin50">
-            <h1>Investment Objectives</h1>
-            <div class="row margin40 ">
-                <div class="col-md-3">
-                    <h3>Intro to MCF</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Benefits to Investors</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Team</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                </div>
-            </div>
+            <h1> {!! $package->info_head_2 !!}</h1>
+            {!! $package->info_detail_2 !!}
         </div>
         <div class="set5 margin50">
-            <h1>Highlights</h1>
-            <div class=" margin40 ">
+            <h1> {!! $package->info_head_3 !!}</h1>
+            {!! $package->info_detail_3 !!}
+            {{-- <div class=" margin40 ">
                 <div class="opt1 mb-3">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
@@ -152,11 +134,11 @@
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="set6 margin50">
-            <h1>Investment Objectives</h1>
-            <p class="margin30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+            <h1> {!! $package->info_head_4 !!}</h1>
+            {{-- <p class="margin30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
             <div class="row margin40 ">
                 <div class="col-md-3">
                     <h3>Seeking to outperform public markets</h3>
@@ -184,59 +166,13 @@
                     <h3>Providing diversified investment focus</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
                 </div>
-            </div>
+            </div> --}}
+            {!! $package->info_detail_4 !!}
         </div>
-        <div class="set5 margin50">
-            <h1>Highlights</h1>
-            <h3 class=margin30>Investment Highlights</h3>
-            <div class=" margin40 ">
-                <div class="opt1 mb-3">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                        </svg>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                </div>
-                <div class="opt1 mb-3">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                        </svg>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                </div>
-                <div class="opt1 mb-3">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                        </svg>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                </div>
-                <div class="opt1 mb-3">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                        </svg>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-                </div>
-            </div>
-        </div>
-        <div class="set7 margin50">
-            <h1>Illustrative Portfolio Diversification</h1>
-            <div class="row margin40 ">
-                <div class="col-md-3">
-                    <p>Geography</p>
-                </div>
-                <div class="col-md-3">
-                    <p>Sector</p>
-                </div>
-                <div class="col-md-3">
-                    <p>Strategy</p>
-                </div>
-            </div>
+         
+        <div class="set4 margin50">
+            <h1> {!! $package->info_head_5 !!}</h1>
+            {!! $package->info_detail_5 !!}
         </div>
     </div>
 </div> 
