@@ -50,33 +50,39 @@
                         <h1>Medium scale diversified investment portfolio</h1>
                         <div class="margin40 row">
                             <div class="col-md-4">
-                                <h3>Intro to MCF</h3>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                                <div class="intro">
+                                    <h3>Intro to MCF</h3>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                                </div>
                             </div>
 
                             <div class="col-md-4">
-                                <h3>Benefits to Investors</h3>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                                <div class="intro">
+                                    <h3>Benefits to Investors</h3>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                                </div>
                             </div>
 
                             <div class="col-md-4">
-                                <h3>Team</h3>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                                <div class="intro">
+                                    <h3>Team</h3>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                                </div>
                             </div>
                         </div>
 
@@ -109,41 +115,53 @@
 
                         <div class="margin40 row">
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Seeking to outperform public markets</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Investing in top-performing buyout manager</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Providing diversified investment focus</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                               </div>
                             </div>
                         </div>
 
                         <div class="margin40 row">
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Seeking to outperform public markets</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Investing in top-performing buyout manager</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Providing diversified investment focus</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                               </div>
                             </div>
                         </div>
 
@@ -155,41 +173,52 @@
 
                         <div class="margin40 row">
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Seeking to outperform public markets</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Investing in top-performing buyout manager</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Providing diversified investment focus</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                               </div>
                             </div>
                         </div>
-
                         <div class="margin40 row">
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Seeking to outperform public markets</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem est nam velit.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Investing in top-performing buyout manager</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus vel ratione dolorum aspernatur officia corrupti, sit qui ad odit iste molestias placeat est aliquid magni vero quis beatae accusantium.</p>
+                               </div>
                             </div>
 
                             <div class="col-md-4">
+                               <div class="seek">
                                 <h3>Providing diversified investment focus</h3>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi magnam non molestias, est sit!</p>
+                               </div>
                             </div>
                         </div>
 
