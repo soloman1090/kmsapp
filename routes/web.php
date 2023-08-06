@@ -52,6 +52,8 @@ use User\Howto;
 use User\Fq;
 use User\Video;
 use User\Pdf;
+use User\InvestmentReceipt;
+use User\InvestmentPayment;
 use HomeController as Home;
 use CompoundInterest as Compound;
 use CreateActivities as Activities;
@@ -263,6 +265,8 @@ Route::prefix('user')->middleware(['auth', 'verified','approved'])->name('user.'
     Route::resource('/pdf', Pdf::class);
     Route::resource('/video', Video::class);
     Route::resource('/fq', Fq::class);
+    Route::resource('/investment-receipt', InvestmentReceipt::class);
+    Route::resource('/investment-payment', InvestmentPayment::class);
 });
 //Admin Routes
 Route::prefix('admin')->middleware(['auth', 'auth.isAdmin'])->name('admin.')->group(function (){

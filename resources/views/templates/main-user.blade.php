@@ -390,6 +390,7 @@
     <script src="{{asset('main-user-assets/js/dashboard-one.js')}}"></script>
     <script src="{{asset('main-user-assets/js/dashboard-two.js')}}"></script>
     <script src="{{asset('main-user-assets/js/dashforge.sampledata.js')}}"></script>
+    <script src="{{asset('assets/js/emma.js')}}"></script>
 
     <!-- append theme customizer -->
     <script src="{{asset('main-user-assets/lib/js-cookie/js.cookie.js')}}"></script>

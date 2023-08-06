@@ -24,3 +24,9 @@ window.onload = function () {
 }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const navbar = document.getElementById('upHeader');
+  const content = document.getElementById('overContent');
+  const availableHeight = window.innerHeight - navbar.offsetHeight;
+  content.style.height = `${availableHeight}px`;
+});
