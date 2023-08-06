@@ -56,8 +56,11 @@
                       <label class="custom-control-label" for="customCheck1">Agree with Terms of Use and Privacy Policy</label>
                     </div>
                   </div>
-                <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary w-100">Submit Form</button>
+               
+                  <div class="col-md-6">
+                   
+                      <button type="submit" class="btn btn-primary w-100">  <a href="/user/investment-receipt" class="sub">Submit Form</a></button>
+                    
                 </div>
             {{-- </center> --}}
           </form>
