@@ -16,11 +16,10 @@
     <div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Make Investment</li>
             </ol>
         </nav>
-        <h4 class="mg-b-0 tx-spacing--1">Welcome to Dashboard</h4>
     </div>
 
 </div>
@@ -31,190 +30,12 @@ border-top-right-radius: 10px;">
 
 <div class="card">
     <div class="card-header">
-        <h1 class="">Short Term Open Funds</h1>
+        <h1 class="">Investment Portfolios</h1>
     </div><!-- end card header -->
-    {{-- <div class="card-body">
-
-        <h1 class="text-center">Active Investments</h1>
-
-        <br>
-        @if($totalPending > 0)
-        <div class="bg-soft-warning text-center p-3">
-            <h5 class="text-dark   ">Your have {{ $totalPending }} Investments Pending for Activation</h5>
-            <a href="user-investments/{{ $pendingId }}" target="_blank" class="btn btn-sm btn-outline-primary  px-4">Confirm Purchase</a>
-            <br>
-            <small class="text-secondary">Referesh Page again to see if activated</small>
-        </div>
-        @endif
-        @if ($totalActive>0)
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-md-6">
-                        <!-- card -->
-                        <div class="card card-h-100">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <span class="  mb-3 lh-1 d-block text-truncate"><b>Total Compounding Capital</b></span>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h1 class="m-0 amount2">${{ $totalCompouding }}</h1>
-                                    </div>
-                                    <div class="col-4">
-                                        <div id="mini-chart2" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                                    </div>
-
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-xl-6 col-md-6">
-                        <!-- card -->
-                        <div class="card card-h-100">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <span class="  mb-3 lh-1 d-block text-truncate "><b>Capital Invested</b></span>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h1 class="m-0 amount1">${{ $totalInvested }}</h1>
-                                    </div>
-                                    <div class="col-4">
-                                        <div id="mini-chart1" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                                    </div>
-
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-
-                    <div class="col-xl-6 col-md-6">
-                        <!-- card -->
-                        <div class="card card-h-100">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <span class="  mb-3 lh-1 d-block text-truncate"><b>Active Investments</b></span>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-
-                                        <h1 class="m-0">{{ $totalActive }}</h1>
-                                    </div>
-                                    <div class="col-4">
-                                        <div id="mini-chart3" data-colors='["#1A7BB7"]' class="apex-charts "></div>
-                                    </div>
-                                    <div class="text-nowrap">
-
-                                        @if ($totalPending > 0)
-                                        <span class="badge bg-soft-warning text-dark">{{ $totalPending }}</span>
-                                        <span class="ms-1 text-warning font-size-13">Pending Investments</span>
-
-                                        @endif
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-
-
-
-
-
-                    <div class="col-xl-6 col-md-6">
-                        <!-- card -->
-                        <div class="card card-h-100">
-                            <!-- card body -->
-                            <div class="card-body">
-                                <span class="  mb-3 lh-1 d-block text-truncate"><b>Current Commission</b></span>
-                                <div class="row align-items-center">
-                                    <div class="col-8">
-                                        <h1 class="m-0">${{ $totalReturns }}</h1>
-                                    </div>
-                                    <div class="col-4">
-                                        <div id="mini-chart4" data-colors='["#1A7BB7"]' class="apex-charts mb-2"></div>
-                                    </div>
-
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-
-
-
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end col-->
-
-
-            <!--end col-->
-        </div>
-        <a href="#" class="accordion-button collapsed shadow-none  px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><b>View Investments Activities</b></a>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample-faq">
-            <div class="card m-3">
-                <div class="accordion-body">
-                    <div class="card-body ">
-                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead class="bg-dark text-white">
-                                <tr>
-                                    <th class="text-white">S/N</th>
-                                    <th class="text-white">Description</th>
-                                    <th class="text-white">Date</th>
-                                    <th class="text-white">Amount</th>
-                                    <th class="text-white">Status </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($activities as $key =>$act)
-                                <tr>
-                                    <td>{{ $key }}</td>
-                                    <td>{{ $act->descp }}</td>
-                                    <td>{{ $act->date }}</td>
-                                    <td>${{ $act->amount }}</td>
-                                    @if ($act->category == 'earning' || $act->category == 'bonus')
-                                    <td> <span class="bg-success p-1 font-10 text-white">CREDITED</span>
-                                    </td>
-                                    @elseif ($act->category == 'withdrawals')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">WITHDRAWAL</span>
-                                    </td>
-
-                                    @elseif ($act->category == 'deposit')
-                                    <td> <span class="bg-primary p-1 font-10 text-white">DEPOSIT</span>
-                                    </td>
-                                    @elseif ($act->category == 'expired')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">EXPIRED</span>
-                                    </td>
-                                    @elseif ($act->category == 'error')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">ERROR</span>
-                                    </td>
-                                    @elseif ($act->category == 'cancelled')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">CANCELLED</span>
-                                    </td>
-                                    @endif
-                                </tr>
-
-                                @endforeach
-                            </tbody>
-
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @else
-        <div class="text-center">
-            <img src="{{ asset('user-assets/images/portfolios/investment.png') }}" width="300" />
-            <h3 class="text-center">No Active Investment Yet</h3>
-            <br>
-            <p> Scroll Down To Purchase An Investment</p>
-
-        </div>
-        @endif
-        <hr>
-    </div> --}}
+    
     <div class="card-body">
         <hr>
-        <h2 class="">Make Investments( {{ count($packages) }} )</h2>
+        <h2 class="">Portfolios Available( {{ count($packages) }} )</h2>
         <hr>
         <div>
             @foreach ($packages as $key=> $pack)
@@ -242,7 +63,7 @@ border-top-right-radius: 10px;">
                                 <p>{{ $pack['info_detail_1'] }}</p>
                             </li>
  
-                            <div class="mt-3"> <span class="bg-light p-2" style="border-radius: 5px">Broad</span></div>
+                            <div class="mt-3"> <span class="bg-light p-2" style="border-radius: 5px">{{ $pack['strategy_focus'] }}</span></div>
                             {{-- <li><b class="text-dark">{{ $pack['info_head_4'] }}</b>
                             <p>{{ $pack['info_detail_4'] }}</p>
                             </li>
@@ -270,7 +91,7 @@ border-top-right-radius: 10px;">
                             </div>
                         </div>
                         <hr>
-                        <a href="{{ route('user.make-investment.show',$pack['id'] ) }}" class="btn btn-primary w-100  btn-outline-dashed py-2 text-white"><span>Get Started With {{ $pack['name'] }}</span></a>
+                        <a href="{{ route('user.make-investment.show',$pack['id'] ) }}" class="btn btn-primary w-100  btn-outline-dashed py-2 text-white">Get Started With {{ $pack['name'] }}</a>
 
 
                         {{-- <form action="{{ route('user.get-payment.index') }}" method="get" class="form-parsley">
@@ -595,12 +416,7 @@ border-top-right-radius: 10px;">
             </div>
         </div>
     </div>
-    <div class="margin40">
-        <p class="blue"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-        </svg>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, at?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolor, ratione optio quaerat laborum nesciunt totam, molestias vel asperiores quod ipsa sit modi quam nobis fuga nam incidunt obcaecati soluta.</p>
-    </div>
+     
 </div>
 </div>
 

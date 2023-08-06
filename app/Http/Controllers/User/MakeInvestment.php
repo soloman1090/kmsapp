@@ -144,4 +144,20 @@ class MakeInvestment extends Controller
         
             return view('user.investment-view', ['user' => $user, 'user_id' => $id, "package"=>$package, 'username' => $user->name, 'page_title' => " "] );
     }
+
+
+    public function edit($pack_id)
+    {
+        $id = auth()->id();
+
+        $user = DB::table('users')
+            ->join('user_infos', 'users.id', "=", 'user_infos.user_id')
+            ->where('users.id', $id)
+            ->get()->first();
+
+        $package = Investment_Packages::findOrFail($pack_id);
+        
+        
+            return view('user.investment-payment', ['user' => $user, 'user_id' => $id, "package"=>$package, 'username' => $user->name, 'page_title' => " "] );
+    }
 }

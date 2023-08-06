@@ -7,20 +7,20 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-3 p-3">
-                    <p>Portfolio Fund Trgets</p>
-                    <h1>~ 10</h1>
+                    <p>Available Fund Balance</p>
+                    <h1><b>$</b>23,000,000.00 </h1>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-3 p-3">
-                    <p>Strategy Focus</p>
-                    <h1>Growth Equity</h1>
+                    <p>Active Interest Balance</p>
+                    <h1><b>$</b>12,000.00 </h1>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-3 p-3">
-                    <p>Target Size</p>
-                    <h1>$95m</h1>
+                    <p>Partner Commission</p>
+                    <h1><b>$</b>78,000.00 </h1>
                 </div>
             </div>
         </div>

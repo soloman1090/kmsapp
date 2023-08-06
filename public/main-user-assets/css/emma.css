@@ -343,7 +343,8 @@ header .nav:hover {
 }
 .Investment .set4 .intro {
   padding: 15px;
- border-radius: 5px;
+  min-height: 500px;
+  border-radius: 5px;
   background-color: var(--color-light-purple);
 }
 .Investment .set4 .intro h3 {
@@ -363,10 +364,12 @@ header .nav:hover {
 .Investment .set6 .seek {
   padding: 15px;
   border-radius: 5px;
+  min-height: 300px;
   background-color: rgba(255, 255, 191, 0.408);
 }
 .Investment .set7 .seek {
   padding: 15px;
+  min-height: 300px;
    border-radius: 5px;
   background-color: rgba(255, 255, 191, 0.408);
 }
