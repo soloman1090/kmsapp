@@ -39,6 +39,7 @@
     <link href="{{asset('main-user-assets/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('main-user-assets/lib/remixicon/fonts/remixicon.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.css')}}">
