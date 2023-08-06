@@ -27,6 +27,7 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('upHeader');
   const content = document.getElementById('overContent');
-  const availableHeight = window.innerHeight - navbar.offsetHeight;
+  const secondavailableHeight = window.innerHeight - 200
+  const availableHeight = secondavailableHeight - navbar.offsetHeight;
   content.style.height = `${availableHeight}px`;
 });
