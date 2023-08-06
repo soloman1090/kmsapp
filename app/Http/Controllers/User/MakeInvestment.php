@@ -22,7 +22,7 @@ class MakeInvestment extends Controller
 {
     public function index()
     {
-        $packages = Investment_Packages::where("package_type","short")->where("active_status","active")->get();
+        $packages = Investment_Packages::where("active_status","active")->get();
         function getAmountAttribute($value)
         {
             return number_format($value);
