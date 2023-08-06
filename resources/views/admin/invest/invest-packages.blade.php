@@ -13,8 +13,8 @@
         </div>
         <div class="pull-right">
             <!-- /.modal -->
-            <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                <div class="modal-dialog">
+            <div id="responsive-modal" class="modal fade modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header bg-primary txt-light">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -218,7 +218,10 @@
                     </div>
                 </div>
                 <div class="pull-right">
-                    <a class="pull-left inline-block mr-15 edit_invest_package" data-toggle="modal" data-target="#edit-package-modal{{ $pac['id'] }}" href="#"  info_head_2="" info_detail_2="" info_head_3="" info_detail_3="" info_head_4="{{ $pac['info_head_4'] }}" info_detail_4="{{ $pac['info_detail_4'] }}" info_head_5="{{ $pac['info_head_5'] }}" info_detail_5="{{ $pac['info_detail_5'] }}" action="{{ route('admin.investment-packages.update', $pac['id']  ) }}">
+                    {{-- <a class="pull-left inline-block mr-15 edit_invest_package" data-toggle="modal" data-target="#edit-package-modal{{ $pac['id'] }}" href="#"  info_head_2="" info_detail_2="" info_head_3="" info_detail_3="" info_head_4="{{ $pac['info_head_4'] }}" info_detail_4="{{ $pac['info_detail_4'] }}" info_head_5="{{ $pac['info_head_5'] }}" info_detail_5="{{ $pac['info_detail_5'] }}" action="{{ route('admin.investment-packages.update', $pac['id']  ) }}">
+                        <i class="zmdi zmdi-edit txt-light"></i>
+                    </a> --}}
+                    <a class="pull-left inline-block mr-15 edit_invest_package"  href="{{ route('admin.investment-packages.edit', $pac['id']) }}"  >
                         <i class="zmdi zmdi-edit txt-light"></i>
                     </a>
                     <a class="pull-left inline-block mr-15" onclick="event.preventDefault();
@@ -266,7 +269,7 @@
 
 
     <div id="edit-package-modal{{ $pac['id'] }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header bg-primary txt-light">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -388,9 +391,9 @@
                                 <label for="info1_heading" class="control-label mb-10">Info Heading 1:</label>
                                 <input type="text" class="form-control" name="info_head_1" placeholder="Enter Info1 Heading:" value="{{ $pac['info_head_1'] }}">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="info1_details" class="control-label mb-10">Info Details 1:</label>
-                                <input type="text" class="form-control" name="info_detail_1" placeholder="Enter Info1 Details" value="{{ $pac['info_detail_1'] }}">
+                                <textarea type="text" class="form-control" name="info_detail_1" id="body" rows="10" required> {{ $pac['info_detail_1'] }}</textarea>
                             </div>
     
                             <div class="form-group col-md-6">
@@ -453,5 +456,9 @@
     @endforeach
 </div>
 
+<script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'body' );
+</script>
 
 @endsection

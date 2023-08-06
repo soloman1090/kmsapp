@@ -241,8 +241,7 @@ border-top-right-radius: 10px;">
                             <li><b class="text-dark">{{ $pack['info_head_1'] }}</b>
                                 <p>{{ $pack['info_detail_1'] }}</p>
                             </li>
-                            <li><i class="mdi mdi-earth text-primary"></i> {{ $pack['info_head_2'] }} <i class="mdi mdi-briefcase-variant text-primary"></i> {{ $pack['info_detail_2'] }} </li>
-
+ 
                             <div class="mt-3"> <span class="bg-light p-2" style="border-radius: 5px">Broad</span></div>
                             {{-- <li><b class="text-dark">{{ $pack['info_head_4'] }}</b>
                             <p>{{ $pack['info_detail_4'] }}</p>
