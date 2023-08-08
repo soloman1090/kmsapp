@@ -155,9 +155,18 @@ class MakeInvestment extends Controller
             ->where('users.id', $id)
             ->get()->first();
 
+        $user->formated_referral_wallet=number_format($user->referral_wallet);
+       
         $package = Investment_Packages::findOrFail($pack_id);
+
+        $investments = UsersInvestments::where("user_id",$id)->get();
         
+        foreach ($investments as $key => $value) {
+            $value->package=Investment_Packages::findOrFail($value->investment_packages_id);
+            $value->formatted_available_fund_balance=number_format($value->available_fund_balance);
+            $value->formatted_active_interest_balance=number_format($value->active_interest_balance);
+        }
         
-            return view('user.investment-payment', ['user' => $user, 'user_id' => $id, "package"=>$package, 'username' => $user->name, 'page_title' => " "] );
+        return view('user.investment-payment', ['user' => $user, "investments"=>$investments, 'user_id' => $id, "package"=>$package, 'username' => $user->name, 'page_title' => " "] );
     }
 }

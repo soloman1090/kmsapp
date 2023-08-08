@@ -26,7 +26,8 @@ class UserInfo extends Model
         'withdrawal_limit',
         'invested',
         'referalcode',
-        'code_2fa'
+        'code_2fa',
+        'referral_wallet'
     ];
 
     public function users()
