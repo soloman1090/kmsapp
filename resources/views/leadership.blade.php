@@ -8,7 +8,7 @@
     <div class="section_one_leadership">
         <div class="leadership_welcome_text col-md-12 col-sm-12">
         <h1 class="leadership_welcome_head">A global team of 200 experts</h1>
-        <p class="leadership_welcome_paragraph">Moonfare's strength lies in the diversity and depth of expertise found across all aspects of the business.</p>
+        <p class="leadership_welcome_paragraph">Dell-Investment Group's strength lies in the diversity and depth of expertise found across all aspects of the business.</p>
         <div class="d-flex see_team">
         <p class="our_team_btn">See our team </p>
         <i class="bi bi-arrow-right-circle-fill btn btn-primary"></i>
@@ -24,7 +24,7 @@
         <div class="main_content">
             <div class="who-we-are_members-section_intro">
                 <h1>Managing Directors</h1>
-                <h6>Moonfare is led by a team of talented professionals from leading investment and technology companies including KKR, Apax Partners, J.P. Morgan, McKinsey & Company, BCG, Microsoft and N26.</h6>
+                <h6>Dell-Investment Group is led by a team of talented professionals from leading investment and technology companies including KKR, Apax Partners, J.P. Morgan, McKinsey & Company, BCG, Microsoft and N26.</h6>
             </div>
             <div class="who-we-are_members-section_images">
                 <div class="who-we-are-single-members-one">
@@ -82,7 +82,7 @@
         <div class="main_content">
             <div class="who-we-are_members-section_intro">
                 <h1>Investment team</h1>
-                <h6>The Moonfare Investment Team is responsible for deal sourcing, due diligence and curation of funds.</h6>
+                <h6>The Dell-Investment Group Investment Team is responsible for deal sourcing, due diligence and curation of funds.</h6>
             </div>
             <div class="who-we-are_members-section_images">
                 <div class="who-we-are-single-members-one">
@@ -128,7 +128,7 @@
 
 <div class="pill_grid">
     <div>
-    <h4>Moonfare in numbers</h4>
+    <h4>Dell-Investment Group in numbers</h4>
     </div>
 </div>
 

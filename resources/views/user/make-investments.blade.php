@@ -409,10 +409,10 @@ border-top-right-radius: 10px;">
         <div class="first">
             <div class="text">
                 <h2 class="m-0">How it Works</h2>
-                <p>Learn how Moonfare gives you access to top tier funds</p>
+                <p>Learn how Dell-Investment Group gives you access to top tier funds</p>
             </div>
             <div class="second">
-                <button class="btn btn-brand-02">Learn How</button>
+                <a href="{{ route('user.howto.create') }}" class="btn btn-brand-02">Learn How</a>
             </div>
         </div>
     </div>

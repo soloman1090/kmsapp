@@ -8,7 +8,7 @@
         <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
           <div class="d-sm-flex align-items-center justify-content-between">
             <div>
-              <h4 class="mg-b-5">Invoice #DF032AZ00022</h4>
+              <h4 class="mg-b-5">Invoice #{{ $receipt_no }}</h4>
               <p class="mg-b-0 tx-color-03">Due on April 21, 2023</p>
             </div>
             <div class="mg-t-20 mg-sm-t-0">
@@ -32,7 +32,7 @@
             </div><!-- col -->
             <div class="col-sm-6 tx-right d-none d-md-block">
               <label class="tx-sans tx-uppercase tx-10 tx-medium tx-spacing-1 tx-color-03">Invoice Number</label>
-              <h1 class="tx-normal tx-color-04 mg-b-10 tx-spacing--2">#DF032AZ00022</h1>
+              <h1 class="tx-normal tx-color-04 mg-b-10 tx-spacing--2">#{{ $receipt_no }}</h1>
             </div><!-- col -->
             <div class="col-sm-6 col-lg-8 mg-t-40 mg-sm-t-0 mg-md-t-40">
               <label class="tx-sans tx-uppercase tx-10 tx-medium tx-spacing-1 tx-color-03">Billed To</label>

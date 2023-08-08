@@ -377,7 +377,9 @@ header .nav:hover {
   margin: 0;
   text-align: center;
 }
-
+video {
+	width: 100%;
+}
 .PDF {
   height: 100vh;
   background-color: #f8f9fc;

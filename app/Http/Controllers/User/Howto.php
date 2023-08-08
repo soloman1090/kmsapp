@@ -24,4 +24,15 @@ class Howto extends Controller
 
         return view('user.howto',['user'=>$user,'user_id'=>$id, 'page_title'=>"How to", 'username'=>$user->name]);
     }
+
+    public function create(){
+        $id = auth()->id();
+        //Join user table and userinfos table together
+        $user = DB::table('users')
+        ->join('user_infos','users.id',"=", 'user_infos.user_id')
+        ->where('users.id',$id)
+        ->get()->first();
+
+        return view('user.learn-how',['user'=>$user,'user_id'=>$id, 'page_title'=>"Learn How Dell Investments Works", 'username'=>$user->name]);
+    }
 }

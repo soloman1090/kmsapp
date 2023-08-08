@@ -26,11 +26,15 @@
         </div>
     </div>
     <div class="">
-        <form>
+        <form  action="{{ route('user.make-investment.create') }}" method="GET">
+          @csrf
+          <input type="hidden" name="package_id" value="{{ $package->id  }}">
+          <input type="hidden" name="page_url" value="/user/make-investment/{{ $package->id }}/edit">
             <div class="row">
+            
                 <div class="form-group col-md-6">
                     <label>Choose Gateway</label>
-                    <select class="form-select">
+                    <select class="form-select" id="gateway" name="payment_method" required>
                         <option value="">Select Gate Way</option>
                         <option value="direct_deposit">Direct Deposit</option>
                         <option value="available_funds">Available Funds Balance</option>
@@ -38,9 +42,9 @@
                         <option value="referral_commission">Referral Commission</option>
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" id="fundsSide">
                      <label for="fundsId">Funding Source</label>
-                    <select name="fundsId" class="form-select" id="fundsId" >
+                    <select name="fundsId" class="form-select" id="fundsId" name="funding_source" >
                         <option value="">Select Source</option>
                         @foreach($investments as $key=> $invest)
                         <option value="{{ $invest->id}}" available_funds="{{  $invest->formatted_available_fund_balance }}" active_interest="{{ $invest->formatted_active_interest_balance }}">{{ $invest->package->name}}: AFB( ${{ $invest->formatted_available_fund_balance }} ) ---- AIB( ${{ $invest->formatted_active_interest_balance }} ) </option>
@@ -49,34 +53,31 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Investment Amount</label>
-                    <input type="number" class="form-control" id="inputEmail4" placeholder="Enter Amount">
+                    <input type="number" class="form-control" id="inputEmail4" name="amount" placeholder="Enter Amount" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Select Process</label>
-                    <select class="form-select">
+                    <select class="form-select" name="payout" required>
                         <option value="">Select Interest Process</option>
                         <option value="bi_weekly">Regular Bi Weekly</option>
                         <option value="stacking_interest">Fixed Stacking Interest</option>
                         <option value="diverse_stacking_interest">Diverse Stacking Interest</option>
                     </select>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                </div>
+                
             </div>
 
             {{-- <center> --}}
             <div class="form-group">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" required>
                     <label class="custom-control-label" for="customCheck1">Agree with Terms of Use and Privacy Policy</label>
                 </div>
             </div>
 
             <div class="col-md-6">
 
-                <button type="submit" class="btn btn-primary w-100"> <a href="/user/investment-receipt" class="sub">Submit Form</a></button>
+                <button type="submit" class="btn btn-primary w-100"> Proceeed</button>
 
             </div>
             {{-- </center> --}}
@@ -86,6 +87,17 @@
 
 <script src="{{ asset('main-user-assets/lib/jquery/jquery.min.js') }}"></script>
 <script>
+    $("#fundsSide").hide()
+
+    
+    $("#gateway").on('change', function() {
+       if($(this).val()=="available_funds" || $(this).val()=="active_interest"){
+        $("#fundsSide").show()
+       }else{
+        $("#fundsSide").hide()
+       }
+    })
+
       $("#fundsId").on('change', function() {
         $("#available_fund_balance").html("<b>$</b>"+$('option:selected', this).attr('available_funds'))
         $("#active_interest_balance").html("<b>$</b>"+$('option:selected', this).attr('active_interest'))
