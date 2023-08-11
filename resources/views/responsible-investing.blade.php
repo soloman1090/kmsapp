@@ -12,11 +12,11 @@
             </div>
             <div class="down">
                 <div class="rightwhite">
-                    <h2>$18.5 bn</h2>
+                    <h2>$11.5 bn</h2>
                     <p>small and emerging managers assets under management</p>
                 </div>
                 <div class="leftwhite">
-                    <h2>$14.5 bn</h2>
+                    <h2>$7.5 bn</h2>
                     <p>diverse managers assets under management</p>
                 </div>
             </div>
