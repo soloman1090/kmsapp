@@ -135,7 +135,7 @@ class UserInvestmentsController extends Controller
                 $thisInvestment->payout == "9_months_compounding" ||
                 $thisInvestment->payout == "10_months_compounding") {
                 $userInfo->compound_wallet = $userInfo->compound_wallet + $thisInvestment->amount;
-                $walletName="Compound Wallet";
+                $walletName="Active Interest Funds";
             } else {
                 $userInfo->main_wallet = $userInfo->main_wallet + $thisInvestment->amount;
                 $walletName="Main Wallet";

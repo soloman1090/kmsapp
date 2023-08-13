@@ -37,20 +37,7 @@ class ReinvestContoller extends Controller
             $req->session()->flash('error', 'Insufficient Amount ... Minimum reinvestment amount is $100');
             return redirect('user/user-investments');
         }
-        //Create Order
-
-        // $secretKey = env('PLISIO_SECRET_KEY');
-        // $paymentData = [
-        //     'amount' => $req['amount'], // required Invoice amount in selected currency OR amount_usd can be used instead
-        //     'amount_usd' => $req['amount'], // required Invoice amoint in USD
-        //     'currency' => $req['currency'], // required (ETH, BTC, LTC, TZEC, DOGE, BCH, ...)
-        //     'order_number' => Carbon::now()->timestamp, // required Client's internal ID
-        //     'order_name' => $user->name, // required Client's internal name
-        //     'email' => $user->email,
-        //     'description' => "Wants to make payment", // optional any description
-        //     'callback_url' => $callBackUrl,
-        //     'success_url' => $callBackUrl, // optional Absolute URL of the final (success) invoice link
-        // ];
+        
 
         $coinRemitter = new Coinremitter($req['currency']);
         $paymentData = [
@@ -63,14 +50,12 @@ class ReinvestContoller extends Controller
         $userInvestment = UsersInvestments::where("id", $req['investment_id'])->get()->first();
 
         $package = Investment_Packages::findOrFail($userInvestment->investment_packages_id);
-        if ($userInvestment->payout == "6_months_compounding" ||
-            $userInvestment->payout == "7_months_compounding" ||
-            $userInvestment->payout == "8_months_compounding" ||
-            $userInvestment->payout == "9_months_compounding" ||
-            $userInvestment->payout == "10_months_compounding") {
+        if ($userInvestment->payout == "bi_weekly") {
+            $percentage = $package->min_percent / 100;
+        } else if ($userInvestment->payout == "stacking_interest" || $userInvestment->payout == "diverse_stacking_interest") {
             $percentage = $package->compound_percent / 100;
-        } else {
-            $percentage = $package->max_percent / 100;
+         } else {
+            $percentage = $package->min_percent / 100;
         }
         $reinvestmentAmount = $req['amount'] + $userInvestment->amount;
         $creditAmount = $percentage * $reinvestmentAmount;
@@ -103,29 +88,54 @@ class ReinvestContoller extends Controller
                     $userInvestment->update();
                     $invoice['data']["confirm_url"] = "user-investments";
 
-                    //return view('user.payment', ['invoice' => $invoice['data'], 'amount' => $req['amount'], 'time_left' => $invoice['data']['expire_utc']]);
-                    //return view('user.remitter-pay', ['invoice' => $invoice['data']["url"]]);
-
+                    
                     return redirect("user/user-investments/".$req['investment_id']);
                 } 
                     else {
                         $req->session()->flash('error', $invoice['msg']);
-                    return redirect('user/user-investments');
+                        return redirect($req['page_url']);
                 }
             } catch (\Exception$e) {
                 $req->session()->flash('error', 'An error occured');
-                return redirect('user/user-investments');
+                return redirect($req['page_url']);
             }
 
-        } else if ($req['payment_method'] == "main_wallet") {
-            // if (count($withdrawalRequests) > 0) {
-            //     $req->session()->flash('error', 'Please you already have a pending withdrawal request on your wallet, wait for approval or delete the previous request and try again');
-            //     return redirect('user/withdrawal-history');
-            // }
-            if ($userInfo->main_wallet > $req['amount']) {
-                $userInfo->main_wallet = $userInfo->main_wallet - $req['amount'];
-                $userInfo->update();
-                $userInvestment->update();
+        } else if ($req['payment_method'] == "available_funds" || $req['payment_method'] == "active_interest" || $req['payment_method'] == "referral_commission") {
+            
+            $userInfo = UserInfo::where('user_id', auth()->id())->firstOrFail();
+                $investment = null;
+            if ($req['payment_method'] == "available_funds") {
+                $investment = UsersInvestments::where('id', $req['investment_id'])->firstOrFail();
+                if ($req['amount'] > $investment->available_fund_balance) {
+                    $req->session()->flash('error', 'Insufficient amount,...sorry you do not enough amount in  Active Funds.');
+                    return redirect($req['page_url']);
+                } else {
+                    $investment->available_fund_balance = $investment->available_fund_balance - $req['amount'];
+                    $investment->update();
+                }
+            }
+
+            if ($req['payment_method'] == "active_interest") {
+                $investment = UsersInvestments::where('id', $req['investment_id'])->firstOrFail();
+                if ($req['amount'] > $investment->active_interest_balance) {
+                    $req->session()->flash('error', 'Insufficient amount,...sorry you do not enough amount in  Active Interest Funds.');
+                    return redirect($req['page_url']);
+                } else {
+                    $investment->active_interest_balance = $investment->active_interest_balance - $req['amount'];
+                    $investment->update();
+                }
+            }
+
+            if ($req['payment_method'] == "referral_commission") {
+                if ($req['amount'] > $userInfo->referral_wallet) {
+                    $req->session()->flash('error', 'Insufficient amount,...sorry you do not enough amount in your Community Wallet.');
+                    return redirect($req['page_url']);
+                } else {
+                    $userInfo->referral_wallet = $userInfo->referral_wallet - $req['amount'];
+                    $userInfo->update();
+                }
+            }
+
                 $invest = new Reinvest;
                 $invest->user_id = $id;
                 $invest->user_investments_id = $req['investment_id'];
@@ -140,45 +150,10 @@ class ReinvestContoller extends Controller
 
                 $req->session()->flash('success', 'Pending Purchase ... Awaiting payment confirmation, Please reload to confirm!');
                 return redirect('user/user-investments');
-            } else {
-                $req->session()->flash('error', 'You dont not have enough funds in your Portfolio Balance to make this purchase ');
-                return redirect('user/user-investments');
-            }
 
-        } else if ($req['payment_method'] == "compound_wallet") {
-            // if (count($withdrawalRequests) > 0) {
-            //     $req->session()->flash('error', 'Please you already have a pending withdrawal request on your wallet, wait for approval or delete the previous request and try again');
-            //     return redirect('user/user-investments');
-            // }
+           
 
-            if ($userInvestment->payout == "daily_payout" || $userInvestment->payout == "monthly_payout") {
-                $req->session()->flash('error', 'Sorry you cannot reinvest with a daily plan investment');
-                return redirect('user/user-investments');
-            }
-            if ($userInfo->compound_wallet > $req['amount']) {
-                $userInfo->compound_wallet = $userInfo->compound_wallet - $req['amount'];
-                $userInfo->update();
-                $userInvestment->update();
-                $invest = new Reinvest;
-                $invest->user_id = $id;
-                $invest->user_investments_id = $req['investment_id'];
-                $invest->date = Carbon::now()->toDayDateTimeString();
-                $invest->amount = $reinvestmentAmount;
-                $invest->returns = $creditAmount;
-                $invest->topup_amount = $req['amount'];
-                $invest->txn_id = null;
-                $invest->active = false;
-                $invest->status = "pending";
-                $invest->save();
-
-                $req->session()->flash('success', 'Pending Purchase ... Awaiting payment confirmation, Please reload to confirm!');
-                return redirect('user/user-investments');
-            } else {
-                $req->session()->flash('error', 'You dont not have enough funds in your Compound Dividend to make this purchase ');
-                return redirect('user/user-investments');
-            }
-
-        }
+        } 
 
     }
 }

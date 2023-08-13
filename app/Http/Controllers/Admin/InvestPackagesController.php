@@ -72,8 +72,17 @@ class InvestPackagesController extends Controller
         $invest->level2_bonus = $req['level2_bonus'];
         $invest->level3_bonus = $req['level3_bonus'];
         $invest->slots = $req['slots'];
+       
+        
         $invest->bonus_percentage = $req['bonus_percentage'];
         $invest->running_days = $req['running_days'];
+
+        $invest->diverse_taken_percentage = $req['diverse_taken_percentage'];
+        $invest->geography = $req['geography'];
+        $invest->strategy = $req['strategy'];
+        $invest->portfolio_fund_targets = $req['portfolio_fund_targets'];
+        $invest->strategy_focus = $req['strategy_focus'];
+        $invest->target_size = $req['target_size'];
 
         if ($req['update'] == "true") {
             $invest->update();

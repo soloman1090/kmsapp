@@ -45,7 +45,7 @@ border-top-right-radius: 10px;" >
 </div>
 <div class="row">
     <div class="col">
-        <h3>Referred Partners</h3>
+        <h3>Friends & Community</h3>
     </div>
     <div class="col">
         <div class="text-center m-2">

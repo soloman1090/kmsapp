@@ -139,7 +139,7 @@ class ApiWithdrawalRequest extends Controller
 
                     if ($req['wallet_type'] == "compound_wallet") {
                         if ($req['amount_paid'] >= $user->compound_wallet) {
-                            return ['error' => true, "msg" => "Insufficient amount,...sorry you do not enough amount in your Compound Wallet.", "type" => "INVALID_CREDENTIAL"];
+                            return ['error' => true, "msg" => "Insufficient amount,...sorry you do not enough amount in your Active Interest Funds.", "type" => "INVALID_CREDENTIAL"];
                         } else {
                             $userInfo->compound_wallet = $userInfo->compound_wallet - $req['amount_paid'];
                         }

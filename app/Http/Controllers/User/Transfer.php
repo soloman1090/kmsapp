@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\UserInfo;
 use App\Models\User;
 use App\Models\Investment_Packages;
+use App\Models\UsersInvestments;
 use App\Models\Withdrawal_Methods;
 use App\Models\WithdrawalRequests;
 use App\Mail\UserRegisteredMail;
@@ -31,6 +32,7 @@ class Transfer extends Controller
         ->join('user_infos','users.id',"=", 'user_infos.user_id')
         ->where('users.id',$id)
         ->get()->first();
+
 
         try{
             if($request->has('auth')){
@@ -62,12 +64,20 @@ class Transfer extends Controller
         }catch(\Exception $e){
            
         }
+        $user->formated_referral_wallet = number_format($user->referral_wallet);
 
+        if($request->investment_id){
+            $investment = UsersInvestments::findOrFail($request->investment_id);
+            $investment->package = Investment_Packages::findOrFail($investment->investment_packages_id);
+            $investment->formatted_available_fund_balance = number_format($investment->available_fund_balance);
+            $investment->formatted_active_interest_balance = number_format($investment->active_interest_balance);
+
+        }
          
        
 
 
-        return view('user.transfer',['user'=>$user, 'user_id'=>$id, 'page_title'=>"Inter Account Transfer",  'username'=>$user->name]);
+        return view('user.transfer',['user'=>$user, 'user_id'=>$id, 'page_title'=>"Inter Account Transfer", "investment"=>$investment,  'username'=>$user->name]);
     }
 
     public function store(Request $req){
@@ -131,7 +141,7 @@ class Transfer extends Controller
 
         if($req['wallet_type']=="compound_wallet"){
             if($req['amount_paid']>$user->compound_wallet){
-                $req->session()->flash('error','Insufficient amount,...sorry you do not enough amount in your COMPOUND WALLET.');
+                $req->session()->flash('error','Insufficient amount,...sorry you do not enough amount in your Active Interest Funds.');
                 return  redirect('user/transfer');
             }else{
                 $userNum1->compound_wallet=$userNum1->compound_wallet -  $req['amount_paid'];

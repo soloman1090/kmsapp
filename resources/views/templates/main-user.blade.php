@@ -42,16 +42,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- DashForge CSS -->
+    <link href="{{asset('main-user-assets/lib/datatables.net-dt/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{asset('main-user-assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/emma.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.filemgr.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.auth.css')}}">
+   
   </head>
   <body>
   <header class="navbar navbar-header navbar-header-fixed">
-      <a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+      <a href="#" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
       <div class="navbar-brand">
-        <a href="../../index.html" class="df-logo">Dell<span> Investment Group</span></a>
+        <a href="/user/dashboard" class="df-logo">Dell<span> Investment Group</span></a>
       </div><!-- navbar-brand -->
       <div id="navbarMenu" class="navbar-menu-wrapper">
         <div class="navbar-menu-header">
@@ -113,21 +116,21 @@
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="package"></i> Secondary Market</a>
             <ul class="navbar-menu-sub">
-              <li class="nav-sub-item"><a href="referred-users" class="nav-sub-link"><i data-feather="calendar"></i>Referrals</a></li>
-              <li class="nav-sub-item"><a href="referral-bonus" class="nav-sub-link"><i data-feather="message-square"></i>Referrals Commissions</a></li>
-              <li class="nav-sub-item"><a href="transfer" class="nav-sub-link"><i data-feather="users"></i>Inter Account Transfer</a></li>
-              <li class="nav-sub-item"><a href="investment-calculator" class="nav-sub-link"><i data-feather="file-text"></i>Investment Calculator</a></li>
+              <li class="nav-sub-item"><a href="/user/referred-users" class="nav-sub-link"><i data-feather="users"></i>Friends & Community</a></li>
+              <li class="nav-sub-item"><a href="/user/referral-bonus" class="nav-sub-link"><i data-feather="dollar-sign"></i>Community Benefits</a></li>
+               <li class="nav-sub-item"><a href="/user/investment-calculator" class="nav-sub-link"><i data-feather="hash"></i>Investment Calculator</a></li>
+              <li class="nav-sub-item"><a href="/user/withdrawal-history" class="nav-sub-link"><i data-feather="credit-card"></i>Withdrawals</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="package"></i> Resources</a>
             <ul class="navbar-menu-sub">
-              <li class="nav-sub-item"><a href="pdf" class="nav-sub-link"><i data-feather="calendar"></i>PDF</a></li>
-              <li class="nav-sub-item"><a href="video" class="nav-sub-link"><i data-feather="message-square"></i>Videos</a></li>
-              <li class="nav-sub-item"><a href="fq" class="nav-sub-link"><i data-feather="users"></i>F & Q</a></li>
-              <li class="nav-sub-item"><a href="contact" class="nav-sub-link"><i data-feather="file-text"></i>Contact Us</a></li>
-              <li class="nav-sub-item"><a href="howto" class="nav-sub-link"><i data-feather="mail"></i>How To</a></li>
-              <li class="nav-sub-item"><a href="news" class="nav-sub-link"><i data-feather="mail"></i>News</a></li>
+              <li class="nav-sub-item"><a href="/user/pdf" class="nav-sub-link"><i data-feather="calendar"></i>PDF</a></li>
+              <li class="nav-sub-item"><a href="/user/video" class="nav-sub-link"><i data-feather="message-square"></i>Videos</a></li>
+              <li class="nav-sub-item"><a href="/user/fq" class="nav-sub-link"><i data-feather="users"></i>F & Q</a></li>
+              <li class="nav-sub-item"><a href="/user/contact" class="nav-sub-link"><i data-feather="file-text"></i>Contact Us</a></li>
+              <li class="nav-sub-item"><a href="/user/howto" class="nav-sub-link"><i data-feather="mail"></i>How To</a></li>
+              <li class="nav-sub-item"><a href="/user/news" class="nav-sub-link"><i data-feather="mail"></i>News</a></li>
             </ul>
           </li>
         </ul>
@@ -394,6 +397,9 @@
     <script src="{{asset('main-user-assets/js/dashboard-two.js')}}"></script>
     <script src="{{asset('main-user-assets/js/dashforge.sampledata.js')}}"></script>
     <script src="{{asset('assets/js/emma.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
 
     <!-- append theme customizer -->
     <script src="{{asset('main-user-assets/lib/js-cookie/js.cookie.js')}}"></script>
@@ -416,7 +422,30 @@
         } else {
           lightMode();
         }
+        
       })
+
+      $('#example1').DataTable({
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+     
+      // Select2
+        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
     </script>
+
+    <script>
+      $('#example2').DataTable({
+          language: {
+              searchPlaceholder: 'Search...'
+              , sSearch: ''
+              , lengthMenu: '_MENU_ items/page'
+          , }
+      });
+  
+  </script>
   </body>
 </html>

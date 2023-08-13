@@ -17,7 +17,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 mg-b-10">
                 <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Make Investment</li>
+                <li class="breadcrumb-item active" aria-current="page">Purchase Portfolios</li>
             </ol>
         </nav>
     </div>
@@ -81,12 +81,12 @@ border-top-right-radius: 10px;">
                             </div>
                             <div class="col-md-3 " style="border-right: 1px solid black">
                                 <div class="text-center">
-                                    <h4 class="amount ">{{ $pack['compound_percent'] }}% <br><small style="font-size: 14px" class="text-muted">Auto Compouding </small> </h4>
+                                    <h4 class="amount ">{{ $pack['compound_percent'] }}% <br><small style="font-size: 14px" class="text-muted">Staking Percentage </small> </h4>
                                 </div>
                             </div>
                             <div class="col-md-3 ">
                                 <div class="text-center">
-                                    <h4 class="amount ">{{ $pack['min_percent'] }}% - {{ $pack['max_percent'] }}% <br><small style="font-size: 14px" class="text-muted">Daily dividends</small></h4> </small> </h2>
+                                    <h4 class="amount ">{{ $pack['min_percent'] }}% - {{ $pack['max_percent'] }}% <br><small style="font-size: 14px" class="text-muted">Bi Weekly Dividends</small></h4> </small> </h2>
                                 </div>
                             </div>
                         </div>
@@ -185,223 +185,41 @@ border-top-right-radius: 10px;">
     <h2 class="mb-4" >Closed funds (56)</h2>
     <!-- Flickity HTML init -->
     <div class="carousel" data-flickity='{ "freeScroll": true, "wrapAround": true }'>
+        @foreach ($investments as $invest)
         <div class="carousel-cell">
             <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
+                <div class="top" style="background-image: url({{ asset("uploads/$invest->image") }})">
+                    <h3>{{ $invest->packagename }}</h3>
                 </div>
                 <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h6> {{ $invest->duration }} Months <br><small class="text-muted">Duration</small></h6>
+                        </div>
+                        <div class="col-md-5">
+                            <h6> ${{ $invest->returns }} <br><small class="text-muted">Investment Roi</small></h6>
+                        </div>
+                       </div>
+                   <div class="row">
+                    <div class="col-md-7">
+                        <h6> ${{ $invest->date }} <br><small class="text-muted">Start Date</small></h6>
                     </div>
+                    <div class="col-md-5">
+                        <h6> ${{ $invest->end_date }} <br><small class="text-muted">Expiration Date</small></h6>
+                    </div>
+                   </div>
+                    
+                     
+                    
                 </div>
                 <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
+                    <h4>${{ $invest->amount }} </h4>
+                    <p>Amount Invested</p>
                 </div>
             </div>
         </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-cell">
-            <div class="set">
-                <div class="top">
-                    <h3>khosla ventures</h3>
-                </div>
-                <div class="middle">
-                    <span>Access A68 SCSP investing in</span>
-                    <h3>Khosla ventures VIII & Opp 2</h3>
-                    <p>The funds will pursue investments in deep tech start-ups operating in large and ....</p>
-                    <ul class="mb-3">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-                            </svg> <p>North America</p>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                            </svg><p>venture Capital</p>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <p>Consumer Dictionary</p>
-                        <p class="ms-4">More....</p>
-                    </div>
-                </div>
-                <div class="down">
-                    <h4>$18 million</h4>
-                    <p>total commitment</p>
-                </div>
-            </div>
-        </div>
+        @endforeach
+        
     </div>
 </div>
 <div class="How margin50">
@@ -409,7 +227,7 @@ border-top-right-radius: 10px;">
         <div class="first">
             <div class="text">
                 <h2 class="m-0">How it Works</h2>
-                <p>Learn how Dell-Investment Group gives you access to top tier funds</p>
+                <p>Learn how You get access to Top-Tier Funds at Dell Investments</p>
             </div>
             <div class="second">
                 <a href="{{ route('user.howto.create') }}" class="btn btn-brand-02">Learn How</a>

@@ -1,12 +1,21 @@
 @extends('templates.main-user')
 @section('content')
+<div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">My Portfolios</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div class="card">
     <img src="{{ asset('user-assets/images/widgets/active_investment.jpg') }}" alt="" style="width: 100%;border-top-left-radius: 5px;
         border-top-right-radius: 5px;">
     <br><br>
     <div class="card-header">
-        <h4 class="card-title">My Investments</h4>
-
+        <h4 class="card-title">My Portfolios</h4>
     </div>
     <!--end card-header-->
     <div class="card-body ">
@@ -30,7 +39,7 @@
         </div>
         @else
         @foreach ($investments as $invest)
-        @if ($invest->status == 'expired' || $invest->status == 'error' || $invest->status == 'cancelled')
+        @if ($invest->status == 'expired' || $invest->status == 'error' || $invest->status == 'cancelled'|| $invest->status == 'finished')
         @else
         <div class="row mb-3">
             <div class="col-md-1"></div>
@@ -99,23 +108,23 @@
                         <div class="row mt-4 d-flex align-items-center">
                             <div class="col">
                                 {{-- <h5 class="font-22 m-0 fw-bold">${{ $invest->amount }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{ $invest->amount }}</h5>
+                                <h5 class="font-14 m-0 fw-bold">${{ number_format($invest->amount,2) }}</h5>
                                 <p class="mb-0 text-muted">Investment Amount</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">(ROI) ${{ $invest->returns }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{ $invest->returns*$invest->days }}</h5>
+                                <h5 class="font-14 m-0 fw-bold">${{  number_format($invest->returns*$invest->days,2) }}</h5>
                                 <p class="mb-0 text-muted">Total Accumulated</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">{{ $invest->payout }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">$3,223</h5>
-                                <p class="mb-0 text-muted">Portfolio Wallet</p>
+                                <h5 class="font-14 m-0 fw-bold">${{ $invest->formatted_available_fund_balance }}</h5>
+                                <p class="mb-0 text-muted">Active Funds</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-18 m-0 fw-bold">{{ $invest->duration }} Months</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">$3434</h5>
-                                <p class="mb-0 text-muted">Compound Wallet</p>
+                                <h5 class="font-14 m-0 fw-bold">${{ $invest->formatted_active_interest_balance }} </h5>
+                                <p class="mb-0 text-muted">Active Interest Funds</p>
                             </div>
                             {{-- <div class="col">
                                 <h5 class="font-14 m-0 fw-bold">{{ $invest->date }}</h5>
@@ -201,7 +210,7 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <h6><b class="text-mute">Compound Wallet
+                                                        <h6><b class="text-mute">Active Interest Funds
                                                                 Balance</b></h6>
                                                         <h3>$ {{ $user->compound_wallet }}</h3>
                                                         <input type="hidden" id="compountWalletInput" value="{{ $user->compound_wallet }}">
@@ -235,7 +244,7 @@
                                                     <option value="">Select Payment Platform</option>
                                                     <option value="direct_deposit">Direct Deposit</option>
                                                     <option value="main_wallet">Main Wallet</option>
-                                                    <option value="compound_wallet">Compound Wallet</option>
+                                                    <option value="compound_wallet">Active Interest Funds</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-12" id="currency">
@@ -279,58 +288,7 @@
                     </div>
                     <!--end modal-->
 
-                    <div id="collapseTwo{{ $invest->investment_id }}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample-faq">
-                        <div class="card m-3">
-                            <div class="accordion-body">
-                                <div class="card-body ">
-                                    <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                        <thead class="bg-dark text-white">
-                                            <tr>
-                                                <th class="text-white">S/N</th>
-                                                <th class="text-white">Action</th>
-                                                <th class="text-white">Date</th>
-                                                <th class="text-white">Amount</th>
-                                                <th class="text-white">Status </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($activities as $key =>$act)
-                                            @if ($invest->investment_id == $act->user_investments_id)
-                                            <tr>
-                                                <td>{{ $key }}</td>
-                                                <td>{{ $act->title }}</td>
-                                                <td>{{ $act->date }}</td>
-                                                <td>${{ $act->amount }}</td>
-                                                @if ($act->category == 'earning' || $act->category == 'bonus')
-                                                <td> <span class="bg-success p-1 font-10 text-white">CREDITED</span>
-                                                </td>
-                                                @elseif ($act->category == 'withdrawals')
-                                                <td> <span class="bg-danger p-1 font-10 text-white">WITHDRAWAL</span>
-                                                </td>
-
-                                                @elseif ($act->category == 'deposit')
-                                                <td> <span class="bg-primary p-1 font-10 text-white">DEPOSIT</span>
-                                                </td>
-                                                @elseif ($act->category == 'expired')
-                                                <td> <span class="bg-danger p-1 font-10 text-white">EXPIRED</span>
-                                                </td>
-                                                @elseif ($act->category == 'error')
-                                                <td> <span class="bg-danger p-1 font-10 text-white">ERROR</span>
-                                                </td>
-                                                @elseif ($act->category == 'cancelled')
-                                                <td> <span class="bg-danger p-1 font-10 text-white">CANCELLED</span>
-                                                </td>
-                                                @endif
-                                            </tr>
-                                            @endif
-                                            @endforeach
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
 
 
                     <!--end card-->
