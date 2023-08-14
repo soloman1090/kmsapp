@@ -16,6 +16,10 @@
   margin-left: 50px !important;
 }
 
+.pt150 {
+  padding-top: 150px !important;
+}
+
 .mr50 {
   margin-right: 50px !important;
 }
@@ -970,12 +974,22 @@
   height: 30px !important;
 }
 
+.marginp {
+  margin: 50px 0;
+}
+
 @media only screen and (max-width: 500px) {
   .ml100 {
     margin-left: 0px !important;
   }
   .ml50 {
     margin-left: 0px !important;
+  }
+  .pt150 {
+    padding-top: 70px !important;
+  }
+  .marginp {
+    margin: 170px 0 !important;
   }
   .carouselss .carousel-cell .cells1 .text,
   .carouselss .carousel-cell .cells2 .text,

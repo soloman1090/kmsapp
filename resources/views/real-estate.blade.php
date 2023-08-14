@@ -3,144 +3,175 @@
  
 @section('content')
 
- <div class="container margin_60_35">
+  <div class=" margin_60_35">
     <div class="real_estate_section_one">
       <div class="real_estate_section_banner">
-        <img src="assets/img/real_estate/banner.webp" alt="">
+        {{-- <img src="assets/img/real_estate/banner.webp" alt=""> --}}
+        {{-- <div class="whitebGs"></div> --}}
       </div>
-        <div class="real_estate_bg">
-        <div class="container real_estate_section_one_header">
-          <h1>Experienced Leadership. Investment Discipline. Dependable Partner.</h1>
-    </div>
-      <div class="container real_estate_section_one_text">
-        <div class="real_estate_section_one_text_one">
-            <p>Real Estate manages comprehensive public and private, equity and debt strategies, with approximately $49.2 billion of assets under management as of March 31, 2023. Backed by a vertically integrated platform, demonstrated track record, tenured team, thematic investment approach, access to proprietary deal flow, and synergies with the broader Ares platform, we are able to identify and execute on attractive opportunities with compelling risk-reward profiles.</p>
-        </div>
-        <div class="real_estate_section_one_text_two">
-            <p>We maintain a time-tested and consistent approach across our equity and debt strategies focusing on major property types and adjacent sectors that have value creation opportunities, located in liquid markets with diversified economies.
-            </p>
-        </div>
-      </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="sec2">
-      <div class="sec2-">
-        <div class="sec2--">
-          <h1>Ares Real Estate</h1>
-          <div class="sec2-details">
-            <div>
-              <p>Primary Role</p>
-              <hr />
-              <p>
-                Majority or shared control investor with execution and asset
-                management experience
-              </p>
+        <div class="container">
+          <div class="real_estate_bg">
+            <div class="margin60"></div>
+            <div class="col-md-9 ml50 padding0">
+              <h1 class="container real_estate_section_one_header">Experienced Leadership. Investment Discipline. Dependable Partner.</h1>
             </div>
-
-            <div>
-              <p>Offices</p>
-              <hr />
-              <p>
-                Denver, New York, Atlanta, Rutherford, Newport Beach, Los
-                Angeles, Chicago, Dallas, El Segundo, Hartford, Seattle, London,
-                Paris, Luxembourg, Madrid
-              </p>
-            </div>
-
-            <div>
-              <p>Primary Areas of Focus</p>
-              <hr />
-              <p>
-                Industrial and Logistics, Multifamily and Residential, Office,
-                Hospitality and Necessity-Based Retail
-              </p>
-            </div>
-
-            <div>
-              <p>Types of Investment<sup>(1)</sup></p>
-              <hr />
-              <p>
-                Senior First Mortgage Loans, Subordinated Debt, Preferred
-                Equity, Common Equity, and Other CRE Investments
-              </p>
+            
+            <div class="ml100">
+              <div class="row">
+                <div class="col-md-5 ">
+                    <p>Real Estate manages comprehensive public and private, equity and debt strategies, with approximately $49.2 billion of assets under management as of March 31, 2023. Backed by a vertically integrated platform, demonstrated track record, tenured team, thematic investment approach, access to proprietary deal flow, and synergies with the broader Ares platform, we are able to identify and execute on attractive opportunities with compelling risk-reward profiles.</p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <p>We maintain a time-tested and consistent approach across our equity and debt strategies focusing on major property types and adjacent sectors that have value creation opportunities, located in liquid markets with diversified economies.
+                    </p>
+                </div>
+              </div>
             </div>
           </div>
-          <h5 class="real_estate_note">
-        (1) None of our fund strategies involve the active trading of securities
-        instruments; however, securities instruments may be acquired/disposed in
-        accordance with the general strategy of the fund.
-      </h5>
-        </div>
-        <div class="sec2-right">
-          <video width="620" height="340" controls>
-            <source src="movie.mp4" type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-          </video>
         </div>
       </div>
     </div>
-
-    <div class="experience">
-        <div class="experience_header">
-        <h2>We believe our cycle-tested team, access to real-time property market and corporate trends and disciplined approach to value creation and risk mitigation differentiate us from other investors.</h2>
+    <div class="margin50"></div>
+    <div class="container  ">
+      <div class="bluue">
+        <div class="row">
+          <div class="col-md-6 ">
+            <h1 class="ml50">Ares Real Estate</h1>
+            <div class="margin30"></div>
+            <div class="sec2-details ml100">
+              <div>
+                <p>Primary Role</p>
+                <hr />
+                <p>
+                  Majority or shared control investor with execution and asset
+                  management experience
+                </p>
+              </div>
+  
+              <div>
+                <p>Offices</p>
+                <hr />
+                <p>
+                  Denver, New York, Atlanta, Rutherford, Newport Beach, Los
+                  Angeles, Chicago, Dallas, El Segundo, Hartford, Seattle, London,
+                  Paris, Luxembourg, Madrid
+                </p>
+              </div>
+  
+              <div>
+                <p>Primary Areas of Focus</p>
+                <hr />
+                <p>
+                  Industrial and Logistics, Multifamily and Residential, Office,
+                  Hospitality and Necessity-Based Retail
+                </p>
+              </div>
+  
+              <div>
+                <p>Types of Investment<sup>(1)</sup></p>
+                <hr />
+                <p>
+                  Senior First Mortgage Loans, Subordinated Debt, Preferred
+                  Equity, Common Equity, and Other CRE Investments
+                </p>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-md-6">
+            <div class="">
+              <video width="100%" controls class="ml50 vid pt150">
+                <source src="movie.mp4" type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="experience_text">
-          <div class="experience_text_one">
-            <p>Ares Real Estate provides investors access to its capabilities through several vehicles including private commingled funds in the U.S. and Europe investing in equity and debt strategies, as well as Non-traded Real Estate Investment Trusts (REITS) and Ares Commercial Real Estate Corporation (NYSE: ACRE), a publicly traded commercial mortgage real estate investment trust.</p>
-          </div>
-          <div class="experience_text_two">
-            <p>Ares Real Estate activities are managed by dedicated equity and debt teams in the U.S. and Europe, which leverage the following core capabilities across our platform:</p>
-          </div>
-        </div>      
-    </div>
-
-    <div class="sec3-rows">
-            <div>
-                <div class="rows">
-                  <img src="assets/img/real_estate/leadership.webp" alt="">
-                </div>
-                <div>
-                    <h3>Experienced Leadership </h3>
-                    <p>Stable and deep team that has been market cycle-tested and is established in many local markets across the world</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="rows">
-                  <img src="assets/img/real_estate/global_market.webp" alt="">
-                </div>
-                <div>
-                    <h3>Global Market Perspective</h3>
-                    <p>Integrating a global market view with local market knowledge and fundamental asset analysis</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="rows">
-                  <img src="assets/img/real_estate/multi_channel.webp" alt="">
-                </div>
-                <div>
-                    <h3>Multi-Channel Sourcing </h3>
-                    <p>Deep connectivity into local property networks, leading to proprietary investment opportunities sourced with an Ares Advantage</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="rows">
-                  <img src="assets/img/real_estate/in_house.webp" alt="">
-                </div>
-                <div>
-                    <h3>In-House Research</h3>
-                    <p>Comprehensive macroeconomic, market, sub-market property and industry research providing real-time information to capitalize on real estate market trends and support rigorous underwriting of investment opportunities.</p>
-                </div>
-            </div>
-          </div>
+        {{-- <div class="margin15s"></div> --}}
+        <h5 class="ml100 real_estate_note">
+          (1) None of our fund strategies involve the active trading of securities
+          instruments; however, securities instruments may be acquired/disposed in
+          accordance with the general strategy of the fund.
+        </h5>
       </div>
+    </div>
     
-
+    <div class="marginp"></div>
+    <div class="container">
+      <div class="experience">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="first">
+              <div class="">
+                <p>Experience</p>
+              </div>
+              <div class="hr"></div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="experience">
+              <div class="experience_header">
+              <h2>We believe our cycle-tested team, access to real-time property market and corporate trends and disciplined approach to value creation and risk mitigation differentiate us from other investors.</h2>
+              </div>
+              <div class="margin30"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>Ares Real Estate provides investors access to its capabilities through several vehicles including private commingled funds in the U.S. and Europe investing in equity and debt strategies, as well as Non-traded Real Estate Investment Trusts (REITS) and Ares Commercial Real Estate Corporation (NYSE: ACRE), a publicly traded commercial mortgage real estate investment trust.</p>
+                </div>
+                <div class="col-md-6">
+                  <p>Ares Real Estate activities are managed by dedicated equity and debt teams in the U.S. and Europe, which leverage the following core capabilities across our platform:</p>
+                </div>
+              </div> 
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="rows">
+                      <img src="assets/img/real_estate/leadership.webp" alt="">
+                    </div>
+                    <div>
+                        <h3>Experienced Leadership </h3>
+                        <p>Stable and deep team that has been market cycle-tested and is established in many local markets across the world</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="rows">
+                      <img src="assets/img/real_estate/global_market.webp" alt="">
+                    </div>
+                    <div>
+                        <h3>Global Market Perspective</h3>
+                        <p>Integrating a global market view with local market knowledge and fundamental asset analysis</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="rows">
+                      <img src="assets/img/real_estate/multi_channel.webp" alt="">
+                    </div>
+                    <div>
+                        <h3>Multi-Channel Sourcing </h3>
+                        <p>Deep connectivity into local property networks, leading to proprietary investment opportunities sourced with an Ares Advantage</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="rows">
+                      <img src="assets/img/real_estate/in_house.webp" alt="">
+                    </div>
+                    <div>
+                        <h3>In-House Research</h3>
+                        <p>Comprehensive macroeconomic, market, sub-market property and industry research providing real-time information to capitalize on real estate market trends and support rigorous underwriting of investment opportunities.</p>
+                    </div>
+                </div>
+              </div>
+          </div>     
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="container sec4">
         <div class="sec4-">
             <h1>Business Sectors</h1>
