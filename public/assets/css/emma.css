@@ -978,7 +978,63 @@
   margin: 50px 0;
 }
 
+.whitecol {
+  color: white;
+}
+
+.sec4-box {
+  height: 360px;
+  width: 320px;
+  margin: 10px;
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+.sec4-box:hover {
+  height: 500px;
+  width: 400px;
+  transition: 0.5s linear;
+}
+.sec4-box:hover .down {
+  display: block !important;
+  transition: 0.5s linear;
+}
+.sec4-box:hover .arrorSvg svg:nth-child(2) {
+  display: block;
+}
+.sec4-box:hover .arrorSvg svg:nth-child(1) {
+  display: none;
+}
+
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.down {
+  display: none;
+  padding: 15px;
+  position: absolute;
+}
+.down h2 {
+  color: white;
+  margin: 0;
+}
+.down p {
+  color: #94cef3;
+}
+
+.arrorSvg svg {
+  color: #94cef3 !important;
+}
+.arrorSvg svg:nth-child(2) {
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
+  .sec4-box:hover {
+    height: 530px !important;
+    width: 350px !important;
+  }
   .ml100 {
     margin-left: 0px !important;
   }
@@ -1256,7 +1312,10 @@
   margin: 10px 0;
   background-color: white;
 }
-.secttion11 .div h1, .secttion11 .div h2, .secttion11 .div h3, .secttion11 .div p {
+.secttion11 .div h1,
+.secttion11 .div h2,
+.secttion11 .div h3,
+.secttion11 .div p {
   color: black;
 }
 .secttion11 .div .first {
@@ -1292,7 +1351,9 @@
   padding: 30px 0;
   color: white;
 }
-.blueOver h1, .blueOver h2, .blueOver h3 {
+.blueOver h1,
+.blueOver h2,
+.blueOver h3 {
   color: white;
 }
 
@@ -1306,7 +1367,10 @@
   margin: 10px 0;
   background-color: white;
 }
-.carousellss .carousel-cell .div h1, .carousellss .carousel-cell .div h2, .carousellss .carousel-cell .div h3, .carousellss .carousel-cell .div p {
+.carousellss .carousel-cell .div h1,
+.carousellss .carousel-cell .div h2,
+.carousellss .carousel-cell .div h3,
+.carousellss .carousel-cell .div p {
   color: black;
 }
 .carousellss .carousel-cell .div .first {
