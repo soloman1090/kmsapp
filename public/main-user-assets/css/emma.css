@@ -344,13 +344,13 @@ header .nav:hover {
 .Investment .set3 .withbackbtn:hover svg {
   color: var(--color-light);
 }
-.Investment .set4 .intro {
+.Investment .set4 .col-md-3 {
   padding: 15px;
-  min-height: 500px;
+  margin: 0 10px;
   border-radius: 5px;
   background-color: var(--color-light-purple);
 }
-.Investment .set4 .intro h3 {
+.Investment .set4 .col-md-3 h3 {
   margin-bottom: 20px;
   color: rgb(55, 93, 247);
 }
@@ -364,19 +364,19 @@ header .nav:hover {
 .Investment .set5 .opt1 .icon svg {
   color: var(--color-light);
 }
-.Investment .set6 .seek {
+.Investment .set6 .col-md-3 {
   padding: 15px;
+  margin: 0 10px;
   border-radius: 5px;
-  min-height: 300px;
   background-color: rgba(255, 255, 191, 0.408);
 }
-.Investment .set7 .seek {
+.Investment .set7 .col-md-3 {
   padding: 15px;
-  min-height: 300px;
-   border-radius: 5px;
+  margin: 0 10px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 191, 0.408);
 }
-.Investment .set7 .seek p {
+.Investment .set7 .col-md-3 p {
   margin: 0;
   text-align: center;
 }

@@ -28,7 +28,7 @@
                 <div class="col-md-7">
                     <div class="video1" >
                         <video width="320" controls>
-                        <source src="mov_bbb.mp4" type="video/mp4">
+                        <source src="{{ asset('assets/img/2023-08-11 14.25.31.mp4') }}" type="video/mp4">
                         <source src="mov_bbb.ogg" type="video/ogg">
                         Your browser does not support HTML video.
                         </video>
@@ -135,8 +135,8 @@
                     <span>‘‘</span>
                     <div class="heltz">
                     <p class="p1">In the years ahead, the differentiated ESG program will be the one that embeds itself in the heart and mind of every employee, informing their daily work. Our aspiration is when someone asks ‘who is responsible for ESG?’ we all will raise our hands.</p>
-                        <p class="p2">Adam Heltzer</p>
-                        <span class="down">Global Head of ESG</span>
+                        {{-- <p class="p2">Adam Heltzer</p>
+                        <span class="down">Global Head of ESG</span> --}}
                     </div>
                 </div>
             </div>

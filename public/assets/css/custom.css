@@ -6,40 +6,44 @@
 
 
 .backgroung_img{
-    background-image: url(../img/unique-process/DSC05479_edit-3.webp);
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.4156862745)), url(../img/unique-process/DSC05479_edit-3.webp);
     background-color: black;
-    height: 100vh;
+    height: 90vh;
+    background-position: center;
 }
 
 .about_header{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     font-family: Sanomat Web,serif;
-    font-size: 49px;
+    font-size: 60px;
     font-weight: 550;
     line-height: 1.25;
     color: white;
+    margin: 0;
 }
 .about_paragraph{
     text-align: center;
     font-family: Sanomat Web,serif;
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 550;
-    padding-top: 50px;
+    line-height: 35px;
+    /* padding-top: 50px; */
     color: white;
 }
 .vl{
     border-left: 2px solid white;
-    height: 100px;
+    height: 80px;
     position: absolute;
     left: 50%;
 }
 .vertical_line{
-    padding-top: 50px;
+    padding-top: 30px;
+    height: 100px;
 }
 .learn_more_about a{
     text-decoration: none;
-    padding-top: 155px;
+    padding-top: 50px;
     color: white;
     display: flex;
     justify-content: center;
@@ -319,11 +323,11 @@
 
 /* real estate starts here  */
 .real_estate_section_one{
-    height: 1000px;
     width:100%;
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
+    /* position: relative; */
 }
 
 .sec1--{
@@ -331,42 +335,45 @@
     margin: auto;
     background-color: #ffff;
 }
+.whitebGs{
+    height: 400px;
+    background-color: red;
+    /* position: absolute; */
+    margin-top: -110px;
+}
 
 .real_estate_section_one_header{
     max-width: 80%;
 }
 
-.real_estate_section_one_text{
-    height: 400px;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    line-height: 30px;
-    padding: 40px;
-}
-.real_estate_section_banner img{
+/* .real_estate_section_banner img{
+   
+} */
+
+.real_estate_section_banner {
     width: 100%;
+    height: 50vh;
+   background-image: url(../../assets/img/real_estate/banner.webp);
 }
-.real_estate_section_one_text_one{
-    height: 400px;
-    width: 50%;
-}
-.real_estate_section_one_text_two{
-    height: 400px;
-    width: 50%;
-}
+
 .real_estate_bg{
     background-color: #ffff;
     margin-top: -110px;
-    position: absolute;
-    width: 80%;
-    margin-left: 18px;
+    /* position: absolute; */
+    padding: 15px;
+    /* left: 6%;
+    right: 6%; */
+    /* width: 80%; */
+    /* margin-left: 18px; */
 }
-.real_estate_section_one_header h1{
-    font-size: 63px;
+.real_estate_bg p{
+    font-size: 18px;
+}
+.real_estate_section_one_header{
+    font-size: 60px;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
 }
 
 
@@ -378,12 +385,13 @@
     color: white;
 }
 .sec2-{
-    height: 700px;
-    width: 85%;
-    margin: auto;
+    /* height: 700px; */
+    /* width: 85%; */
+    /* margin: auto; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     /* margin: auto; */
 }
 
@@ -396,38 +404,49 @@
 }
 
 .sec2-details{
-    width: 50%;
-    margin: auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     line-height: 2rem;
-    margin-left: 180px;
-}
-.sec2-- h1{
-    margin-left: 15%;
-    color: white;
-    font-size: 70px;
 }
 
-.sec2-right{
-    width: 34%;
-    position: absolute;
-    left: 65%;
-    margin-bottom: 245px;
+.bluue{
+    background-color: #012a41;
+    /* width: 500px; */
+    padding: 50px 20px;
 }
+.bluue h1,.bluue p, .bluue hr{
+    color: white;
+}
+/* .sec2-right{
+    width: 34%;
+} */
 .real_estate_note{
     color: #ffff;
-    padding: 18px 42px 10px 150px;
+    /* padding: 18px 42px 10px 150px; */
     font-size: 11px;
 }
-.experience_header{
-    padding: 70px 240px 0px 170px;
+/* .minusright{
+    margin-left: 200px !important;
+} */
+.experience_header h2{
+    margin: 0 !important;
 }
 .experience_text{
     display: flex;
     padding: 55px 219px 30px 160px;
     gap: 50px;
+}
+.experience .first{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.experience .hr{
+    border-bottom: 1px solid #0f3557;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 .experience_text_one{
     width: 50%;
@@ -469,14 +488,13 @@
 }
 
 .sec3-rows{
-    width: 100%;
+    /* width: 100%;
     height: 900px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     justify-content: space-around;
-    padding: 0px 179px 199px 200px;
     gap: 4rem;
 }
 .rows{
@@ -530,19 +548,25 @@
 }
 
 
-.sec4-box{
-   
+.sec4-box {
     background-color: #0f3557;
-    padding: 30px;
-
+    /* height: 250px; */
+    margin: 10px 0;
+    position: relative;
+    padding: 20px;
+    border-radius: 7px;
+    position: relative;
 }
 
-.sec4-box svg{
+.sec4-box svg,.sec4-box h1,.sec4-box p{
     color: white;
 }
 
 .arrorSvg{
-    float:right;
+   position: absolute;
+   right: 15px;
+   bottom: 10px;
+   cursor: pointer;
 }
 /* section 4 ends */
 
@@ -560,8 +584,9 @@
     margin: auto;
 }
 
-.sec5- h1{
+.h111{
     font-weight: 500;
+    font-size: 50px;
 }
 
 .sec5--{
@@ -573,7 +598,7 @@
     height: 300px;
     width: 25%;
     background-color: #0f3557;
-
+    cursor: pointer;
 }
 /* body{
     margin: 80%;
@@ -610,7 +635,7 @@
 }
 .unique_section {
     max-width: 80%;
-    height: 300px;
+    /* height: 300px; */
     padding-top: 50px;
     text-align: center;
 }
@@ -634,17 +659,53 @@
 .Sustainability{
     background-image: url(../img/unique-process/windmill.webp);
     height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.content_center_Sustainability h3{
+.content_center_Sustainability h1{
    
-    padding: 30px !important;
-    font-size: 30px;
+    padding: 20px 0 !important;
+    font-size: 35px;
     color: #ffff;
     font-weight: 500;
 }
 .content_center_Sustainability p{
     display: flex;
     justify-content: flex-start;
+    color: white;
+    margin-bottom: 0px !important;
+    font-size: 22px;
+}
+.content_center_Sustainability svg{
+    margin-left: 20px !important;
+    /* margin-top: 20px !important;  */
+}
+.content_center_Sustainability button{
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    background-color: transparent;
+    color: white;
+   font-weight: 400;
+   padding: 10px 25px !important;
+}
+.bluecol{
+    color: #0f3557;
+}
+
+.box_service a{
+    position: absolute;
+    bottom: 20px;
+    /* background: none !important; */
+    /* color: #0f3557 !important;
+    text-decoration: underline; */
+    height: 50px !important;
+}
+.content_center_Sustainability button:hover{
+    background-color: rgba(255, 255, 255, 0.493);
+    transition: 0.5s linear;
+    border: 1px solid white !important;
 }
 .recent_news_bg{
     background-color: #023b5c;
@@ -1019,7 +1080,7 @@
 
 .banner{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/insurance/banner_insurfance.jpeg);
-    height: 600px;
+    height: 65vh;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -1030,11 +1091,13 @@
     width: 90%;
     margin: auto;
     position: relative;
-    top: 60%;
+    top: 40%;
+   
 }
 
 .sec1 h1{
     font-size: 60px;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -1042,26 +1105,12 @@
     font-size: 18px;
 }
 
-.sec2{
-    width: 100%;
-    height: 200px;
+.secs2 p{
+    font-size: 23px;
 }
 
-.sec2-{
-    height: 200px;
-    width: 80%;
-    color: black;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
-}
 
-.sec3{
-    height: 400px;
-    width: 100%;
+.secs3{
     background-color:
     #4887b2 ;
     color: white;
@@ -1071,37 +1120,36 @@
     margin-left: 10%;
 }
 
-.sec3-rep h1{
-    font-size: 40px;
-    font-weight: 700;
-    padding-top: 50px; 
+.secs3 h1{
+    font-size: 30px;
+    font-weight: 700; 
     color: #fff;
 }
 
-.sec3-{
-    height: 300px;
-    width: 80%;
-    margin: auto;
+.sec3s{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
     gap: 5rem;
 
 }
-.se3--{
+.sec3--{
     text-align: center;
+    width: 170px !important;
 }
 
 .sec3-- p{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     width: 100%;
 }
 
 
 .icon {
-    width: 150px;
+    width: 100px;
+    margin-left: 35px;
 }
 
 .sec4{
@@ -1188,27 +1236,45 @@
  } 
 
  .sec5{
-    height: 500px;
+    height: 80vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/insurance/banner_insurfance.jpeg);
     background-position: center;
     background-size: cover;
     color: white;
+    /* position: relative; */
     background-attachment: fixed;
  }
  .sec5-{
-    width: 90%;
     margin: auto;
+    padding-top: 100px;
     position: relative;
-    top: 40%;
  }
 
- .sec5- h1{
-    font-size: 50px;
+ .sec5- h2{
+    font-size: 45px;
+    margin: 0;
+    color: white;
  }
+ .sec5- .col-md-8{
+    top: 80px;
+    position: absolute;
+ }
+ 
 
  .sec5- h3{
     font-size: 20px;
+ }
+
+ .sec5- p{
+    font-weight: 600;
+ }
+
+ .sec5- h1{
+    font-size: 100px;
+    margin: 0;
+    color: white;
+    line-height: 55px;
  }
 
  .sec5-details{
@@ -1221,52 +1287,44 @@
     font-weight: 700;
  }
 
- .sec6{
-    height: 500px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
-
- .sec6-{
-    /* height: 500px; */
-    width: 80%;
-    margin: auto;
-    display: block;
-    align-items: center;
-    justify-content: center;
- }
-
- .sec6- h1{
-    /* height: 400px; */
-    font-size: 45px;
-    font-weight: 400;
-}
-.sec6-details{
-   display: flex;
-   align-items: center;
-   justify-content: space-evenly;
-   gap: 2rem;
-   margin-top: 70px;
-}
-
 .sec6-details h3{
-    font-size: 20px;
-    color: #083151;
+    font-size: 22px;
+    font-weight: 600;
+    color: #004984;
     margin-bottom: 10px;
  }
- .sec6-details p{
-    font-size: 18px;
-    line-height: 30px;
- }
- .sec6-details div{
-    height: 256px;
-    width: 33%;
-    padding: 5px 20px 20px 20px;
-    box-shadow: 2px 2px 10px rgba(44, 43, 43, 0.9);
 
+ .sec6-details {
+    padding: 5px 20px 20px 20px;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    min-height: 235px !important;
+ }  
+
+ .sec7s-details h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
  }
+ .sec7s-details span{
+    font-size: 13px;
+ }
+ .sec7s-details button{
+    color: white;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    background-color: #0f3557;
+    border-radius: 5px;
+ }
+
+ .sec7s-details {
+    margin: 10px 0;
+    padding: 30px 30px 30px 30px;
+    background-color: #EDEDED;
+    min-height: 500px !important;
+ }  
 
  #logo_footer{
     object-fit: contain !important;
@@ -1275,3 +1333,17 @@
     background-size: contain;
  }
  
+ @media only screen and (max-width: 500px) {
+    .sec5- h2{
+        font-size: 25px;
+        margin: 0;
+        color: white;
+     }
+     .sec5- h1{
+        font-size: 50px;
+     }
+
+     .sec5- .col-md-8{
+        top: 250px !important;
+     }
+ }

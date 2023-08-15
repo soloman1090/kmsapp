@@ -37,6 +37,7 @@
     <!-- YOUR CUSTOM CSS -->
     <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/emma.css" rel="stylesheet">
+    <link href="assets/css/skippr.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- LayerSlider stylesheet -->
@@ -350,11 +351,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <!-- COMMON SCRIPTS -->
-    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{-- <script src="assets/js/jquery-2.2.4.min.js"></script> --}}
     <script src="assets/js/common_scripts.js"></script>
     <script src="assets/validate.js"></script>
     <script src="assets/js/header_sticky_1.js"></script>
     <script src="assets/js/functions.js"></script>
+    <script src="assets/js/skippr.js"></script>
     <script src="assets/js/emma.js"></script>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

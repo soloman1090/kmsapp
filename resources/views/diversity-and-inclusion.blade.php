@@ -91,8 +91,8 @@
                 <center>
                     <p><b>ACCOUNTABILITY THROUGH MEASUREMENT</b></p>
                     <div class="line"></div>
-                    <p class="margin30">Our proprietary NB Equity, Inclusion and Diversity Index drives greater transparency into our progress, and challenges us to be more broadly accountable. <br> We aim to set a higher standard with a goal to be a materially different firm over time that better reflects society and the rich diversity of our clients.</p>
-                    <img src="https://www.nb.com/-/media/NB/Firm-Pages/EID/SVGs/EID_Metrics_2022_12_01.ashx?la=en&hash=7B9400DCB3F2482599A6B7814FB720E7EC844C97" alt="" class="margin60 up" width="90%">
+                    <p class="margin30">Our proprietary Delle Equity, Inclusion and Diversity Index drives greater transparency into our progress, and challenges us to be more broadly accountable. <br> We aim to set a higher standard with a goal to be a materially different firm over time that better reflects society and the rich diversity of our clients.</p>
+                    <img src="assets/img/EQUITY.png" alt="" class="margin60 up" width="90%">
                 </center>
            </div>
         </div>

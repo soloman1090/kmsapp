@@ -116,10 +116,16 @@
                         Our investment philosophy builds upon the foundation of diversification with three principles that ensure disciplined stewardship of investor assets.
                     </p>
 
-                    <ul>
-                        <li>We maintain a long-term focus that allows us to avoid reactionary responses to short-term spikes in volatility.</li>
-                        <li>We follow facts not feelings and base our investment decisions on thorough analysis of objective data through both quantitative and fundamental processes.</li>
-                        <li>As our views are generally based on long-term trends rather than tactical trade ideas, we make adjustments gradually to avoid the pitfalls of market timing.</li>
+                    <ul class="checkk">
+                        <li><div class=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                          </svg></div> <p> We maintain a long-term focus that allows us to avoid reactionary responses to short-term spikes in volatility.</p></li>
+                        <li><div class=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                          </svg></div> <p>We follow facts not feelings and base our investment decisions on thorough analysis of objective data through both quantitative and fundamental processes.</p></li>
+                        <li><div class=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                          </svg></div><p> As our views are generally based on long-term trends rather than tactical trade ideas, we make adjustments gradually to avoid the pitfalls of market timing.</p></li>
                     </ul>
                 </div>
            </div>
