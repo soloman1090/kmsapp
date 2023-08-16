@@ -994,7 +994,7 @@
   width: 400px;
   transition: 0.5s linear;
 }
-.sec4-box:hover .down {
+.sec4-box:hover .downed {
   display: block !important;
   transition: 0.5s linear;
 }
@@ -1010,16 +1010,16 @@
   flex-wrap: wrap;
 }
 
-.down {
+.downed {
   display: none;
   padding: 15px;
   position: absolute;
 }
-.down h2 {
+.downed h2 {
   color: white;
   margin: 0;
 }
-.down p {
+.downed p {
   color: #94cef3;
 }
 
@@ -1030,10 +1030,18 @@
   display: none;
 }
 
+.heighttable {
+  height: 350px;
+}
+
 @media only screen and (max-width: 500px) {
   .sec4-box:hover {
     height: 530px !important;
     width: 350px !important;
+  }
+  .last-infra h1 {
+    font-size: 35px !important;
+    margin-top: 90px !important;
   }
   .ml100 {
     margin-left: 0px !important;

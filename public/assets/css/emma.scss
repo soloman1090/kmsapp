@@ -1177,7 +1177,7 @@
         width: 400px;
         transition: 0.5s linear;
 
-        .down {
+        .downed {
             display: block !important;
             transition: 0.5s linear;
         }
@@ -1198,7 +1198,7 @@
     flex-wrap: wrap;
 }
 
-.down {
+.downed {
     display: none;
     padding: 15px;
     position: absolute;
@@ -1223,6 +1223,9 @@
         display: none;
     }
 }
+.heighttable{
+    height: 350px;
+}
 
 @media only screen and (max-width: 500px) {
 
@@ -1231,6 +1234,14 @@
         &:hover {
             height: 530px !important;
             width: 350px !important;
+        }
+    }
+
+    .last-infra{
+       
+        h1{
+            font-size: 35px !important;
+            margin-top: 90px !important;
         }
     }
 

@@ -99,126 +99,129 @@
                 <button id="btn_secondary" class="botBtn4" type="button" onclick="showhide(this)">SECONDARY TRANSACTIONS</button>
                 <button id="btn_joint" class="botBtn5" type="button" onclick="showhide(this)">JOINT VENTURE</button>
             </div>
-            <div id="direct" class="down" style="display: none;">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="">
-                            <img src="{{ asset('assets/img/pexels-pixabay-414122.jpg') }}" alt="" >
+            <div class="heighttable">
+                <div id="direct" class="down" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="">
+                                <img src="{{ asset('assets/img/pexels-pixabay-414122.jpg') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2>Direct Investments </h2>
+                                    <div class="margin25"></div>
+                                    <p> Investments made directly into businesses or securities.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
+                </div>
+                <div id="co" class="down"  style="display: none;">
+                    <div class="row">
+                        <div class="col-md-7 ">
                             <div class="">
-                                <h2>Direct Investments </h2>
-                                <div class="margin25"></div>
-                                <p> Investments made directly into businesses or securities.</p>
+                                <img src="{{ asset('assets/img/pexels-pixabay-414837.jpg') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class=" ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2> Co-Investments</h2>
+                                    <div class="margin25"></div>
+                                    <p> Investments made directly into businesses or securities in partnership with a sponsor. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fund" class="down"  style="display: none;">
+                    <div class="row">
+                        <div class="col-md-7 ">
+                            <div class="">
+                                <img src="{{ asset('assets/img/pexels-stephan-seeber-1261728.jpg') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class=" ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2>Fund Investments</h2>
+                                    <div class="margin25"></div>
+                                    <p> Investments in managers’ multi-client funds; such investments are also known as primary investments. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="secondary" class="down"  style="display: none;">
+                    <div class="row">
+                        <div class="col-md-7 ">
+                            <div class="">
+                                <img src="{{ asset('assets/img/Responsibility-success2.webp') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class=" ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2>Secondary Transactions</h2>
+                                    <div class="margin25"></div>
+                                    <p> Acquired interests in a primary fund after the fund has been at least partially deployed in underlying investments. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="joint" class="down"  style="display: none;">
+                    <div class="row">
+                        <div class="col-md-7 ">
+                            <div class="">
+                                <img src="{{ asset('assets/img/about_page/bridge.webp') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class=" ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2>Seed | Joint Venture | Acceleration Investments</h2>
+                                    <div class="margin25"></div>
+                                    <p>Investments in early stage managers or first funds in return for preferential terms and a share of manager economics. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="datta" class="down" style="display: block;">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="">
+                                <img src="{{ asset('assets/img/pexels-pixabay-414122.jpg') }}" alt="" >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="ml20">
+                                <div class="padding20"></div>
+                                <div class="greenLine"></div>
+                                <div class="">
+                                    <h2>Direct Investments </h2>
+                                    <div class="margin25"></div>
+                                    <p> Investments made directly into businesses or securities.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="co" class="down"  style="display: none;">
-                <div class="row">
-                    <div class="col-md-7 ">
-                        <div class="">
-                            <img src="{{ asset('assets/img/pexels-pixabay-414837.jpg') }}" alt="" >
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class=" ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
-                            <div class="">
-                                <h2> Co-Investments</h2>
-                                <div class="margin25"></div>
-                                <p> Investments made directly into businesses or securities in partnership with a sponsor. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="fund" class="down"  style="display: none;">
-                <div class="row">
-                    <div class="col-md-7 ">
-                        <div class="">
-                            <img src="{{ asset('assets/img/pexels-stephan-seeber-1261728.jpg') }}" alt="" >
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class=" ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
-                            <div class="">
-                                <h2>Fund Investments</h2>
-                                <div class="margin25"></div>
-                                <p> Investments in managers’ multi-client funds; such investments are also known as primary investments. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="secondary" class="down"  style="display: none;">
-                <div class="row">
-                    <div class="col-md-7 ">
-                        <div class="">
-                            <img src="{{ asset('assets/img/Responsibility-success2.webp') }}" alt="" >
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class=" ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
-                            <div class="">
-                                <h2>Secondary Transactions</h2>
-                                <div class="margin25"></div>
-                                <p> Acquired interests in a primary fund after the fund has been at least partially deployed in underlying investments. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="joint" class="down"  style="display: none;">
-                <div class="row">
-                    <div class="col-md-7 ">
-                        <div class="">
-                            <img src="{{ asset('assets/img/about_page/bridge.webp') }}" alt="" >
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class=" ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
-                            <div class="">
-                                <h2>Seed | Joint Venture | Acceleration Investments</h2>
-                                <div class="margin25"></div>
-                                <p>Investments in early stage managers or first funds in return for preferential terms and a share of manager economics. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="datta" class="down" style="display: block;">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="">
-                            <img src="{{ asset('assets/img/pexels-pixabay-414122.jpg') }}" alt="" >
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="ml20">
-                            <div class="margin50"></div>
-                            <div class="greenLine"></div>
-                            <div class="">
-                                <h2>Direct Investments </h2>
-                                <div class="margin25"></div>
-                                <p> Investments made directly into businesses or securities.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
     {{-- <div class="sec4">
@@ -240,7 +243,7 @@
             </div>
         </div>
     </div> --}}
-    <div class="margin70"></div>
+    <div class="margin50"></div>
     <div class="sec5 believe">
         <div class="sec5- ">
             <div class="col-md-8">
