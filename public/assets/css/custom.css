@@ -910,12 +910,13 @@
     color: #fff;
     font-size: 38px;
     font-weight: 600;
-    margin-top: 230px;
+    padding-top: 200px;
     margin-bottom: 15px;
 }
 .infr-bx p {
     color: #fff;
-    padding: 0px 450px 0px 0px;
+    font-size: 20px;
+    /* padding: 0px 450px 0px 0px; */
 }
 
 .infr-bx-a {
@@ -983,20 +984,31 @@
 }
 .hist-con {
     background-color: #fff;
-    padding: 65px;
 }
 .inf-chart {
     margin: 25px 0px;
 }
 
+.width100{
+    width: 100%;
+}
+
 .tari-bx {
     background-color: #fff;
-    padding: 55px 0px;
+    padding: 35px 0px;
 }
+
+.tari-bx p{
+    font-size: 18px;
+}
+.tari-bx .col-lg-6{
+    margin: 10px 0;
+}
+
 .tari-h4 {
     font-size: 44px;
-    font-weight: 600;
-    margin-bottom: 55px;
+    /* font-weight: 600; */
+    margin-bottom: 25px;
 }
 .tari-bxa {
     margin-bottom: 135px;
@@ -1009,15 +1021,13 @@
     padding-left: 65px;
 }
 .tari-bxb {
-    background-color: #8AC0E6;
-    padding: 65px 20px;
-    margin-bottom: 100px;
+    background-color: #EDEDED;
+    padding: 50px 20px;
+    /* margin-bottom: 100px; */
 }
 .tari-bxb h4 {
     font-size: 52px;
-    font-weight: 600;
-    margin-bottom: 65px;
-    padding-left: 25px;
+    margin-bottom: 35px;
 }
 .tari-bxb2m {
     width: 85%;
@@ -1040,7 +1050,7 @@
 .val-h6 {
     font-size: 44px;
     font-weight: 500;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 .val-bx2 img {
     object-fit: cover;
@@ -1057,12 +1067,12 @@
 }
 .last-infra {
     background-image: url('../img/infrastructure/infra-foot.jpg');
-    height: 600px;
+    height: 500px;
     width: 100%;
 }
 .infra-ft h1 {
     color: #fff;
-    font-size: 54px;
+    font-size: 50px;
     padding-right: 65px;
     margin-top: 120px;
 }

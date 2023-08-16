@@ -6,39 +6,45 @@
 
 <div class="margin_60_35">
     <div class="infr-banner">
-        <div class="bg-cover">
-            <div class="container infr-bx">
+        <div class=" bg-cover">
+           <div class="col-md-9">
+            <div class="ml50  infr-bx">
                 <h4>Infrastructure</h4>
                 <p>Our infrastructure team has deep expertise and a history of sourcing proprietary opportunities and executing complex transactions. With the definition of traditional infrastructure evolving significantly, our value-add strategy offers access to the infrastructure assets of the future.</p>
             </div>
+           </div>
         </div>
     </div>
 
     <div class="infr-bx-a">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 infr-bxm">
+                <div class="col-md-4 infr-bxm">
                     <h4>$16bn+</h4>
                     <p>Capital invested in infrastructure assets</p>
                 </div>
 
-                <div class="col-lg-4 infr-bxm">
+                <div class="col-md-4 infr-bxm">
                     <h4>17+ yrs</h4>
                     <p>Investing history</p>
                 </div>
 
-                <div class="col-lg-4 infr-bxm">
+                <div class="col-md-4 infr-bxm">
                     <h4>36+</h4>
                     <p>infrastructure professionals</p>
                 </div>
             </div>
 
             <div class="row cardw">
-                <div class="col-lg-9 cardw-b">
-                    <video src="assets/video/Alternatives - Infrastructure.mp4" id="infr-vid" alt="" />
+                <div class="col-md-9 cardw-b">
+                    <video style="width: 100%; height:420px" controls>
+                        <source src="{{ asset('assets/img/infastructures.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    {{-- <video src="assets/video/infrastructures.mp4" id="infr-vid" alt="" /> --}}
                 </div>
 
-                <div class="col-lg-3 cardw-b bcx">
+                <div class="col-md-3 cardw-b bcx">
                     <span>Video</span>
                     <h6>Our Infrastructure Strategy</h6>
                     <p>We navigate complexity, and leverage the Goldman Sachs franchise, to find and create value.</p>
@@ -71,17 +77,20 @@
 
         </div>
     </div>
-
+   
     <div class="hist-con">
+        <div class="padding20"></div>
         <div class="container">
-            <div class="row">
-                <h5>Infrastructure Opportunities Are Evolving</h5>
+            <div class="">
+                <h2>Infrastructure Opportunities Are Evolving</h2>
 
                 <p>
                     Historically infrastructure was narrowly defined as assets needed for the movement of people and physical goods, with focus on transportation and fossil fuels. This definition has evolved to today include more modern infrastructure, assets that incorporate the delivery of data and services, with a focus on digitization and energy transition. While the type of assets considered to be infrastructure has evolved, the key characteristics of infrastructure have remained more constant -- defensive and contractual cash flows, resiliency through economic cycles, incumbency advantages, and a critical role in society.
                     <br /> 
-                    <img src="assets/img/infrastructure/infrastructure-characteristics-chart-reduced.webp" class="inf-chart" alt="infrastructure" />
+                    <br /> 
+                    <img src="assets/img/infrastructure/infrastructure-characteristics-chart-reduced.webp" class="width100" alt="infrastructure" />
                     <br />
+                    <br /> 
                     As of March, 2023. This information discusses general market activity, industry or sector trends, or other broad-based economic, market or political conditions and should not be construed as research or investment advice. This material has been prepared by Goldman Sachs and is not financial research nor a product of Goldman Sachs Global Investment Research (GIR). It was not prepared in compliance with applicable provisions of law designed to promote the independence of financial analysis and is not subject to a prohibition on trading following the distribution of financial research. The views and opinions expressed may differ from those of Goldman Sachs Global Investment Research or other departments or divisions of Goldman Sachs and its affiliates. Investors are urged to consult with their financial advisors before buying or selling any securities. This information may not be current and Goldman Sachs has no obligation to provide any updates or changes.
                 </p>
             </div>
@@ -93,33 +102,36 @@
             <h4 class="tari-h4">Targeted Investments</h4>
 
             <div class="row">
-                <div class="col-lg-6 tari-bxa">
-                    <img src="assets/img/infrastructure/group_1762x.webp" alt="" />
+                <div class="col-lg-6 ">
+                    <img src="assets/img/infrastructure/group_1762x.webp" alt="" class="width100" />
                 </div>
-                <div class="col-lg-6 tari-bxa">
+                <div class="col-lg-6">
                     <p>
                         Targeted InvestmentsOur experience across market cycles allows us to seek opportunities in the rapidly evolving infrastructure industry. We target essential infrastructure assets and companies with stable cash flow profiles through long-term contracts and high barriers to entry.
                         <br />
+                        <br>
                         We emphasize value creation and enhanced returns through balanced investing across the capital stack and the asset life cycle, including development, construction and operations.
                     </p>
                 </div>
             </div>
         </div>
-
+        <div class="margin60"></div>
         <div class="container tari-bxb">
-            <h4>Infrastructure Opportunities Sectors</h4>
-            <div class="row tari-bxb2m">
-                <div class="col-lg-6 tari-bxb2">
-                    <img src="assets/img/infrastructure/sustainable-infrastructure.webp" alt="" />
-                    <h6>Sustainable Infrastructure</h6>
-                </div>
-                <div class="col-lg-6 tari-bxb2">
-                    <img src="assets/img/infrastructure/infra_power_sector_1st_image.webp" alt="" />
-                    <h6>Climate Infrastructure</h6>
+            <h4 class="ml50"> Infrastructure Opportunities Sectors</h4>
+            <div class="ml100">
+                <div class="row ">
+                    <div class="col-md-6 ">
+                        <img src="assets/img/infrastructure/sustainable-infrastructure.webp" alt="" class="width100" />
+                        <p class="margin15">Sustainable Infrastructure</p>
+                    </div>
+                    <div class="col-md-6 ">
+                        <img src="assets/img/infrastructure/infra_power_sector_1st_image.webp" alt="" class="width100" />
+                        <p class="margin15">Climate Infrastructure</p>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="margin50"></div>
         <div class="container">
             <h6 class="val-h6">Value Proposition</h6>
 
