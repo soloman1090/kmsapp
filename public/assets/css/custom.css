@@ -939,7 +939,6 @@
 .cardw {
     background: #fff;
     border: 1px solid #ffffffdc;
-    height: 430px;
     margin-bottom: 75px;
     margin-top: 15px;
 }
@@ -955,6 +954,14 @@
     font-weight: 500;
     margin-bottom: 20px;
 }
+
+.cardw-b video {
+    height: 410px;
+}
+.cardw-b {
+    height: 420px;
+}
+
 .cardw-b h6 {
     font-size: 20px;
     font-weight: 500;

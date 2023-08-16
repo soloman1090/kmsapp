@@ -36,18 +36,21 @@
             </div>
 
             <div class="row cardw">
-                <div class="col-md-9 cardw-b">
-                    <video style="width: 100%; height:420px" controls>
-                        <source src="{{ asset('assets/img/infastructures.mp4') }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    {{-- <video src="assets/video/infrastructures.mp4" id="infr-vid" alt="" /> --}}
+                <div class="col-md-9 ">
+                    <div class="cardw-b">
+                        <video style="" class="width100" controls>
+                            <source src="{{ asset('assets/img/infastructures.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="col-md-3 cardw-b bcx">
-                    <span>Video</span>
-                    <h6>Our Infrastructure Strategy</h6>
-                    <p>We navigate complexity, and leverage the Goldman Sachs franchise, to find and create value.</p>
+                <div class="col-md-3">
+                    <div class="cardw-b bcx">
+                        <span>Video</span>
+                        <h6>Our Infrastructure Strategy</h6>
+                        <p>We navigate complexity, and leverage the Goldman Sachs franchise, to find and create value.</p>
+                    </div>
                 </div>
             </div>
 
