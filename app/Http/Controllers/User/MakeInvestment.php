@@ -298,7 +298,7 @@ class MakeInvestment extends Controller
                     $invest->active_interest_balance = 0.0;
                     $invest->active = false;
                     $invest->status = "pending";
-                    //$invest->save();
+                    $invest->save();
 
                     return redirect("user/user-investments/" . $invest->id);
                 } else {
@@ -356,7 +356,7 @@ class MakeInvestment extends Controller
                 $invest->duration = $req['duration'];
                 $invest->returns = $creditAmount;
                 $invest->txn_id = "wallet";
-                
+
                 $invest->currency = $req['currency'];
                 $invest->payout = $req['payout'];
                 if ($stacking_end_month != null) {
@@ -367,8 +367,8 @@ class MakeInvestment extends Controller
                 }
                 $invest->available_fund_balance = 0.0;
                 $invest->active_interest_balance = 0.0;
-                $invest->active = true;
-                $invest->status = "completed";
+                $invest->active = false;
+                $invest->status = "pending";
                 $invest->save();
 
                 try{

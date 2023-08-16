@@ -42,15 +42,15 @@
                     <div class="set1">
                         <div class="card mb-3 p-3">
                             <p>Invested Amount</p>
-                            <h1>${{ $investment->formatted_amount }}</h1>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_amount }}</h1>
                         </div>
                         <div class="card mb-3 p-3">
                             <p>Accumulated Income </p>
-                            <h1>${{ $investment->formatted_total_accumulated }}</h1>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_total_accumulated }}</h1>
                         </div>
                         <div class="card mb-3 p-3">
                             <p>Active Funds Balance </p>
-                            <h1>${{ $investment->formatted_available_fund_balance }}</h1>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_available_fund_balance }}</h1>
                         </div>
                     </div>
                 </div>
@@ -58,11 +58,11 @@
                     <div class="set1">
                         <div class="card mb-3 p-3">
                             <p>Active Interest Balance </p>
-                            <h1>${{ $investment->formatted_active_interest_balance }}</h1>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_active_interest_balance }}</h1>
                         </div>
                         <div class="card mb-3 p-3">
                             <p>Total Withdrawn </p>
-                            <h1>${{ $investment->formatted_total_withdawal }}</h1>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_total_withdawal }}</h1>
                         </div>
                         <div class=" mb-3 ">
                            <form action="{{ route('user.withdrawal-request.index') }}" method="GET">
@@ -132,7 +132,7 @@
                         </li>
                         <li>
                             <p class="grey">ROI</p>
-                            <h6> <span class="blue"> ${{ $investment->returns }},</span> <small class="text-muted">Bi Weekly</small></h6>
+                            <h6> <span class="blue"> <b class="tx-20 blue">$</b>{{ $investment->returns }},</span> <small class="text-muted">Bi Weekly</small></h6>
                         </li>
                         <li>
                             <p class="grey">Payout</p>

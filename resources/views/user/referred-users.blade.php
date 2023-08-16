@@ -49,13 +49,13 @@ border-top-right-radius: 10px;" >
     </div>
     <div class="col">
         <div class="text-center m-2">
-            <span class="badge badge-outline-primary"><b>Referal Link: </b> <span class="badge  badge-soft-primary p-3"> https://Dell Group.com/register/?refer={{ $referral_code }} </span></span>
-            <input id="refereee" class="form-control" placeholder="show here" />
+            <span class="badge badge-outline-primary"><b>Referal Link: </b> <span class="badge  badge-soft-primary p-3 text-dark"> https://DellGroup.com/register/?refer={{ $referral_code }} </span></span>
+            <input id="refereee" type="hidden" class="form-control" placeholder="show here" />
         </div>
     </div>
     <div class="col-auto">
         <div class="text-center m-2">
-            <a class="btn btn-primary" id="referralLink" href="#" referral_id="{{ $referral_code }}">Copy Referral Link</a>
+            <a class="btn btn-primary" id="referralLink" href="#" referral_id="{{ $referral_code }}">Get Community Link</a>
         </div>
     </div>
 </div>
@@ -63,7 +63,7 @@ border-top-right-radius: 10px;" >
 
 <div class="card">
     <div class="card-body">
-        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+        <table id="example1" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
             <thead class="bg-dark text-white">
                 <tr>
                     <th class="text-white">S/N</th>

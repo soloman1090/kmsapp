@@ -11,15 +11,15 @@
     </div>
 </div>
 <div class="card">
-    <img src="{{ asset('user-assets/images/widgets/active_investment.jpg') }}" alt="" style="width: 100%;border-top-left-radius: 5px;
-        border-top-right-radius: 5px;">
-    <br><br>
+   
     <div class="card-header">
         <h4 class="card-title">My Portfolios</h4>
     </div>
     <!--end card-header-->
     <div class="card-body ">
-        <div class="row">
+        <img src="{{ asset('user-assets/images/widgets/active_investment.jpg') }}" alt="" style="width: 100%;border-top-left-radius: 5px;
+        border-top-right-radius: 5px;">
+        {{-- <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10 video-bg">
                 <video style="width: 100%; height:450px" poster="{{ asset('assets/images/Header/video-bg.jpg') }}" controls>
@@ -28,7 +28,7 @@
                 </video>
             </div>
             <div class="col-md-1"></div>
-        </div>
+        </div> --}}
         <br>
         @if (count($investments) == 0)
         <div class="text-center">
@@ -108,22 +108,22 @@
                         <div class="row mt-4 d-flex align-items-center">
                             <div class="col">
                                 {{-- <h5 class="font-22 m-0 fw-bold">${{ $invest->amount }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{ number_format($invest->amount,2) }}</h5>
+                                <h4 class="font-14 m-0 fw-bold"><b class="tx-30">$</b>{{ number_format($invest->amount,2) }}</h4>
                                 <p class="mb-0 text-muted">Investment Amount</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">(ROI) ${{ $invest->returns }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{  number_format($invest->returns*$invest->days,2) }}</h5>
+                                <h4 class="font-14 m-0 fw-bold"><b class="tx-30">$</b>{{  number_format($invest->returns*$invest->days,2) }}</h4>
                                 <p class="mb-0 text-muted">Total Accumulated</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-20 m-0 fw-bold">{{ $invest->payout }}</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{ $invest->formatted_available_fund_balance }}</h5>
+                                <h4 class="font-14 m-0 fw-bold"><b class="tx-30">$</b>{{ $invest->formatted_available_fund_balance }}</h4>
                                 <p class="mb-0 text-muted">Active Funds</p>
                             </div>
                             <div class="col">
                                 {{-- <h5 class="font-18 m-0 fw-bold">{{ $invest->duration }} Months</h5> --}}
-                                <h5 class="font-14 m-0 fw-bold">${{ $invest->formatted_active_interest_balance }} </h5>
+                                <h4 class="font-14 m-0 fw-bold"><b class="tx-30">$</b>{{ $invest->formatted_active_interest_balance }} </h4>
                                 <p class="mb-0 text-muted">Active Interest Funds</p>
                             </div>
                             {{-- <div class="col">

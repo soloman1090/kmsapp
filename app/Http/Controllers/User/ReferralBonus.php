@@ -30,6 +30,11 @@ class ReferralBonus extends Controller
         ->orderBy('activities.id','DESC')
         ->get();
 
-        return view('user.referral-bonus',['user'=>$user, 'user_id'=>$id, 'bonus'=> $userBonus, 'page_title'=>"Members Benefit Commissions", 'username'=>$user->name,'referral_code'=>$user->referalcode,]);
+        $totalBonus=0.00;
+        foreach ($userBonus as $key => $value) {
+            $totalBonus=$totalBonus+ $value->amount;
+        }
+
+        return view('user.referral-bonus',['user'=>$user, 'user_id'=>$id,"totalBonus"=>$totalBonus, 'bonus'=> $userBonus, 'page_title'=>"Members Benefit Commissions", 'username'=>$user->name,'referral_code'=>$user->referalcode,]);
     }
 }

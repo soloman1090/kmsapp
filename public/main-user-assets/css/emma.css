@@ -257,6 +257,10 @@ header .nav:hover {
   padding: 30px;
   color: white;
 }
+.tooltip-size{
+  width: 16px !important;
+  stroke: #0168fa !important;
+}
 .Investment .set1 h1 {
   font-size: 26px;
 }

@@ -74,10 +74,10 @@ border-top-right-radius: 10px;">
                         </ul>
                         <div class=" row ">
                             <div class="col-md-3 text-center" style="border-right: 1px solid black">
-                                <h4 class="amount">$ {{ $pack['formatted_min'] }}<br> <small style="font-size: 14px" class="text-muted">Min Investment</small> </h4>
+                                <h4 class="amount"><b class="tx-30">$</b> {{ $pack['formatted_min'] }}<br> <small style="font-size: 14px" class="text-muted">Min Investment</small> </h4>
                             </div>
                             <div class="col-md-3 text-center" style="border-right: 1px solid black">
-                                <h4 class="amount ">$ {{ $pack['formatted_max'] }}<br> <small style="font-size: 14px" class="text-muted">Max Investment</small> </h4>
+                                <h4 class="amount "><b class="tx-30">$</b> {{ $pack['formatted_max'] }}<br> <small style="font-size: 14px" class="text-muted">Max Investment</small> </h4>
                             </div>
                             <div class="col-md-3 " style="border-right: 1px solid black">
                                 <div class="text-center">

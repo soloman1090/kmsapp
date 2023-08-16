@@ -447,5 +447,33 @@
       });
   
   </script>
+
+  <script>
+    $(function(){
+      'use strict'
+
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+      $('.df-example .btn-primary').tooltip({
+        template: '<div class="tooltip tooltip-primary" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-secondary').tooltip({
+        template: '<div class="tooltip tooltip-secondary" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-success').tooltip({
+        template: '<div class="tooltip tooltip-success" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-danger').tooltip({
+        template: '<div class="tooltip tooltip-danger" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+
+    });
+  </script>
   </body>
 </html>
