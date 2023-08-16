@@ -1177,7 +1177,7 @@
         width: 400px;
         transition: 0.5s linear;
 
-        .down {
+        .downed {
             display: block !important;
             transition: 0.5s linear;
         }
@@ -1198,7 +1198,7 @@
     flex-wrap: wrap;
 }
 
-.down {
+.downed {
     display: none;
     padding: 15px;
     position: absolute;
@@ -1222,6 +1222,9 @@
     svg:nth-child(2) {
         display: none;
     }
+}
+.heighttable{
+    height: 350px;
 }
 
 @media only screen and (max-width: 500px) {
