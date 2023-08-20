@@ -54,7 +54,6 @@
                         <div class="col-md-6">
                             <h2>Fill the form below to purchase investment</h2>
                             <div class="row">
-        
                                 <div class="form-group col-md-12">
                                     <label>Choose Gateway <i data-feather="alert-circle" class="tooltip-size text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Need to work on this for now, use this"></i></label>
                                     <select class="form-select" id="gateway" name="payment_method" required>

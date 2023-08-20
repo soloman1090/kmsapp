@@ -254,57 +254,62 @@
         </div>
     </div>
     <div class="margin60">
-        <div data-label="Example" class="df-example demo-table">
-            <div class="table-responsive">
-                <table class="table table-striped mg-b-0" id="example1">
-                    <thead class="thead-secondary">
-                        <tr>
-                            <th scope="col">S\N</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Value</th>
-                            <th scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                         
-                            @foreach ($activities as $key =>$act)
-                             
-                            <tr>
-                                <td>{{ $key }}</td>
-                                <td>{{ $act->title }}</td>
-                                <td>{{ $act->descp }}</td>
-                                <td>{{ $act->date }}</td>
-                                <td>${{ $act->amount }}</td>
-                                @if ($act->category == 'earning' || $act->category == 'bonus')
-                                <td> <span class="bg-success p-1 font-10 text-white">CREDITED</span>
-                                </td>
-                                @elseif ($act->category == 'withdrawals')
-                                <td> <span class="bg-danger p-1 font-10 text-white">WITHDRAWAL</span>
-                                </td>
-
-                                @elseif ($act->category == 'deposit')
-                                <td> <span class="bg-primary p-1 font-10 text-white">DEPOSIT</span>
-                                </td>
-                                @elseif ($act->category == 'expired')
-                                <td> <span class="bg-danger p-1 font-10 text-white">EXPIRED</span>
-                                </td>
-                                @elseif ($act->category == 'error')
-                                <td> <span class="bg-danger p-1 font-10 text-white">ERROR</span>
-                                </td>
-                                @elseif ($act->category == 'cancelled')
-                                <td> <span class="bg-danger p-1 font-10 text-white">CANCELLED</span>
-                                </td>
-                                @endif
-                            </tr>
-                             
-                            @endforeach
-                    </tbody>
-                </table>
-            </div><!-- table-responsive -->
-        </div>
-    </div>
+            <div class="card">
+                <div class="card-header">
+                    <h4>Portfolio Activities</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-border " id="example1">
+                            <thead class="thead-secondary">
+                                <tr>
+                                    <th scope="col">S\N</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Message</th>
+                                    <th scope="col">Date Of Activty</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 
+                                    @foreach ($activities as $key =>$act)
+                                     
+                                    <tr>
+                                        <td>{{ $key }}</td>
+                                        <td>{{ $act->title }}</td>
+                                        <td>{{ $act->descp }}</td>
+                                        <td>{{ $act->date }}</td>
+                                        <td>${{ $act->amount }}</td>
+                                        @if ($act->category == 'earning' || $act->category == 'bonus')
+                                        <td> <span class=" p-1 font-10 text-success">CREDITED</span>
+                                        </td>
+                                        @elseif ($act->category == 'withdrawals')
+                                        <td> <span class=" p-1 font-10 text-danger">WITHDRAWAL</span>
+                                        </td>
+        
+                                        @elseif ($act->category == 'deposit')
+                                        <td> <span class=" p-1 font-10 text-primary">DEPOSIT</span>
+                                        </td>
+                                        @elseif ($act->category == 'expired')
+                                        <td> <span class=" p-1 font-10 text-danger">EXPIRED</span>
+                                        </td>
+                                        @elseif ($act->category == 'error')
+                                        <td> <span class="p-1 font-10 text-danger">ERROR</span>
+                                        </td>
+                                        @elseif ($act->category == 'cancelled')
+                                        <td> <span class=" p-1 font-10 text-danger">CANCELLED</span>
+                                        </td>
+                                        @endif
+                                    </tr>
+                                     
+                                    @endforeach
+                            </tbody>
+                        </table>
+                    </div><!-- table-responsive -->
+                </div>
+            </div>
+     </div>
 
     
 </div>

@@ -238,19 +238,29 @@
         </div> -->
         <div class="dropdown dropdown-profile">
           <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-display="static">
-            <div class="avatar avatar-sm"><img src="https://placehold.co/387" class="rounded-circle" alt=""></div>
+            <div class="avatar avatar-sm">
+              @if ($user->image=="" || $user->image==null)
+              <img src="https://placehold.co/387" class="rounded-circle" alt="">
+               @else
+               <img src="{{ asset('uploads/'.$user->image ) }}" class="rounded-circle" alt="">
+               @endif
+            </div>
           </a><!-- dropdown-link -->
           <div class="dropdown-menu dropdown-menu-end tx-13">
-            <div class="avatar avatar-lg mg-b-15"><img src="https://placehold.co/387" class="rounded-circle" alt=""></div>
-            <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
-            <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
-
-            <a href="profile" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
-            <a href="profile" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+            <div class="avatar avatar-lg mg-b-15">
+              @if ($user->image=="" || $user->image==null)
+              <img src="https://placehold.co/387" class="rounded-circle" alt="">
+               @else
+               <img src="{{ asset('uploads/'.$user->image ) }}" class="rounded-circle" alt="">
+               @endif
+             
+            </div>
+            <h6 class="tx-semibold mg-b-5">{{ auth()->user()->name }} {{ $user->last_name }}</h6>
+ 
+             <a href="profile" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
             <div class="dropdown-divider"></div>
             <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
-            <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
-            <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+             <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
           </div><!-- dropdown-menu -->
         </div><!-- dropdown -->
       </div><!-- navbar-right -->
@@ -383,6 +393,22 @@
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="{{asset('main-user-assets/lib/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('main-user-assets/js/skippr.min.js') }}"></script>
+<script>
+    $("#newsSlider").skippr({
+        transition: 'slide',
+        speed: 1000,
+        easing: 'easeOutQuart',
+        navType: '',
+        childrenElementType: 'div',
+        arrows: false,
+        autoPlay: true,
+        autoPlayDuration: 5000,
+        keyboardOnAlways: true,
+        hidePrevious: false
+
+        });
+</script>
     <script src="{{asset('main-user-assets/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/feather-icons/feather.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/ionicons/ionicons/ionicons.esm.js')}}" type="module"></script>

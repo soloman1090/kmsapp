@@ -70,8 +70,17 @@ class UsersInvestmentsView extends Controller
                  'user_investments.active', 
                  'user_investments.status', 'user_investments.txn_id', 'user_investments.wallet_id', 'investment_packages.image',]);
 
-        
+        $hasPendingOnvestment=false;
+        $totalPending=0;
+        $totalCompleted=0;
         foreach($investments as $key => $invest) {
+            if($invest->status=="pending"){
+                $totalPending=$totalPending+1;
+                $hasPendingOnvestment=true;
+            }
+            if($invest->status=="completed" || $invest->status=="pending_reinvest"){
+                $totalCompleted=$totalCompleted+1;
+             }
             $d1 = strtotime(Carbon::now()->toDayDateTimeString());
                 $d2 = strtotime($invest->end_date);
                 $totalSecondsDiff = abs($d1 - $d2);
@@ -81,6 +90,7 @@ class UsersInvestmentsView extends Controller
                     if ($totalDaysDiff < 100) {
                         $dayLeft = $totalDaysDiff;
                     }
+                    
                     $invest->days=$totalDaysDiff;
                     $invest->daysLeft=$dayLeft;
 
@@ -89,7 +99,7 @@ class UsersInvestmentsView extends Controller
             $invest->formatted_active_interest_balance = number_format($invest->active_interest_balance,2);
         }
 
-        return view('user.user-investments', ['user' => $user, 'user_id' => $id, 'page_title' => "All Active Investment", 'investments' => $investments, 'username' => $user->name]);
+        return view('user.user-investments', ['user' => $user, "totalCompleted"=>$totalCompleted, "totalPending"=>$totalPending, "hasPendinginvestment"=> $hasPendingOnvestment, 'user_id' => $id, 'page_title' => "All Active Investment", 'investments' => $investments, 'username' => $user->name]);
     }
 
     public function show($id, Request $req)
