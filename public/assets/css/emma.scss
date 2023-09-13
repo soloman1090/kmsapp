@@ -1181,11 +1181,13 @@
             display: block !important;
             transition: 0.5s linear;
         }
+
         .arrorSvg {
-        
+
             svg:nth-child(2) {
                 display: block;
             }
+
             svg:nth-child(1) {
                 display: none;
             }
@@ -1223,23 +1225,24 @@
         display: none;
     }
 }
-.heighttable{
+
+.heighttable {
     height: 350px;
 }
 
 @media only screen and (max-width: 500px) {
 
     .sec4-box {
-    
+
         &:hover {
             height: 530px !important;
             width: 350px !important;
         }
     }
 
-    .last-infra{
-       
-        h1{
+    .last-infra {
+
+        h1 {
             font-size: 35px !important;
             margin-top: 90px !important;
         }
@@ -1758,5 +1761,180 @@
 
     .heights {
         height: 700px;
+    }
+}
+
+//////NEW
+.ban1 {
+    padding-top: 50px;
+    background-image: url(../img/credit/bams.png);
+    background-color: #0F3557;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+
+    .textts {
+        align-items: center;
+        text-align: center;
+        width: 75%;
+
+        span {
+            color: white;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+        }
+    }
+}
+
+.ban2 {
+    background-color: #EDEDED;
+
+    .tett {
+        align-items: center;
+        text-align: center;
+        width: 60%;
+
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    .overflowing {
+        padding-right: 50px;
+        height: 550px;
+        overflow-y: scroll;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .overflowing::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .overflowing {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+.ban3{
+    .track{
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    .rowww{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        h1{
+            font-size: 50px;
+            margin: 0;
+        }
+    }
+}
+
+.ban4{
+    background-color: #123a5f;
+    h1,p,span,h2,li,h3{
+        color: white !important;
+    }
+    ul{
+        margin-left: 20px;
+    }
+    .scale{
+        width: 80%;
+    }
+    .strat{
+        width: 80%;
+        text-align: left !important;
+    }
+    
+    .waypoint{
+        border: 1px solid white;
+        padding: 30px;
+        border-radius: 20px;
+        p{
+            font-size: 18px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        img{
+            width: 100%;
+        }
+        .col-md-6{
+            margin-bottom: 15px;
+        }
+    }
+    .logos{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        div{
+            margin: 20px 0; 
+            img{
+                width: 50%;
+            }
+        }
+    }
+    .col-md-7{
+        p{
+            font-size: 20px;
+        }
+    }
+    p{b{font-size:30px;}}
+}
+
+@media only screen and (max-width: 1200px) {
+    .ban1 {
+        height: 600px !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .ban1 {
+        height: 700px !important;
+
+        .textts {
+            width: 95% !important;
+
+            .margin100 {
+                margin: 50px !important;
+            }
+
+            span {
+                font-size: 18px !important;
+            }
+
+            h1 {
+                font-size: 40px !important;
+            }
+
+            p {
+                font-size: 18px !important;
+            }
+        }
+    }
+
+    .ban2 {
+        .tett {
+            width: 90% !important;
+        }
     }
 }

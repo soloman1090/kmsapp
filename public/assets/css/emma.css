@@ -1411,4 +1411,154 @@
 }
 .section_two_about_divs .heights {
   height: 700px;
+}
+
+.ban1 {
+  padding-top: 50px;
+  background-image: url(../img/credit/bams.png);
+  background-color: #0F3557;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+.ban1 .textts {
+  align-items: center;
+  text-align: center;
+  width: 75%;
+}
+.ban1 .textts span {
+  color: white;
+  font-size: 20px;
+}
+.ban1 .textts h1 {
+  color: white;
+  font-size: 50px;
+}
+.ban1 .textts p {
+  color: white;
+  font-size: 20px;
+}
+
+.ban2 {
+  background-color: #EDEDED;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
+.ban2 .tett {
+  align-items: center;
+  text-align: center;
+  width: 60%;
+}
+.ban2 .tett h1 {
+  font-size: 45px;
+}
+.ban2 .overflowing {
+  padding-right: 50px;
+  height: 550px;
+  overflow-y: scroll;
+}
+.ban2 .overflowing::-webkit-scrollbar {
+  display: none;
+}
+.ban2 .overflowing {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.ban3 .track {
+  width: 70%;
+  margin-bottom: 40px;
+}
+.ban3 .rowww {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.ban3 .rowww h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.ban4 {
+  background-color: #123a5f;
+}
+.ban4 h1, .ban4 p, .ban4 span, .ban4 h2, .ban4 li, .ban4 h3 {
+  color: white !important;
+}
+.ban4 ul {
+  margin-left: 20px;
+}
+.ban4 .scale {
+  width: 80%;
+}
+.ban4 .strat {
+  width: 80%;
+  text-align: left !important;
+}
+.ban4 .waypoint {
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 20px;
+}
+.ban4 .waypoint p {
+  font-size: 18px;
+}
+.ban4 .waypoint h1 {
+  font-size: 40px;
+}
+.ban4 .waypoint img {
+  width: 100%;
+}
+.ban4 .waypoint .col-md-6 {
+  margin-bottom: 15px;
+}
+.ban4 .logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ban4 .logos div {
+  margin: 20px 0;
+}
+.ban4 .logos div img {
+  width: 50%;
+}
+.ban4 .col-md-7 p {
+  font-size: 20px;
+}
+.ban4 p b {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .ban1 {
+    height: 600px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ban1 {
+    height: 700px !important;
+  }
+  .ban1 .textts {
+    width: 95% !important;
+  }
+  .ban1 .textts .margin100 {
+    margin: 50px !important;
+  }
+  .ban1 .textts span {
+    font-size: 18px !important;
+  }
+  .ban1 .textts h1 {
+    font-size: 40px !important;
+  }
+  .ban1 .textts p {
+    font-size: 18px !important;
+  }
+  .ban2 .tett {
+    width: 90% !important;
+  }
 }/*# sourceMappingURL=emma.css.map */

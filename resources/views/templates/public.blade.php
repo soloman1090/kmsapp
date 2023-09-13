@@ -349,7 +349,8 @@
 
     <!-- BOOSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <!-- COMMON SCRIPTS -->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     {{-- <script src="assets/js/jquery-2.2.4.min.js"></script> --}}
@@ -361,7 +362,6 @@
     <script src="assets/js/emma.js"></script>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
     <!-- LayerSlider script files -->
     <script src="assets/layerslider/js/greensock.js"></script>
     <script src="assets/layerslider/js/layerslider.transitions.js"></script>
