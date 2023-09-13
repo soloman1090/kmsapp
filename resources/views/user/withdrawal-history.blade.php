@@ -1,14 +1,25 @@
 @extends('templates.main-user')
 
 @section('content')
- 
+<div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="/user/withdrawal-history">Withdrawals</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div class="card">
+    <div class="card-header">
+        <h4>{{ $page_title }}</h4>
+    </div>
     <img src="{{ asset('user-assets/images/widgets/withdrawal.jpg') }}" alt="" style="width: 100%; border-top-left-radius: 10px;
     border-top-right-radius: 10px;" >
-    <br><br>
     <div class="card-body">
        
-        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+        <table id="example1" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
             <thead class="bg-dark text-white">
                 <tr>
                     <th class="text-white">S/N</th>
@@ -38,7 +49,7 @@
                     {{-- <td>${{ $req['charge'] }}</td>
                     <td>${{ $req['amount_credited'] }}</td> --}}
                     <td>{{ $req['wallet_address'] }}</td>
-                    <td>{{ $req['wallet_type'] }}</td>
+                    <td>{{ $req['formatted_wallet_type'] }}</td>
 
                     @if ($req['approved']==true)
                     <td > <span class="badge bg-success">Aproved</span></td>

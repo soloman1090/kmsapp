@@ -101,7 +101,7 @@ class ReloadWallets extends Controller
                             $userInfo->main_wallet=$userInfo->main_wallet - $activity->amount;
                           }else{
                             $userInfo->compound_wallet=$userInfo->compound_wallet - $activity->amount;
-                            echo "\n Compound Wallet \n";
+                            echo "\n Active Interest Funds \n";
                           }
                           $userInfo->update();
                       }

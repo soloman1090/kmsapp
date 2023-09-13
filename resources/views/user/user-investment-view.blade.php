@@ -1,59 +1,90 @@
 @extends('templates.main-user')
 @section('content')
+<div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item " aria-current="page"><a href="/user/user-investments">Portfolios</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $investment->package->name  }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div class="card">
     <img src="{{ asset('user-assets/images/widgets/active_investment.jpg') }}" alt="" style="width: 100%;border-top-left-radius: 5px;
         border-top-right-radius: 5px;">
-    <br><br>
+        
     <div class="card-header">
-        <h4 class="card-title">My Investments</h4>
+        <div class="row">
+            <div class="col-md">
+                <h4 class="card-title">My Investments </h4>
+            </div>
+            @if($investment->status == 'pending_reinvest')
+                <div class="col-md-auto">
+                    <a href="{{ route('user.user-investments.show',$investment->id) }}" target="_blank" class="btn btn-sm btn-warning  px-4">Confirm Reinvestment</a>
+                </div>
+            @endif
+             
+        </div>
 
     </div>
 
-<div class="container">
-    <div class="Investment margin60">
-        <div class="row">
-            <div class="col-md-5 ">
-                <div class="moon" style="background-image: url({{ asset('uploads/'.$investment->package->image) }})">
-                    <h1>{{ $investment->package->name  }}</h1>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="set1">
-                    <div class="card mb-3 p-3">
-                        <p>Investment Amount</p>
-                        <h1>${{ $investment->amount }}</h1>
-                    </div>
-                    <div class="card mb-3 p-3">
-                        <p>Total Accumulated </p>
-                        <h1>$32,432</h1>
-                    </div>
-                    <div class="card mb-3 p-3">
-                        <p>Portfolio Wallet </p>
-                        <h1> $3,223</h1>
+    <div class="container">
+        <div class="Investment margin20">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="moon" style="background-image: url({{ asset('uploads/'.$investment->package->image) }})">
+                        <h1>{{ $investment->package->name  }}</h1>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="set1">
-                    <div class="card mb-3 p-3">
-                        <p>Compound Wallet </p>
-                        <h1>$3,434</h1>
+                 <div class="col-md-3">
+                    <div class="set1">
+                        <div class="card mb-3 p-3">
+                            <p>Invested Amount</p>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_amount }}</h1>
+                        </div>
+                        <div class="card mb-3 p-3">
+                            <p>Accumulated Income </p>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_total_accumulated }}</h1>
+                        </div>
+                        <div class="card mb-3 p-3">
+                            <p>Active Funds Balance </p>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_available_fund_balance }}</h1>
+                        </div>
                     </div>
-                    <div class="card mb-3 p-3">
-                        <p>Total Withdrawn  </p>
-                        <h1>$32,432</h1>
-                    </div>
-                    <div class=" mb-3 ">
-                        <button class="btn btn-brand-02 w-100 mb-2">
-                            Make Withdrawal
-                        </button>
-                        <button class="btn btn-brand-02 w-100 ">
-                            Inter Account Transfer
-                        </button>
-                        {{-- <div class="col-3">
+                </div>
+                <div class="col-md-3">
+                    <div class="set1">
+                        <div class="card mb-3 p-3">
+                            <p>Active Interest Balance </p>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_active_interest_balance }}</h1>
+                        </div>
+                        <div class="card mb-3 p-3">
+                            <p>Total Withdrawn </p>
+                            <h1><b class="tx-30">$</b>{{ $investment->formatted_total_withdawal }}</h1>
+                        </div>
+                        <div class=" mb-3 ">
+                           <form action="{{ route('user.withdrawal-request.index') }}" method="GET">
+                            @csrf
+                            <input type="hidden" name="investment_id" value="{{ $investment->id }}<">
+                            <button class="btn btn-brand-02 w-100 mb-2">
+                                Make Withdrawal <i class="bi bi-wallet2 text-white"></i>
+                            </button>
+                           </form>
+
+                           <form action="{{ route('user.transfer.index') }}" method="GET">
+                            @csrf
+                            <input type="hidden" name="investment_id" value="{{ $investment->id }}<">
+                            <button class="btn btn-brand-02 w-100 ">
+                                Inter Account Transfer <i class="bi bi-send text-white"></i>
+                            </button>
+                           </form>
+                           
+                            {{-- <div class="col-3">
                                 <a href="#" class="accordion-button collapsed shadow-none  px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ $invest->investment_id }}" aria-expanded="false" aria-controls="collapseTwo{{ $invest->investment_id }}">More Details</a>
-                            </div> --}}
-                        
+                        </div> --}}
+
                     </div>
                 </div>
             </div>
@@ -63,164 +94,243 @@
             <div class="mb-4"></div>
             <p>A growth portfolio providing access to selected top-tier growth equity and VC funds</p>
         </div>
-        {{-- <div id="collapseTwo{{ $invest->investment_id }}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample-faq">
-            <div class="card m-3">
-                <div class="accordion-body">
-                    <div class="card-body ">
-                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap " style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead class="bg-dark text-white">
+ 
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card p-3">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md">
+                            <h4>Portfolio Summary</h4>
+                        </div>
+                        <div class="col-md">
+                            <div class="c100 p{{ $investment->daysLeft }} small mt-2 ">
+                                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="{{ $investment->days }}" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: {{ $investment->days }}%"></div>
+                                </div>
+                                <div class="slice">
+                                    <div class="bar"></div>
+                                    <div class="fill"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <div class="right mt-1">
+                                <h6 class="mb-0 text-muted"> {{ $investment->days }} Days Left</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="set3">
+
+                    <br>
+                    <ul>
+                        <li class="up">
+                            <p><span class="greendot me-2"></span> INVESTMENT NAME</p>
+                            <p> <span class="blue"> {{ $package->name }} </span> </p>
+                        </li>
+                        <li>
+                            <p class="grey">ROI</p>
+                            <h6> <span class="blue"> <b class="tx-20 blue">$</b>{{ $investment->returns }},</span> <small class="text-muted">Bi Weekly</small></h6>
+                        </li>
+                        <li>
+                            <p class="grey">Payout</p>
+                            <h6> {{ $investment->formatted_payout }}</h6>
+                        </li>
+
+                        <li>
+                            <p class="grey">Next Earning Date</p>
+                            <h6> {{ $investment->formatted_next_earn_date }}</h6>
+                        </li>
+
+
+                        @if($investment->compound_status==true )
+                        <li>
+                            <p class="grey">Stacking Status</p>
+                            <h6> {{ $investment->end_date }}</h6>
+                        </li>
+                        <li>
+                            <p class="grey">Stacking End Date</p>
+                            <h6> {{ $investment->compound_end_date }}</h6>
+                        </li>
+                        @endif
+
+                        @if ($investment->payout=="diverse_stacking_interest")
+                        <li>
+                            <p>Diverse Ration</p>
+                            <h6> {{ $package->diverse_taken_percentage*100 }}%-(AIB)...........{{ 100-$package->diverse_taken_percentage*100 }}%-(AFB)</h6>
+                        </li>
+                        @endif
+
+                        <li>
+                            <p class="text-danger">Portfolio Expiration Date</p>
+                            <h6> {{ $investment->end_date }}</h6>
+                        </li>
+
+                    </ul>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#">
+                                <button class="withbackbtn mb-3">
+                                    <i class="bi bi-arrow-clockwise text-white"></i>
+                                    Reinitiate Investment
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#">
+                                <button class="withbackbtn btn-outline-primary mb-3 ">
+                                    <i class="bi bi-arrow-clockwise text-white"></i>
+                                    Capital Call
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card p-3">
+                <div class="card-header">
+                    <h4>Make Reinvestment</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('user.reinvest.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="investment_id" value="{{ $investment->id  }}">
+                        <input type="hidden" name="page_url" value="/user/user-investments/{{ $investment->id }}/edit">
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <label>Choose Gateway</label>
+                                <select class="form-select" id="gateway" name="payment_method" required>
+                                    <option value="">Select Gate Way</option>
+                                    <option value="direct_deposit">Direct Deposit</option>
+                                    <option value="available_funds">Active Funds Balance</option>
+                                    <option value="active_interest">Active Interest Balance</option>
+                                    <option value="referral_commission">Referral Commission</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12" id="currency">
+                                <label for="currency">Currency</label>
+                                <select name="currency" class="form-control" id="currency_drop" required>
+                                    <option value="">Select Currency</option>
+                                    <option value="USDTTRC20">Tether USD TRC20 (USDTTRC20)</option>
+                                    <option value="BTC">Bitcoin (BTC)</option>
+                                    <option value="BCH">Bitcoin Cash (BCH)</option>
+                                    <option value="ETH">Ethereum (ETH)</option>
+                                    <option value="USDTERC20">Tether USD ERC20 (USDTERC20)</option>
+                                    <option value="LTC">Litecoin (LTC)</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail4">What amount would you like to add </label>
+                                <input type="number" class="form-control" id="inputEmail4" name="amount" placeholder="Enter Amount" required>
+                            </div>
+
+                            <div class="col-md-12">
+
+                                <button type="submit" class="btn btn-primary w-100"> Proceeed</button>
+
+                            </div>
+                        </div>
+
+                        {{-- <center> --}}
+
+
+
+                        {{-- </center> --}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin60">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Portfolio Activities</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-border " id="example1">
+                            <thead class="thead-secondary">
                                 <tr>
-                                    <th class="text-white">S/N</th>
-                                    <th class="text-white">Action</th>
-                                    <th class="text-white">Date</th>
-                                    <th class="text-white">Amount</th>
-                                    <th class="text-white">Status </th>
+                                    <th scope="col">S\N</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Message</th>
+                                    <th scope="col">Date Of Activty</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Category</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($activities as $key =>$act)
-                                @if ($invest->investment_id == $act->user_investments_id)
-                                <tr>
-                                    <td>{{ $key }}</td>
-                                    <td>{{ $act->title }}</td>
-                                    <td>{{ $act->date }}</td>
-                                    <td>${{ $act->amount }}</td>
-                                    @if ($act->category == 'earning' || $act->category == 'bonus')
-                                    <td> <span class="bg-success p-1 font-10 text-white">CREDITED</span>
-                                    </td>
-                                    @elseif ($act->category == 'withdrawals')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">WITHDRAWAL</span>
-                                    </td>
-
-                                    @elseif ($act->category == 'deposit')
-                                    <td> <span class="bg-primary p-1 font-10 text-white">DEPOSIT</span>
-                                    </td>
-                                    @elseif ($act->category == 'expired')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">EXPIRED</span>
-                                    </td>
-                                    @elseif ($act->category == 'error')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">ERROR</span>
-                                    </td>
-                                    @elseif ($act->category == 'cancelled')
-                                    <td> <span class="bg-danger p-1 font-10 text-white">CANCELLED</span>
-                                    </td>
-                                    @endif
-                                </tr>
-                                @endif
-                                @endforeach
+                                 
+                                    @foreach ($activities as $key =>$act)
+                                     
+                                    <tr>
+                                        <td>{{ $key }}</td>
+                                        <td>{{ $act->title }}</td>
+                                        <td>{{ $act->descp }}</td>
+                                        <td>{{ $act->date }}</td>
+                                        <td>${{ $act->amount }}</td>
+                                        @if ($act->category == 'earning' || $act->category == 'bonus')
+                                        <td> <span class=" p-1 font-10 text-success">CREDITED</span>
+                                        </td>
+                                        @elseif ($act->category == 'withdrawals')
+                                        <td> <span class=" p-1 font-10 text-danger">WITHDRAWAL</span>
+                                        </td>
+        
+                                        @elseif ($act->category == 'deposit')
+                                        <td> <span class=" p-1 font-10 text-primary">DEPOSIT</span>
+                                        </td>
+                                        @elseif ($act->category == 'expired')
+                                        <td> <span class=" p-1 font-10 text-danger">EXPIRED</span>
+                                        </td>
+                                        @elseif ($act->category == 'error')
+                                        <td> <span class="p-1 font-10 text-danger">ERROR</span>
+                                        </td>
+                                        @elseif ($act->category == 'cancelled')
+                                        <td> <span class=" p-1 font-10 text-danger">CANCELLED</span>
+                                        </td>
+                                        @endif
+                                    </tr>
+                                     
+                                    @endforeach
                             </tbody>
-
                         </table>
-                    </div>
+                    </div><!-- table-responsive -->
                 </div>
             </div>
-        </div> --}}
-        <div class="col-md-8">
-            <div class="card p-3">
-                <div class="set3">
-                    <ul>
-                        <li class="up">
-                            <p ><span class="greendot me-2"></span> IN FINAL CLOSE</p>
-                            <p> <span class="blue">INVESTMENT PROCESS</span> </p>
-                        </li>
-                        <li>
-                            <p class="grey">Strategy</p>
-                            <p> <span class="blue"> Growth Equity,</span> Portfolio</p>
-                        </li>
-                        <li>
-                            <p class="grey">Geography</p>
-                            <p>Global</p>
-                        </li>
-                        <li>
-                            <p class="grey">Fund Lifetime</p>
-                            <p> <span class="blue"> >12 years </span></p>
-                        </li>
-                        <li>
-                            <p class="grey">Investment Period</p>
-                            <p>Up to 2 years</p>
-                        </li>
-                        <li>
-                            <p class="grey"># of Investments</p>
-                            <p>~ 150</p>
-                        </li>
-                        <li>
-                            <p class="grey">Closing date</p>
-                            <p>Q4 2022</p>
-                        </li>
-                        <li>
-                            <p class="grey">Min. Investment</p>
-                            <p>$60,000</p>
-                        </li>
-                    </ul>
-                    <button class="nobackbtn mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
-                        </svg>Compare Fund
-                    </button> <br>
-                    <button class="withbackbtn mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                        </svg>
-                        Complete Profile
-                    </button>
-                    <center><p class="fsize10">Please complete your profile to unlock confidential fund information and request an allocation</p></center>
-                </div>
-            </div>
-        </div>
-        <div class="margin60">
-            <div data-label="Example" class="df-example demo-table">
-                <div class="table-responsive">
-                  <table class="table table-striped mg-b-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Job Title</th>
-                        <th scope="col">Degree</th>
-                        <th scope="col">Salary</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Adrian Monino</td>
-                        <td>Front-End Engineer</td>
-                        <td>Computer Science</td>
-                        <td>$120,000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Socrates Itumay</td>
-                        <td>Software Engineer</td>
-                        <td>Computer Engineering</td>
-                        <td>$150,000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Reynante Labares</td>
-                        <td>Product Manager</td>
-                        <td>Business Management</td>
-                        <td>$250,000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Hamza Macasindil</td>
-                        <td>Software Engineer</td>
-                        <td>Computer Engineering</td>
-                        <td>$140,000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Roven Galeon</td>
-                        <td>Project Manager</td>
-                        <td>Accountancy</td>
-                        <td>$160,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><!-- table-responsive -->
-              </div>
-        </div>
-    </div>
+     </div>
+
+    
+</div>
 </div>
 
+<script src="{{ asset('main-user-assets/lib/jquery/jquery.min.js') }}"></script>
+<script>
+     $("#gateway").on('change', function() {
+        if ($(this).val() == "available_funds" || $(this).val() == "active_interest") {
+             
+            $("#currency").hide()
+            $("#currency_drop").attr("required", false)
+        } else if ($(this).val() == "direct_deposit") {
+            $("#currency").show()
+            $("#currency_drop").attr("required", true)
+            
+        } else {
+            
+            $("#currency").hide()
+            $("#currency_drop").attr("required", false)
+        }
+    })
+</script>
 @endsection

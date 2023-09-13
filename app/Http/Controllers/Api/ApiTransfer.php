@@ -129,7 +129,7 @@ return ['error' => true, "msg" => "Error sending OTP", "type" => "INVALID_CREDEN
 
         if ($req['wallet_type'] == "compound_wallet") {
             if ($req['amount_paid'] > $user->compound_wallet) {
-                return ['error' => true, "msg" => "Insufficient amount,...sorry you do not enough amount in your Compound Wallet.", "type" => "INVALID_CREDENTIAL"];
+                return ['error' => true, "msg" => "Insufficient amount,...sorry you do not enough amount in your Active Interest Funds.", "type" => "INVALID_CREDENTIAL"];
             } else {
                 $userNum1->compound_wallet = $userNum1->compound_wallet - $req['amount_paid'];
                 $userNum2->compound_wallet = $userNum2->compound_wallet + $req['amount_paid'];

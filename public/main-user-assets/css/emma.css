@@ -248,7 +248,7 @@ header .nav:hover {
   background-image: url(../../assets/img/pexels-stephan-seeber-1261728.jpg);
   background-position: center;
   border-radius: 20px;
-  height: 40vh;
+  height: 320px;
   background-color: black;
   background-size: cover;
   background-blend-mode: exclusion;
@@ -257,8 +257,15 @@ header .nav:hover {
   padding: 30px;
   color: white;
 }
+.tooltip-size{
+  width: 16px !important;
+  stroke: #0168fa !important;
+}
 .Investment .set1 h1 {
-  font-size: 16px;
+  font-size: 26px;
+}
+.dymanic-data img{
+  width: 100%;
 }
 .Investment .set1 p {
   font-size: 13px;
@@ -377,7 +384,9 @@ header .nav:hover {
   margin: 0;
   text-align: center;
 }
-
+video {
+	width: 100%;
+}
 .PDF {
   height: 100vh;
   background-color: #f8f9fc;

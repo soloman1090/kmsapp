@@ -56,7 +56,7 @@
             @elseif ($payment_method=="main_wallet")
             <td class="unit">Main Wallet</td>
             @elseif ($payment_method=="compound_wallet")
-            <td class="unit">Compound Wallet</td>
+            <td class="unit">Active Interest Funds</td>
             @endif
             <td class="qty">1</td>
             <td class="total amount1"  amount="{{$amount}}">${{ $amount }} </td>

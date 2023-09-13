@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+use App\Models\ContentLibary;
 use App\Models\UserInfo;
 use App\Models\User;
 use App\Models\Investment_Packages;
@@ -22,6 +24,8 @@ class Video extends Controller
         ->where('users.id',$id)
         ->get()->first();
 
-        return view('user.video',['user'=>$user,'user_id'=>$id, 'page_title'=>"Video", 'username'=>$user->name]);
+        $allVideos = ContentLibary::where('category', "video")->where("created_at", "<", Carbon::now())->orderBy("created_at", 'desc')->get();
+
+        return view('user.video',['user'=>$user,'user_id'=>$id, 'page_title'=>"Dellgroup Videos", 'username'=>$user->name, "videos"=>$allVideos]);
     }
 }

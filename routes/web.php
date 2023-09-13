@@ -23,6 +23,7 @@ use Admin\MigrationController;
 use Admin\VoyagerController;
 use Admin\SurveyController;
 use Admin\InvestmentSummaryController;
+use Admin\ContentLibaryController;
 use User\UserDashboard;
 use User\Profile;
 use User\Kyc;
@@ -288,6 +289,7 @@ Route::prefix('admin')->middleware(['auth', 'auth.isAdmin'])->name('admin.')->gr
     Route::resource('/sendmail', SendMailController::class);
     Route::resource('/reinvestments', ReinvestmentController::class);
     Route::resource('/popups', PopupController::class);
+    Route::resource('/content-libary', ContentLibaryController::class);
     Route::resource('/voyagers', VoyagerController::class);
     Route::resource('/surveys', SurveyController::class);
     Route::resource('/investment-summary', InvestmentSummaryController::class);

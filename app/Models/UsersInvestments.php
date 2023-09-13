@@ -26,6 +26,10 @@ class UsersInvestments extends Model
         'currency',
         'invoice_url',
         'active',
+        'compound_end_date',
+        'compound_status',
+        'compound_precentage',
+        'compounding_amount',
         'available_fund_balance',
         'active_interest_balance',
         'by_weekly_next_date'

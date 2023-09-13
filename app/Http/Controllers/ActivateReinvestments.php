@@ -167,7 +167,7 @@ class ActivateReinvestments extends Controller
                             } else {
                                 $userInfo->compound_wallet = $userInfo->compound_wallet + $bonusAmount;
                             }
-                            $wallet_type = "Compound Wallet";
+                            $wallet_type = "Active Interest Funds";
                         }
 
                         $userInfo->update();
@@ -225,7 +225,7 @@ class ActivateReinvestments extends Controller
                                     } else {
                                         $userInfo_stage2->compound_wallet = $userInfo_stage2->compound_wallet + $bonusAmount_stage2;
                                     }
-                                    $wallet_type = "Compound Wallet";
+                                    $wallet_type = "Active Interest Funds";
                                 }
                                 //Save Wallet
 
@@ -282,7 +282,7 @@ class ActivateReinvestments extends Controller
                                             } else {
                                                 $userInfo_stage3->compound_wallet = $userInfo_stage3->compound_wallet + $bonusAmount_stage3;
                                             }
-                                            $wallet_type = "Compound Wallet";
+                                            $wallet_type = "Active Interest Funds";
                                         }
                                         $userInfo_stage3->update();
 

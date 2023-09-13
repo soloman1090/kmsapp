@@ -204,7 +204,7 @@ class ApiPortfolios extends Controller
                 if ($req['payment_method'] == "compound_wallet") {
                     if( $req['payout']=="daily_payout" ||  $req['payout']=="monthly_payout"){
     
-                        return ['error' => true, "msg" => "Sorry you cannot make a daily plan investment with your compound wallet", "type" => "INVALID_CREDENTIAL"];
+                        return ['error' => true, "msg" => "Sorry you cannot make a daily plan investment with your Active Interest Funds", "type" => "INVALID_CREDENTIAL"];
                     }else{
                         if ($user->compound_wallet >= $investAmount) {
                             $userInfo->compound_wallet = $userInfo->compound_wallet - $investAmount;

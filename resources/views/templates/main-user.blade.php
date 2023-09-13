@@ -42,16 +42,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- DashForge CSS -->
+    <link href="{{asset('main-user-assets/lib/datatables.net-dt/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{asset('main-user-assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/emma.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.filemgr.css')}}">
     <link rel="stylesheet" href="{{asset('main-user-assets/css/dashforge.auth.css')}}">
+   
   </head>
   <body>
   <header class="navbar navbar-header navbar-header-fixed">
-      <a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+      <a href="#" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
       <div class="navbar-brand">
-        <a href="../../index.html" class="df-logo">Dell<span> Investment Group</span></a>
+        <a href="/user/dashboard" class="df-logo">Dell<span> Investment Group</span></a>
       </div><!-- navbar-brand -->
       <div id="navbarMenu" class="navbar-menu-wrapper">
         <div class="navbar-menu-header">
@@ -113,21 +116,21 @@
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="package"></i> Secondary Market</a>
             <ul class="navbar-menu-sub">
-              <li class="nav-sub-item"><a href="referred-users" class="nav-sub-link"><i data-feather="calendar"></i>Referrals</a></li>
-              <li class="nav-sub-item"><a href="referral-bonus" class="nav-sub-link"><i data-feather="message-square"></i>Referrals Commissions</a></li>
-              <li class="nav-sub-item"><a href="transfer" class="nav-sub-link"><i data-feather="users"></i>Inter Account Transfer</a></li>
-              <li class="nav-sub-item"><a href="investment-calculator" class="nav-sub-link"><i data-feather="file-text"></i>Investment Calculator</a></li>
+              <li class="nav-sub-item"><a href="/user/referred-users" class="nav-sub-link"><i data-feather="users"></i>Friends & Community</a></li>
+              <li class="nav-sub-item"><a href="/user/referral-bonus" class="nav-sub-link"><i data-feather="dollar-sign"></i>Community Benefits</a></li>
+               <li class="nav-sub-item"><a href="/user/investment-calculator" class="nav-sub-link"><i data-feather="hash"></i>Investment Calculator</a></li>
+              <li class="nav-sub-item"><a href="/user/withdrawal-history" class="nav-sub-link"><i data-feather="credit-card"></i>Withdrawals</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="package"></i> Resources</a>
             <ul class="navbar-menu-sub">
-              <li class="nav-sub-item"><a href="pdf" class="nav-sub-link"><i data-feather="calendar"></i>PDF</a></li>
-              <li class="nav-sub-item"><a href="video" class="nav-sub-link"><i data-feather="message-square"></i>Videos</a></li>
-              <li class="nav-sub-item"><a href="fq" class="nav-sub-link"><i data-feather="users"></i>F & Q</a></li>
-              <li class="nav-sub-item"><a href="contact" class="nav-sub-link"><i data-feather="file-text"></i>Contact Us</a></li>
-              <li class="nav-sub-item"><a href="howto" class="nav-sub-link"><i data-feather="mail"></i>How To</a></li>
-              <li class="nav-sub-item"><a href="news" class="nav-sub-link"><i data-feather="mail"></i>News</a></li>
+              <li class="nav-sub-item"><a href="/user/pdf" class="nav-sub-link"><i data-feather="calendar"></i>PDF</a></li>
+              <li class="nav-sub-item"><a href="/user/video" class="nav-sub-link"><i data-feather="message-square"></i>Videos</a></li>
+              <li class="nav-sub-item"><a href="/user/fq" class="nav-sub-link"><i data-feather="users"></i>F & Q</a></li>
+              <li class="nav-sub-item"><a href="/user/contact" class="nav-sub-link"><i data-feather="file-text"></i>Contact Us</a></li>
+              <li class="nav-sub-item"><a href="/user/howto" class="nav-sub-link"><i data-feather="mail"></i>How To</a></li>
+              <li class="nav-sub-item"><a href="/user/news" class="nav-sub-link"><i data-feather="mail"></i>News</a></li>
             </ul>
           </li>
         </ul>
@@ -235,19 +238,29 @@
         </div> -->
         <div class="dropdown dropdown-profile">
           <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-display="static">
-            <div class="avatar avatar-sm"><img src="https://placehold.co/387" class="rounded-circle" alt=""></div>
+            <div class="avatar avatar-sm">
+              @if ($user->image=="" || $user->image==null)
+              <img src="https://placehold.co/387" class="rounded-circle" alt="">
+               @else
+               <img src="{{ asset('uploads/'.$user->image ) }}" class="rounded-circle" alt="">
+               @endif
+            </div>
           </a><!-- dropdown-link -->
           <div class="dropdown-menu dropdown-menu-end tx-13">
-            <div class="avatar avatar-lg mg-b-15"><img src="https://placehold.co/387" class="rounded-circle" alt=""></div>
-            <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
-            <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
-
-            <a href="profile" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
-            <a href="profile" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+            <div class="avatar avatar-lg mg-b-15">
+              @if ($user->image=="" || $user->image==null)
+              <img src="https://placehold.co/387" class="rounded-circle" alt="">
+               @else
+               <img src="{{ asset('uploads/'.$user->image ) }}" class="rounded-circle" alt="">
+               @endif
+             
+            </div>
+            <h6 class="tx-semibold mg-b-5">{{ auth()->user()->name }} {{ $user->last_name }}</h6>
+ 
+             <a href="profile" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
             <div class="dropdown-divider"></div>
             <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
-            <a href="my-account" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
-            <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+             <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
           </div><!-- dropdown-menu -->
         </div><!-- dropdown -->
       </div><!-- navbar-right -->
@@ -300,13 +313,13 @@
         <div class="row mb-3">
           <div class="col-md-4">
             <ul>
-              <li><b>About Moonfare</b></li>
-              <li>Moonfare is a technology platform that enables individuals and their advisors to invest in top-tier private equity funds.</li>
+              <li><b>About Dell-Investment Group</b></li>
+              <li>Dell-Investment Group is a technology platform that enables individuals and their advisors to invest in top-tier private equity funds.</li>
               <li><div class="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
               </svg>
-                <p>team@moonfare.com</p>
+                <p>team@Dell-Investment Group.com</p>
               </div></li>
               <li><div class="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -351,11 +364,11 @@
           </div>
           <div class="col-md-3">
             <ul>
-              <li>Moonfare GmbH</li>
+              <li>Dell-Investment Group GmbH</li>
               <li>Schlesische Str.33/34, 2.OG <br>
                 10997 Berlin <br>
                 Germany <br>
-                team@moonfare.com
+                team@Dell-Investment Group.com
               </li>
             </ul>
           </div>
@@ -380,6 +393,22 @@
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="{{asset('main-user-assets/lib/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('main-user-assets/js/skippr.min.js') }}"></script>
+<script>
+    $("#newsSlider").skippr({
+        transition: 'slide',
+        speed: 1000,
+        easing: 'easeOutQuart',
+        navType: '',
+        childrenElementType: 'div',
+        arrows: false,
+        autoPlay: true,
+        autoPlayDuration: 5000,
+        keyboardOnAlways: true,
+        hidePrevious: false
+
+        });
+</script>
     <script src="{{asset('main-user-assets/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/feather-icons/feather.min.js')}}"></script>
     <script src="{{asset('main-user-assets/lib/ionicons/ionicons/ionicons.esm.js')}}" type="module"></script>
@@ -394,6 +423,9 @@
     <script src="{{asset('main-user-assets/js/dashboard-two.js')}}"></script>
     <script src="{{asset('main-user-assets/js/dashforge.sampledata.js')}}"></script>
     <script src="{{asset('assets/js/emma.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js')}}"></script>
+    <script src="{{asset('main-user-assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
 
     <!-- append theme customizer -->
     <script src="{{asset('main-user-assets/lib/js-cookie/js.cookie.js')}}"></script>
@@ -416,7 +448,58 @@
         } else {
           lightMode();
         }
+        
       })
+
+      $('#example1').DataTable({
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+     
+      // Select2
+        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
     </script>
+
+    <script>
+      $('#example2').DataTable({
+          language: {
+              searchPlaceholder: 'Search...'
+              , sSearch: ''
+              , lengthMenu: '_MENU_ items/page'
+          , }
+      });
+  
+  </script>
+
+  <script>
+    $(function(){
+      'use strict'
+
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+      $('.df-example .btn-primary').tooltip({
+        template: '<div class="tooltip tooltip-primary" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-secondary').tooltip({
+        template: '<div class="tooltip tooltip-secondary" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-success').tooltip({
+        template: '<div class="tooltip tooltip-success" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+      $('.df-example .btn-danger').tooltip({
+        template: '<div class="tooltip tooltip-danger" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+      })
+
+
+    });
+  </script>
   </body>
 </html>

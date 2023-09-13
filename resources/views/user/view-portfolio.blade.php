@@ -180,7 +180,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">
@@ -337,7 +337,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">
@@ -535,7 +535,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">
@@ -693,7 +693,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">
@@ -864,7 +864,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">
@@ -1022,7 +1022,7 @@
                                                 <option value="">Select Payment Platform</option>
                                                 <option value="direct_deposit">Direct Deposit</option>
                                                 <option value="main_wallet">Main Wallet</option>
-                                                <option value="compound_wallet">Compound Wallet</option>
+                                                <option value="compound_wallet">Active Interest Funds</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12" id="currency">

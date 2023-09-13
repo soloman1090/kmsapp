@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="form-group col-md-4">
-                            <label for="compound_duration" class="control-label mb-10">Compounding Duration</label>
+                            <label for="compound_duration" class="control-label mb-10">Staking Duration</label>
                             <input type="number" class="form-control" name="compound_duration" placeholder="Enter amount: 2.4%" value="{{ $pac['compound_duration'] }}" required>
                             
                         </div>
@@ -101,7 +101,7 @@
                             <input type="number" class="form-control" name="slots" value="{{ $pac['slots'] }}" placeholder="10" id="" >
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="compound_percent" class="control-label mb-10">Compound Percentage</label>
+                            <label for="compound_percent" class="control-label mb-10">Staking Percentage</label>
                             <input type="decimal" class="form-control" name="compound_percent" placeholder="Pecentage:e.g 2.4" value="{{ $pac['compound_percent'] }}" required>
                         </div>
                         
@@ -127,6 +127,32 @@
                             <label for="level3_bonus" class="control-label mb-10">Level 3 Bonus </label>
                             <input type="decimal" class="form-control" name="level3_bonus" value="{{ $pac['level3_bonus'] }}"  placeholder="%:e.g 0.025" required>
                         </div>
+                        <div class="form-group col-md-4">
+                            <label for="diverse_taken_percentage" class="control-label mb-10">Diverse Staking Percentage </label>
+                            <input type="decimal" class="form-control" name="diverse_taken_percentage" value="{{ $pac['diverse_taken_percentage'] }}"  placeholder="%:e.g 0.025" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="geography" class="control-label mb-10">Geography</label>
+                            <input type="text" class="form-control" name="geography" value="{{ $pac['geography'] }}"  placeholder="Global" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="strategy" class="control-label mb-10">Strategy</label>
+                            <input type="text" class="form-control" name="strategy" value="{{ $pac['strategy'] }}"  placeholder="Enter Strategy" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="portfolio_fund_targets" class="control-label mb-10">Portfolio Fund Targets</label>
+                            <input type="text" class="form-control" name="portfolio_fund_targets" value="{{ $pac['portfolio_fund_targets'] }}"  placeholder="Enter Fund Targets" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="strategy_focus" class="control-label mb-10">Strategy Focus</label>
+                            <input type="text" class="form-control" name="strategy_focus" value="{{ $pac['strategy_focus'] }}"  placeholder="Enter Focus" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="target_size" class="control-label mb-10">Target Size</label>
+                            <input type="text" class="form-control" name="target_size" value="{{ $pac['target_size'] }}"  placeholder="Enter Targets" required>
+                        </div>
+                        
+                        
                     </div>
                     <hr>
                     <h2>More Details</h2>

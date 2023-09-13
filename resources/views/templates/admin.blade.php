@@ -262,7 +262,10 @@
 					<a href="surveys"><div class="pull-left"><i class="fa fa-comments mr-20" aria-hidden="true"></i><span class="right-nav-text">Surveys</span></div><div class="clearfix"></div></a>
 				</li>
                 <li><hr class="light-grey-hr mb-10"/></li>
-
+				<li>
+					<a href="content-libary"><div class="pull-left"><i class="fa fa-image mr-20" aria-hidden="true"></i><span class="right-nav-text">Manage Contents</span></div><div class="clearfix"></div></a>
+				</li>
+				<li><hr class="light-grey-hr mb-10"/></li>
                 <li>
 					<a href="popups"><div class="pull-left"><i class="fa fa-image mr-20" aria-hidden="true"></i><span class="right-nav-text">Manage Popups</span></div><div class="clearfix"></div></a>
 				</li>

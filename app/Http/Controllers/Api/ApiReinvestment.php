@@ -200,7 +200,7 @@ class ApiReinvestment extends Controller
                 
                 if( $req['payout']=="daily_payout" ||  $req['payout']=="monthly_payout"){
     
-                    return ['error' => true, "msg" => "Sorry you cannot make a daily plan investment with your compound wallet", "type" => "INVALID_CREDENTIAL"];
+                    return ['error' => true, "msg" => "Sorry you cannot make a daily plan investment with your Active Interest Funds", "type" => "INVALID_CREDENTIAL"];
                 }else
                 if ($userInfo->compound_wallet >= $req['amount']) {
                     $userInfo->compound_wallet = $userInfo->compound_wallet - $req['amount'];

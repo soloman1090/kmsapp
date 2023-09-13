@@ -98,7 +98,7 @@ border-top-right-radius: 10px;">
                                 <option value="">Select Payment Platform</option>
                                 <option value="direct_deposit">Direct Deposit</option>
                                 <option value="main_wallet">Main Wallet</option>
-                                <option value="compound_wallet">Compound Wallet</option>
+                                <option value="compound_wallet">Active Interest Funds</option>
                             </select>
                         </div>
                         @endif

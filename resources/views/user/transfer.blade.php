@@ -1,51 +1,70 @@
 @extends('templates.main-user')
 
 @section('content')
-<img src="{{ asset('user-assets/images/widgets/inter_account_transfer.jpg') }}" alt="" style="width: 100%; border-top-left-radius: 10px;
-border-top-right-radius: 10px;">
-<br><br>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
-        <div class="card bg-primary text-white">
-            <div class="card-body">
-                <h6><b class="text-white">Portfolio Balance</b></h6>
-                <h2 class="text-white " ><b class="amount1" amount="{{$user->main_wallet}}">$ {{ $user->main_wallet }}</b></h2>
-                 <input type="hidden" id="mainWalletInput" value="{{ $user->main_wallet }}">
-            </div>
-        </div>
-        
-        <div class="card bg-dark">
-            <div class="card-body">
-                <h6><b class="text-white">Compounding Dividends</b></h6>
-                <h2 class="text-white"><b class="amount2" amount="{{$user->compound_wallet}}">$ {{ $user->compound_wallet }}</b></h2>
-                <input type="hidden" id="compountWalletInput" value="{{ $user->compound_wallet }}">
-            </div>
-        </div>
+<div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item " aria-current="page"><a href="/user/user-investments">Portfolios</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="/user/user-investments/{{ $investment->id }}/edit">{{ $investment->package->name  }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $page_title }}</li>
+            </ol>
+        </nav>
     </div>
-
-    <div class="col-md-5">
-        <div class="card">
-            <div class="card-body">
-
+</div>
+<div class="card">
+    <div class="card-header">
+        <h4>{{ $page_title }}</h4>
+    </div>
+    <div class="card-body">
+        <img src="{{ asset('user-assets/images/widgets/inter_account_transfer.jpg') }}" alt="" style="width: 100%; border-top-left-radius: 10px;
+border-top-right-radius: 10px;">
+        <div class="set1">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3 p-3">
+                        <p>Active Funds Balance</p>
+                        <h1 id="available_fund_balance"><b>$</b>{{ $investment->formatted_available_fund_balance }} </h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 p-3">
+                        <p>Active Interest Balance</p>
+                        <h1 id="active_interest_balance"><b>$</b>{{ $investment->formatted_active_interest_balance }} </h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 p-3">
+                        <p>Partner Commission</p>
+                        <h1><b>$</b>{{ $user->formated_referral_wallet }} </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <form action="{{ route('user.withdrawal-request.index') }}" method="get">
+                        @csrf
+                        <input type="hidden" name="investment_id" value="{{ $investment->id }}">
+                        <input type="hidden" name="auth" value="yes">
+                        <button class="btn btn-warning w-100 mb-2 py-4 px-5">
+                            <b>Generate 2-FA Code</b>
+                        </button>
+                    </form>
+                 </div>
                 <form action="{{ route('user.transfer.store') }}" method="post" class="form-parsley">
                     @csrf
                     <input type="hidden" name="user_id" value="{{ $user_id }}">
-                    
+
 
                     <p>To make transfer, you have to generate a 2fa code with will be sent to your email address, paste the code on the 2fa field below to continue</p>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="inputAmount">Enter 2fa Code </label>
-                                <input type="text" class="form-control 2fa" name="2fa" id="2fa" placeholder="Enter 2fa code">
+                    <div class="form-group">
+                        <label for="inputAmount">Enter 2fa Code </label>
+                        <input type="text" class="form-control 2fa" name="2fa" id="2fa" placeholder="Enter 2fa code">
 
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <br>
-                            <a href="transfer?auth=yes" class="btn btn-info">Generate Code</a>
-                        </div>
                     </div>
                     <div class="amount-group">
                         <div class="row">
@@ -57,11 +76,11 @@ border-top-right-radius: 10px;">
                             <input type="hidden" class="main_wallet_balance" value="{{ $user->main_wallet}}">
                             <input type="hidden" class="compound_wallet_balance" value="{{ $user->compound_wallet}}">
                             <div class="form-group col-md-12">
-                                <label for="wallet">Wallet</label>
-                                <select name="wallet_type" class="form-control wallet_type" id="wallet_type" required>
+                                <select class="form-select" id="wallet_type" name="wallet_type" required>
                                     <option value="">Select Wallet</option>
-                                    <option value="main_wallet">Portfolio Balance</option>
-                                    {{-- <option value="compound_wallet">Compounding Dividends</option> --}}
+                                     <option value="available_funds">Active Funds Balance</option>
+                                    <option value="active_interest">Active Interest Balance</option>
+                                    <option value="referral_commission">Referral Commission</option>
                                 </select>
                             </div>
                         </div>
@@ -70,14 +89,22 @@ border-top-right-radius: 10px;">
                             <input type="text" class="form-control" name="email" id="email" placeholder="Enter Receiver Email Address" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary withdrawBtn" id="">Confirm Transfer</button>
+                    <div class="col-md-12">
+        
+                        <button type="submit" class="btn btn-primary w-100"> Proceeed</button>
+
+                    </div>
                 </form>
+               
             </div>
 
+            <div class="col-md-3">
+                 
+            </div>
         </div>
+
     </div>
 </div>
-
 
 
 

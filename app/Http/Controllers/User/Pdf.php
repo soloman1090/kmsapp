@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\UserInfo;
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Investment_Packages;
 use App\Models\UsersInvestments;
+use App\Models\ContentLibary;
 use App\Models\Activities;
 
 class Pdf extends Controller
@@ -22,6 +24,10 @@ class Pdf extends Controller
         ->where('users.id',$id)
         ->get()->first();
 
-        return view('user.pdf',['user'=>$user,'user_id'=>$id, 'page_title'=>"PDF", 'username'=>$user->name]);
+        $allDocuments = ContentLibary::where('category', "document")->where("created_at", "<", Carbon::now())->orderBy("created_at", 'desc')->get();
+       //dd($allDocuments);
+
+
+        return view('user.pdf',['user'=>$user,'user_id'=>$id, 'page_title'=>"Dellgroup Documents", 'username'=>$user->name, "documents"=> $allDocuments]);
     }
 }

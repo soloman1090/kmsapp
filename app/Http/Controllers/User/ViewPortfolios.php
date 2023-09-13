@@ -148,7 +148,7 @@ class ViewPortfolios extends Controller
                 if ($req['payment_method'] == "compound_wallet") {
 
                     if( $req['payout']=="daily_payout" ||  $req['payout']=="monthly_payout"){
-                        $req->session()->flash('error', 'Sorry you cannot make a daily plan investment with your compound wallet');
+                        $req->session()->flash('error', 'Sorry you cannot make a daily plan investment with your Active Interest Funds');
                         if($req["quick_purchase"]){
                             return redirect('user/dashboard');
                         }else{
@@ -156,7 +156,7 @@ class ViewPortfolios extends Controller
                         }
                     }
                     if ($req['amount'] > $user->compound_wallet) {
-                        $req->session()->flash('error', 'Insufficient amount,...sorry you do not enough amount in your Compound Wallet.');
+                        $req->session()->flash('error', 'Insufficient amount,...sorry you do not enough amount in your Active Interest Funds.');
                         if($req["quick_purchase"]){
                             return redirect('user/dashboard');
                         }else{

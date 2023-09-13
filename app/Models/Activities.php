@@ -15,6 +15,7 @@ class Activities extends Model
         'user_id',
         'user_investments_id',
         'investment_packages_id',
+        'withdrawal_id',
         'category',
         'descp',
         'amount',
@@ -24,6 +25,11 @@ class Activities extends Model
     public function users()
     {
         return $this->belongsTo('App\Models\Users');
+    }
+
+    public function WithdrawalRequests()
+    {
+        return $this->belongsTo('App\Models\WithdrawalRequests');
     }
 
     public function user_investments()

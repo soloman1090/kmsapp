@@ -310,9 +310,9 @@
             position: relative;
             z-index: 1;
             border-radius: 10px 10px 0 0;
-            background: -webkit-gradient(linear, left top, right top, from(#5c45eb), to(#4574eb));
-            background: -o-linear-gradient(left, #5c45eb 0, #4574eb 100%);
-            background: linear-gradient(90deg, #5c45eb 0, #4574eb);
+            background: -webkit-gradient(linear, left top, right top, from(#e8d04c), to(#ad951f));
+            background: -o-linear-gradient(left, #e8d04c 0, #ad951f 100%);
+            background: linear-gradient(90deg, #e8d04c 0, #ad951f);
         }
 
         .invoice__appLogo {
@@ -335,7 +335,6 @@
         }
 
         .invoice__contentWr {
-            border-radius: 0 0 10px 10px;
             background: #f5f6fa;
         }
 
@@ -354,7 +353,7 @@
             -ms-flex-align: center;
             align-items: center;
             text-align: center;
-            min-height: 514px;
+            min-height: 400px;
             padding: 0 1rem 24px;
             border-radius: 0 0 10px 10px;
         }
@@ -528,7 +527,7 @@
 
         .invoice[data-v-5e0cd238] {
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             min-width: 320px;
             margin: 34px auto;
         }
@@ -2808,6 +2807,8 @@
             word-break: break-all;
             font-weight: 600;
             color: #2b2d31;
+            padding: 10px 20px;
+            border: 5px dotted #e8d04c;
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s;
@@ -2817,6 +2818,30 @@
             background: #4574eb;
             color: #fff;
         }
+        .invoice__footer{
+            width: 100%;
+            height:60px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+        .confirmLink{
+            text-decoration: none !important;
+            color: white !important;
+            padding: 10px 40px;
+            border: 2px solid #e8d04c;
+            background-color: #e8d04c;
+            border-radius: 20px;
+        }
+        .app_logo{
+            height: 30px;
+            width: 180px;
+            object-fit: contain;
+        }
+        .powered{
+            font-size: 12px;
+        }
+
 
     </style>
 </head>
@@ -2915,7 +2940,7 @@
         <div data-v-5e0cd238="" class="invoice">
             <div class="invoice__header header">
                 <div class="header__top row_between">
-                    <h5 style="color: white;">Dell Group Management</h5>
+                    <h5 style="color: white;">DellInvestment Payment</h5>
                 </div>
                 <div data-v-e2dae8b0="" id="timer_invoice" class="header__progress progress">
                     <div data-v-e2dae8b0="" class="progress__line" style="width: 2%;"></div>
@@ -2936,7 +2961,7 @@
                 <div data-v-04d1a81a="" class="invoice__row_sum row_between">
                     <div data-v-04d1a81a="" class="row_sum__shop row_start">
                          
-                            <img src="{{ asset('admin-assets/img/logo.png') }}" alt="" srcset="" width="100">
+                            <img src="{{ asset('admin-assets/img/logo.png') }}" alt="" srcset=""   class="app_logo"> 
                      </div>
                     <div data-v-04d1a81a="" class="row_sum__val">
                         <div data-v-04d1a81a="" class="row_sum__crypto">
@@ -3029,13 +3054,13 @@
                         </div>
                         <!---->
                         <div data-v-1e9a806c="" class="invoice__hint">
-                            To complete your payment, please send <strong id="step_pay__amount_payTo"
+                            To complete your payment,<br> please send <strong id="step_pay__amount_payTo"
                                 class="step_pay__amount">{{ $invoice['pending_amount']??'' }} </strong>
                             <strong id="step_pay__curr_payTo" class="step_pay__curr">{{ $invoice['psys_cid']??'' }}</strong>
                             to the address below:
                         </div>
                         <div data-v-1e9a806c="" class="step_pay__address" id="step_pay__address">{{ $invoice['wallet_hash']??'' }}</div>
-                        <div data-v-a6f121a6="" data-v-1e9a806c="" class="clipboard">
+                        {{-- <div data-v-a6f121a6="" data-v-1e9a806c="" class="clipboard">
                             <div data-v-a6f121a6="" class="clipboard__value"></div>
                             <div data-v-a6f121a6="" class="clipboard__btn" data-clipboard-click-handler="$17"
                                 data-clipboard-success-handler="$18" id="clipboard__btn">
@@ -3046,31 +3071,35 @@
                                 Copy the wallet address
                                 <!---->
                             </div>
-                        </div>
+                        </div> --}}
                         <br>
                         <br>
-                        <div data-v-a6f121a6="" data-v-1e9a806c="" class="clipboard">
-                            <div data-v-a6f121a6="" class="clipboard__value"></div>
-                            <div data-v-a6f121a6="" class="clipboard__btn" data-clipboard-click-handler="$17"
-                                data-clipboard-success-handler="$18" id="clipboard__btn">
-                                <a data-v-e6bd7c5e="" href="/user/user-investments" title="How do I pay for this?"
-                                  rel="noopener"
-                            class="help__link _que">
-                            <i>Click to Confirm Investment Activation</i>
-                        </a>
-                                <!---->
-                            </div>
-                        </div>
+                       
                     </div>
                     <aside data-v-e6bd7c5e="" class="invoice__help help">
                         <a data-v-e6bd7c5e="" href="#" title="How do I pay for this?" target="_blank" rel="noopener"
                             class="help__link _que"> 
-                            <b>Powered by Dell Group</b>
+                            
                         </a>
 
                     </aside>
 
                 </div>
+            </div>
+            <div class="invoice__footer">
+ <div data-v-a6f121a6="" data-v-1e9a806c="" class="clipboard">
+                            <div data-v-a6f121a6="" class="clipboard__value"></div>
+                            <div data-v-a6f121a6="" class="clipboard__btn" data-clipboard-click-handler="$17"
+                                data-clipboard-success-handler="$18" id="clipboard__btn">
+                                <a data-v-e6bd7c5e="" href="/user/user-investments" title="How do I pay for this?"
+                                  rel="noopener"
+                            class="help__link _que confirmLink">
+                            Click to here to view investment
+                        </a>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="powered">Powered by DellInvestment Group</div>
             </div>
         </div>
     </div>

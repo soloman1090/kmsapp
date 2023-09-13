@@ -8,6 +8,7 @@ use App\Models\Activities;
 use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\WithdrawalRequests;
+use App\Models\UsersInvestments;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -26,15 +27,17 @@ class WithdrawalController extends Controller
             return redirect("admin/users");
         }
         $withdrawals = null;
-        $singleActivities =null;
+        $singleActivities = null;
         if ($req['user_id'] == null) {
             $withdrawals = User::join('withdrawal_requests', 'withdrawal_requests.user_id', '=', 'users.id')
                 ->join('withdrawal_methods', 'withdrawal_methods.id', '=', 'withdrawal_requests.withdrawal_methods_id')
                 ->where('withdrawal_requests.approved', false)
                 ->orderBy('withdrawal_requests.id', 'DESC')
-                ->get(['users.name as username', 'users.email', 'users.id as user_id', 'withdrawal_requests.id as request_id', 'withdrawal_methods.name as methodname',
+                ->get([
+                    'users.name as username', 'users.email', 'users.id as user_id', 'withdrawal_requests.id as request_id', 'withdrawal_methods.name as methodname',
                     'withdrawal_methods.currency_code', 'withdrawal_requests.amount_paid', 'withdrawal_requests.created_at as date',
-                    'withdrawal_requests.amount_credited', 'withdrawal_requests.charge', 'withdrawal_requests.wallet_address', 'withdrawal_requests.wallet_type', 'withdrawal_requests.approved', 'withdrawal_requests.approval_key']);
+                    'withdrawal_requests.amount_credited', 'withdrawal_requests.charge', 'withdrawal_requests.wallet_address', 'withdrawal_requests.wallet_type', 'withdrawal_requests.approved', 'withdrawal_requests.approval_key'
+                ]);
         } else {
             $singleActivities = "true";
             $withdrawals = User::join('withdrawal_requests', 'withdrawal_requests.user_id', '=', 'users.id')
@@ -42,17 +45,20 @@ class WithdrawalController extends Controller
                 ->where('withdrawal_requests.approved', false)
                 ->where('withdrawal_requests.user_id', $req['user_id'])
                 ->orderBy('withdrawal_requests.id', 'DESC')
-                ->get(['users.name as username', 'users.email', 'users.id as user_id', 'withdrawal_requests.id as request_id', 'withdrawal_methods.name as methodname',
+                ->get([
+                    'users.name as username', 'users.email', 'users.id as user_id', 'withdrawal_requests.id as request_id', 'withdrawal_methods.name as methodname',
                     'withdrawal_methods.currency_code', 'withdrawal_requests.amount_paid', 'withdrawal_requests.created_at as date',
-                    'withdrawal_requests.amount_credited', 'withdrawal_requests.charge', 'withdrawal_requests.wallet_address', 'withdrawal_requests.wallet_type', 'withdrawal_requests.approved', 'withdrawal_requests.approval_key']);
-
+                    'withdrawal_requests.amount_credited', 'withdrawal_requests.charge', 'withdrawal_requests.wallet_address', 'withdrawal_requests.wallet_type', 'withdrawal_requests.approved', 'withdrawal_requests.approval_key'
+                ]);
         }
-        return view('admin.withdrawal.w-request',
+        return view(
+            'admin.withdrawal.w-request',
             [
                 'withdrawals' => $withdrawals, "priviledge" => $priviledge,
                 'page_title' => "Pending Withdrawal",
-                "single"=>$singleActivities
-            ]);
+                "single" => $singleActivities
+            ]
+        );
     }
 
     public function update(Request $req, $id)
@@ -66,12 +72,19 @@ class WithdrawalController extends Controller
                 case 'compound_wallet':
                     return "Compounding Dividends";
                     break;
-
+                case 'available_funds':
+                    return "Active Funds Balance";
+                    break;
+                case 'active_interest':
+                    return "Active Interest Balance";
+                    break;
+                case 'referral_commission':
+                    return "Referral Commission";
+                    break;
             }
         }
 
         $wallet_type = getWalletType($req['wallet_type']);
-
         try {
 
             $wRequest = WithdrawalRequests::findOrFail($id);
@@ -82,7 +95,9 @@ class WithdrawalController extends Controller
             $activity->title = "Withdrawal Approved";
             $activity->user_id = $req['user_id'];
             $activity->category = "withdrawals";
+            $activity->withdrawal_id = $id;
             $activity->date = Carbon::now()->toDayDateTimeString();
+            $activity->user_investments_id = $wRequest->user_investments_id;
             $activity->amount = $req['amount_credited'];
             $activity->descp = "Your request of {$req['amount_credited']} made from  $wallet_type has been approved ";
             $activity->save();
@@ -125,38 +140,60 @@ class WithdrawalController extends Controller
                     case 'compound_wallet':
                         return "Compounding Dividends";
                         break;
-
+                    case 'available_funds':
+                        return "Active Funds Balance";
+                        break;
+                    case 'active_interest':
+                        return "Active Interest Balance";
+                        break;
+                    case 'referral_commission':
+                        return "Referral Commission";
+                        break;
                 }
             }
 
             $wallet_type = getWalletType($request['wallet_type']);
+            $wRequest = WithdrawalRequests::findOrFail($id);
 
             $userInfo = UserInfo::where('user_id', $request['user_id'])->firstOrFail();
+            $investment = UsersInvestments::where('id', $wRequest->user_investments_id)->firstOrFail();
 
-            if ($request['wallet_type'] == "main_wallet") {
-                $userInfo->main_wallet = $userInfo->main_wallet + $request['amount_paid'];
+          
+
+            if ($request['wallet_type'] == "available_funds") {
+                $investment->available_fund_balance = $investment->available_fund_balance + $request['amount_paid'];
+            } else if ($request['wallet_type'] == "active_interest") {
+                $investment->active_interest_balance = $investment->active_interest_balance + $request['amount_paid'];
             } else {
-                $userInfo->compound_wallet = $userInfo->compound_wallet + $request['amount_paid'];
+                $userInfo->referral_wallet = $userInfo->referral_wallet + $request['amount_paid'];
             }
+            $investment->update();
             $userInfo->update();
 
             $activity = new Activities;
             $activity->title = "Withdrawal Cancelled";
             $activity->user_id = $request['user_id'];
             $activity->category = "withdrawals";
+            $activity->user_investments_id = $wRequest->user_investments_id;
             $activity->date = Carbon::now()->toDayDateTimeString();
             $activity->amount = 0;
             $activity->descp = $request['message'];
             $activity->save();
 
-            // Mail::to($request['email'])->send(new UserRegisteredMail([
-            //     'subject' => 'Withdrawal Cancelled',
-            //     'title' => "Hi {$request['username']} ",
-            //     'url' => "{$request->getSchemeAndHttpHost()}/user/withdrawal-history",
-            //     'descp' => "Your withdrawal has been cancelled and your money returned to your $wallet_type ............ {$request['message']} ",
-            //     'action-text' => 'Client Access',
-            //     'img' => 'assets/images/emails/withdrawal-banner.jpg',
-            // ]));
+            try {
+                
+            Mail::to($request['email'])->send(new UserRegisteredMail([
+                'subject' => 'Withdrawal Cancelled',
+                'title' => "Hi {$request['username']} ",
+                'url' => "{$request->getSchemeAndHttpHost()}/user/withdrawal-history",
+                'descp' => "Your withdrawal has been cancelled and your money returned to your $wallet_type ............ {$request['message']} ",
+                'action-text' => 'Client Access',
+                'img' => 'assets/images/emails/withdrawal-banner.jpg',
+            ]));
+            } catch (\Throwable $th) {
+                
+            }
+
         }
 
         WithdrawalRequests::destroy($id);

@@ -289,7 +289,7 @@ class UserController extends Controller
                 $adminInfo->code_2fa = null;
                 $adminInfo->update();
 
-                $request->session()->flash('success', $user->name . 'User Name, Last Name, Email, Referral-Code, Main and Compound Wallets updated successfully');
+                $request->session()->flash('success', $user->name . 'User Name, Last Name, Email, Referral-Code, Main and Active Interest Fundss updated successfully');
 
             }
 

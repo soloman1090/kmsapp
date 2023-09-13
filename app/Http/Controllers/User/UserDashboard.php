@@ -13,6 +13,7 @@ use App\Models\UserInfo;
 use App\Models\Voyager;
 use App\Models\WithdrawalRequests;
 use App\Models\Withdrawal_Methods;
+use App\Models\UsersInvestments;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -107,10 +108,18 @@ class UserDashboard extends Controller
         $investments = User::join('user_investments', 'user_investments.user_id', '=', 'users.id')
             ->join('investment_packages', 'investment_packages.id', '=', 'user_investments.investment_packages_id')
             ->where('users.id', $id)
-            ->where('user_investments.status', "completed")
+            // ->where('user_investments.status', "completed")
             ->orderBy('user_investments.id', 'DESC')
-            ->get(['users.name as username', 'users.email', 'investment_packages.name as packagename', 'investment_packages.id as package_id', 'user_investments.date', 'user_investments.id as user_investments_id', 'user_investments.end_date', 'investment_packages.category_name',
-                'user_investments.amount', 'user_investments.returns', 'user_investments.duration', 'user_investments.payout', 'user_investments.active', 'user_investments.status', 'user_investments.txn_id']);
+            ->get(['users.name as username', 'users.email', 'investment_packages.name as packagename',
+            'investment_packages.id as package_id', 'user_investments.date', 'user_investments.id as user_investments_id',
+             'user_investments.end_date',  'investment_packages.category_name',
+                'user_investments.amount', 'user_investments.returns', 'user_investments.duration', 
+                'user_investments.payout', 'user_investments.active', 'user_investments.status', 
+                'user_investments.available_fund_balance', 
+                'user_investments.active_interest_balance', 
+                'user_investments.by_weekly_next_date', 
+                
+                'user_investments.txn_id', ]);
 
         $usersInvestments = [];
         for ($i = 0; $i < count($investments); $i++) {
@@ -125,7 +134,21 @@ class UserDashboard extends Controller
                 if ($totalDaysDiff < 100) {
                     $dayLeft = $totalDaysDiff;
                 }
-                $data = ['days' => $totalDaysDiff, 'daysLeft' => $dayLeft, 'username' => $investments[$i]['username'], 'email' => $investments[$i]['email'], 'packagename' => $investments[$i]['packagename'], 'category_name' => $investments[$i]['category_name'], 'date' => $investments[$i]['date'], 'amount' => $investments[$i]['amount'], 'returns' => $investments[$i]['returns'], 'duration' => $investments[$i]['duration'], 'active' => $investments[$i]['active'], 'user_investments_id' => $investments[$i]['user_investments_id'], 'package_id' => $investments[$i]['package_id'], 'status' => $investments[$i]['status'], 'txn_id' => $investments[$i]['txn_id']];
+                $data = ['days' => $totalDaysDiff, 'daysLeft' => $dayLeft, 
+                'available_fund_balance' => $investments[$i]['available_fund_balance'], 'active_interest_balance' => $investments[$i]['active_interest_balance'],
+                'username' => $investments[$i]['username'], 'email' => $investments[$i]['email'], 
+                'packagename' => $investments[$i]['packagename'], 
+                'category_name' => $investments[$i]['category_name'], 
+                'date' => $investments[$i]['date'], 
+                'amount' => $investments[$i]['amount'], 
+                'returns' => $investments[$i]['returns'],
+                'duration' => $investments[$i]['duration'], 
+                'active' => $investments[$i]['active'],
+                'user_investments_id' => $investments[$i]['user_investments_id'],
+                'package_id' => $investments[$i]['package_id'], 
+                'status' => $investments[$i]['status'],
+                'by_weekly_next_date' => $investments[$i]['by_weekly_next_date'],
+                'txn_id' => $investments[$i]['txn_id']];
                 array_push($usersInvestments, (object) $data);
             }
         }
@@ -375,27 +398,15 @@ class UserDashboard extends Controller
         }
 
         $hasSurvey = DB::table('survey')->where('user_id', $id)->get()->first();
-        $packages = Investment_Packages::all();
-        $voyager = Voyager::where('user_id', $id)->get()->first();
-         
-        if($voyager!=null){
-            $voyager->amount=getAmountAttribute($voyager->amount);
-        }
+      
 
-        $totalDaysDiff = 0;
-        $dayLeft = 0;
-        if ($voyager != null) {
-            $d1 = strtotime(Carbon::now()->toDayDateTimeString());
-            $d2 = strtotime($voyager->date);
-            $totalSecondsDiff = abs($d1 - $d2);
-            $totalDaysDiff = intval(round($totalSecondsDiff / 60 / 60 / 24));
-            if ($d1 < $d2) {
-                $dayLeft = 100;
-                if ($totalDaysDiff < 100) {
-                    $dayLeft = $totalDaysDiff;
-                }
-            }
+        foreach ($usersInvestments as $key => $value) {
+            $value->package = Investment_Packages::findOrFail($value->package_id);
+            $value->formatted_available_fund_balance = number_format($value->available_fund_balance);
+            $value->formatted_active_interest_balance = number_format($value->active_interest_balance);
+            $value->formatted_next_earn_date =Carbon::parse($value->by_weekly_next_date)->format("Y-M-d");
         }
+        $packages= Investment_Packages::all();
 
         return view('user.dashboard', [
             'page_title' => "Dashboard",
@@ -413,14 +424,14 @@ class UserDashboard extends Controller
             'withdrawMethods' => $withdrawMethods,
             'invested_capital' =>  getAmountAttribute($totalCapital),
             'investment_count' => count($usersInvestments),
+            'my_investments'=>$usersInvestments,
+            'packages'=>$packages,
             'recent_investments' => $recentInvestments,
             'all_investments' => $usersInvestments,
             'dailyCredited' => $dailyCredited,
             'referrals' => $referrals,
-            "voyager" => $voyager,
             "Popup_Data" => $popData,
             "Popup_Datas" => $Popup_Datas,
-            "packages" => $packages,
             'hasSurvey' => $hasSurvey,
             'site_host' => "https://verify.Dell Group.com",//$request->getSchemeAndHttpHost()
             "accumulatedTransfer" =>  getAmountAttribute($accumulatedTransfer),

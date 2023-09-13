@@ -118,6 +118,6 @@ class ReferredUsers extends Controller
             }
         }
        //dd($sortedReferrals);
-        return view('user.referred-users', ['user' => $user, 'referrals' => $sortedReferrals, 'user_id' => $id, 'page_title' => " Referred Members", 'username' => $user->name, 'referral_code' => $user->referalcode]);
+        return view('user.referred-users', ['user' => $user, 'referrals' => $sortedReferrals, 'user_id' => $id, 'page_title' => "Friends & Community", 'username' => $user->name, 'referral_code' => $user->referalcode]);
     }
 }
