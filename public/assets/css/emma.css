@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  outline: none;
   box-sizing: border-box;
 }
 
@@ -144,6 +145,247 @@
 
 .borderrights {
   border-right: 3px solid #F06C00;
+}
+
+.lineOrange {
+  border-bottom: 3px solid #F06C00;
+  width: 100px;
+}
+
+.aboutPage .banner1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0745098039), rgba(0, 0, 0, 0.4901960784)), url(../img/about_page/aboutus-whoweare-hero-desktop-3.webp);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+}
+.aboutPage .banner1 h1 {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  font-size: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.aboutPage .ssection1 h2 {
+  text-align: center;
+  color: #0F3557;
+}
+.aboutPage .tabb {
+  background: #002340;
+}
+.aboutPage .tabb .div {
+  text-align: center;
+  padding: 20px;
+}
+.aboutPage .tabb .div h1 {
+  color: #fff;
+}
+.aboutPage .tabb .div p {
+  color: #94cef3;
+  font-size: 20px;
+  font-weight: 500;
+}
+.aboutPage .accord .accordion-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10px 0;
+  border-top: 1px solid gray;
+  width: 100%;
+  cursor: pointer;
+}
+.aboutPage .accord .accordion-button:hover {
+  border-top: 3px solid #002340;
+}
+.aboutPage .accord .accordion-button .ren {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutPage .accord .accordion-button .ren .first {
+  display: flex;
+  align-items: center;
+}
+.aboutPage .accord .accordion-button .ren .first p {
+  margin: 0;
+  margin-left: 20px;
+  color: #002340;
+  font-size: 20px;
+}
+.aboutPage .accord .accordion-button img {
+  width: 40px;
+  height: 40px;
+}
+.aboutPage .accord .accordion-collapse .accordion-button, .aboutPage .accord .collapse .accordion-button, .aboutPage .accord .show .accordion-button {
+  border-top: 3px solid #002340;
+}
+.aboutPage .accord .accordion-header {
+  margin: 0;
+}
+.aboutPage .accord .expain {
+  color: #002340;
+  margin: 0;
+}
+.aboutPage .accord .expain .exp {
+  font-size: 17px;
+}
+.aboutPage .accord .expain ul {
+  margin-top: 30px;
+}
+.aboutPage .accord .expain ul .bold {
+  border: none;
+}
+.aboutPage .accord .expain ul li {
+  list-style: none;
+  border-top: 1px solid #002340;
+  width: 250px;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.aboutPage .accord .expain button {
+  width: 100%;
+  background-color: #002340;
+  color: #fff;
+  text-align: left;
+  border-radius: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  justify-content: space-between;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+.aboutPage .accord .expain button svg {
+  padding-top: 1px;
+  margin-top: 3px;
+}
+.aboutPage .accord .expain button:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22));
+}
+.aboutPage .Atwork .first {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6823529412), rgba(255, 255, 255, 0.0705882353)), url(../img/about_page/brookfield-at-work-cover-image.webp);
+  background-position: center;
+  background-size: cover;
+  padding: 40px 50px;
+  height: 400px;
+  color: #fff;
+}
+.aboutPage .Atwork .first p {
+  font-size: 40px;
+}
+.aboutPage .Atwork .first span {
+  font-size: 19px;
+}
+.aboutPage .Atwork .first button {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.aboutPage .Atwork .first button span {
+  font-size: 16px;
+}
+.aboutPage .Atwork .first button:hover {
+  background-color: rgba(255, 255, 255, 0.5333333333);
+}
+.aboutPage .Atwork .first button svg {
+  margin-left: 15px;
+}
+.aboutPage .Atwork .second {
+  background-image: linear-gradient(to bottom right, #002340, #0F3557);
+  background-position: center;
+  background-size: cover;
+  padding: 40px 50px;
+  height: 400px;
+  color: #fff;
+}
+.aboutPage .Atwork .second p {
+  font-size: 40px;
+  line-height: normal;
+}
+.aboutPage .Atwork .second span {
+  font-size: 19px;
+}
+.aboutPage .Atwork .second button {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.aboutPage .Atwork .second button span {
+  font-size: 16px;
+}
+.aboutPage .Atwork .second button:hover {
+  background-color: rgba(255, 255, 255, 0.5333333333);
+}
+.aboutPage .Atwork .second button svg {
+  margin-left: 15px;
+}
+.aboutPage .Advantage {
+  background-color: #002340;
+  color: #fff;
+  padding: 50px;
+}
+.aboutPage .Advantage .header h2 {
+  color: #fff;
+}
+.aboutPage .Advantage .lineOrange {
+  padding: 0;
+}
+.aboutPage .Advantage .set {
+  height: 500px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+.aboutPage .Advantage .set img {
+  width: 100%;
+  height: 200px;
+}
+.aboutPage .Advantage .set .div {
+  padding: 20px;
+  color: #000;
+}
+.aboutPage .Advantage .set .div h2 {
+  color: #002340;
+  line-height: normal;
+}
+.aboutPage .NEWS h2 {
+  font-size: 20px;
+  color: #002340;
+}
+.aboutPage .NEWS .sets {
+  height: 400px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+.aboutPage .NEWS .sets img {
+  width: 100%;
+  height: 150px;
+}
+.aboutPage .NEWS .sets div {
+  padding: 40px 30px;
+  color: #000;
+}
+.aboutPage .NEWS .sets div span {
+  color: #123a5f;
+}
+.aboutPage .NEWS .sets div a {
+  color: #002340;
+  margin-top: 15px;
+  font-size: 25px;
+}
+.aboutPage .NEWS .sets div a:hover {
+  text-decoration: underline;
 }
 
 .ESG .Banner1 {
@@ -1486,7 +1728,12 @@
 .ban4 {
   background-color: #123a5f;
 }
-.ban4 h1, .ban4 p, .ban4 span, .ban4 h2, .ban4 li, .ban4 h3 {
+.ban4 h1,
+.ban4 p,
+.ban4 span,
+.ban4 h2,
+.ban4 li,
+.ban4 h3 {
   color: white !important;
 }
 .ban4 ul {
@@ -1540,6 +1787,9 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  .Atwork .first, .Atwork .second {
+    height: 100% !important;
+  }
   .ban1 {
     height: 700px !important;
   }
@@ -1560,5 +1810,14 @@
   }
   .ban2 .tett {
     width: 90% !important;
+  }
+  .aboutPage .banner1 {
+    height: 50vh !important;
+  }
+  .aboutPage .banner1 h1 {
+    font-size: 30px !important;
+  }
+  .aboutPage .ssection1 h2 {
+    font-size: 24px !important;
   }
 }/*# sourceMappingURL=emma.css.map */
